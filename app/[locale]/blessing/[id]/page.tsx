@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { BlockedCard } from "@/components/BlockedCard";
 import { CardActions } from "@/components/CardActions";
+import { JourneyMark } from "@/components/JourneyMark";
 import { StageNote } from "@/components/StageNote";
 import { VersePassage } from "@/components/VersePassage";
 import { Link } from "@/i18n/navigation";
@@ -47,6 +48,7 @@ export default async function BlessingPage({ params }: Props) {
 
   return (
     <article className="mt-6 overflow-hidden rounded-3xl bg-layl text-sama shadow-lg">
+      {blessing.journeyStation && <JourneyMark station={blessing.journeyStation} />}
       <header className="px-6 pt-6 text-center">
         <h1 className="font-heading text-4xl text-lazima">{blessing.labels[locale]}</h1>
         {card.mappingUnderReview && (

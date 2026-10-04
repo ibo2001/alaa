@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { LensClient } from "@/components/LensClient";
+import { stationByBlessing } from "@/lib/journey";
 import { formatRef } from "@/lib/quran/surahs";
-import { concepts } from "@/lib/sources/data";
+import { blessings, concepts } from "@/lib/sources/data";
 import { abstentionPassages } from "@/lib/sources/passages";
 import { samples } from "@/lib/vision/samples";
 import type { Lang } from "@/lib/types";
@@ -43,6 +44,7 @@ export default async function LensPage({ params }: Props) {
         }))}
         conceptLabels={Object.fromEntries(concepts.map((c) => [c.id, c.labels[locale]]))}
         abstention={abstention}
+        stationOf={stationByBlessing(blessings)}
       />
     </>
   );

@@ -1,0 +1,65 @@
+import { expect, test } from "@playwright/test";
+
+// Learning stage, My Day's Surah and the Ar-Rahman Journey. All state is on the device (IndexedDB),
+// and each Playwright test starts with a fresh browser context.
+
+test("learning stage: new readers see the refrain note", async ({ page }) => {
+  await page.goto("/en");
+  const option = page.getByRole("button", { name: "I'm new to the Quran" });
+  await option.click();
+  await expect(option).toHaveAttribute("aria-pressed", "true");
+
+  await page.goto("/en/blessing/water");
+  await expect(page.getByText("This ayah is from Surah Ar-Rahman, where it is repeated 31 times.")).toBeVisible();
+});
+
+test("My Day's Surah: add a card, see it with the refrain, draw the share card", async ({ page }) => {
+  await page.goto("/en/blessing/water");
+  await page.getByRole("button", { name: "Add to My Day" }).click();
+  await expect(page.getByRole("button", { name: /Added to My Day/ })).toBeVisible();
+
+  await page.goto("/en/today");
+  await expect(page.locator("[data-ready]")).toBeVisible();
+  await expect(page.getByText("1 blessing today")).toBeVisible();
+  await expect(page.getByRole("link", { name: "Water" })).toBeVisible();
+
+  await page.getByRole("button", { name: "Make my day's card" }).click();
+  const img = page.getByRole("img", { name: /My Day's Surah card/ });
+  await expect(img).toBeVisible();
+  expect(await img.evaluate((el: HTMLImageElement) => [el.naturalWidth, el.naturalHeight])).toEqual([1080, 1920]);
+  await expect(page.getByRole("link", { name: "Download image" })).toHaveAttribute("download", "alaa-my-day.png");
+});
+
+test("Ar-Rahman Journey: photo and read progress, then the after-journey screen", async ({ page }) => {
+  await page.goto("/en/journey");
+  await expect(page.locator("[data-ready]")).toBeVisible();
+  await expect(page.getByText("0 of 7 stations")).toBeVisible();
+
+  // Station 1 by reading its card.
+  await page.getByRole("link", { name: /Read the card Speech and writing/ }).click();
+  await expect(page).toHaveURL(/\/en\/blessing\/speech-writing$/);
+  await page.goto("/en/journey");
+  await expect(page.locator('[data-station="1"]')).toHaveAttribute("data-done", "true");
+  await expect(page.locator('[data-station="1"]').getByText("Card read")).toBeVisible();
+
+  // Station 5 by a (sample) photo of dates.
+  await page.goto("/en/lens");
+  await expect(page.locator("[data-ready]")).toBeVisible();
+  await page.locator('[data-sample="dates"]').click();
+  await expect(page).toHaveURL(/\/en\/blessing\/dates-palms$/);
+  await page.goto("/en/journey");
+  await expect(page.locator('[data-station="5"]').getByText("Found with a photo")).toBeVisible();
+  await expect(page.getByText("2 of 7 stations")).toBeVisible();
+  await expect(page.getByRole("heading", { name: "After the journey" })).toBeHidden();
+
+  // The remaining stations.
+  for (const id of ["sun-moon", "stars-trees", "sky", "sea", "pearls"]) {
+    await page.goto(`/en/blessing/${id}`);
+    await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+    await page.waitForTimeout(200); // let the station mark reach IndexedDB
+  }
+  await page.goto("/en/journey");
+  await expect(page.getByText("7 of 7 stations")).toBeVisible();
+  await expect(page.getByRole("heading", { name: "After the journey" })).toBeVisible();
+  await expect(page.getByRole("link", { name: /Surah Ar-Rahman with translation/ })).toHaveAttribute("href", "https://quran.com/55");
+});

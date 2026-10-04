@@ -1,0 +1,5 @@
+{
+  "$comment": "Referral to human support, shown after the journey (SPEC §4). Ibrahim chooses the recognized organization; until then url is null and the referral is not shown.",
+  "ar": { "name": null, "url": null },
+  "en": { "name": null, "url": null }
+}

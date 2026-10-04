@@ -4,7 +4,9 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/navigation";
+import { markStation } from "@/lib/device";
 import { downscaleImage } from "@/lib/image/downscale";
+import type { StationNumber } from "@/lib/journey";
 import type { GuardedAyah, TranslationStatus } from "@/lib/guard";
 import type { Decision, DecisionCandidate } from "@/lib/vision/decide";
 import type { Lang } from "@/lib/types";
@@ -72,11 +74,14 @@ export function LensClient({
   samples,
   conceptLabels,
   abstention,
+  stationOf,
 }: {
   lang: Lang;
   samples: SampleView[];
   conceptLabels: Record<string, string>;
   abstention: { ayat: GuardedAyah[]; translation: TranslationStatus; ref: string }[];
+  /** blessing id → Ar-Rahman Journey station, so a photo counts as finding that station. */
+  stationOf: Record<string, StationNumber>;
 }) {
   const t = useTranslations("lens");
   const tc = useTranslations("confirm");
@@ -91,8 +96,14 @@ export function LensClient({
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
 
+  async function openCard(blessingId: string) {
+    const station = stationOf[blessingId];
+    if (station) await markStation(station, "photo").catch(() => {});
+    router.push(`/blessing/${blessingId}`);
+  }
+
   function apply(decision: Decision) {
-    if (decision.kind === "card") router.push(`/blessing/${decision.blessingId}`);
+    if (decision.kind === "card") void openCard(decision.blessingId);
     else if (decision.kind === "confirm") setState({ kind: "confirm", candidates: decision.candidates });
     else setState({ kind: "abstain", reason: decision.reason, concept: decision.concept });
   }
@@ -133,7 +144,7 @@ export function LensClient({
   }
 
   function pick(c: DecisionCandidate) {
-    if (c.blessingId) router.push(`/blessing/${c.blessingId}`);
+    if (c.blessingId) void openCard(c.blessingId);
     else setState({ kind: "abstain", reason: "no-blessing", concept: c.concept });
   }
 
