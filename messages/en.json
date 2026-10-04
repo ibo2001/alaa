@@ -58,7 +58,11 @@
     "no-blessing": "I see {concept}, but I don't have a verse about it specifically.",
     "person": "Alaa doesn't analyze people. Try photographing an object near you.",
     "unsafe": "This photo can't be used. Try something else around you.",
-    "general": "But remember:"
+    "general": "But remember:",
+    "cardsLabel": "Verses about countless blessings",
+    "cardOf": "{n} of {total}",
+    "previous": "Previous verse",
+    "next": "Next verse"
   },
   "errors": {
     "title": "Something went wrong",

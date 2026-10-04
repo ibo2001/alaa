@@ -26,6 +26,8 @@ export type Blessing = {
   reflection?: Partial<Record<Stage, Partial<Record<Lang, string>>>>;
   tafsirRef?: { book: string; volume?: number; page?: number };
   journeyStation?: 1 | 2 | 3 | 4 | 5 | 6 | 7;
+  /** Why this entry is the way it is (decisions, interim choices). Not shown to users. */
+  note?: string;
   review: {
     mapping: ReviewStatus;
     reflection: ReviewStatus;

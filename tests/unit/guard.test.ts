@@ -37,6 +37,13 @@ describe("Level 1: verse text must hash-match Tanzil", () => {
     expect(guardPassage(data.refrain.verses, [], "ar", real).ok).toBe(true);
   });
 
+  it("each abstention ayah is shown whole: every ayah key of the reference is present", async () => {
+    const { abstentionPassages } = await import("@/lib/sources/passages");
+    const cards = abstentionPassages("ar");
+    expect(cards.map((c) => c.ayat.map((a) => a.key))).toEqual([["14:34"], ["16:18"]]);
+    for (const c of cards) expect(c.ayat[0]!.text).toBe(real.quran.get(c.ayat[0]!.key));
+  });
+
   it("blocks the card when one letter of an ayah is altered", () => {
     // Swap the first two characters: same letters, different text.
     const bundle = withQuranText("21:30", (t) => t.charAt(1) + t.charAt(0) + t.slice(2));

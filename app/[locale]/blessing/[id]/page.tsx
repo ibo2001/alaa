@@ -8,7 +8,7 @@ import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { formatRef, quranComUrl } from "@/lib/quran/surahs";
 import { blessings, getBlessing } from "@/lib/sources/data";
-import { blessingCard, refrainPassage } from "@/lib/sources/passages";
+import { blessingCard, isRefrainOnly, refrainPassage } from "@/lib/sources/passages";
 import type { Lang } from "@/lib/types";
 
 // Cards are generated at build time from the Tanzil file; unknown ids are 404.
@@ -36,6 +36,8 @@ export default async function BlessingPage({ params }: Props) {
   if (!card) notFound();
   if (!card.ok) return <BlockedCard />;
 
+  // Interim cards whose only verse is the refrain show it once, in gold.
+  const refrainOnly = isRefrainOnly(card.refs);
   const refrain = refrainPassage(locale);
   const { blessing } = card;
   const first = card.refs[0]!;
@@ -55,14 +57,14 @@ export default async function BlessingPage({ params }: Props) {
       </header>
 
       <section className="px-6 py-6">
-        <VersePassage ayat={card.ayat} translation={card.translation} lang={locale} tone="dark" />
+        <VersePassage ayat={card.ayat} translation={card.translation} lang={locale} tone={refrainOnly ? "gold" : "dark"} size={refrainOnly ? "xl" : "lg"} />
         <p className="mt-4 text-center text-sm text-sama/70">
           {card.refs.map((r) => formatRef(r, locale)).join(" · ")}
         </p>
         {card.reflection && <p className="mt-6 border-s-4 border-lazima ps-4">{card.reflection}</p>}
       </section>
 
-      {refrain.ok && (
+      {refrain.ok && !refrainOnly && (
         <section className="border-t border-sama/15 px-6 py-6">
           <VersePassage ayat={refrain.ayat} translation={refrain.translation} lang={locale} tone="gold" size="xl" />
           <p className="mt-2 text-center text-xs text-sama/60">{formatRef(refrain.refs[0]!, locale)}</p>

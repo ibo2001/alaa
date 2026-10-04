@@ -3,7 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { LensClient } from "@/components/LensClient";
 import { formatRef } from "@/lib/quran/surahs";
 import { concepts } from "@/lib/sources/data";
-import { abstentionPassage } from "@/lib/sources/passages";
+import { abstentionPassages } from "@/lib/sources/passages";
 import { samples } from "@/lib/vision/samples";
 import type { Lang } from "@/lib/types";
 
@@ -20,11 +20,12 @@ export default async function LensPage({ params }: Props) {
   setRequestLocale(locale);
   const t = await getTranslations("pages");
 
-  // The abstention verse is verified by the Source Guard here, on the server, then passed down.
-  const passage = abstentionPassage(locale);
-  const abstention = passage.ok
-    ? { ayat: passage.ayat, translation: passage.translation, ref: formatRef(passage.refs[0]!, locale) }
-    : null;
+  // Abstention ayat are verified by the Source Guard here, on the server, then passed down whole.
+  const abstention = abstentionPassages(locale).map((p) => ({
+    ayat: p.ayat,
+    translation: p.translation,
+    ref: formatRef(p.refs[0]!, locale),
+  }));
 
   return (
     <>

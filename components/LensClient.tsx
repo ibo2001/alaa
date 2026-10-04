@@ -28,6 +28,45 @@ const primary =
 const secondary =
   "inline-flex min-h-12 items-center justify-center gap-2 rounded-full border-2 border-layl px-6 py-3 text-layl hover:bg-layl/5 disabled:opacity-50";
 
+/** The general-gratitude ayat, each whole and on its own card, with previous/next. */
+function AbstentionCards({
+  cards,
+  lang,
+}: {
+  cards: { ayat: GuardedAyah[]; translation: TranslationStatus; ref: string }[];
+  lang: Lang;
+}) {
+  const t = useTranslations("abstain");
+  const [i, setI] = useState(0);
+  const card = cards[i]!;
+  const nav = "min-h-11 min-w-11 rounded-full border border-sama/40 px-3 text-sama hover:border-lazima disabled:opacity-30";
+  return (
+    <div role="group" aria-roledescription="carousel" aria-label={t("cardsLabel")}>
+      <div aria-live="polite" aria-label={t("cardOf", { n: i + 1, total: cards.length })}>
+        <VersePassage ayat={card.ayat} translation={card.translation} lang={lang} tone="gold" />
+        <p className="mt-2 text-center text-sm text-sama/80">{card.ref}</p>
+      </div>
+      {cards.length > 1 && (
+        <div className="mt-4 flex items-center justify-center gap-4">
+          <button type="button" className={nav} disabled={i === 0} onClick={() => setI(i - 1)} aria-label={t("previous")}>
+            <span aria-hidden className="rtl:rotate-180 inline-block">←</span>
+          </button>
+          <span className="text-sm text-sama/70">{t("cardOf", { n: i + 1, total: cards.length })}</span>
+          <button
+            type="button"
+            className={nav}
+            disabled={i === cards.length - 1}
+            onClick={() => setI(i + 1)}
+            aria-label={t("next")}
+          >
+            <span aria-hidden className="rtl:rotate-180 inline-block">→</span>
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export function LensClient({
   lang,
   samples,
@@ -37,7 +76,7 @@ export function LensClient({
   lang: Lang;
   samples: SampleView[];
   conceptLabels: Record<string, string>;
-  abstention: { ayat: GuardedAyah[]; translation: TranslationStatus; ref: string } | null;
+  abstention: { ayat: GuardedAyah[]; translation: TranslationStatus; ref: string }[];
 }) {
   const t = useTranslations("lens");
   const tc = useTranslations("confirm");
@@ -153,11 +192,10 @@ export function LensClient({
             <h2 id="abstain-title" className="text-center text-lg">
               {ta(state.reason, { concept: label(state.concept) })}
             </h2>
-            {abstention && (state.reason === "low-confidence" || state.reason === "no-blessing") && (
+            {abstention.length > 0 && (state.reason === "low-confidence" || state.reason === "no-blessing") && (
               <div className="mt-5">
                 <p className="mb-3 text-center text-sm text-sama/70">{ta("general")}</p>
-                <VersePassage ayat={abstention.ayat} translation={abstention.translation} lang={lang} tone="gold" />
-                <p className="mt-2 text-center text-xs text-sama/60">{abstention.ref}</p>
+                <AbstentionCards cards={abstention} lang={lang} />
               </div>
             )}
             <p className="mt-6 text-center">

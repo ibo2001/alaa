@@ -41,6 +41,10 @@ describe("decide: thresholds", () => {
     expect(decide(r([["drinking_water", 0.9], ["water", 0.8]]))).toMatchObject({ kind: "card", concept: "drinking_water" });
   });
 
+  it("hand → interim card (refrain only, decided by Ibrahim)", () => {
+    expect(decide(r([["hand", 0.95]], { is_person: true }))).toEqual({ kind: "card", concept: "hand", blessingId: "hand" });
+  });
+
   it("two confident objects with different blessings (dates next to water) → choose", () => {
     const d = decide(r([["date_fruit", 0.9], ["drinking_water", 0.85]]));
     expect(d.kind).toBe("confirm");

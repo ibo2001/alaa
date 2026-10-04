@@ -5,6 +5,10 @@
       {
         "surah": 14,
         "ayah": 34
+      },
+      {
+        "surah": 16,
+        "ayah": 18
       }
     ],
     "review": {
@@ -636,6 +640,31 @@
           "source": "en.itani"
         }
       ],
+      "review": {
+        "mapping": "draft",
+        "reflection": "draft"
+      }
+    },
+    {
+      "id": "hand",
+      "concept": "hand",
+      "labels": {
+        "ar": "اليد",
+        "en": "Hand"
+      },
+      "verses": [
+        {
+          "surah": 55,
+          "ayah": 13
+        }
+      ],
+      "translations": [
+        {
+          "lang": "en",
+          "source": "en.itani"
+        }
+      ],
+      "note": "Interim mapping decided by Ibrahim on 2026-10-04: the refrain only, until a hand reference is chosen through the planned source-bound (RAG) review process.",
       "review": {
         "mapping": "draft",
         "reflection": "draft"

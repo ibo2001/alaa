@@ -28,7 +28,10 @@ describe("seed data integrity", () => {
       for (const v of b.verses) expect(Object.keys(v).sort()).toEqual(expect.arrayContaining(["ayah", "surah"]));
       for (const t of b.translations) expect(translationRegistry[t.source], t.source).toBeDefined();
     }
-    expect(data.abstention.verses).toEqual([{ surah: 14, ayah: 34 }]);
+    expect(data.abstention.verses).toEqual([
+      { surah: 14, ayah: 34 },
+      { surah: 16, ayah: 18 },
+    ]);
   });
 
   it("'broader' points to an existing concept", () => {

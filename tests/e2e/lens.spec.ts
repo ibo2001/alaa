@@ -22,5 +22,18 @@ test("lens → sample with no verse → polite abstention", async ({ page }) => 
   await expect(page.locator("[data-ready]")).toBeVisible();
   await page.locator('[data-sample="keyboard"]').click();
   await expect(page.getByRole("heading", { name: /لوحة المفاتيح/ })).toBeVisible();
+  // Two whole ayat, one card each, with surah name and ayah number.
   await expect(page.getByText("إبراهيم ١٤:٣٤")).toBeVisible();
+  await page.getByRole("button", { name: "الآية التالية" }).click();
+  await expect(page.getByText("النحل ١٦:١٨")).toBeVisible();
+  await expect(page.getByText("إبراهيم ١٤:٣٤")).toBeHidden();
+});
+
+test("hand sample → interim refrain card", async ({ page }) => {
+  await page.goto("/en/lens");
+  await expect(page.locator("[data-ready]")).toBeVisible();
+  await page.locator('[data-sample="hand"]').click();
+  await expect(page).toHaveURL(/\/en\/blessing\/hand$/);
+  await expect(page.getByText("Mapping under review")).toBeVisible();
+  await expect(page.getByText("Ar-Rahman 55:13")).toHaveCount(1);
 });
