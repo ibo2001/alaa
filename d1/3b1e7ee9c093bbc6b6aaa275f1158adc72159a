@@ -1,0 +1,35 @@
+components/JourneyMark.tsx
+  s_a8c554c53780f6::t_c104904f7554af 1-13
+app/[locale]/lens/page.tsx
+  s_a8c554c53780f6::t_041f1b244c413e 4,6,47
+sources/referral.json
+  s_a8c554c53780f6::t_0c9e4f53c782e7 1-5
+tests/e2e/day2.spec.ts
+  s_a8c554c53780f6::t_3eed4a8766d79b 1-65
+app/[locale]/journey/page.tsx
+  s_a8c554c53780f6::t_e7a4c4a25b8797 30
+  s_a8c554c53780f6::t_7b2c0c72f74017 1-8,10-19,21-29,31
+app/[locale]/blessing/[id]/page.tsx
+  s_a8c554c53780f6::t_041f1b244c413e 6,51
+components/JourneyClient.tsx
+  s_a8c554c53780f6::t_7b344899998ecf 1-3,5-6,9-19,21-50,52-86,88-156
+  s_a8c554c53780f6::t_a75947ef69c517 4,7-8,20,51,87
+components/LensClient.tsx
+  s_a8c554c53780f6::t_041f1b244c413e 7,9,77,83-84,99-104,106,147
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d13b1e7ee9c093bbc6b6aaa275f1158adc72159a",
+  "prompts": {},
+  "sessions": {
+    "s_a8c554c53780f6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e041fdb0-f00a-40b2-9e78-70e84cc32759",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
