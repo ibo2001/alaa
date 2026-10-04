@@ -18,3 +18,9 @@ export async function addToDay(blessingId: string, d = new Date()): Promise<DayE
   await set(dayKey(d), next);
   return next;
 }
+
+export async function removeFromDay(blessingId: string, d = new Date()): Promise<DayEntry[]> {
+  const next = (await getDay(d)).filter((e) => e.blessingId !== blessingId);
+  await set(dayKey(d), next);
+  return next;
+}

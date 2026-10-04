@@ -1,4 +1,5 @@
 // Server/build-time only.
+import { ayahKey } from "@/lib/quran/tanzil";
 import { guardBlessing, guardPassage, type GuardedBlessing, type GuardedPassage } from "@/lib/guard";
 import type { Lang, Stage } from "@/lib/types";
 import { data, getBlessing } from "./data";
@@ -8,6 +9,16 @@ const DEFAULT_TRANSLATIONS = [{ lang: "en" as const, source: "en.itani" }];
 
 export function refrainPassage(lang: Lang): GuardedPassage {
   return guardPassage(data.refrain.verses, DEFAULT_TRANSLATIONS, lang, loadSources());
+}
+
+/** How many ayat of the refrain's surah are identical to it, counted from the Tanzil manifest hashes. */
+export function refrainRepeatCount(bundle = loadSources()): number {
+  const ref = data.refrain.verses[0]!;
+  const hashes = bundle.quranManifest.ayat;
+  const target = hashes[ayahKey(ref.surah, ref.ayah)];
+  if (!target) return 0;
+  const prefix = `${ref.surah}:`;
+  return Object.entries(hashes).filter(([key, h]) => key.startsWith(prefix) && h === target).length;
 }
 
 /** Each abstention ayah is shown whole, as its own card; any that fails the Guard is dropped. */
