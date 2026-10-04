@@ -1,0 +1,29 @@
+docs/user-testing/PARTICIPANT_SHEET.en.md
+  s_a8c554c53780f6::t_1c4a56b3d84610 1-54
+docs/user-testing/PROTOCOL.md
+  s_a8c554c53780f6::t_6f98bc86463193 1-56
+docs/CHANGES_FROM_TESTING.md
+  s_a8c554c53780f6::t_f03826941ae34d 1-6
+docs/user-testing/RESULTS.md
+  s_a8c554c53780f6::t_a70ce4fd79dd6f 1-26
+docs/CURRENT_STATE.md
+  s_a8c554c53780f6::t_3d54bef82e4bc9 5,12,39-43
+docs/ROADMAP.md
+  s_a8c554c53780f6::t_929a94b5f3be10 10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "042cf3849bad88f05bed0f17588510b2d9888908",
+  "prompts": {},
+  "sessions": {
+    "s_a8c554c53780f6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e041fdb0-f00a-40b2-9e78-70e84cc32759",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
