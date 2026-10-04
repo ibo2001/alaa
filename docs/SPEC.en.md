@@ -328,6 +328,12 @@ Standard mushaf numbering. English glosses are short paraphrases, not quoted tra
 | Family | ﴿والله جعل لكم من أنفسكم أزواجاً وجعل لكم من أزواجكم بنين وحفدة﴾ | He gave you spouses, and from them children and grandchildren | An-Nahl 16:72 |
 | Everything (abstention) | ﴿وإن تعدوا نعمة الله لا تحصوها﴾ | If you tried to count Allah's blessings, you could not | Ibrahim 14:34 / An-Nahl 16:18 |
 
+**Decisions of Oct 4, 2026 (Ibrahim):**
+- **Abstention:** both ayat are shown whole, Ibrahim 14:34 and An-Nahl 16:18, each on its own card with surah name and ayah number; the user can move between them. No part of an ayah is ever cut; an ayah is always shown from its beginning to its end.
+- **Hand:** interim card showing the refrain (Ar-Rahman 55:13) with the "mapping under review" badge, until a reference is chosen through the RAG process in §16.
+- **Family:** not offered to the vision model (it would require analyzing people); the card is reachable from the journey and My Day only.
+- **Splitting compound entries into concepts** (e.g. palm tree → dates and palms, bed → sleep): approved as an initial version; all remain "under review".
+
 **Supporting hadith (sahih):**
 - «نعمتان مغبون فيهما كثير من الناس: الصحة والفراغ» — Bukhari 6412
 - «انظروا إلى من أسفل منكم، ولا تنظروا إلى من هو فوقكم، فهو أجدر أن لا تزدروا نعمة الله عليكم» — Muslim 2963
@@ -448,4 +454,5 @@ Hadith text is copied from the source collection when entered into `blessings.js
 - **Maintenance:** Ibrahim owns the code; the religious reviewer owns the content.
 - **Community:** open-source database; the Itqan community can contribute via Pull Requests.
 - **`sanad-core`** shared with Mizan: Source Guard, source registry, source-card component.
+- **Source-bound RAG (planned):** the final product will integrate RAG data that is binding on the app in terms of sources and content, to give results that better match sharia standards and user needs, including choosing references (e.g. a verse for the hand) and refining concept → verse mappings. The principle stays the same: no religious text is generated; retrieval only from approved, licensed sources; the output is references (surah/ayah) that pass the Source Guard, and a mapping is adopted only with the religious reviewer's approval and a `REVIEW_LOG.md` entry.
 - **Later:** Norwegian once licensed; native SwiftUI version with on-device Vision for lower cost and better privacy.

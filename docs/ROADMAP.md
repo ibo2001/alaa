@@ -9,6 +9,7 @@ This file separates what was **built during the challenge** (Oct 4–6, 2026) fr
 - Day 1: Lens (camera, gallery upload, sample photos), blessing card, "Is this…?" picker, abstention screen, source page, error states with next steps; Playwright tests
 
 ## Planned (not built yet)
+- Source-bound RAG: retrieval over approved, licensed sources to help choose references and refine mappings for the religious reviewer (see `docs/SPEC.en.md` §16). Replaces interim choices such as the hand card
 - "Report an error" filed through `/api/report` (today: link to a prefilled GitHub issue)
 - Live camera preview with `getUserMedia` (today: the system camera via `capture="environment"`)
 - Durable daily limit (shared store such as Vercel KV); today it is per server instance, best effort
