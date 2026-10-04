@@ -2,14 +2,14 @@
 
 A running snapshot of where the project is. Updated at each milestone. For "built vs planned" see `ROADMAP.md`; for content decisions see `DECISIONS.md`.
 
-**Last updated:** 2026-10-04 11:15 (Riyadh) · **Head:** after `9713aa0` · **Live:** https://alaa-alpha.vercel.app
+**Last updated:** 2026-10-04 12:10 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
 
 ## Health
 | Check | Status |
 |---|---|
 | Lint, typecheck | Clean |
-| Unit tests (Vitest) | 47 passing |
-| E2E (Playwright, stub provider) | 3 passing |
+| Unit tests (Vitest) | 55 passing |
+| E2E (Playwright, stub provider) | 6 passing |
 | Vercel deploy | Green, auto-deploys from `main` |
 | Real-model eval (`claude-haiku-4-5`) | 21/21 correct, 7/7 consistent over 3 runs (7 sample photos) |
 
@@ -27,12 +27,17 @@ A running snapshot of where the project is. Updated at each milestone. For "buil
 | Eval on 30 images (SPEC §12) | Partial: 7 photos × 3 runs. Needs more labelled photos from Ibrahim in `eval/images/` |
 | Placeholder submission on the challenge platform | Ibrahim (outside the repo) |
 
-## Day 2 (Oct 5): Journey and testing (not started)
-- My Day's Surah + 1080×1920 share card
-- Ar-Rahman Journey (7 stations) + after-journey screen
-- Learning stage ("I'm new to the Quran" / "I know the Quran"), stored on device
-- Religious review of the 25 cards (reviewer), recorded in `sources/REVIEW_LOG.md` by Ibrahim
-- User testing with a comparison group
+## Day 2: Journey and testing (started early, Oct 4)
+| Item | Status |
+|---|---|
+| Learning stage on welcome, stored on device; "new" readers get the refrain note (31 repeats, counted from Tanzil hashes) | Done |
+| My Day's Surah: today's blessings, each followed by the refrain; counter; remove | Done |
+| 1080×1920 share card drawn on device (names and references only, refrain whole); share or download | Done |
+| Ar-Rahman Journey: 7 stations with missions, found by photo or card read, progress on device, reset | Done |
+| After-journey screen: read the surah on quran.com, daily habit | Done |
+| After-journey referral to human support | Built, hidden: needs Ibrahim's choice of organization in `sources/referral.json` |
+| Religious review of the 25 cards, recorded in `sources/REVIEW_LOG.md` by Ibrahim | Not started (reviewer) |
+| User testing with a comparison group | Not started (Ibrahim) |
 
 ## Day 3 (Oct 6): Measurement and submission (not started)
 - Fixes from user testing; evaluation ×3, alternative-approach run, cost measurement
@@ -40,6 +45,7 @@ A running snapshot of where the project is. Updated at each milestone. For "buil
 - Video (≤ 2 min), presentation PDF, final checks from another device and network
 
 ## Open items
+- Referral organization for the after-journey screen (name and URL, Arabic and English): Ibrahim's choice
 - `docs/alaa-pitch.pdf` (registration pitch, pre-challenge) is listed in `BASELINE.md` as "to be added"; Ibrahim adds the original file
 - Challenge presentation: English draft approved and Arabic draft made (13 slides each, challenge work, separate from the registration pitch); files `docs/alaa-presentation.en.pdf` and `docs/alaa-presentation.ar.pdf`. Placeholders for screenshots, Day 2–3 features and Day 3 results; exported to PDF on Day 3
 - `DAILY_LIMIT` is not set on Vercel (defaults to 50 per device per instance); raise it for the judging period

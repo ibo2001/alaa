@@ -17,6 +17,10 @@ Built for the AI Challenge for Islamic Content (islamicaich.org), Track 3: Inter
    - L3: unreviewed mappings show a "mapping under review" badge
    - L4: reflections are hidden until reviewed (see `sources/REVIEW_LOG.md`)
 4. **Source page**: text source, translation and license, review status, quran.com link.
+5. **My Day's Surah** (`/[locale]/today`): blessings added from cards, each followed by the refrain; a 1080×1920 share card is drawn on the device with Canvas (blessing names and references, the refrain whole).
+6. **Ar-Rahman Journey** (`/[locale]/journey`): 7 stations in the surah's order, each found by photo or by reading its card, then the after-journey steps.
+
+The learning stage, My Day and journey progress are stored on the device (IndexedDB) only. There are no accounts.
 
 See `docs/ROADMAP.md` for what is built and what is planned.
 

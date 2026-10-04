@@ -7,8 +7,11 @@ This file separates what was **built during the challenge** (Oct 4–6, 2026) fr
 - Day 1: Tanzil loader with per-ayah SHA-256 manifest; Source Guard (4 level gates) with tests
 - Day 1: `/api/see` vision endpoint: closed concept enum, thresholds, person/unsafe handling, per-device daily limit, swappable provider (`anthropic`, `stub`)
 - Day 1: Lens (camera, gallery upload, sample photos), blessing card, "Is this…?" picker, abstention screen, source page, error states with next steps; Playwright tests
+- Day 2 (started Oct 4): learning stage on the welcome screen (on device, optional); My Day's Surah with the refrain after each blessing and a 1080×1920 share card drawn on the device; Ar-Rahman Journey with 7 stations (found by photo or card read), progress on the device and the after-journey screen
 
 ## Planned (not built yet)
+- Referral to human support after the journey: built, hidden until Ibrahim chooses the recognized organization (`sources/referral.json`)
+- Deeper content for the "I know the Quran" stage (reflections with tafsir references), once reflections are reviewed
 - Source-bound RAG: retrieval over approved, licensed sources to help choose references and refine mappings for the religious reviewer (see `docs/SPEC.en.md` §16). Replaces interim choices such as the hand card
 - "Report an error" filed through `/api/report` (today: link to a prefilled GitHub issue)
 - Live camera preview with `getUserMedia` (today: the system camera via `capture="environment"`)
