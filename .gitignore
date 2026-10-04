@@ -57,3 +57,6 @@ public/swe-worker*.js.map
 /eval/images/*
 !/eval/images/README.md
 !/eval/images/labels.json
+
+# User-testing responses (fetched by scripts/study-results.ts); never committed
+/user-testing-private/

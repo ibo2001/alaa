@@ -39,7 +39,8 @@ A running snapshot of where the project is. Updated at each milestone. For "buil
 | About page (what Alaa is and is not, AI use, sources, review, privacy, referral, report) | Done |
 | Review sheet for the reviewer: `/ar/review`, every card through the Guard, printable, with a checklist | Done |
 | Religious review of the 25 cards, recorded in `sources/REVIEW_LOG.md` by Ibrahim | Ready to start: send the reviewer https://alaa-alpha.vercel.app/ar/review |
-| User testing kit: protocol, participant sheet (English and Arabic), results template, changes log | Done |
+| User testing kit: protocol, printed sheets (Arabic and English PDF), results template, changes log | Done |
+| Online forms (Google Forms, Arabic and English) with A/B links, blind-scoring script | Done: links in `docs/user-testing/forms.json` |
 | User testing sessions | Not started (Ibrahim) |
 
 ## Day 3 (Oct 6): Measurement and submission (not started)

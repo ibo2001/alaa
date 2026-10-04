@@ -2,6 +2,8 @@
 
 For the "Benefit per track criterion" metric in `docs/SPEC.en.md` §11. Run by Ibrahim on Day 2 (Oct 5). Results go in `RESULTS.md`; changes made because of testing go in `docs/CHANGES_FROM_TESTING.md`.
 
+**Two ways to run it:** in person with the printed sheets (below), or remotely with the online forms (`FORM.md`). Report which mode each participant used.
+
 ## Question
 Do people who spend 5 minutes with Alaa link an everyday blessing to its place in the Quran, and explain the refrain, better than people who read the same verses in a regular mushaf app?
 
