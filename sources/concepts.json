@@ -1,0 +1,1245 @@
+{
+  "$comment": "Closed list of everyday concepts the vision model may return. Draft, written during the challenge. Concept names are not religious text. \"none\" means nothing in the list; \"recognizable\": false concepts are never offered to the model.",
+  "concepts": [
+    {
+      "id": "water",
+      "labels": {
+        "ar": "الماء",
+        "en": "Water"
+      },
+      "aliases": [
+        "running water",
+        "tap water",
+        "stream",
+        "water in a container"
+      ]
+    },
+    {
+      "id": "drinking_water",
+      "labels": {
+        "ar": "ماء الشرب",
+        "en": "Drinking water"
+      },
+      "aliases": [
+        "glass of water",
+        "bottle of water",
+        "cup of water",
+        "someone drinking water"
+      ]
+    },
+    {
+      "id": "rain",
+      "labels": {
+        "ar": "المطر",
+        "en": "Rain"
+      },
+      "aliases": [
+        "raindrops",
+        "rain on a window",
+        "wet street in rain"
+      ]
+    },
+    {
+      "id": "date_fruit",
+      "labels": {
+        "ar": "التمر",
+        "en": "Dates"
+      },
+      "aliases": [
+        "date fruit",
+        "dried dates",
+        "plate of dates"
+      ]
+    },
+    {
+      "id": "palm_tree",
+      "labels": {
+        "ar": "النخلة",
+        "en": "Palm tree"
+      },
+      "aliases": [
+        "date palm",
+        "palm fronds"
+      ]
+    },
+    {
+      "id": "pomegranate",
+      "labels": {
+        "ar": "الرمان",
+        "en": "Pomegranate"
+      },
+      "aliases": [
+        "pomegranate seeds",
+        "pomegranate fruit"
+      ]
+    },
+    {
+      "id": "fig",
+      "labels": {
+        "ar": "التين",
+        "en": "Fig"
+      },
+      "aliases": [
+        "fresh fig",
+        "dried fig"
+      ]
+    },
+    {
+      "id": "olive",
+      "labels": {
+        "ar": "الزيتون",
+        "en": "Olives"
+      },
+      "aliases": [
+        "olive fruit",
+        "olive tree",
+        "olive oil"
+      ]
+    },
+    {
+      "id": "honey",
+      "labels": {
+        "ar": "العسل",
+        "en": "Honey"
+      },
+      "aliases": [
+        "jar of honey",
+        "honeycomb"
+      ]
+    },
+    {
+      "id": "milk",
+      "labels": {
+        "ar": "الحليب",
+        "en": "Milk"
+      },
+      "aliases": [
+        "glass of milk",
+        "milk carton",
+        "milk bottle"
+      ]
+    },
+    {
+      "id": "sun",
+      "labels": {
+        "ar": "الشمس",
+        "en": "Sun"
+      },
+      "aliases": [
+        "sunrise",
+        "sunset",
+        "sunlight",
+        "sun in the sky"
+      ]
+    },
+    {
+      "id": "moon",
+      "labels": {
+        "ar": "القمر",
+        "en": "Moon"
+      },
+      "aliases": [
+        "crescent",
+        "full moon"
+      ]
+    },
+    {
+      "id": "sky",
+      "labels": {
+        "ar": "السماء",
+        "en": "Sky"
+      },
+      "aliases": [
+        "blue sky",
+        "clouds in the sky",
+        "open sky"
+      ]
+    },
+    {
+      "id": "star",
+      "labels": {
+        "ar": "النجوم",
+        "en": "Stars"
+      },
+      "aliases": [
+        "starry night sky",
+        "night sky with stars"
+      ]
+    },
+    {
+      "id": "tree",
+      "labels": {
+        "ar": "الشجرة",
+        "en": "Tree"
+      },
+      "aliases": [
+        "trees",
+        "forest",
+        "tree trunk"
+      ]
+    },
+    {
+      "id": "sea",
+      "labels": {
+        "ar": "البحر",
+        "en": "Sea"
+      },
+      "aliases": [
+        "ocean",
+        "seashore",
+        "waves",
+        "beach with water"
+      ]
+    },
+    {
+      "id": "pearl",
+      "labels": {
+        "ar": "اللؤلؤ",
+        "en": "Pearl"
+      },
+      "aliases": [
+        "pearls",
+        "pearl necklace"
+      ]
+    },
+    {
+      "id": "coral",
+      "labels": {
+        "ar": "المرجان",
+        "en": "Coral"
+      },
+      "aliases": [
+        "coral reef",
+        "red coral"
+      ]
+    },
+    {
+      "id": "ship",
+      "labels": {
+        "ar": "السفينة",
+        "en": "Ship"
+      },
+      "aliases": [
+        "boat",
+        "sailing boat",
+        "ferry",
+        "ship at sea"
+      ]
+    },
+    {
+      "id": "eye",
+      "labels": {
+        "ar": "العين",
+        "en": "Eye"
+      },
+      "aliases": [
+        "human eye close-up",
+        "eyes"
+      ]
+    },
+    {
+      "id": "mouth",
+      "labels": {
+        "ar": "الفم والشفتان",
+        "en": "Mouth and lips"
+      },
+      "aliases": [
+        "lips",
+        "tongue",
+        "mouth close-up"
+      ]
+    },
+    {
+      "id": "pen",
+      "labels": {
+        "ar": "القلم",
+        "en": "Pen"
+      },
+      "aliases": [
+        "pencil",
+        "ballpoint pen",
+        "writing tool"
+      ]
+    },
+    {
+      "id": "handwriting",
+      "labels": {
+        "ar": "الكتابة",
+        "en": "Handwriting"
+      },
+      "aliases": [
+        "handwritten notes",
+        "writing on paper",
+        "notebook with writing"
+      ]
+    },
+    {
+      "id": "bed",
+      "labels": {
+        "ar": "السرير",
+        "en": "Bed"
+      },
+      "aliases": [
+        "pillow",
+        "bedroom bed",
+        "blanket on a bed"
+      ]
+    },
+    {
+      "id": "night",
+      "labels": {
+        "ar": "الليل",
+        "en": "Night"
+      },
+      "aliases": [
+        "dark night scene",
+        "night city lights"
+      ]
+    },
+    {
+      "id": "daytime",
+      "labels": {
+        "ar": "النهار",
+        "en": "Daytime"
+      },
+      "aliases": [
+        "daylight scene",
+        "bright day outdoors"
+      ]
+    },
+    {
+      "id": "mountain",
+      "labels": {
+        "ar": "الجبل",
+        "en": "Mountain"
+      },
+      "aliases": [
+        "mountains",
+        "hills",
+        "mountain range"
+      ]
+    },
+    {
+      "id": "clothing",
+      "labels": {
+        "ar": "الملابس",
+        "en": "Clothing"
+      },
+      "aliases": [
+        "clothes",
+        "shirt",
+        "dress",
+        "jacket",
+        "folded clothes"
+      ]
+    },
+    {
+      "id": "sheep",
+      "labels": {
+        "ar": "الغنم",
+        "en": "Sheep"
+      },
+      "aliases": [
+        "lamb",
+        "flock of sheep"
+      ]
+    },
+    {
+      "id": "cow",
+      "labels": {
+        "ar": "البقرة",
+        "en": "Cow"
+      },
+      "aliases": [
+        "cattle",
+        "calf"
+      ]
+    },
+    {
+      "id": "camel",
+      "labels": {
+        "ar": "الجمل",
+        "en": "Camel"
+      },
+      "aliases": [
+        "camels"
+      ]
+    },
+    {
+      "id": "goat",
+      "labels": {
+        "ar": "الماعز",
+        "en": "Goat"
+      },
+      "aliases": [
+        "goats",
+        "kid goat"
+      ]
+    },
+    {
+      "id": "house",
+      "labels": {
+        "ar": "البيت",
+        "en": "House"
+      },
+      "aliases": [
+        "home",
+        "house exterior",
+        "living room"
+      ]
+    },
+    {
+      "id": "wheat",
+      "labels": {
+        "ar": "القمح",
+        "en": "Wheat"
+      },
+      "aliases": [
+        "wheat field",
+        "ears of wheat"
+      ]
+    },
+    {
+      "id": "grain",
+      "labels": {
+        "ar": "الحبوب",
+        "en": "Grains"
+      },
+      "aliases": [
+        "rice grains",
+        "lentils",
+        "seeds",
+        "barley",
+        "corn kernels"
+      ]
+    },
+    {
+      "id": "family",
+      "labels": {
+        "ar": "الأسرة",
+        "en": "Family"
+      },
+      "recognizable": false
+    },
+    {
+      "id": "hand",
+      "labels": {
+        "ar": "اليد",
+        "en": "Hand"
+      },
+      "aliases": [
+        "palm of the hand",
+        "fingers"
+      ]
+    },
+    {
+      "id": "foot",
+      "labels": {
+        "ar": "القدم",
+        "en": "Foot"
+      },
+      "aliases": [
+        "feet"
+      ]
+    },
+    {
+      "id": "flower",
+      "labels": {
+        "ar": "الزهرة",
+        "en": "Flower"
+      },
+      "aliases": [
+        "flowers",
+        "rose",
+        "bouquet"
+      ]
+    },
+    {
+      "id": "grass",
+      "labels": {
+        "ar": "العشب",
+        "en": "Grass"
+      },
+      "aliases": [
+        "lawn",
+        "green grass"
+      ]
+    },
+    {
+      "id": "leaf",
+      "labels": {
+        "ar": "ورقة الشجر",
+        "en": "Leaf"
+      },
+      "aliases": [
+        "leaves",
+        "green leaf"
+      ]
+    },
+    {
+      "id": "plant",
+      "labels": {
+        "ar": "نبتة",
+        "en": "Potted plant"
+      },
+      "aliases": [
+        "houseplant",
+        "plant in a pot"
+      ]
+    },
+    {
+      "id": "apple",
+      "labels": {
+        "ar": "التفاح",
+        "en": "Apple"
+      }
+    },
+    {
+      "id": "banana",
+      "labels": {
+        "ar": "الموز",
+        "en": "Banana"
+      }
+    },
+    {
+      "id": "orange_fruit",
+      "labels": {
+        "ar": "البرتقال",
+        "en": "Orange"
+      },
+      "aliases": [
+        "citrus",
+        "tangerine"
+      ]
+    },
+    {
+      "id": "grapes",
+      "labels": {
+        "ar": "العنب",
+        "en": "Grapes"
+      },
+      "aliases": [
+        "bunch of grapes",
+        "raisins"
+      ]
+    },
+    {
+      "id": "lemon",
+      "labels": {
+        "ar": "الليمون",
+        "en": "Lemon"
+      },
+      "aliases": [
+        "lime"
+      ]
+    },
+    {
+      "id": "watermelon",
+      "labels": {
+        "ar": "البطيخ",
+        "en": "Watermelon"
+      }
+    },
+    {
+      "id": "tomato",
+      "labels": {
+        "ar": "الطماطم",
+        "en": "Tomato"
+      }
+    },
+    {
+      "id": "cucumber",
+      "labels": {
+        "ar": "الخيار",
+        "en": "Cucumber"
+      }
+    },
+    {
+      "id": "onion",
+      "labels": {
+        "ar": "البصل",
+        "en": "Onion"
+      }
+    },
+    {
+      "id": "garlic",
+      "labels": {
+        "ar": "الثوم",
+        "en": "Garlic"
+      }
+    },
+    {
+      "id": "vegetables",
+      "labels": {
+        "ar": "الخضروات",
+        "en": "Vegetables"
+      },
+      "aliases": [
+        "mixed vegetables",
+        "salad"
+      ]
+    },
+    {
+      "id": "egg",
+      "labels": {
+        "ar": "البيض",
+        "en": "Egg"
+      },
+      "aliases": [
+        "eggs"
+      ]
+    },
+    {
+      "id": "bread",
+      "labels": {
+        "ar": "الخبز",
+        "en": "Bread"
+      },
+      "aliases": [
+        "loaf",
+        "flatbread"
+      ]
+    },
+    {
+      "id": "cheese",
+      "labels": {
+        "ar": "الجبن",
+        "en": "Cheese"
+      }
+    },
+    {
+      "id": "meat",
+      "labels": {
+        "ar": "اللحم",
+        "en": "Meat"
+      }
+    },
+    {
+      "id": "fish",
+      "labels": {
+        "ar": "السمك",
+        "en": "Fish"
+      }
+    },
+    {
+      "id": "salt",
+      "labels": {
+        "ar": "الملح",
+        "en": "Salt"
+      }
+    },
+    {
+      "id": "sugar",
+      "labels": {
+        "ar": "السكر",
+        "en": "Sugar"
+      }
+    },
+    {
+      "id": "cooking_oil",
+      "labels": {
+        "ar": "زيت الطبخ",
+        "en": "Cooking oil"
+      },
+      "aliases": [
+        "bottle of oil"
+      ]
+    },
+    {
+      "id": "coffee",
+      "labels": {
+        "ar": "القهوة",
+        "en": "Coffee"
+      },
+      "aliases": [
+        "cup of coffee",
+        "coffee beans"
+      ]
+    },
+    {
+      "id": "tea",
+      "labels": {
+        "ar": "الشاي",
+        "en": "Tea"
+      },
+      "aliases": [
+        "cup of tea",
+        "tea leaves"
+      ]
+    },
+    {
+      "id": "bird",
+      "labels": {
+        "ar": "الطائر",
+        "en": "Bird"
+      },
+      "aliases": [
+        "birds",
+        "pigeon",
+        "sparrow"
+      ]
+    },
+    {
+      "id": "cat",
+      "labels": {
+        "ar": "القطة",
+        "en": "Cat"
+      },
+      "aliases": [
+        "kitten"
+      ]
+    },
+    {
+      "id": "dog",
+      "labels": {
+        "ar": "الكلب",
+        "en": "Dog"
+      },
+      "aliases": [
+        "puppy"
+      ]
+    },
+    {
+      "id": "chicken",
+      "labels": {
+        "ar": "الدجاجة",
+        "en": "Chicken"
+      },
+      "aliases": [
+        "hen",
+        "rooster"
+      ]
+    },
+    {
+      "id": "horse",
+      "labels": {
+        "ar": "الحصان",
+        "en": "Horse"
+      }
+    },
+    {
+      "id": "donkey",
+      "labels": {
+        "ar": "الحمار",
+        "en": "Donkey"
+      }
+    },
+    {
+      "id": "bee",
+      "labels": {
+        "ar": "النحلة",
+        "en": "Bee"
+      },
+      "aliases": [
+        "bees",
+        "beehive"
+      ]
+    },
+    {
+      "id": "butterfly",
+      "labels": {
+        "ar": "الفراشة",
+        "en": "Butterfly"
+      }
+    },
+    {
+      "id": "ant",
+      "labels": {
+        "ar": "النملة",
+        "en": "Ant"
+      },
+      "aliases": [
+        "ants"
+      ]
+    },
+    {
+      "id": "cloud",
+      "labels": {
+        "ar": "السحاب",
+        "en": "Cloud"
+      },
+      "aliases": [
+        "clouds",
+        "overcast"
+      ]
+    },
+    {
+      "id": "snow",
+      "labels": {
+        "ar": "الثلج",
+        "en": "Snow"
+      },
+      "aliases": [
+        "ice",
+        "frost"
+      ]
+    },
+    {
+      "id": "river",
+      "labels": {
+        "ar": "النهر",
+        "en": "River"
+      }
+    },
+    {
+      "id": "lake",
+      "labels": {
+        "ar": "البحيرة",
+        "en": "Lake"
+      },
+      "aliases": [
+        "pond"
+      ]
+    },
+    {
+      "id": "desert",
+      "labels": {
+        "ar": "الصحراء",
+        "en": "Desert"
+      },
+      "aliases": [
+        "sand dunes",
+        "sand"
+      ]
+    },
+    {
+      "id": "stone",
+      "labels": {
+        "ar": "الحجر",
+        "en": "Stone"
+      },
+      "aliases": [
+        "rock",
+        "pebbles"
+      ]
+    },
+    {
+      "id": "soil",
+      "labels": {
+        "ar": "التراب",
+        "en": "Soil"
+      },
+      "aliases": [
+        "earth",
+        "dirt",
+        "mud"
+      ]
+    },
+    {
+      "id": "fire",
+      "labels": {
+        "ar": "النار",
+        "en": "Fire"
+      },
+      "aliases": [
+        "flame",
+        "candle flame",
+        "campfire"
+      ]
+    },
+    {
+      "id": "lamp",
+      "labels": {
+        "ar": "المصباح",
+        "en": "Lamp"
+      },
+      "aliases": [
+        "light bulb",
+        "ceiling light"
+      ]
+    },
+    {
+      "id": "rainbow",
+      "labels": {
+        "ar": "قوس قزح",
+        "en": "Rainbow"
+      }
+    },
+    {
+      "id": "cup",
+      "labels": {
+        "ar": "الكوب",
+        "en": "Cup"
+      },
+      "aliases": [
+        "empty cup",
+        "mug"
+      ]
+    },
+    {
+      "id": "plate",
+      "labels": {
+        "ar": "الطبق",
+        "en": "Plate"
+      },
+      "aliases": [
+        "dish",
+        "bowl"
+      ]
+    },
+    {
+      "id": "spoon",
+      "labels": {
+        "ar": "الملعقة",
+        "en": "Spoon"
+      },
+      "aliases": [
+        "fork",
+        "cutlery"
+      ]
+    },
+    {
+      "id": "knife",
+      "labels": {
+        "ar": "السكين",
+        "en": "Knife"
+      }
+    },
+    {
+      "id": "kettle",
+      "labels": {
+        "ar": "الغلاية",
+        "en": "Kettle"
+      },
+      "aliases": [
+        "teapot"
+      ]
+    },
+    {
+      "id": "chair",
+      "labels": {
+        "ar": "الكرسي",
+        "en": "Chair"
+      },
+      "aliases": [
+        "stool"
+      ]
+    },
+    {
+      "id": "table",
+      "labels": {
+        "ar": "الطاولة",
+        "en": "Table"
+      },
+      "aliases": [
+        "desk"
+      ]
+    },
+    {
+      "id": "sofa",
+      "labels": {
+        "ar": "الأريكة",
+        "en": "Sofa"
+      },
+      "aliases": [
+        "couch"
+      ]
+    },
+    {
+      "id": "door",
+      "labels": {
+        "ar": "الباب",
+        "en": "Door"
+      }
+    },
+    {
+      "id": "window",
+      "labels": {
+        "ar": "النافذة",
+        "en": "Window"
+      }
+    },
+    {
+      "id": "key",
+      "labels": {
+        "ar": "المفتاح",
+        "en": "Key"
+      },
+      "aliases": [
+        "keys"
+      ]
+    },
+    {
+      "id": "book",
+      "labels": {
+        "ar": "الكتاب",
+        "en": "Book"
+      },
+      "aliases": [
+        "books",
+        "printed book"
+      ]
+    },
+    {
+      "id": "phone",
+      "labels": {
+        "ar": "الهاتف",
+        "en": "Phone"
+      },
+      "aliases": [
+        "smartphone",
+        "mobile phone"
+      ]
+    },
+    {
+      "id": "laptop",
+      "labels": {
+        "ar": "الحاسوب المحمول",
+        "en": "Laptop"
+      },
+      "aliases": [
+        "computer",
+        "notebook computer"
+      ]
+    },
+    {
+      "id": "keyboard",
+      "labels": {
+        "ar": "لوحة المفاتيح",
+        "en": "Keyboard"
+      },
+      "aliases": [
+        "computer keyboard"
+      ]
+    },
+    {
+      "id": "computer_mouse",
+      "labels": {
+        "ar": "فأرة الحاسوب",
+        "en": "Computer mouse"
+      }
+    },
+    {
+      "id": "television",
+      "labels": {
+        "ar": "التلفاز",
+        "en": "Television"
+      },
+      "aliases": [
+        "screen",
+        "monitor"
+      ]
+    },
+    {
+      "id": "clock",
+      "labels": {
+        "ar": "الساعة",
+        "en": "Clock"
+      },
+      "aliases": [
+        "wall clock",
+        "wristwatch"
+      ]
+    },
+    {
+      "id": "eyeglasses",
+      "labels": {
+        "ar": "النظارة",
+        "en": "Eyeglasses"
+      },
+      "aliases": [
+        "glasses",
+        "sunglasses"
+      ]
+    },
+    {
+      "id": "shoes",
+      "labels": {
+        "ar": "الحذاء",
+        "en": "Shoes"
+      },
+      "aliases": [
+        "sneakers",
+        "sandals"
+      ]
+    },
+    {
+      "id": "bag",
+      "labels": {
+        "ar": "الحقيبة",
+        "en": "Bag"
+      },
+      "aliases": [
+        "backpack",
+        "handbag"
+      ]
+    },
+    {
+      "id": "umbrella",
+      "labels": {
+        "ar": "المظلة",
+        "en": "Umbrella"
+      }
+    },
+    {
+      "id": "car",
+      "labels": {
+        "ar": "السيارة",
+        "en": "Car"
+      },
+      "aliases": [
+        "vehicle"
+      ]
+    },
+    {
+      "id": "bicycle",
+      "labels": {
+        "ar": "الدراجة",
+        "en": "Bicycle"
+      },
+      "aliases": [
+        "bike"
+      ]
+    },
+    {
+      "id": "bus",
+      "labels": {
+        "ar": "الحافلة",
+        "en": "Bus"
+      }
+    },
+    {
+      "id": "airplane",
+      "labels": {
+        "ar": "الطائرة",
+        "en": "Airplane"
+      },
+      "aliases": [
+        "plane"
+      ]
+    },
+    {
+      "id": "road",
+      "labels": {
+        "ar": "الطريق",
+        "en": "Road"
+      },
+      "aliases": [
+        "street"
+      ]
+    },
+    {
+      "id": "building",
+      "labels": {
+        "ar": "المبنى",
+        "en": "Building"
+      },
+      "aliases": [
+        "tower",
+        "apartment block"
+      ]
+    },
+    {
+      "id": "toy",
+      "labels": {
+        "ar": "اللعبة",
+        "en": "Toy"
+      },
+      "aliases": [
+        "ball",
+        "teddy bear"
+      ]
+    },
+    {
+      "id": "money",
+      "labels": {
+        "ar": "النقود",
+        "en": "Money"
+      },
+      "aliases": [
+        "coins",
+        "banknotes"
+      ]
+    },
+    {
+      "id": "mirror",
+      "labels": {
+        "ar": "المرآة",
+        "en": "Mirror"
+      }
+    },
+    {
+      "id": "toothbrush",
+      "labels": {
+        "ar": "فرشاة الأسنان",
+        "en": "Toothbrush"
+      }
+    },
+    {
+      "id": "soap",
+      "labels": {
+        "ar": "الصابون",
+        "en": "Soap"
+      }
+    },
+    {
+      "id": "towel",
+      "labels": {
+        "ar": "المنشفة",
+        "en": "Towel"
+      }
+    },
+    {
+      "id": "medicine",
+      "labels": {
+        "ar": "الدواء",
+        "en": "Medicine"
+      },
+      "aliases": [
+        "pills",
+        "tablets"
+      ]
+    },
+    {
+      "id": "scissors",
+      "labels": {
+        "ar": "المقص",
+        "en": "Scissors"
+      }
+    },
+    {
+      "id": "paper",
+      "labels": {
+        "ar": "الورق",
+        "en": "Paper"
+      },
+      "aliases": [
+        "blank paper"
+      ]
+    },
+    {
+      "id": "bottle",
+      "labels": {
+        "ar": "الزجاجة",
+        "en": "Bottle"
+      },
+      "aliases": [
+        "empty bottle",
+        "plastic bottle"
+      ]
+    },
+    {
+      "id": "box",
+      "labels": {
+        "ar": "الصندوق",
+        "en": "Box"
+      },
+      "aliases": [
+        "cardboard box",
+        "package"
+      ]
+    },
+    {
+      "id": "none",
+      "labels": {
+        "ar": "لا شيء مما سبق",
+        "en": "None of these"
+      },
+      "aliases": [
+        "nothing recognizable",
+        "blurry image",
+        "blank image"
+      ]
+    }
+  ]
+}

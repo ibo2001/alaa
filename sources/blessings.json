@@ -1,0 +1,645 @@
+{
+  "$comment": "References only (surah/ayah), from docs/SPEC.md §9. Verse text is loaded from sources/quran/ by reference and never stored here. Review status changes only by Ibrahim with an entry in sources/REVIEW_LOG.md.",
+  "abstention": {
+    "verses": [
+      {
+        "surah": 14,
+        "ayah": 34
+      }
+    ],
+    "review": {
+      "mapping": "draft",
+      "reflection": "draft"
+    }
+  },
+  "refrain": {
+    "verses": [
+      {
+        "surah": 55,
+        "ayah": 13
+      }
+    ]
+  },
+  "blessings": [
+    {
+      "id": "water",
+      "concept": "water",
+      "labels": {
+        "ar": "الماء",
+        "en": "Water"
+      },
+      "verses": [
+        {
+          "surah": 21,
+          "ayah": 30
+        }
+      ],
+      "translations": [
+        {
+          "lang": "en",
+          "source": "en.itani"
+        }
+      ],
+      "review": {
+        "mapping": "draft",
+        "reflection": "draft"
+      }
+    },
+    {
+      "id": "drinking-water",
+      "concept": "drinking_water",
+      "labels": {
+        "ar": "ماء الشرب",
+        "en": "Drinking water"
+      },
+      "verses": [
+        {
+          "surah": 56,
+          "ayah": 68,
+          "ayahEnd": 70
+        }
+      ],
+      "translations": [
+        {
+          "lang": "en",
+          "source": "en.itani"
+        }
+      ],
+      "review": {
+        "mapping": "draft",
+        "reflection": "draft"
+      }
+    },
+    {
+      "id": "rain",
+      "concept": "rain",
+      "labels": {
+        "ar": "المطر",
+        "en": "Rain"
+      },
+      "verses": [
+        {
+          "surah": 50,
+          "ayah": 9
+        }
+      ],
+      "translations": [
+        {
+          "lang": "en",
+          "source": "en.itani"
+        }
+      ],
+      "review": {
+        "mapping": "draft",
+        "reflection": "draft"
+      }
+    },
+    {
+      "id": "dates-palms",
+      "concept": "date_fruit",
+      "relatedConcepts": [
+        "palm_tree"
+      ],
+      "labels": {
+        "ar": "التمر والنخل",
+        "en": "Dates and palms"
+      },
+      "verses": [
+        {
+          "surah": 55,
+          "ayah": 11
+        }
+      ],
+      "translations": [
+        {
+          "lang": "en",
+          "source": "en.itani"
+        }
+      ],
+      "journeyStation": 5,
+      "review": {
+        "mapping": "draft",
+        "reflection": "draft"
+      }
+    },
+    {
+      "id": "pomegranate",
+      "concept": "pomegranate",
+      "labels": {
+        "ar": "الرمان",
+        "en": "Pomegranate"
+      },
+      "verses": [
+        {
+          "surah": 55,
+          "ayah": 68
+        }
+      ],
+      "translations": [
+        {
+          "lang": "en",
+          "source": "en.itani"
+        }
+      ],
+      "review": {
+        "mapping": "draft",
+        "reflection": "draft"
+      }
+    },
+    {
+      "id": "figs-olives",
+      "concept": "fig",
+      "relatedConcepts": [
+        "olive"
+      ],
+      "labels": {
+        "ar": "التين والزيتون",
+        "en": "Figs and olives"
+      },
+      "verses": [
+        {
+          "surah": 95,
+          "ayah": 1
+        }
+      ],
+      "translations": [
+        {
+          "lang": "en",
+          "source": "en.itani"
+        }
+      ],
+      "review": {
+        "mapping": "draft",
+        "reflection": "draft"
+      }
+    },
+    {
+      "id": "honey",
+      "concept": "honey",
+      "labels": {
+        "ar": "العسل",
+        "en": "Honey"
+      },
+      "verses": [
+        {
+          "surah": 16,
+          "ayah": 69
+        }
+      ],
+      "translations": [
+        {
+          "lang": "en",
+          "source": "en.itani"
+        }
+      ],
+      "review": {
+        "mapping": "draft",
+        "reflection": "draft"
+      }
+    },
+    {
+      "id": "milk",
+      "concept": "milk",
+      "labels": {
+        "ar": "الحليب",
+        "en": "Milk"
+      },
+      "verses": [
+        {
+          "surah": 16,
+          "ayah": 66
+        }
+      ],
+      "translations": [
+        {
+          "lang": "en",
+          "source": "en.itani"
+        }
+      ],
+      "review": {
+        "mapping": "draft",
+        "reflection": "draft"
+      }
+    },
+    {
+      "id": "sun-moon",
+      "concept": "sun",
+      "relatedConcepts": [
+        "moon"
+      ],
+      "labels": {
+        "ar": "الشمس والقمر",
+        "en": "Sun and moon"
+      },
+      "verses": [
+        {
+          "surah": 55,
+          "ayah": 5
+        }
+      ],
+      "translations": [
+        {
+          "lang": "en",
+          "source": "en.itani"
+        }
+      ],
+      "journeyStation": 2,
+      "review": {
+        "mapping": "draft",
+        "reflection": "draft"
+      }
+    },
+    {
+      "id": "sky",
+      "concept": "sky",
+      "labels": {
+        "ar": "السماء",
+        "en": "Sky"
+      },
+      "verses": [
+        {
+          "surah": 55,
+          "ayah": 7
+        }
+      ],
+      "translations": [
+        {
+          "lang": "en",
+          "source": "en.itani"
+        }
+      ],
+      "journeyStation": 4,
+      "review": {
+        "mapping": "draft",
+        "reflection": "draft"
+      }
+    },
+    {
+      "id": "stars-trees",
+      "concept": "star",
+      "relatedConcepts": [
+        "tree"
+      ],
+      "labels": {
+        "ar": "النجوم والشجر",
+        "en": "Stars and trees"
+      },
+      "verses": [
+        {
+          "surah": 55,
+          "ayah": 6
+        }
+      ],
+      "translations": [
+        {
+          "lang": "en",
+          "source": "en.itani"
+        }
+      ],
+      "journeyStation": 3,
+      "review": {
+        "mapping": "draft",
+        "reflection": "draft"
+      }
+    },
+    {
+      "id": "sea",
+      "concept": "sea",
+      "labels": {
+        "ar": "البحر",
+        "en": "Sea"
+      },
+      "verses": [
+        {
+          "surah": 55,
+          "ayah": 19
+        }
+      ],
+      "translations": [
+        {
+          "lang": "en",
+          "source": "en.itani"
+        }
+      ],
+      "journeyStation": 6,
+      "review": {
+        "mapping": "draft",
+        "reflection": "draft"
+      }
+    },
+    {
+      "id": "pearls",
+      "concept": "pearl",
+      "relatedConcepts": [
+        "coral"
+      ],
+      "labels": {
+        "ar": "اللؤلؤ والمرجان",
+        "en": "Pearls and coral"
+      },
+      "verses": [
+        {
+          "surah": 55,
+          "ayah": 22
+        }
+      ],
+      "translations": [
+        {
+          "lang": "en",
+          "source": "en.itani"
+        }
+      ],
+      "journeyStation": 7,
+      "review": {
+        "mapping": "draft",
+        "reflection": "draft"
+      }
+    },
+    {
+      "id": "ships",
+      "concept": "ship",
+      "labels": {
+        "ar": "السفن",
+        "en": "Ships"
+      },
+      "verses": [
+        {
+          "surah": 55,
+          "ayah": 24
+        }
+      ],
+      "translations": [
+        {
+          "lang": "en",
+          "source": "en.itani"
+        }
+      ],
+      "review": {
+        "mapping": "draft",
+        "reflection": "draft"
+      }
+    },
+    {
+      "id": "eyes-tongue",
+      "concept": "eye",
+      "relatedConcepts": [
+        "mouth"
+      ],
+      "labels": {
+        "ar": "العين واللسان",
+        "en": "Eyes and tongue"
+      },
+      "verses": [
+        {
+          "surah": 90,
+          "ayah": 8,
+          "ayahEnd": 9
+        }
+      ],
+      "translations": [
+        {
+          "lang": "en",
+          "source": "en.itani"
+        }
+      ],
+      "review": {
+        "mapping": "draft",
+        "reflection": "draft"
+      }
+    },
+    {
+      "id": "speech-writing",
+      "concept": "pen",
+      "relatedConcepts": [
+        "handwriting"
+      ],
+      "labels": {
+        "ar": "الكلام والكتابة",
+        "en": "Speech and writing"
+      },
+      "verses": [
+        {
+          "surah": 55,
+          "ayah": 3,
+          "ayahEnd": 4
+        }
+      ],
+      "translations": [
+        {
+          "lang": "en",
+          "source": "en.itani"
+        }
+      ],
+      "journeyStation": 1,
+      "review": {
+        "mapping": "draft",
+        "reflection": "draft"
+      }
+    },
+    {
+      "id": "sleep",
+      "concept": "bed",
+      "labels": {
+        "ar": "النوم",
+        "en": "Sleep"
+      },
+      "verses": [
+        {
+          "surah": 78,
+          "ayah": 9
+        }
+      ],
+      "translations": [
+        {
+          "lang": "en",
+          "source": "en.itani"
+        }
+      ],
+      "review": {
+        "mapping": "draft",
+        "reflection": "draft"
+      }
+    },
+    {
+      "id": "night-day",
+      "concept": "night",
+      "relatedConcepts": [
+        "daytime"
+      ],
+      "labels": {
+        "ar": "الليل والنهار",
+        "en": "Night and day"
+      },
+      "verses": [
+        {
+          "surah": 78,
+          "ayah": 10,
+          "ayahEnd": 11
+        }
+      ],
+      "translations": [
+        {
+          "lang": "en",
+          "source": "en.itani"
+        }
+      ],
+      "review": {
+        "mapping": "draft",
+        "reflection": "draft"
+      }
+    },
+    {
+      "id": "mountains",
+      "concept": "mountain",
+      "labels": {
+        "ar": "الجبال",
+        "en": "Mountains"
+      },
+      "verses": [
+        {
+          "surah": 78,
+          "ayah": 7
+        }
+      ],
+      "translations": [
+        {
+          "lang": "en",
+          "source": "en.itani"
+        }
+      ],
+      "review": {
+        "mapping": "draft",
+        "reflection": "draft"
+      }
+    },
+    {
+      "id": "clothing",
+      "concept": "clothing",
+      "labels": {
+        "ar": "اللباس",
+        "en": "Clothing"
+      },
+      "verses": [
+        {
+          "surah": 7,
+          "ayah": 26
+        }
+      ],
+      "translations": [
+        {
+          "lang": "en",
+          "source": "en.itani"
+        }
+      ],
+      "review": {
+        "mapping": "draft",
+        "reflection": "draft"
+      }
+    },
+    {
+      "id": "livestock",
+      "concept": "sheep",
+      "relatedConcepts": [
+        "cow",
+        "camel",
+        "goat"
+      ],
+      "labels": {
+        "ar": "الأنعام",
+        "en": "Livestock"
+      },
+      "verses": [
+        {
+          "surah": 16,
+          "ayah": 5
+        }
+      ],
+      "translations": [
+        {
+          "lang": "en",
+          "source": "en.itani"
+        }
+      ],
+      "review": {
+        "mapping": "draft",
+        "reflection": "draft"
+      }
+    },
+    {
+      "id": "home",
+      "concept": "house",
+      "labels": {
+        "ar": "البيت",
+        "en": "Home"
+      },
+      "verses": [
+        {
+          "surah": 16,
+          "ayah": 80
+        }
+      ],
+      "translations": [
+        {
+          "lang": "en",
+          "source": "en.itani"
+        }
+      ],
+      "review": {
+        "mapping": "draft",
+        "reflection": "draft"
+      }
+    },
+    {
+      "id": "crops-grain",
+      "concept": "wheat",
+      "relatedConcepts": [
+        "grain"
+      ],
+      "labels": {
+        "ar": "الزرع والحب",
+        "en": "Crops and grain"
+      },
+      "verses": [
+        {
+          "surah": 55,
+          "ayah": 12
+        }
+      ],
+      "translations": [
+        {
+          "lang": "en",
+          "source": "en.itani"
+        }
+      ],
+      "journeyStation": 5,
+      "review": {
+        "mapping": "draft",
+        "reflection": "draft"
+      }
+    },
+    {
+      "id": "family",
+      "concept": "family",
+      "labels": {
+        "ar": "الأسرة",
+        "en": "Family"
+      },
+      "verses": [
+        {
+          "surah": 16,
+          "ayah": 72
+        }
+      ],
+      "translations": [
+        {
+          "lang": "en",
+          "source": "en.itani"
+        }
+      ],
+      "review": {
+        "mapping": "draft",
+        "reflection": "draft"
+      }
+    }
+  ]
+}
