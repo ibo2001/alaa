@@ -1,0 +1,13 @@
+{
+  "en.itani": {
+    "lang": "en",
+    "dir": "sources/translations/en",
+    "file": "en.itani.txt",
+    "translator": "Talal Itani",
+    "attribution": "Translation by Talal Itani, ClearQuran.com",
+    "url": "https://www.clearquran.com",
+    "license": "CC BY-ND 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nd/4.0/",
+    "obtainedFrom": "https://tanzil.net/trans/"
+  }
+}
