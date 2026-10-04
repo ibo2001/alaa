@@ -1,0 +1,24 @@
+eval/images/labels.json
+  s_a8c554c53780f6::t_05c8a81f987b2f 1-9
+.gitignore
+  s_a8c554c53780f6::t_05c8a81f987b2f 55-59
+eval/quick.ts
+  s_a8c554c53780f6::t_131dee197ce58a 8-10,47-56,100
+  s_a8c554c53780f6::t_05c8a81f987b2f 61,84-85,90-91,93
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a9b787bfe4185917b631e2ac0d32082db8d7fa94",
+  "prompts": {},
+  "sessions": {
+    "s_a8c554c53780f6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e041fdb0-f00a-40b2-9e78-70e84cc32759",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
