@@ -4,6 +4,8 @@
 
 Built for the AI Challenge for Islamic Content (islamicaich.org), Track 3: Interactive Experiences & Knowledge Journeys, Oct 4–6, 2026. See `BASELINE.md` for what existed before the challenge.
 
+**Live demo:** https://alaa-alpha.vercel.app (Arabic: `/ar`, English: `/en`). No camera? Use the sample photos in the lens.
+
 > Alaa is not a mushaf app, a tafsir, a fatwa service or a religious Q&A. The AI only **sees**; it never writes religious text.
 
 ## How it works
