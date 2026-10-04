@@ -7,11 +7,13 @@
 | | |
 |---|---|
 | **Baseline tag** | `baseline` |
-| **Baseline commit** | `<commit-hash>` |
+| **Baseline commit** | `70addb4` (committed 2026-10-04 08:46 +03) |
 | **Baseline time** | 2026-10-04, before 09:00 Riyadh time (UTC+3) |
 | **Challenge window** | Oct 4–5: 09:00–22:00 · Oct 6: 09:00–23:59 (Riyadh time) |
 
-To verify: `git show baseline` shows exactly what existed before the challenge. Everything after that tag was built during the challenge window (`git log baseline..HEAD`).
+To verify: `git show baseline` shows exactly what was committed before the challenge. Everything after that tag was committed during the challenge window (`git log baseline..HEAD`).
+
+> **Disclosure about the planning documents.** `docs/SPEC.md`, `docs/SPEC.en.md`, `docs/LINKS.md` and `CLAUDE.md` were written before the challenge (see §1) but were **not** included in the baseline commit by mistake. They were committed unchanged in the first commit after `baseline` (Oct 4, just after 09:00), moved into `docs/`. They contain planning only, no code. Compare their content with this description to verify.
 
 ---
 
@@ -21,21 +23,16 @@ To verify: `git show baseline` shows exactly what existed before the challenge. 
 | Item | Description | Location |
 |---|---|---|
 | `SPEC.md` / `SPEC.en.md` | Product and technical specification (Arabic / English) | `docs/` |
-| Registration pitch | 10-slide pitch submitted with the registration form | `docs/alaa-pitch.pdf` |
+| Registration pitch | 10-slide pitch submitted with the registration form | `docs/alaa-pitch.pdf` (to be added) |
 | Visual identity | Colors, typography and logo direction, shared with the sister project Mizan | Linked in `docs/SOURCES.md` |
 | Seed blessing list | 25 concept → verse references (references only, unreviewed) | Inside `SPEC.md` §9 |
+| `CLAUDE.md`, `LINKS.md` | Standing instructions for Claude Code; project links | repo root, `docs/` |
 
 ### Data prepared before the challenge
-Tick only what is actually in the baseline commit; delete the rest.
-
-- [ ] `sources/quran/` — Quran text from Tanzil, unmodified, with its terms of use file
-- [ ] `sources/concepts.json` — closed concept list (draft)
-- [ ] `sources/blessings.json` — concept → verse references (draft, `status: "draft"`, not religiously reviewed)
-- [ ] `tests/images/` — test image set (count: ___)
+None. `sources/` (Quran text, concepts, blessings) and any test images are added during the challenge.
 
 ### Application code
-- [ ] **No application code existed before the challenge.** The repository at `baseline` contains only the documents and data listed above.
-- [ ] (If not true, list here every pre-existing code file or package and where it came from.)
+- [x] **No application code existed before the challenge.** The repository at `baseline` contains only `BASELINE.md`; the planning documents above followed in the next commit as disclosed.
 
 ---
 
