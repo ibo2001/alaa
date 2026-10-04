@@ -12,7 +12,7 @@ Do people who spend 5 minutes with Alaa link an everyday blessing to its place i
 - Optional, self-reported: "How well do you know the Quran?" with the app's two answers ("I'm new to the Quran" / "I know the Quran"). Recorded only if they choose to answer, so results can be read per stage.
 
 ## Consent
-Before starting, read or hand over the consent text in `PARTICIPANT_SHEET` (English / Arabic) and get a yes. Anyone may stop at any time. No photos of participants, no audio or video recording. Results are published only in aggregate and anonymously (SPEC §10).
+Print `participant-sheet.ar.pdf` or `participant-sheet.en.pdf` (A4, two pages; rebuild with `npx tsx scripts/participant-sheets.ts`). Page 1 is the consent: read it or hand it over before the session and get a yes. Page 2 is the questions: hand it over only after the 5 minutes. Write the same ID on both pages. Anyone may stop at any time. No photos of participants, no audio or video recording. Results are published only in aggregate and anonymously (SPEC §10).
 
 ## Setup
 - One phone with the live app open: https://alaa-alpha.vercel.app (Arabic or English, the participant's choice). Clear site data before each Alaa session so My Day and the journey start empty.
