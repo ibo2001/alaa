@@ -1,0 +1,28 @@
+lib/sources/load.ts
+  s_a8c554c53780f6::t_d3677e4f243483 1-42
+tests/unit/guard.test.ts
+  s_a8c554c53780f6::t_40d8e8760cf9b9 1-13,18-135
+  s_a8c554c53780f6::t_8c659547757ccf 14-17
+tests/unit/tanzil.test.ts
+  s_a8c554c53780f6::t_40d8e8760cf9b9 1-28
+lib/sources/translations.ts
+  s_a8c554c53780f6::t_d3677e4f243483 1-19
+lib/guard/index.ts
+  s_a8c554c53780f6::t_d3677e4f243483 1-136
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9a80f6890adf6be145754c452775d8871ef777dd",
+  "prompts": {},
+  "sessions": {
+    "s_a8c554c53780f6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e041fdb0-f00a-40b2-9e78-70e84cc32759",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
