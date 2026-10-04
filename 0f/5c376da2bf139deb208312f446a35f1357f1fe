@@ -1,0 +1,42 @@
+tests/unit/data.test.ts
+  s_a8c554c53780f6::t_a84cbe21e7013c 31-34
+messages/en.json
+  s_a8c554c53780f6::t_bd0da4eb5f2be4 61-65
+tests/unit/decide.test.ts
+  s_a8c554c53780f6::t_2958673d33508c 44-47
+sources/blessings.json
+  s_a8c554c53780f6::t_a84cbe21e7013c 8-11,647-667
+  s_a8c554c53780f6::t_e77dbd10a6df5a 668-671
+app/[locale]/blessing/[id]/page.tsx
+  s_a8c554c53780f6::t_bd0da4eb5f2be4 11,39-40,60,67
+lib/types.ts
+  s_a8c554c53780f6::t_a84cbe21e7013c 29-30
+messages/ar.json
+  s_a8c554c53780f6::t_bd0da4eb5f2be4 61-65
+app/[locale]/lens/page.tsx
+  s_a8c554c53780f6::t_bd0da4eb5f2be4 6,23-28
+components/LensClient.tsx
+  s_a8c554c53780f6::t_bd0da4eb5f2be4 31-69,79,195,198
+lib/sources/passages.ts
+  s_a8c554c53780f6::t_a84cbe21e7013c 13-23
+tests/e2e/lens.spec.ts
+  s_a8c554c53780f6::t_2958673d33508c 25,27-38
+tests/unit/guard.test.ts
+  s_a8c554c53780f6::t_2958673d33508c 40-46
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0f5c376da2bf139deb208312f446a35f1357f1fe",
+  "prompts": {},
+  "sessions": {
+    "s_a8c554c53780f6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e041fdb0-f00a-40b2-9e78-70e84cc32759",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
