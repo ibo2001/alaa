@@ -1,0 +1,14 @@
+BASELINE.md
+  h_fd7218d7775189 1-63
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "70addb4cd6dcaedd455594989cec8f475d091847",
+  "prompts": {},
+  "humans": {
+    "h_fd7218d7775189": {
+      "author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
