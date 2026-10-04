@@ -81,3 +81,31 @@ test("Review sheet: every card through the Guard, with status and checklist", as
   await expect(page.locator("#water p.verse")).toBeVisible();
   await expect(page.locator("#abstention p.verse")).toHaveCount(2);
 });
+
+test("Review sheet: answers are saved on the device and sent to the review inbox", async ({ page }) => {
+  let posted = "";
+  // Never reach the real Google Form from tests.
+  await page.route("**/formResponse", async (route) => {
+    posted = route.request().postData() ?? "";
+    await route.fulfill({ status: 200, body: "" });
+  });
+  await page.goto("/ar/review");
+  await page.locator('[data-review-card="water"]').getByRole("button", { name: "الآية مناسبة لهذه النعمة" }).click();
+  const sky = page.locator('[data-review-card="sky"]');
+  await sky.getByRole("button", { name: "تحتاج إلى تبديل" }).click();
+  await sky.getByLabel("الآية المقترحة").fill("٥٥:١٠");
+
+  await page.reload();
+  await expect(page.locator('[data-review-card="water"]').getByRole("button", { name: "الآية مناسبة لهذه النعمة" })).toHaveAttribute("aria-pressed", "true");
+  await expect(page.locator('[data-review-card="sky"]').getByLabel("الآية المقترحة")).toHaveValue("٥٥:١٠");
+  await expect(page.getByText("تمت مراجعة ٢ من ٢٧")).toBeVisible();
+
+  await page.getByLabel("اسمك").fill("مراجع تجريبي");
+  await page.getByRole("button", { name: "أرسل المراجعة" }).click();
+  await expect(page.getByRole("status")).toContainText("أُرسلت إلى إبراهيم");
+  const review = new URLSearchParams(posted);
+  const text = [...review.values()].join("\n");
+  expect(text).toContain("مراجع تجريبي");
+  expect(text).toContain("[sky]");
+  expect(text).toContain("٥٥:١٠");
+});

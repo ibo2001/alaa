@@ -1,0 +1,11 @@
+{
+  "$comment": "Where the review sheet sends the reviewer's answers (a Google Form owned by Ibrahim). Not secret: anyone can submit, only Ibrahim can read.",
+  "formId": "1-tpL2AjcIki706U0vShR4LVG3gCjuRlgeq93kCmSKeY",
+  "action": "https://docs.google.com/forms/d/e/1FAIpQLScdkYXdM2hf_slkHjrzJ8YSWwKvHgUwnIefZOJn7rbY0C4wiQ/formResponse",
+  "entries": {
+    "name": "entry.1677597219",
+    "qualification": "entry.655193169",
+    "consent": "entry.407947289",
+    "review": "entry.1985421309"
+  }
+}

@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { ReviewCardControls, ReviewSubmit } from "@/components/ReviewControls";
 import { VersePassage } from "@/components/VersePassage";
 import { REVIEW_LOG_URL } from "@/lib/links";
 import { formatNumber, formatRef, quranComUrl } from "@/lib/quran/surahs";
 import { blessings, data, getConcept } from "@/lib/sources/data";
 import { blessingCard, guardedRefs } from "@/lib/sources/passages";
 import type { Lang, ReviewStatus } from "@/lib/types";
+import reviewForm from "@/sources/review-form.json";
 
 type Props = { params: Promise<{ locale: Lang }> };
 
@@ -19,7 +21,7 @@ const box = "inline-block h-5 w-5 shrink-0 rounded border-2 border-layl/60 align
 
 function Checklist({ t }: { t: (k: string) => string }) {
   return (
-    <div className="mt-4 space-y-2 border-t border-layl/10 pt-3 text-sm">
+    <div className="mt-4 hidden space-y-2 border-t border-layl/10 pt-3 text-sm print:block">
       <p className="flex items-center gap-2">
         <span className={box} aria-hidden /> {t("checkFits")}
       </p>
@@ -117,6 +119,7 @@ export default async function ReviewPage({ params }: Props) {
                   <p className="text-tamr">{t("blocked")}</p>
                 )}
               </div>
+              <ReviewCardControls id={b.id} label={b.labels[locale]} />
               <Checklist t={tr} />
             </li>
           );
@@ -136,11 +139,21 @@ export default async function ReviewPage({ params }: Props) {
                   </div>
                 ))}
               </div>
+              <ReviewCardControls id={f.id} label={f.title} />
               <Checklist t={tr} />
             </li>
           );
         })}
       </ol>
+
+      <ReviewSubmit
+        items={[
+          ...blessings.map((b) => ({ id: b.id, label: b.labels[locale], refs: b.verses.map((v) => formatRef(v, locale)).join(" · ") })),
+          ...fixed.map((f) => ({ id: f.id, label: f.title, refs: f.refs.map((v) => formatRef(v, locale)).join(" · ") })),
+        ]}
+        action={reviewForm.action}
+        entries={reviewForm.entries}
+      />
     </article>
   );
 }

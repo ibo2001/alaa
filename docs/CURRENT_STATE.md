@@ -9,7 +9,7 @@ A running snapshot of where the project is. Updated at each milestone. For "buil
 |---|---|
 | Lint, typecheck | Clean |
 | Unit tests (Vitest) | 55 passing |
-| E2E (Playwright, stub provider) | 8 passing |
+| E2E (Playwright, stub provider) | 9 passing |
 | Vercel deploy | Green, auto-deploys from `main` |
 | Real-model eval (`claude-haiku-4-5`) | 21/21 correct, 7/7 consistent over 3 runs (7 sample photos) |
 
@@ -37,7 +37,7 @@ A running snapshot of where the project is. Updated at each milestone. For "buil
 | After-journey screen: read the surah on quran.com, daily habit | Done |
 | After-journey referral to human support | Done: IslamQA (Ibrahim's choice) |
 | About page (what Alaa is and is not, AI use, sources, review, privacy, referral, report) | Done |
-| Review sheet for the reviewer: `/ar/review`, every card through the Guard, printable, with a checklist | Done |
+| Review sheet for the reviewer: `/ar/review`, every card through the Guard; per card "fits" / "needs replacing" + suggested verse + notes, saved on the reviewer's device, sent to a private Google Form (`npx tsx scripts/review-form.ts fetch`); printable | Done |
 | Religious review of the 25 cards, recorded in `sources/REVIEW_LOG.md` by Ibrahim | Ready to start: send the reviewer https://alaa-alpha.vercel.app/ar/review |
 | User testing kit: protocol, printed sheets (Arabic and English PDF), results template, changes log | Done |
 | Online forms (Google Forms, Arabic and English) with A/B links, blind-scoring script | Done: links in `docs/user-testing/forms.json` |
