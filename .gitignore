@@ -52,3 +52,8 @@ public/swe-worker*.js.map
 /playwright-report/
 /playwright/.cache/
 !.env.example
+
+# eval images are local until their licenses are documented
+/eval/images/*
+!/eval/images/README.md
+!/eval/images/labels.json
