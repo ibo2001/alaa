@@ -1,0 +1,27 @@
+lib/image/downscale.ts
+  s_a8c554c53780f6::t_d4ef0b4eedcd47 1-24
+next.config.ts
+  s_a8c554c53780f6::t_ebeb08df93e777 23-24
+app/api/see/route.ts
+  s_a8c554c53780f6::t_ebeb08df93e777 87-88
+  s_a8c554c53780f6::t_b0c824c12aa382 1-86,89-94
+tests/unit/see-route.test.ts
+  s_a8c554c53780f6::t_ebeb08df93e777 1-18,20-52,54-58
+  s_a8c554c53780f6::t_6d2e775f94d15d 19,53
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "314c8c05069f6d94cb4b0405ca4e3eff2e61fdc1",
+  "prompts": {},
+  "sessions": {
+    "s_a8c554c53780f6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e041fdb0-f00a-40b2-9e78-70e84cc32759",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
