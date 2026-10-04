@@ -31,7 +31,15 @@ export default async function LensPage({ params }: Props) {
       <h1 className="sr-only">{t("lens")}</h1>
       <LensClient
         lang={locale}
-        samples={samples.map((s) => ({ id: s.id, file: s.file, alt: s.alt[locale], placeholder: s.placeholder }))}
+        samples={samples.map((s) => ({
+          id: s.id,
+          file: s.file,
+          alt: s.alt[locale],
+          placeholder: s.placeholder,
+          credit: s.credit,
+          license: s.license,
+          sourceUrl: s.sourceUrl,
+        }))}
         conceptLabels={Object.fromEntries(concepts.map((c) => [c.id, c.labels[locale]]))}
         abstention={abstention}
       />

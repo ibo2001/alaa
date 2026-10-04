@@ -24,7 +24,7 @@ const upload = (bytes: Uint8Array<ArrayBuffer>, type: string, cookie?: string) =
 
 describe("/api/see", () => {
   it("sample photo → card via the stub provider", async () => {
-    const res = await json({ sampleId: "water-glass" }, "alaa_device=a");
+    const res = await json({ sampleId: "water" }, "alaa_device=a");
     expect(res.status).toBe(200);
     expect(await res.json()).toMatchObject({ decision: { kind: "card", blessingId: "drinking-water" } });
   });

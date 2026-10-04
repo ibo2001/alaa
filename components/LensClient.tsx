@@ -10,7 +10,7 @@ import type { Decision, DecisionCandidate } from "@/lib/vision/decide";
 import type { Lang } from "@/lib/types";
 import { VersePassage } from "./VersePassage";
 
-type SampleView = { id: string; file: string; alt: string; placeholder: boolean };
+type SampleView = { id: string; file: string; alt: string; placeholder: boolean; credit: string; license: string; sourceUrl: string };
 type ErrorKind = "network" | "daily-limit" | "model-unavailable" | "invalid-image" | "too-large" | "decode" | "invalid-request";
 type AbstainReason = Extract<Decision, { kind: "abstain" }>["reason"];
 
@@ -210,6 +210,19 @@ export function LensClient({
             </li>
           ))}
         </ul>
+        <details className="mt-3 text-xs text-layl/70">
+          <summary className="cursor-pointer">{t("credits")}</summary>
+          <ul className="mt-2 space-y-1">
+            {samples.map((s) => (
+              <li key={s.id}>
+                <a href={s.sourceUrl} target="_blank" rel="noopener noreferrer" className="underline" lang="en" dir="ltr">
+                  {s.credit}
+                </a>{" "}
+                · {s.license}
+              </li>
+            ))}
+          </ul>
+        </details>
       </section>
     </div>
   );

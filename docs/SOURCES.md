@@ -20,7 +20,19 @@ Every dependency, font, image, dataset and translation used by Alaa is listed he
 | Item | Source | License |
 |---|---|---|
 | App icons (`public/icons/`) | Placeholder drawn for this project during the challenge | Project's own |
-| Sample photos (`public/samples/`) | Placeholders drawn for this project; real photos pending (added by Ibrahim with licenses) | Project's own (placeholders) |
+| Sample photos (`public/samples/`) | Wikimedia Commons, chosen by Ibrahim; see the table below | Public domain / CC0 |
+
+### Sample photos
+All resized to 768px (longest edge) and re-encoded as JPEG, which also strips metadata. No other changes.
+
+| File | Work | Source | License |
+|---|---|---|---|
+| `public/samples/water.jpg` | "Glass of Water.JPG" by Jorge Barrios | https://commons.wikimedia.org/wiki/File:Glass_of_Water.JPG | Public domain |
+| `public/samples/dates.jpg` | "Dates on date palm.jpg" by Stan Shebs | https://commons.wikimedia.org/wiki/File:Dates_on_date_palm.jpg | Public domain |
+| `public/samples/sky.jpg` | "Sky clouds.JPG" by 12345danNL | https://commons.wikimedia.org/wiki/File:Sky_clouds.JPG | CC0 |
+| `public/samples/sky-trees.jpg` | "Blue sky white clouds looking up at trees.jpg" | https://commons.wikimedia.org/wiki/File:Blue_sky_white_clouds_looking_up_at_trees.jpg | CC0 1.0 |
+| `public/samples/bubbles.jpg` | "Bubbles in glass of water.jpg" by Paolo Neo | https://commons.wikimedia.org/wiki/File:Bubbles_in_glass_of_water.jpg | Public domain |
+| `public/samples/keyboard.jpg` | "Acer SF114-32 keyboard closeup.jpg" by Florine W. Dekker | https://commons.wikimedia.org/wiki/File:Acer_SF114-32_keyboard_closeup.jpg | CC0 |
 
 ## Design
 | Item | Source |

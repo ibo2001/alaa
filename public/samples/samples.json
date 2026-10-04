@@ -1,65 +1,65 @@
 {
-  "$comment": "Bundled sample photos for judges without a camera. 'concept' is the expected label (used by eval and the stub provider). Replace placeholders with real photos + licenses and update docs/SOURCES.md.",
+  "$comment": "Bundled sample photos for judges without a camera. 'concept' is the expected label (used by eval and the stub provider). Resized to 768px; licenses in docs/SOURCES.md.",
   "samples": [
     {
-      "id": "water-glass",
+      "id": "water",
       "concept": "drinking_water",
-      "file": "/samples/water-glass.jpg",
-      "alt": {
-        "en": "Glass of water",
-        "ar": "كوب ماء"
-      },
-      "credit": "Placeholder drawn for this project",
-      "license": "Project's own",
-      "placeholder": true
+      "file": "/samples/water.jpg",
+      "alt": { "en": "Glass of water", "ar": "كوب ماء" },
+      "credit": "\"Glass of Water.JPG\" by Jorge Barrios",
+      "license": "Public domain",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Glass_of_Water.JPG",
+      "placeholder": false
     },
     {
       "id": "dates",
       "concept": "date_fruit",
       "file": "/samples/dates.jpg",
-      "alt": {
-        "en": "Plate of dates",
-        "ar": "طبق تمر"
-      },
-      "credit": "Placeholder drawn for this project",
-      "license": "Project's own",
-      "placeholder": true
+      "alt": { "en": "Dates on a palm", "ar": "تمر على نخلة" },
+      "credit": "\"Dates on date palm.jpg\" by Stan Shebs",
+      "license": "Public domain",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dates_on_date_palm.jpg",
+      "placeholder": false
     },
     {
       "id": "sky",
       "concept": "sky",
       "file": "/samples/sky.jpg",
-      "alt": {
-        "en": "Open sky",
-        "ar": "السماء"
-      },
-      "credit": "Placeholder drawn for this project",
-      "license": "Project's own",
-      "placeholder": true
+      "alt": { "en": "Sky and clouds", "ar": "سماء وغيوم" },
+      "credit": "\"Sky clouds.JPG\" by 12345danNL",
+      "license": "CC0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sky_clouds.JPG",
+      "placeholder": false
     },
     {
-      "id": "hand",
-      "concept": "hand",
-      "file": "/samples/hand.jpg",
-      "alt": {
-        "en": "A hand",
-        "ar": "يد"
-      },
-      "credit": "Placeholder drawn for this project",
-      "license": "Project's own",
-      "placeholder": true
+      "id": "sky-trees",
+      "concept": "sky",
+      "file": "/samples/sky-trees.jpg",
+      "alt": { "en": "Sky above trees", "ar": "سماء فوق الأشجار" },
+      "credit": "\"Blue sky white clouds looking up at trees.jpg\", Wikimedia Commons",
+      "license": "CC0 1.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blue_sky_white_clouds_looking_up_at_trees.jpg",
+      "placeholder": false
+    },
+    {
+      "id": "bubbles",
+      "concept": "drinking_water",
+      "file": "/samples/bubbles.jpg",
+      "alt": { "en": "Bubbles in a glass of water", "ar": "فقاعات في كوب ماء" },
+      "credit": "\"Bubbles in glass of water.jpg\" by Paolo Neo",
+      "license": "Public domain",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bubbles_in_glass_of_water.jpg",
+      "placeholder": false
     },
     {
       "id": "keyboard",
       "concept": "keyboard",
       "file": "/samples/keyboard.jpg",
-      "alt": {
-        "en": "Computer keyboard",
-        "ar": "لوحة مفاتيح"
-      },
-      "credit": "Placeholder drawn for this project",
-      "license": "Project's own",
-      "placeholder": true
+      "alt": { "en": "Computer keyboard", "ar": "لوحة مفاتيح" },
+      "credit": "\"Acer SF114-32 keyboard closeup.jpg\" by Florine W. Dekker",
+      "license": "CC0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Acer_SF114-32_keyboard_closeup.jpg",
+      "placeholder": false
     }
   ]
 }

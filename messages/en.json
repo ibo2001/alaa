@@ -45,7 +45,8 @@
     "placeholderNote": "placeholder",
     "working": "Looking…",
     "privacy": "Your photo is shrunk on your device, analyzed, then discarded. It is never stored.",
-    "tryAgain": "Try something else around you"
+    "tryAgain": "Try something else around you",
+    "credits": "Photo credits (resized to 768px)"
   },
   "confirm": {
     "title": "Is this…?",

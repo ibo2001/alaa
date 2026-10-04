@@ -1,4 +1,137 @@
 {
-  "$comment": "Recorded vision results for sample photos, written by `npx tsx eval/quick.ts --record`. Empty until recorded with the real model.",
-  "results": {}
+  "$comment": "Recorded vision results for sample photos, written by `npx tsx eval/quick.ts --record` (model: see each entry). Served instead of a live call so demos are instant and consistent.",
+  "results": {
+    "water": {
+      "result": {
+        "candidates": [
+          {
+            "concept": "drinking_water",
+            "confidence": 0.85
+          },
+          {
+            "concept": "water",
+            "confidence": 0.75
+          },
+          {
+            "concept": "cup",
+            "confidence": 0.6
+          }
+        ],
+        "is_person": false,
+        "unsafe": false
+      },
+      "model": "claude-haiku-4-5-20251001",
+      "recordedAt": "2026-10-04T07:28:14.813Z"
+    },
+    "dates": {
+      "result": {
+        "candidates": [
+          {
+            "concept": "date_fruit",
+            "confidence": 0.95
+          },
+          {
+            "concept": "palm_tree",
+            "confidence": 0.9
+          },
+          {
+            "concept": "daytime",
+            "confidence": 0.6
+          }
+        ],
+        "is_person": false,
+        "unsafe": false
+      },
+      "model": "claude-haiku-4-5-20251001",
+      "recordedAt": "2026-10-04T07:28:16.510Z"
+    },
+    "sky": {
+      "result": {
+        "candidates": [
+          {
+            "concept": "sky",
+            "confidence": 0.9
+          },
+          {
+            "concept": "cloud",
+            "confidence": 0.85
+          },
+          {
+            "concept": "daytime",
+            "confidence": 0.7
+          }
+        ],
+        "is_person": false,
+        "unsafe": false
+      },
+      "model": "claude-haiku-4-5-20251001",
+      "recordedAt": "2026-10-04T07:28:17.944Z"
+    },
+    "sky-trees": {
+      "result": {
+        "candidates": [
+          {
+            "concept": "sky",
+            "confidence": 0.9
+          },
+          {
+            "concept": "cloud",
+            "confidence": 0.85
+          },
+          {
+            "concept": "tree",
+            "confidence": 0.75
+          }
+        ],
+        "is_person": false,
+        "unsafe": false
+      },
+      "model": "claude-haiku-4-5-20251001",
+      "recordedAt": "2026-10-04T07:28:19.552Z"
+    },
+    "bubbles": {
+      "result": {
+        "candidates": [
+          {
+            "concept": "drinking_water",
+            "confidence": 0.9
+          },
+          {
+            "concept": "water",
+            "confidence": 0.7
+          },
+          {
+            "concept": "cup",
+            "confidence": 0.6
+          }
+        ],
+        "is_person": false,
+        "unsafe": false
+      },
+      "model": "claude-haiku-4-5-20251001",
+      "recordedAt": "2026-10-04T07:28:21.662Z"
+    },
+    "keyboard": {
+      "result": {
+        "candidates": [
+          {
+            "concept": "keyboard",
+            "confidence": 0.95
+          },
+          {
+            "concept": "laptop",
+            "confidence": 0.7
+          },
+          {
+            "concept": "none",
+            "confidence": 0.05
+          }
+        ],
+        "is_person": false,
+        "unsafe": false
+      },
+      "model": "claude-haiku-4-5-20251001",
+      "recordedAt": "2026-10-04T07:28:23.175Z"
+    }
+  }
 }
