@@ -1,11 +1,87 @@
-import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
-import { use } from "react";
-import { Placeholder } from "@/components/Placeholder";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { BlockedCard } from "@/components/BlockedCard";
+import { CardActions } from "@/components/CardActions";
+import { VersePassage } from "@/components/VersePassage";
+import { Link } from "@/i18n/navigation";
+import { routing } from "@/i18n/routing";
+import { formatRef, quranComUrl } from "@/lib/quran/surahs";
+import { blessings, getBlessing } from "@/lib/sources/data";
+import { blessingCard, refrainPassage } from "@/lib/sources/passages";
+import type { Lang } from "@/lib/types";
 
-export default function Page({ params }: { params: Promise<{ locale: string }> }) {
-  const { locale } = use(params);
+// Cards are generated at build time from the Tanzil file; unknown ids are 404.
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return routing.locales.flatMap((locale) => blessings.map((b) => ({ locale, id: b.id })));
+}
+
+type Props = { params: Promise<{ locale: Lang; id: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale, id } = await params;
+  const b = getBlessing(id);
+  return b ? { title: b.labels[locale] } : {};
+}
+
+export default async function BlessingPage({ params }: Props) {
+  const { locale, id } = await params;
   setRequestLocale(locale);
-  const t = useTranslations("pages");
-  return <Placeholder title={t("blessing")} />;
+  const t = await getTranslations("card");
+
+  // Reflections depend on the learning stage; all reflections are hidden until reviewed (level 4).
+  const card = blessingCard(id, locale, "new");
+  if (!card) notFound();
+  if (!card.ok) return <BlockedCard />;
+
+  const refrain = refrainPassage(locale);
+  const { blessing } = card;
+  const first = card.refs[0]!;
+
+  return (
+    <article className="mt-6 overflow-hidden rounded-3xl bg-layl text-sama shadow-lg">
+      <header className="px-6 pt-6 text-center">
+        <h1 className="font-heading text-4xl text-lazima">{blessing.labels[locale]}</h1>
+        {card.mappingUnderReview && (
+          <details className="mt-3 inline-block text-sm">
+            <summary className="cursor-pointer list-none rounded-full border border-lazima/60 px-3 py-1 text-lazima">
+              ⓘ {t("underReview")}
+            </summary>
+            <p className="mt-2 max-w-sm text-sama/80">{t("underReviewHint")}</p>
+          </details>
+        )}
+      </header>
+
+      <section className="px-6 py-6">
+        <VersePassage ayat={card.ayat} translation={card.translation} lang={locale} tone="dark" />
+        <p className="mt-4 text-center text-sm text-sama/70">
+          {card.refs.map((r) => formatRef(r, locale)).join(" · ")}
+        </p>
+        {card.reflection && <p className="mt-6 border-s-4 border-lazima ps-4">{card.reflection}</p>}
+      </section>
+
+      {refrain.ok && (
+        <section className="border-t border-sama/15 px-6 py-6">
+          <VersePassage ayat={refrain.ayat} translation={refrain.translation} lang={locale} tone="gold" size="xl" />
+          <p className="mt-2 text-center text-xs text-sama/60">{formatRef(refrain.refs[0]!, locale)}</p>
+        </section>
+      )}
+
+      <footer className="border-t border-sama/15 px-6 py-6">
+        <CardActions
+          blessingId={blessing.id}
+          title={blessing.labels[locale]}
+          quranUrl={quranComUrl(first)}
+          readLabel={t("readInContextLabel", { ref: formatRef(first, locale) })}
+        />
+        <p className="mt-6 text-center">
+          <Link href="/lens" className="text-sm text-sama/80 underline hover:text-lazima">
+            {t("lookAgain")}
+          </Link>
+        </p>
+      </footer>
+    </article>
+  );
 }

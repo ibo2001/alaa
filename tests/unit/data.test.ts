@@ -44,3 +44,11 @@ describe("seed data integrity", () => {
     }
   });
 });
+
+describe("surah names", () => {
+  it("every referenced surah has a display name", async () => {
+    const { hasSurahName } = await import("@/lib/quran/surahs");
+    const refs = [...blessings.flatMap((b) => b.verses), ...data.abstention.verses, ...data.refrain.verses];
+    for (const r of refs) expect(hasSurahName(r.surah), `surah ${r.surah}`).toBe(true);
+  });
+});

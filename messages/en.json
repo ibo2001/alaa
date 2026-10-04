@@ -16,7 +16,8 @@
   },
   "welcome": {
     "start": "Start looking",
-    "intro": "Alaa helps you notice everyday blessings you have grown used to: water, light, your own hands."
+    "intro": "Alaa helps you notice everyday blessings you have grown used to: water, light, the food on your table.",
+    "refrainNote": "This verse is repeated 31 times in Surah Ar-Rahman."
   },
   "placeholder": {
     "comingSoon": "This screen is being built."
@@ -33,5 +34,79 @@
     "title": "You're offline",
     "body": "Alaa needs a connection to recognize photos. Check your connection and try again.",
     "retry": "Try again"
+  },
+  "lens": {
+    "intro": "Point your camera at something around you, or try one of the sample photos.",
+    "takePhoto": "Take a photo",
+    "upload": "Choose a photo",
+    "samplesTitle": "Sample photos",
+    "samplesHint": "No camera nearby? Try one of these.",
+    "sampleLabel": "Try sample: {name}",
+    "placeholderNote": "placeholder",
+    "working": "Looking…",
+    "privacy": "Your photo is shrunk on your device, analyzed, then discarded. It is never stored.",
+    "tryAgain": "Try something else around you"
+  },
+  "confirm": {
+    "title": "Is this…?",
+    "hint": "I'm not sure. Pick what you photographed.",
+    "noneOfThese": "None of these"
+  },
+  "abstain": {
+    "low-confidence": "I couldn't recognize this clearly.",
+    "no-blessing": "I see {concept}, but I don't have a verse about it specifically.",
+    "person": "Alaa doesn't analyze people. Try photographing an object near you.",
+    "unsafe": "This photo can't be used. Try something else around you.",
+    "general": "But remember:"
+  },
+  "errors": {
+    "title": "Something went wrong",
+    "network": "No connection. Check your internet and try again, or try a sample photo.",
+    "daily-limit": "You've reached today's limit for new photos. Sample photos still work, and you can try again tomorrow.",
+    "model-unavailable": "Recognition is unavailable right now. Try again in a minute, or try a sample photo.",
+    "invalid-image": "This file isn't a photo Alaa can read. Choose a JPEG, PNG or WebP photo.",
+    "too-large": "This photo is too large. Choose another photo.",
+    "decode": "Couldn't open this photo. Try another one, or a sample photo.",
+    "invalid-request": "Something went wrong. Please try again.",
+    "dismiss": "OK"
+  },
+  "card": {
+    "underReview": "Mapping under review",
+    "underReviewHint": "The link between this blessing and this verse has not yet been reviewed by a qualified scholar.",
+    "translationPending": "Translation pending",
+    "translationBy": "Translation by {translator}, ClearQuran.com",
+    "meaningNote": "The translation conveys the meaning; the Quran is the Arabic text.",
+    "addToDay": "Add to My Day",
+    "added": "Added to My Day",
+    "share": "Share",
+    "copied": "Link copied",
+    "source": "Source",
+    "readInContext": "Read in context",
+    "readInContextLabel": "Read {ref} in context on quran.com (opens in a new tab)",
+    "lookAgain": "Look again",
+    "blockedTitle": "This card can't be shown",
+    "blockedBody": "Its verse text could not be verified against the source, so Alaa shows nothing rather than risk an error.",
+    "ayahNumber": "Ayah {n}"
+  },
+  "source": {
+    "title": "Source: {name}",
+    "verses": "Verses",
+    "textSource": "Arabic text",
+    "textSourceBody": "Tanzil Project, Uthmani text, unmodified. Licensed CC BY 3.0.",
+    "verified": "Verified: each ayah matches the SHA-256 fingerprint of the Tanzil file.",
+    "notVerified": "Not verified: this text does not match the source and is not shown.",
+    "translation": "Translation",
+    "translationNone": "No translation is shown in Arabic.",
+    "translationPending": "No licensed translation available yet.",
+    "license": "License",
+    "review": "Religious review",
+    "mapping": "Blessing → verse link",
+    "reflection": "Reflection",
+    "draft": "Not yet reviewed",
+    "reviewed": "Reviewed",
+    "reviewer": "Reviewer",
+    "reviewLog": "Review log",
+    "readOnQuranCom": "Read on quran.com",
+    "reportError": "Report an error"
   }
 }
