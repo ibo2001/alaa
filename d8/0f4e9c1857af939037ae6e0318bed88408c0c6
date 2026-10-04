@@ -1,0 +1,21 @@
+docs/user-testing/PARTICIPANT_SHEET.ar.md
+  s_a8c554c53780f6::t_1fb6676a4eaa4d 1-58
+docs/CURRENT_STATE.md
+  s_a8c554c53780f6::t_9d5681d3a68ee9 42
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d80f4e9c1857af939037ae6e0318bed88408c0c6",
+  "prompts": {},
+  "sessions": {
+    "s_a8c554c53780f6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e041fdb0-f00a-40b2-9e78-70e84cc32759",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
