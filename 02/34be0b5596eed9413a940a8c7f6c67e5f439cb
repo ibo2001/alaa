@@ -1,0 +1,29 @@
+sources/translations/index.json
+  s_a8c554c53780f6::t_5cfc9889189dca 1-13
+sources/translations/en/manifest.json
+  s_a8c554c53780f6::t_5cfc9889189dca 1
+sources/quran/manifest.json
+  s_a8c554c53780f6::t_5cfc9889189dca 1
+lib/quran/tanzil.ts
+  s_a8c554c53780f6::t_5cfc9889189dca 1-54
+lib/types.ts
+  s_a8c554c53780f6::t_5cfc9889189dca 1-39
+scripts/build-manifest.ts
+  s_a8c554c53780f6::t_5cfc9889189dca 1-24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0234be0b5596eed9413a940a8c7f6c67e5f439cb",
+  "prompts": {},
+  "sessions": {
+    "s_a8c554c53780f6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e041fdb0-f00a-40b2-9e78-70e84cc32759",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
