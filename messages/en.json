@@ -120,5 +120,87 @@
     "familiar": "I know the Quran",
     "hint": "Optional. Saved on this device only; change it any time.",
     "refrainIntro": "This ayah is from Surah Ar-Rahman, where it is repeated {count} times."
+  },
+  "today": {
+    "title": "My Day's Surah",
+    "loading": "Loading your day…",
+    "count": "{count, plural, =0 {No blessings yet today} one {{shown} blessing today} other {{shown} blessings today}}",
+    "empty": "Nothing here yet. When a blessing card opens, tap “Add to My Day” and it will appear here, followed by the refrain.",
+    "emptyCta": "Start looking",
+    "remove": "Remove {name} from today",
+    "removeShort": "Remove",
+    "makeCard": "Make my day's card",
+    "drawing": "Drawing…",
+    "shareCard": "Share",
+    "download": "Download image",
+    "previewAlt": "My Day's Surah card for {date}",
+    "more": "+ {shown} more",
+    "cardFooter": "alaa-alpha.vercel.app",
+    "cardError": "This device couldn't draw the card. Try another browser.",
+    "privacy": "Your day is saved on this device only. Nothing is sent to a server."
+  },
+  "journey": {
+    "title": "Ar-Rahman Journey",
+    "loading": "Loading your journey…",
+    "intro": "Seven stations, in the order these blessings come in Surah Ar-Rahman. At each one, find the blessing around you and photograph it, or read its card.",
+    "progress": "{n} of {total} stations",
+    "stationLabel": "Station {n}",
+    "next": "Next station",
+    "upcoming": "Not started",
+    "foundByPhoto": "Found with a photo",
+    "cardRead": "Card read",
+    "takePhoto": "Take the photo",
+    "readCard": "Read: {name}",
+    "readCardLabel": "Read the card {name} ({ref})",
+    "afterLocked": "After station 7, your next steps open here.",
+    "reset": "Start the journey again",
+    "privacy": "Your progress is saved on this device only.",
+    "stations": {
+      "s1": {
+        "number": "1",
+        "title": "Man and speech",
+        "mission": "Find a pen, or something handwritten."
+      },
+      "s2": {
+        "number": "2",
+        "title": "The sun and the moon",
+        "mission": "Photograph the moon, or sunlight. Never look straight at the sun."
+      },
+      "s3": {
+        "number": "3",
+        "title": "Stars and trees",
+        "mission": "Find a tree or a plant near you."
+      },
+      "s4": {
+        "number": "4",
+        "title": "The sky and the balance",
+        "mission": "Look up and photograph the sky."
+      },
+      "s5": {
+        "number": "5",
+        "title": "Earth, fruit and palms",
+        "mission": "Find dates, a palm tree or some grain."
+      },
+      "s6": {
+        "number": "6",
+        "title": "The two seas",
+        "mission": "Photograph the sea, if you are near one."
+      },
+      "s7": {
+        "number": "7",
+        "title": "Pearls and coral",
+        "mission": "Find a pearl or coral, even in a piece of jewellery."
+      }
+    },
+    "after": {
+      "title": "After the journey",
+      "intro": "You have walked all seven stations.",
+      "readTitle": "Read the whole surah",
+      "readLink": "Surah Ar-Rahman with translation on quran.com",
+      "habitTitle": "Keep looking, every day",
+      "habitLink": "Look back at My Day's Surah each evening",
+      "askTitle": "Have a question about Islam?",
+      "askLink": "Talk to a specialist at {name}"
+    }
   }
 }
