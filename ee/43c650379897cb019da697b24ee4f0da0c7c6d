@@ -1,0 +1,90 @@
+app/[locale]/journey/page.tsx
+  s_a8c554c53780f6::t_cc032d0d2c15e8 1-11
+i18n/request.ts
+  s_a8c554c53780f6::t_8644f9b009ee7c 1-15
+package.json
+  s_a8c554c53780f6::t_e010242650d7b4 9-13,39-41
+  s_a8c554c53780f6::t_e1e67a7030609a 1-8,14-27,29,31-35,42-43
+  s_a8c554c53780f6::t_ca7f2f6f58b3a3 28,30,36-38
+i18n/routing.ts
+  s_a8c554c53780f6::t_8644f9b009ee7c 1-12
+app/[locale]/blessing/[id]/page.tsx
+  s_a8c554c53780f6::t_cc032d0d2c15e8 1-11
+lib/fonts.ts
+  s_a8c554c53780f6::t_e75bb064b006d0 1-29
+playwright.config.ts
+  s_a8c554c53780f6::t_e010242650d7b4 1-18
+postcss.config.mjs
+  s_a8c554c53780f6::t_e1e67a7030609a 1-5
+app/[locale]/about/page.tsx
+  s_a8c554c53780f6::t_cc032d0d2c15e8 1-11
+.env.example
+  s_a8c554c53780f6::t_3644c99d480554 1-14
+app/globals.css
+  s_a8c554c53780f6::t_e75bb064b006d0 1-51
+app/[locale]/lens/page.tsx
+  s_a8c554c53780f6::t_cc032d0d2c15e8 1-11
+tsconfig.json
+  s_a8c554c53780f6::t_e010242650d7b4 3-9,27-35,37-47
+  s_a8c554c53780f6::t_e1e67a7030609a 1-2,10-26,36,48
+app/manifest.ts
+  s_a8c554c53780f6::t_8644f9b009ee7c 1-25
+vitest.config.ts
+  s_a8c554c53780f6::t_e010242650d7b4 1-11
+components/LanguageSwitch.tsx
+  s_a8c554c53780f6::t_6cd96178f01927 1-7,9-12,14-22
+  s_a8c554c53780f6::t_cc032d0d2c15e8 8,13
+components/Placeholder.tsx
+  s_a8c554c53780f6::t_6cd96178f01927 1-11
+app/[locale]/source/[id]/page.tsx
+  s_a8c554c53780f6::t_cc032d0d2c15e8 1-11
+app/sw.ts
+  s_a8c554c53780f6::t_8644f9b009ee7c 1-22,26-35
+  s_a8c554c53780f6::t_2d0fe6bb01b0c2 23-25
+messages/en.json
+  s_a8c554c53780f6::t_82b8f806e291e9 1-37
+messages/ar.json
+  s_a8c554c53780f6::t_82b8f806e291e9 1-37
+components/SiteHeader.tsx
+  s_a8c554c53780f6::t_6cd96178f01927 1-32
+.gitignore
+  s_a8c554c53780f6::t_e1e67a7030609a 2-42
+  s_a8c554c53780f6::t_3644c99d480554 54
+  s_a8c554c53780f6::t_e010242650d7b4 43-53
+eslint.config.mjs
+  s_a8c554c53780f6::t_e010242650d7b4 21-24
+  s_a8c554c53780f6::t_e1e67a7030609a 1-20,25-29
+i18n/navigation.ts
+  s_a8c554c53780f6::t_8644f9b009ee7c 1-5
+middleware.ts
+  s_a8c554c53780f6::t_8644f9b009ee7c 1-10
+app/[locale]/offline/page.tsx
+  s_a8c554c53780f6::t_cc032d0d2c15e8 1-18
+app/[locale]/page.tsx
+  s_a8c554c53780f6::t_cc032d0d2c15e8 1-25
+app/[locale]/layout.tsx
+  s_a8c554c53780f6::t_6cd96178f01927 1-57
+app/[locale]/today/page.tsx
+  s_a8c554c53780f6::t_cc032d0d2c15e8 1-11
+next.config.ts
+  s_a8c554c53780f6::t_e1e67a7030609a 1,4,20,23-24
+  s_a8c554c53780f6::t_8644f9b009ee7c 2-3,5-19,21-22,25
+package-lock.json
+  s_a8c554c53780f6::t_ff9377979aebc1 1-9009
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ee43c650379897cb019da697b24ee4f0da0c7c6d",
+  "prompts": {},
+  "sessions": {
+    "s_a8c554c53780f6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e041fdb0-f00a-40b2-9e78-70e84cc32759",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
