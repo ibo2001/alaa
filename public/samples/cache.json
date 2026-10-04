@@ -1,0 +1,4 @@
+{
+  "$comment": "Recorded vision results for sample photos, written by `npx tsx eval/quick.ts --record`. Empty until recorded with the real model.",
+  "results": {}
+}
