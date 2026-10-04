@@ -1,0 +1,34 @@
+messages/en.json
+  s_a8c554c53780f6::t_ca2db1d2dd66a3 48-49
+components/LensClient.tsx
+  s_a8c554c53780f6::t_ca2db1d2dd66a3 13,213-225
+docs/SOURCES.md
+  s_a8c554c53780f6::t_87d67edec2e76c 23-35
+messages/ar.json
+  s_a8c554c53780f6::t_ca2db1d2dd66a3 48-49
+app/[locale]/lens/page.tsx
+  s_a8c554c53780f6::t_ca2db1d2dd66a3 34-42
+tests/unit/see-route.test.ts
+  s_a8c554c53780f6::t_c99122249ac2b6 27
+public/samples/cache.json
+  s_a8c554c53780f6::t_eeebc24fa1c21f 2
+  s_a8c554c53780f6::t_111ccaf0ed55c6 3-136
+public/samples/samples.json
+  s_a8c554c53780f6::t_c99122249ac2b6 2,5,7-12,18-22,28-32,35-52,58-62,65
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "751db3a7185525bb50785a40a900d3580f092ec6",
+  "prompts": {},
+  "sessions": {
+    "s_a8c554c53780f6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e041fdb0-f00a-40b2-9e78-70e84cc32759",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
