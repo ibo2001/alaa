@@ -69,6 +69,7 @@ All resized to 768px (longest edge) and re-encoded as JPEG, which also strips me
 | Anthropic API (Claude) | Vision recognition in `/api/see`, constrained to a closed list of concept IDs |
 | Vercel | Hosting |
 | quran.com | "Read in context" verification links (linked, not embedded) |
+| IslamQA (islamqa.info) | Referral link for religious questions after the journey (linked, not embedded; chosen by Ibrahim) |
 
 ## AI tools used in development
 | Tool | Use |

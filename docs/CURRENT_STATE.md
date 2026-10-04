@@ -35,7 +35,7 @@ A running snapshot of where the project is. Updated at each milestone. For "buil
 | 1080×1920 share card drawn on device (names and references only, refrain whole); share or download | Done |
 | Ar-Rahman Journey: 7 stations with missions, found by photo or card read, progress on device, reset | Done |
 | After-journey screen: read the surah on quran.com, daily habit | Done |
-| After-journey referral to human support | Built, hidden: needs Ibrahim's choice of organization in `sources/referral.json` |
+| After-journey referral to human support | Done: IslamQA (Ibrahim's choice) |
 | Religious review of the 25 cards, recorded in `sources/REVIEW_LOG.md` by Ibrahim | Not started (reviewer) |
 | User testing with a comparison group | Not started (Ibrahim) |
 
@@ -45,7 +45,6 @@ A running snapshot of where the project is. Updated at each milestone. For "buil
 - Video (≤ 2 min), presentation PDF, final checks from another device and network
 
 ## Open items
-- Referral organization for the after-journey screen (name and URL, Arabic and English): Ibrahim's choice
 - `docs/alaa-pitch.pdf` (registration pitch, pre-challenge) is listed in `BASELINE.md` as "to be added"; Ibrahim adds the original file
 - Challenge presentation: English draft approved and Arabic draft made (13 slides each, challenge work, separate from the registration pitch); files `docs/alaa-presentation.en.pdf` and `docs/alaa-presentation.ar.pdf`. Placeholders for screenshots, Day 2–3 features and Day 3 results; exported to PDF on Day 3
 - `DAILY_LIMIT` is not set on Vercel (defaults to 50 per device per instance); raise it for the judging period

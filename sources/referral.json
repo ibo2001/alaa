@@ -1,5 +1,5 @@
 {
-  "$comment": "Referral to human support, shown after the journey (SPEC §4). Ibrahim chooses the recognized organization; until then url is null and the referral is not shown.",
-  "ar": { "name": null, "url": null },
-  "en": { "name": null, "url": null }
+  "$comment": "Referral to human support, shown after the journey (SPEC §4). Organization chosen by Ibrahim on 2026-10-04 (docs/DECISIONS.md).",
+  "ar": { "name": "الإسلام سؤال وجواب", "url": "https://islamqa.info/ar" },
+  "en": { "name": "IslamQA", "url": "https://islamqa.info/en" }
 }

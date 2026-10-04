@@ -62,4 +62,5 @@ test("Ar-Rahman Journey: photo and read progress, then the after-journey screen"
   await expect(page.getByText("7 of 7 stations")).toBeVisible();
   await expect(page.getByRole("heading", { name: "After the journey" })).toBeVisible();
   await expect(page.getByRole("link", { name: /Surah Ar-Rahman with translation/ })).toHaveAttribute("href", "https://quran.com/55");
+  await expect(page.getByRole("link", { name: "Ask the specialists at IslamQA" })).toHaveAttribute("href", "https://islamqa.info/en");
 });
