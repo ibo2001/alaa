@@ -20,6 +20,8 @@ const withSerwist = withSerwistInit({
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  // /api/see reads sample photos from disk when they have no cached result.
+  outputFileTracingIncludes: { "/api/see": ["./public/samples/**/*"] },
 };
 
 export default withSerwist(withNextIntl(nextConfig));
