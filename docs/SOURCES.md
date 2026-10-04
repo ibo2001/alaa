@@ -5,8 +5,9 @@ Every dependency, font, image, dataset and translation used by Alaa is listed he
 ## Religious content
 | Item | Source | License / terms | Location |
 |---|---|---|---|
-| Quran text (Uthmani) | Tanzil Project, tanzil.net | Tanzil terms of use (file included alongside the text) | `sources/quran/` (pending) |
-| English translation | _pending: chosen by Ibrahim with its license_ | _pending_ | `sources/translations/en/` |
+| Quran text (Uthmani), `quran-uthmani.txt` | Tanzil Project, https://tanzil.net | Creative Commons Attribution 3.0; verbatim only, changing it is not allowed (`sources/quran/LICENSE`) | `sources/quran/` |
+| English translation, `en.itani.txt` | Talal Itani, ClearQuran.com, obtained from https://tanzil.net/trans/ | CC BY-ND 4.0 (`sources/translations/en/LICENSE`). Attribution shown in the app: "Translation by Talal Itani, ClearQuran.com" | `sources/translations/en/` |
+| Concept list, blessing references | Written for this project during the challenge; references from `docs/SPEC.md` §9 | Project's own; mappings pending religious review | `sources/concepts.json`, `sources/blessings.json` |
 
 ## Fonts (via `next/font/google`, self-hosted at build time)
 | Font | Use | License |
@@ -19,7 +20,7 @@ Every dependency, font, image, dataset and translation used by Alaa is listed he
 | Item | Source | License |
 |---|---|---|
 | App icons (`public/icons/`) | Placeholder drawn for this project during the challenge | Project's own |
-| Sample photos (`public/samples/`) | _pending: added by Ibrahim with licenses_ | _pending_ |
+| Sample photos (`public/samples/`) | Placeholders drawn for this project; real photos pending (added by Ibrahim with licenses) | Project's own (placeholders) |
 
 ## Design
 | Item | Source |
@@ -46,6 +47,7 @@ Every dependency, font, image, dataset and translation used by Alaa is listed he
 | `vitest` | 5.0.3 | MIT |
 | `@playwright/test` | 1.63.0 | Apache-2.0 |
 | `tsx` | 4.23.15 | MIT |
+| `sharp` | 0.34.5 | Apache-2.0 |
 | `@types/node`, `@types/react`, `@types/react-dom` | 24 / 19 / 19 | MIT |
 
 ## External services

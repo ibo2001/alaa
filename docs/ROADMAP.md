@@ -4,8 +4,12 @@ This file separates what was **built during the challenge** (Oct 4–6, 2026) fr
 
 ## Built during the challenge
 - Day 1: Next.js 15 PWA scaffold (App Router, TypeScript strict, Tailwind with RTL, `next-intl` ar/en, Serwist offline shell)
+- Day 1: Tanzil loader with per-ayah SHA-256 manifest; Source Guard (4 level gates) with tests
+- Day 1: `/api/see` vision endpoint: closed concept enum, thresholds, person/unsafe handling, per-device daily limit, swappable provider (`anthropic`, `stub`)
 
 ## Planned (not built yet)
+- Durable daily limit (shared store such as Vercel KV); today it is per server instance, best effort
+- Second real vision provider behind `VISION_PROVIDER` (today: `stub` fallback)
 - Norwegian locale, once a translation license is confirmed
 - Native SwiftUI version with on-device Vision (lower cost, better privacy)
 - `sanad-core` shared with Mizan: Source Guard, source registry, source-card component
