@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens. Components use the Tailwind names (bg-layl, text-lazima, ...);
+ * a later Design System only needs to change the values below.
+ */
+:root {
+  --layl: #1b2340; /* night: primary dark background, text on light */
+  --lazima: #e6c478; /* gold: the refrain, highlights (9.4:1 on layl) */
+  --sama: #e4ecf3; /* sky: light background */
+  --nakhl: #2f6b4f; /* palm: success, journey progress */
+  --tamr: #7a3b1d; /* date: accents, warm details */
+
+  --background: var(--sama);
+  --foreground: var(--layl);
+}
+
+@theme inline {
+  --color-layl: var(--layl);
+  --color-lazima: var(--lazima);
+  --color-sama: var(--sama);
+  --color-nakhl: var(--nakhl);
+  --color-tamr: var(--tamr);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-ui: var(--font-plex-arabic), system-ui, sans-serif;
+  --font-heading: var(--font-aref-ruqaa), var(--font-plex-arabic), serif;
+  --font-quran: var(--font-amiri-quran), serif;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-ui);
+}
+
+:focus-visible {
+  outline: 3px solid var(--lazima);
+  outline-offset: 2px;
+}
+
+/* Verse text: generous line height for Uthmani diacritics. */
+.verse {
+  font-family: var(--font-quran);
+  line-height: 2.2;
+}

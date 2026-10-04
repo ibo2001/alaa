@@ -1,0 +1,37 @@
+{
+  "app": {
+    "name": "Alaa",
+    "tagline": "A lens for seeing blessings",
+    "description": "Point your camera at something everyday and see where the Quran mentions it."
+  },
+  "nav": {
+    "label": "Main",
+    "home": "Home",
+    "lens": "Look",
+    "today": "My Day",
+    "journey": "Journey",
+    "about": "About",
+    "switchLanguage": "العربية",
+    "switchLanguageLabel": "Switch to Arabic"
+  },
+  "welcome": {
+    "start": "Start looking",
+    "intro": "Alaa helps you notice everyday blessings you have grown used to: water, light, your own hands."
+  },
+  "placeholder": {
+    "comingSoon": "This screen is being built."
+  },
+  "pages": {
+    "lens": "Lens",
+    "blessing": "Blessing",
+    "today": "My Day's Surah",
+    "journey": "Ar-Rahman Journey",
+    "source": "Source",
+    "about": "About Alaa"
+  },
+  "offline": {
+    "title": "You're offline",
+    "body": "Alaa needs a connection to recognize photos. Check your connection and try again.",
+    "retry": "Try again"
+  }
+}
