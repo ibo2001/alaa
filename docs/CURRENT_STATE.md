@@ -40,7 +40,8 @@ A running snapshot of where the project is. Updated at each milestone. For "buil
 - Video (≤ 2 min), presentation PDF, final checks from another device and network
 
 ## Open items
-- `docs/alaa-pitch.pdf` (registration pitch, pre-challenge) is listed in `BASELINE.md` as "to be added"; waiting for Ibrahim's file
+- `docs/alaa-pitch.pdf` (registration pitch, pre-challenge) is listed in `BASELINE.md` as "to be added"; Ibrahim adds the original file
+- Challenge presentation: draft deck started (13 slides, challenge work, separate from the registration pitch). Placeholders for screenshots, Day 2–3 features and Day 3 results; exported to PDF on Day 3
 - `DAILY_LIMIT` is not set on Vercel (defaults to 50 per device per instance); raise it for the judging period
 - Daily limit is in memory per server instance (best effort); durable store is planned
 - Only one real vision provider; the second is `stub`
