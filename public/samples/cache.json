@@ -21,7 +21,7 @@
         "unsafe": false
       },
       "model": "claude-haiku-4-5-20251001",
-      "recordedAt": "2026-10-04T07:28:14.813Z"
+      "recordedAt": "2026-10-04T07:41:04.349Z"
     },
     "dates": {
       "result": {
@@ -43,7 +43,7 @@
         "unsafe": false
       },
       "model": "claude-haiku-4-5-20251001",
-      "recordedAt": "2026-10-04T07:28:16.510Z"
+      "recordedAt": "2026-10-04T07:41:06.418Z"
     },
     "sky": {
       "result": {
@@ -65,7 +65,7 @@
         "unsafe": false
       },
       "model": "claude-haiku-4-5-20251001",
-      "recordedAt": "2026-10-04T07:28:17.944Z"
+      "recordedAt": "2026-10-04T07:41:08.208Z"
     },
     "sky-trees": {
       "result": {
@@ -87,18 +87,18 @@
         "unsafe": false
       },
       "model": "claude-haiku-4-5-20251001",
-      "recordedAt": "2026-10-04T07:28:19.552Z"
+      "recordedAt": "2026-10-04T07:41:09.746Z"
     },
     "bubbles": {
       "result": {
         "candidates": [
           {
             "concept": "drinking_water",
-            "confidence": 0.9
+            "confidence": 0.85
           },
           {
             "concept": "water",
-            "confidence": 0.7
+            "confidence": 0.75
           },
           {
             "concept": "cup",
@@ -109,7 +109,7 @@
         "unsafe": false
       },
       "model": "claude-haiku-4-5-20251001",
-      "recordedAt": "2026-10-04T07:28:21.662Z"
+      "recordedAt": "2026-10-04T07:41:11.289Z"
     },
     "keyboard": {
       "result": {
@@ -131,7 +131,21 @@
         "unsafe": false
       },
       "model": "claude-haiku-4-5-20251001",
-      "recordedAt": "2026-10-04T07:28:23.175Z"
+      "recordedAt": "2026-10-04T07:41:12.860Z"
+    },
+    "hand": {
+      "result": {
+        "candidates": [
+          {
+            "concept": "hand",
+            "confidence": 0.95
+          }
+        ],
+        "is_person": true,
+        "unsafe": false
+      },
+      "model": "claude-haiku-4-5-20251001",
+      "recordedAt": "2026-10-04T07:41:14.138Z"
     }
   }
 }
