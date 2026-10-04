@@ -227,6 +227,35 @@
     "reportLink": "Report an error on GitHub",
     "builtTitle": "Built for the AI Challenge for Islamic Content",
     "built": "Alaa was built during the AI Challenge for Islamic Content (Track 3: Interactive Experiences & Knowledge Journeys), October 4–6, 2026. The code is open.",
-    "cta": "Start looking"
+    "cta": "Start looking",
+    "reviewSheet": "See every card on one page (review sheet)"
+  },
+  "review": {
+    "title": "Review sheet",
+    "intro": "For the religious reviewer: every card in Alaa, exactly as users see it, with the verse text loaded from the Tanzil file. For each card, please check whether the verse fits the blessing.",
+    "rule1": "The question is the link (mapping): does this verse plainly mention this everyday blessing, without stretching its meaning?",
+    "rule2": "The verse text itself is not in question: it is the Tanzil Uthmani text, checked against its fingerprint. Each reference links to quran.com.",
+    "rule3": "“Opens from” lists the things a photo can show that lead to this card.",
+    "rule4": "No “scientific miracle” claims are made anywhere in Alaa.",
+    "howToReturn": "Print this page or save it as PDF and mark it up, or send your notes to Ibrahim. Ibrahim records every decision, with your name and qualification (with your consent), in the public",
+    "reviewLog": "review log.",
+    "summary": "Mappings reviewed: {reviewed} of {total}",
+    "opensFrom": "Opens from",
+    "refs": "Verses",
+    "station": "Journey station",
+    "status": "Status",
+    "mapping": "mapping",
+    "reflection": "reflection",
+    "note": "Note",
+    "draft": "not reviewed",
+    "reviewed": "reviewed",
+    "blocked": "This text failed the Source Guard and is not shown.",
+    "checkFits": "The verse fits this blessing",
+    "checkOther": "Suggest another verse (write the reference below)",
+    "notes": "Notes:",
+    "abstentionTitle": "When Alaa finds no verse",
+    "abstentionHint": "Shown when the photo is unclear or the object has no card. Both ayat are shown whole, each on its own card.",
+    "refrainTitle": "The refrain",
+    "refrainHint": "Shown on every card and in My Day's Surah. The hand card currently shows only this ayah, as an interim choice."
   }
 }

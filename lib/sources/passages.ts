@@ -1,7 +1,7 @@
 // Server/build-time only.
 import { ayahKey } from "@/lib/quran/tanzil";
 import { guardBlessing, guardPassage, type GuardedBlessing, type GuardedPassage } from "@/lib/guard";
-import type { Lang, Stage } from "@/lib/types";
+import type { Lang, Stage, VerseRef } from "@/lib/types";
 import { data, getBlessing } from "./data";
 import { loadSources } from "./load";
 
@@ -26,6 +26,11 @@ export function abstentionPassages(lang: Lang): Extract<GuardedPassage, { ok: tr
   return data.abstention.verses
     .map((ref) => guardPassage([ref], DEFAULT_TRANSLATIONS, lang, loadSources()))
     .filter((p): p is Extract<GuardedPassage, { ok: true }> => p.ok);
+}
+
+/** Each reference guarded on its own (whole ayat, never cut), in order. */
+export function guardedRefs(refs: VerseRef[], lang: Lang): GuardedPassage[] {
+  return refs.map((ref) => guardPassage([ref], DEFAULT_TRANSLATIONS, lang, loadSources()));
 }
 
 /** True if a blessing's only verse is the refrain itself (so the card doesn't show it twice). */

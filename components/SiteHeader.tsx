@@ -13,7 +13,7 @@ export function SiteHeader() {
   ] as const;
 
   return (
-    <header className="bg-layl text-sama">
+    <header className="bg-layl text-sama print:hidden">
       <div className="mx-auto flex w-full max-w-xl items-center justify-between gap-3 px-4 py-3">
         <Link href="/" className="font-heading text-2xl text-lazima">
           {app("name")}

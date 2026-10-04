@@ -63,6 +63,11 @@ export default async function AboutPage({ params }: Props) {
             {t("reviewLog")}
           </a>
         </p>
+        <p>
+          <Link href="/review" className="text-nakhl underline">
+            {t("reviewSheet")}
+          </Link>
+        </p>
       </Section>
 
       <Section title={t("privacyTitle")}>
