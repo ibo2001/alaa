@@ -2,14 +2,14 @@
 
 A running snapshot of where the project is. Updated at each milestone. For "built vs planned" see `ROADMAP.md`; for content decisions see `DECISIONS.md`.
 
-**Last updated:** 2026-10-04 12:10 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
+**Last updated:** 2026-10-04 12:45 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
 
 ## Health
 | Check | Status |
 |---|---|
 | Lint, typecheck | Clean |
 | Unit tests (Vitest) | 55 passing |
-| E2E (Playwright, stub provider) | 6 passing |
+| E2E (Playwright, stub provider) | 8 passing |
 | Vercel deploy | Green, auto-deploys from `main` |
 | Real-model eval (`claude-haiku-4-5`) | 21/21 correct, 7/7 consistent over 3 runs (7 sample photos) |
 
@@ -36,8 +36,11 @@ A running snapshot of where the project is. Updated at each milestone. For "buil
 | Ar-Rahman Journey: 7 stations with missions, found by photo or card read, progress on device, reset | Done |
 | After-journey screen: read the surah on quran.com, daily habit | Done |
 | After-journey referral to human support | Done: IslamQA (Ibrahim's choice) |
-| Religious review of the 25 cards, recorded in `sources/REVIEW_LOG.md` by Ibrahim | Not started (reviewer) |
-| User testing with a comparison group | Not started (Ibrahim) |
+| About page (what Alaa is and is not, AI use, sources, review, privacy, referral, report) | Done |
+| Review sheet for the reviewer: `/ar/review`, every card through the Guard, printable, with a checklist | Done |
+| Religious review of the 25 cards, recorded in `sources/REVIEW_LOG.md` by Ibrahim | Ready to start: send the reviewer https://alaa-alpha.vercel.app/ar/review |
+| User testing kit: protocol, participant sheet (English), results template, changes log | Done (Arabic participant sheet after Ibrahim approves the English) |
+| User testing sessions | Not started (Ibrahim) |
 
 ## Day 3 (Oct 6): Measurement and submission (not started)
 - Fixes from user testing; evaluation ×3, alternative-approach run, cost measurement
