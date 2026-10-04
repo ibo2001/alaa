@@ -1,0 +1,35 @@
+app/[locale]/today/page.tsx
+  s_a8c554c53780f6::t_df1cf73ecada3a 1-7,9-18,20-44
+tests/unit/sharecard.test.ts
+  s_a8c554c53780f6::t_6f99a4fdd13d1f 1-24
+messages/en.json
+  s_a8c554c53780f6::t_da55c18cbeea3f 123-126,128-136,138-140
+  s_a8c554c53780f6::t_a75947ef69c517 127,137
+  s_a8c554c53780f6::t_4b3a6bab1513d4 141-204
+components/TodayClient.tsx
+  s_a8c554c53780f6::t_a75947ef69c517 8,65,95
+  s_a8c554c53780f6::t_727beb322ed33c 1-7,9-64,66-94,96-175
+lib/sharecard.ts
+  s_a8c554c53780f6::t_02ee8368636a05 1-81,83-95,97,111-121
+  s_a8c554c53780f6::t_a75947ef69c517 82,96,98-110
+messages/ar.json
+  s_a8c554c53780f6::t_4b3a6bab1513d4 141-204
+  s_a8c554c53780f6::t_da55c18cbeea3f 123-126,128-136,138-140
+  s_a8c554c53780f6::t_a75947ef69c517 127,137
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "cf1d326e21ede0e12ae2507a2e79c2544e6fb480",
+  "prompts": {},
+  "sessions": {
+    "s_a8c554c53780f6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e041fdb0-f00a-40b2-9e78-70e84cc32759",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
