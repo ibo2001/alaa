@@ -1,0 +1,29 @@
+messages/en.json
+  s_a8c554c53780f6::t_6dd1b20228afbd 202-230
+app/[locale]/about/page.tsx
+  s_a8c554c53780f6::t_014bc0d6959958 1-8,10-30,32-107
+app/[locale]/source/[id]/page.tsx
+  s_a8c554c53780f6::t_ea0a931607e2e0 11,48-51,118,129
+messages/ar.json
+  s_a8c554c53780f6::t_6dd1b20228afbd 202-230
+lib/links.ts
+  s_a8c554c53780f6::t_ea0a931607e2e0 1-7
+tests/e2e/day2.spec.ts
+  s_a8c554c53780f6::t_b288cefb1c8316 67-74
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "45a85da3874e45e705f3cf43141a267819d19ef3",
+  "prompts": {},
+  "sessions": {
+    "s_a8c554c53780f6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e041fdb0-f00a-40b2-9e78-70e84cc32759",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
