@@ -1,0 +1,22 @@
+components/LensClient.tsx
+  s_a8c554c53780f6::t_5dc20fd0c6e553 4,51-53,104,108,111,198
+  s_a8c554c53780f6::t_1075415392516a 1-3,5-50,54-103,105-107,109-110,112-197,199-216
+app/[locale]/lens/page.tsx
+  s_a8c554c53780f6::t_1075415392516a 1-8,10-19,21-39
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "697a71ff1c5fb056f0370ca482aea996dba85e22",
+  "prompts": {},
+  "sessions": {
+    "s_a8c554c53780f6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e041fdb0-f00a-40b2-9e78-70e84cc32759",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
