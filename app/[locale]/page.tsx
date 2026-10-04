@@ -1,8 +1,9 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { StagePicker } from "@/components/StagePicker";
 import { VersePassage } from "@/components/VersePassage";
 import { Link } from "@/i18n/navigation";
-import { formatRef } from "@/lib/quran/surahs";
-import { refrainPassage } from "@/lib/sources/passages";
+import { formatNumber, formatRef } from "@/lib/quran/surahs";
+import { refrainPassage, refrainRepeatCount } from "@/lib/sources/passages";
 import type { Lang } from "@/lib/types";
 
 export default async function Welcome({ params }: { params: Promise<{ locale: Lang }> }) {
@@ -21,12 +22,13 @@ export default async function Welcome({ params }: { params: Promise<{ locale: La
         <figure className="mt-8 w-full rounded-3xl bg-layl px-6 py-8">
           <VersePassage ayat={refrain.ayat} translation={refrain.translation} lang={locale} tone="gold" size="xl" />
           <figcaption className="mt-3 text-xs text-sama/70">
-            {formatRef(refrain.refs[0]!, locale)} · {t("refrainNote")}
+            {formatRef(refrain.refs[0]!, locale)} · {t("refrainNote", { count: formatNumber(refrainRepeatCount(), locale) })}
           </figcaption>
         </figure>
       )}
 
       <p className="mt-8 max-w-md text-layl/80">{t("intro")}</p>
+      <StagePicker />
       <Link href="/lens" className="mt-8 rounded-full bg-layl px-8 py-3 text-lg text-lazima hover:bg-layl/90">
         {t("start")}
       </Link>

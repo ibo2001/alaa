@@ -3,12 +3,13 @@ import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { BlockedCard } from "@/components/BlockedCard";
 import { CardActions } from "@/components/CardActions";
+import { StageNote } from "@/components/StageNote";
 import { VersePassage } from "@/components/VersePassage";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { formatRef, quranComUrl } from "@/lib/quran/surahs";
+import { formatNumber, formatRef, quranComUrl } from "@/lib/quran/surahs";
 import { blessings, getBlessing } from "@/lib/sources/data";
-import { blessingCard, isRefrainOnly, refrainPassage } from "@/lib/sources/passages";
+import { blessingCard, isRefrainOnly, refrainPassage, refrainRepeatCount } from "@/lib/sources/passages";
 import type { Lang } from "@/lib/types";
 
 // Cards are generated at build time from the Tanzil file; unknown ids are 404.
@@ -30,6 +31,8 @@ export default async function BlessingPage({ params }: Props) {
   const { locale, id } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("card");
+  const ts = await getTranslations("stage");
+  const refrainIntro = ts("refrainIntro", { count: formatNumber(refrainRepeatCount(), locale) });
 
   // Reflections depend on the learning stage; all reflections are hidden until reviewed (level 4).
   const card = blessingCard(id, locale, "new");
@@ -61,6 +64,7 @@ export default async function BlessingPage({ params }: Props) {
         <p className="mt-4 text-center text-sm text-sama/70">
           {card.refs.map((r) => formatRef(r, locale)).join(" · ")}
         </p>
+        {refrainOnly && <StageNote text={refrainIntro} />}
         {card.reflection && <p className="mt-6 border-s-4 border-lazima ps-4">{card.reflection}</p>}
       </section>
 
@@ -68,6 +72,7 @@ export default async function BlessingPage({ params }: Props) {
         <section className="border-t border-sama/15 px-6 py-6">
           <VersePassage ayat={refrain.ayat} translation={refrain.translation} lang={locale} tone="gold" size="xl" />
           <p className="mt-2 text-center text-xs text-sama/60">{formatRef(refrain.refs[0]!, locale)}</p>
+          <StageNote text={refrainIntro} />
         </section>
       )}
 

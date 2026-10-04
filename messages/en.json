@@ -17,7 +17,7 @@
   "welcome": {
     "start": "Start looking",
     "intro": "Alaa helps you notice everyday blessings you have grown used to: water, light, the food on your table.",
-    "refrainNote": "This verse is repeated 31 times in Surah Ar-Rahman."
+    "refrainNote": "This verse is repeated {count} times in Surah Ar-Rahman."
   },
   "placeholder": {
     "comingSoon": "This screen is being built."
@@ -113,5 +113,12 @@
     "reviewLog": "Review log",
     "readOnQuranCom": "Read on quran.com",
     "reportError": "Report an error"
+  },
+  "stage": {
+    "question": "How well do you know the Quran?",
+    "new": "I'm new to the Quran",
+    "familiar": "I know the Quran",
+    "hint": "Optional. Saved on this device only; change it any time.",
+    "refrainIntro": "This ayah is from Surah Ar-Rahman, where it is repeated {count} times."
   }
 }
