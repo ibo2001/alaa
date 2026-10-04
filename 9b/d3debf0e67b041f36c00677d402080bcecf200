@@ -1,0 +1,25 @@
+sources/quran/LICENSE
+  s_a8c554c53780f6::t_20283c31490720 1-23
+sources/quran/quran-uthmani.txt
+  s_a8c554c53780f6::t_78f9b6ac910ae0 1-6266
+sources/translations/en/LICENSE
+  s_a8c554c53780f6::t_3e532de0de1ece 1-4
+sources/translations/en/en.itani.txt
+  s_a8c554c53780f6::t_16a10eed27d05e 1-6249
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9bd3debf0e67b041f36c00677d402080bcecf200",
+  "prompts": {},
+  "sessions": {
+    "s_a8c554c53780f6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e041fdb0-f00a-40b2-9e78-70e84cc32759",
+        "model": "unknown"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
