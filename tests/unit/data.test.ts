@@ -31,6 +31,11 @@ describe("seed data integrity", () => {
     expect(data.abstention.verses).toEqual([{ surah: 14, ayah: 34 }]);
   });
 
+  it("'broader' points to an existing concept", () => {
+    const ids = new Set(concepts.map((c) => c.id));
+    for (const c of concepts) if (c.broader) expect(ids.has(c.broader), `${c.id} → ${c.broader}`).toBe(true);
+  });
+
   it("concepts that need describing people are never offered to the model", () => {
     expect(recognizableConceptIds).not.toContain("family");
   });

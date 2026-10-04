@@ -35,6 +35,12 @@ describe("decide: thresholds", () => {
     expect(decide(r([["keyboard", 0.97]]))).toEqual({ kind: "abstain", reason: "no-blessing", concept: "keyboard" });
   });
 
+  it("a concept and its broader name are one object (glass of water) → card for the top one", () => {
+    expect(decide(r([["water", 0.95], ["drinking_water", 0.85]]))).toMatchObject({ kind: "card", concept: "drinking_water" });
+    expect(decide(r([["water", 0.95], ["drinking_water", 0.6]]))).toMatchObject({ kind: "card", concept: "water" });
+    expect(decide(r([["drinking_water", 0.9], ["water", 0.8]]))).toMatchObject({ kind: "card", concept: "drinking_water" });
+  });
+
   it("two confident objects with different blessings (dates next to water) → choose", () => {
     const d = decide(r([["date_fruit", 0.9], ["drinking_water", 0.85]]));
     expect(d.kind).toBe("confirm");

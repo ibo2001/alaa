@@ -1,5 +1,5 @@
 {
-  "$comment": "Closed list of everyday concepts the vision model may return. Draft, written during the challenge. Concept names are not religious text. \"none\" means nothing in the list; \"recognizable\": false concepts are never offered to the model.",
+  "$comment": "Closed list of everyday concepts the vision model may return. Draft, written during the challenge. Concept names are not religious text. \"none\" means nothing in the list; \"recognizable\": false concepts are never offered to the model. \"broader\" marks a more general concept for the same object (both may be reported for one object).",
   "concepts": [
     {
       "id": "water",
@@ -25,7 +25,8 @@
         "bottle of water",
         "cup of water",
         "someone drinking water"
-      ]
+      ],
+      "broader": "water"
     },
     {
       "id": "rain",

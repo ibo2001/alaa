@@ -7,6 +7,8 @@ export type Concept = {
   aliases?: string[];
   /** false = never offered to the vision model (e.g. concepts that would require describing people). */
   recognizable?: boolean;
+  /** A more general concept for the same object (e.g. drinking_water → water); never counted as a second object. */
+  broader?: string;
 };
 
 export type VerseRef = { surah: number; ayah: number; ayahEnd?: number };

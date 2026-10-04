@@ -10,6 +10,8 @@ export const DEFAULT_VISION_MODEL = "claude-opus-5-5";
 const NO_FORCED_TOOL = /^claude-(opus-5-5|sonnet-5-5|fable-5-1|mythos-5-1)/;
 // These models do not accept output_config.effort.
 const NO_EFFORT = /^claude-(haiku-4-5|sonnet-4-5)/;
+// These models still accept sampling parameters; temperature 0 makes repeated runs more consistent.
+const SAMPLING_ALLOWED = /^claude-(haiku-4-5|sonnet-4-5|opus-4-5|opus-4-6|sonnet-4-6)/;
 
 export class AnthropicVisionProvider implements VisionProvider {
   readonly name = "anthropic";
@@ -49,6 +51,7 @@ export class AnthropicVisionProvider implements VisionProvider {
         tools: [this.tool],
         tool_choice: forced ? { type: "tool", name: TOOL_NAME } : { type: "auto", disable_parallel_tool_use: true },
         ...(NO_EFFORT.test(this.model) ? {} : { output_config: { effort: "low" as const } }),
+        ...(SAMPLING_ALLOWED.test(this.model) ? { temperature: 0 } : {}),
         messages: [
           {
             role: "user",
