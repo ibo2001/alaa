@@ -1,0 +1,40 @@
+messages/ar.json
+  s_a8c554c53780f6::t_0237b466d65049 57
+  s_a8c554c53780f6::t_57399182fbd2dd 19-20,37-56,58-110
+components/BlockedCard.tsx
+  s_a8c554c53780f6::t_6be6c29a002c0f 1-15
+components/CardActions.tsx
+  s_a8c554c53780f6::t_6be6c29a002c0f 1-84
+lib/quran/surahs.ts
+  s_a8c554c53780f6::t_9f669bb46b0637 1-37
+lib/sources/passages.ts
+  s_a8c554c53780f6::t_b908bc280ae21a 1-20
+messages/en.json
+  s_a8c554c53780f6::t_57399182fbd2dd 19-20,37-110
+lib/myday.ts
+  s_a8c554c53780f6::t_6be6c29a002c0f 1-20
+app/[locale]/page.tsx
+  s_a8c554c53780f6::t_7ca26fa639316c 1-2,4-6,8-9,11-13,16,19-28,30
+components/VersePassage.tsx
+  s_a8c554c53780f6::t_b908bc280ae21a 1-65
+app/[locale]/blessing/[id]/page.tsx
+  s_a8c554c53780f6::t_6be6c29a002c0f 1-12,14-30,32-86
+tests/unit/data.test.ts
+  s_a8c554c53780f6::t_9f669bb46b0637 47-54
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ee1fc577bf8125699bf3170889179bef5410a163",
+  "prompts": {},
+  "sessions": {
+    "s_a8c554c53780f6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e041fdb0-f00a-40b2-9e78-70e84cc32759",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
