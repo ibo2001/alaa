@@ -19,9 +19,6 @@
     "intro": "Alaa helps you notice everyday blessings you have grown used to: water, light, the food on your table.",
     "refrainNote": "This verse is repeated {count} times in Surah Ar-Rahman."
   },
-  "placeholder": {
-    "comingSoon": "This screen is being built."
-  },
   "pages": {
     "lens": "Lens",
     "blessing": "Blessing",
@@ -202,5 +199,34 @@
       "askTitle": "Have a question about Islam?",
       "askLink": "Ask the specialists at {name}"
     }
+  },
+  "about": {
+    "title": "About Alaa",
+    "lead": "A lens for seeing blessings: point your camera at something everyday and see where the Quran mentions it.",
+    "isTitle": "What Alaa is",
+    "is": "Technology that helps you notice the blessings you have grown so used to that you no longer see them. Its one job is to connect something in front of you to where the Quran mentions it.",
+    "isNotTitle": "What Alaa is not",
+    "isNot": "Alaa is not a mushaf app, a tafsir, a fatwa service or a place to ask religious questions. It says nothing of its own about religion: every verse is shown exactly as it is in a verified source, with its reference.",
+    "aiTitle": "How the AI is used",
+    "ai": "The AI only sees. It names what is in your photo by choosing from a closed list of {count} everyday concepts, with a confidence. It never chooses verses and never writes religious text. When it is unsure, it asks “Is this…?” or says it doesn't know.",
+    "aiMapping": "Each concept is linked to its verses in a fixed table written by people, not by the AI.",
+    "sourcesTitle": "Where the text comes from",
+    "sourcesQuran": "Quran text: the Tanzil Project, Uthmani script, unmodified. Every ayah is checked against its SHA-256 fingerprint before it is shown; if it doesn't match, nothing is shown.",
+    "sourcesTranslation": "English translation: Talal Itani (ClearQuran.com), CC BY-ND 4.0. A translation conveys the meaning; the Quran is the Arabic text.",
+    "sourcesVerify": "Every verse links to quran.com, so you can read it in its surah and check it yourself.",
+    "reviewTitle": "Religious review",
+    "review": "The links between blessings and verses show “Mapping under review” until a qualified reviewer approves them. Short reflections stay hidden until they are reviewed. Every review is recorded publicly.",
+    "reviewLog": "Read the review log",
+    "privacyTitle": "Privacy",
+    "privacy": "Your photo is shrunk on your device, analyzed, then discarded: it is never stored or logged. My Day, your journey and your learning stage are saved on this device only. There are no accounts and no tracking.",
+    "questionsTitle": "Questions about Islam?",
+    "questions": "Alaa does not answer religious questions. For those, please ask people qualified to answer.",
+    "questionsLink": "Ask the specialists at {name}",
+    "reportTitle": "Report an error",
+    "report": "If a verse, a translation or a link between a blessing and a verse looks wrong, please tell us. Each source page also has its own report link.",
+    "reportLink": "Report an error on GitHub",
+    "builtTitle": "Built for the AI Challenge for Islamic Content",
+    "built": "Alaa was built during the AI Challenge for Islamic Content (Track 3: Interactive Experiences & Knowledge Journeys), October 4–6, 2026. The code is open.",
+    "cta": "Start looking"
   }
 }

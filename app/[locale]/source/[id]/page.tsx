@@ -8,6 +8,7 @@ import { formatRef, quranComUrl } from "@/lib/quran/surahs";
 import { blessings, getBlessing } from "@/lib/sources/data";
 import { blessingCard } from "@/lib/sources/passages";
 import type { Lang, ReviewStatus } from "@/lib/types";
+import { issueUrl, REVIEW_LOG_URL } from "@/lib/links";
 
 export const dynamicParams = false;
 
@@ -16,8 +17,6 @@ export function generateStaticParams() {
 }
 
 type Props = { params: Promise<{ locale: Lang; id: string }> };
-
-const REPO = "https://github.com/ibo2001/alaa";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, id } = await params;
@@ -46,10 +45,10 @@ export default async function SourcePage({ params }: Props) {
   const card = blessingCard(id, locale, "new")!;
   const status = (s: ReviewStatus) => (s === "reviewed" ? t("reviewed") : t("draft"));
   const refs = blessing.verses.map((r) => formatRef(r, locale)).join(" · ");
-  const issueUrl = `${REPO}/issues/new?${new URLSearchParams({
-    title: `Content report: ${blessing.id}`,
-    body: `Card: ${blessing.id}\nVerses: ${blessing.verses.map((r) => `${r.surah}:${r.ayah}${r.ayahEnd ? `-${r.ayahEnd}` : ""}`).join(", ")}\n\nWhat looks wrong?\n`,
-  })}`;
+  const reportUrl = issueUrl(
+    `Content report: ${blessing.id}`,
+    `Card: ${blessing.id}\nVerses: ${blessing.verses.map((r) => `${r.surah}:${r.ayah}${r.ayahEnd ? `-${r.ayahEnd}` : ""}`).join(", ")}\n\nWhat looks wrong?\n`,
+  );
 
   return (
     <article className="py-6">
@@ -116,7 +115,7 @@ export default async function SourcePage({ params }: Props) {
             </p>
           )}
           <p className="mt-1 text-sm">
-            <a href={`${REPO}/blob/main/sources/REVIEW_LOG.md`} target="_blank" rel="noopener noreferrer" className="text-nakhl underline">
+            <a href={REVIEW_LOG_URL} target="_blank" rel="noopener noreferrer" className="text-nakhl underline">
               {t("reviewLog")} ↗
             </a>
           </p>
@@ -127,7 +126,7 @@ export default async function SourcePage({ params }: Props) {
         <Link href={`/blessing/${blessing.id}`} className="rounded-full bg-layl px-5 py-2 text-lazima">
           ← {blessing.labels[locale]}
         </Link>
-        <a href={issueUrl} target="_blank" rel="noopener noreferrer" className="rounded-full border-2 border-tamr px-5 py-2 text-tamr">
+        <a href={reportUrl} target="_blank" rel="noopener noreferrer" className="rounded-full border-2 border-tamr px-5 py-2 text-tamr">
           {t("reportError")} ↗
         </a>
       </div>

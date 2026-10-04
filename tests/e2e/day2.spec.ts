@@ -64,3 +64,11 @@ test("Ar-Rahman Journey: photo and read progress, then the after-journey screen"
   await expect(page.getByRole("link", { name: /Surah Ar-Rahman with translation/ })).toHaveAttribute("href", "https://quran.com/55");
   await expect(page.getByRole("link", { name: "Ask the specialists at IslamQA" })).toHaveAttribute("href", "https://islamqa.info/en");
 });
+
+test("About: what Alaa is and is not, referral and report links", async ({ page }) => {
+  await page.goto("/ar/about");
+  await expect(page.getByRole("heading", { level: 1, name: "عن آلاء" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "ما ليس هو" })).toBeVisible();
+  await expect(page.getByRole("link", { name: /الإسلام سؤال وجواب/ })).toHaveAttribute("href", "https://islamqa.info/ar");
+  await expect(page.getByRole("link", { name: "أبلغ عن خطأ عبر GitHub" })).toHaveAttribute("href", /github\.com\/ibo2001\/alaa\/issues\/new/);
+});
