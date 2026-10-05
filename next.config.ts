@@ -20,6 +20,8 @@ const withSerwist = withSerwistInit({
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  // E2E builds into its own folder so it can run while `next dev` uses .next (see playwright.config.ts).
+  distDir: process.env.NEXT_DIST_DIR || ".next",
   // /api/see reads sample photos from disk when they have no cached result.
   outputFileTracingIncludes: { "/api/see": ["./public/samples/**/*"] },
 };

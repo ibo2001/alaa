@@ -13,6 +13,6 @@ export default defineConfig({
     timeout: 240_000,
     reuseExistingServer: !process.env.CI,
     // e2e uses the stub vision provider so it needs no API key.
-    env: { VISION_PROVIDER: "stub" },
+    env: { VISION_PROVIDER: "stub", NEXT_DIST_DIR: ".next-e2e" },
   },
 });
