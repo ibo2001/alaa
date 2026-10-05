@@ -1,0 +1,25 @@
+.env.example
+  s_9a8b9d0f22ef1e::t_0b63069f3ee714 12
+  s_9a8b9d0f22ef1e::t_dcb5a46f8f9537 5
+docs/ROADMAP.md
+  s_9a8b9d0f22ef1e::t_be8d6847487bc7 12,25,27
+README.md
+  s_9a8b9d0f22ef1e::t_0b63069f3ee714 65
+  s_9a8b9d0f22ef1e::t_be8d6847487bc7 16,51,54-55,62,71-75
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "854ef412e91fc42141e0db01cd753fadb5bff08a",
+  "prompts": {},
+  "sessions": {
+    "s_9a8b9d0f22ef1e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b8b37140-fbdc-4e61-a833-176ff24e8c3a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
