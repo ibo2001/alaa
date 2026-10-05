@@ -281,5 +281,16 @@
     "notReviewed": "not reviewed yet",
     "yes": "yes",
     "no": "no"
+  },
+  "home": {
+    "verseTitle": "A blessing verse",
+    "another": "Another verse",
+    "openCard": "{name} card",
+    "loading": "…",
+    "journey": "Journey {n} of {total}",
+    "journeyNext": "Next: {name}",
+    "journeyDone": "Journey complete",
+    "yourDay": "Your day",
+    "hijri": "Hijri date"
   }
 }

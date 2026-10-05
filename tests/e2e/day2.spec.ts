@@ -1,4 +1,17 @@
-import { expect, test } from "@playwright/test";
+import { expect, test, type Page } from "@playwright/test";
+
+/** The learning stage as stored in IndexedDB (buttons update before the write commits). */
+const storedStage = (page: Page) =>
+  page.evaluate(
+    () =>
+      new Promise((resolve) => {
+        const open = indexedDB.open("keyval-store");
+        open.onsuccess = () => {
+          const req = open.result.transaction("keyval").objectStore("keyval").get("stage");
+          req.onsuccess = () => resolve(req.result);
+        };
+      }),
+  );
 
 // Learning stage, My Day's Surah and the Ar-Rahman Journey. All state is on the device (IndexedDB),
 // and each Playwright test starts with a fresh browser context.
@@ -9,20 +22,7 @@ test("learning stage: new readers see the refrain note", async ({ page }) => {
   await option.click();
   await expect(option).toHaveAttribute("aria-pressed", "true");
   // The button updates before the IndexedDB write commits; wait for the stored value before leaving the page.
-  await expect
-    .poll(() =>
-      page.evaluate(
-        () =>
-          new Promise((resolve) => {
-            const open = indexedDB.open("keyval-store");
-            open.onsuccess = () => {
-              const req = open.result.transaction("keyval").objectStore("keyval").get("stage");
-              req.onsuccess = () => resolve(req.result);
-            };
-          }),
-      ),
-    )
-    .toBe("new");
+  await expect.poll(() => storedStage(page)).toBe("new");
 
   await page.goto("/en/blessing/water");
   await expect(page.getByText("This ayah is from Surah Ar-Rahman, where it is repeated 31 times.")).toBeVisible();
@@ -123,4 +123,25 @@ test("Review sheet: answers are saved on the device and sent to the review inbox
   expect(text).toContain("مراجع تجريبي");
   expect(text).toContain("[sky]");
   expect(text).toContain("٥٥:١٠");
+});
+
+test("Home: a Guard-verified blessing verse that changes, and the stage question only until answered", async ({ page }) => {
+  await page.goto("/en");
+  await expect(page.locator("[data-ready]")).toBeVisible();
+  const verse = page.locator("[data-verse]");
+  await expect(verse.locator("p.verse")).toBeVisible();
+  const first = await verse.getAttribute("data-verse");
+  await page.getByRole("button", { name: "Another verse" }).click();
+  await expect(verse).not.toHaveAttribute("data-verse", first!);
+  await expect(page.getByRole("link", { name: "My Day's Surah" })).toHaveCount(0); // no repeated shortcuts
+
+  // First visit asks the learning stage; once answered, Home no longer shows it (About still does).
+  await page.getByRole("button", { name: "I know the Quran" }).click();
+  await expect(page.getByRole("button", { name: "I know the Quran" })).toHaveAttribute("aria-pressed", "true");
+  await expect.poll(() => storedStage(page)).toBe("familiar");
+  await page.reload();
+  await expect(page.locator("[data-ready]")).toBeVisible();
+  await expect(page.getByRole("button", { name: "I know the Quran" })).toHaveCount(0);
+  await page.goto("/en/about");
+  await expect(page.getByRole("button", { name: "I know the Quran" })).toHaveAttribute("aria-pressed", "true");
 });

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { LensIcon } from "@/components/icons";
+import { StagePicker } from "@/components/StagePicker";
 import { button, PageHeader } from "@/components/ui";
 import { Link } from "@/i18n/navigation";
 import { issueUrl, REPO_URL, REVIEW_LOG_URL } from "@/lib/links";
@@ -70,6 +71,11 @@ export default async function AboutPage({ params }: Props) {
           </Link>
         </p>
       </Section>
+
+      {/* The learning stage is asked on Home only until answered; here it can always be changed. */}
+      <div className="mt-4">
+        <StagePicker />
+      </div>
 
       <Section title={t("privacyTitle")}>
         <p>{t("privacy")}</p>

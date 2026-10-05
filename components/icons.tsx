@@ -123,3 +123,11 @@ export const ExternalIcon = ({ className }: Props) => (
     <path d="M14 4h6v6M20 4l-8.5 8.5M18 14v4.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10" />
   </svg>
 );
+
+/** Two arrows in a circle: show another. */
+export const RefreshIcon = ({ className }: Props) => (
+  <svg {...base} className={className}>
+    <path d="M19.5 12a7.5 7.5 0 0 1-13 5.1M4.5 12a7.5 7.5 0 0 1 13-5.1" />
+    <path d="M17.5 3.5v3.4h-3.4M6.5 20.5v-3.4h3.4" />
+  </svg>
+);

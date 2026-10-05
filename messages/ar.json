@@ -281,5 +281,16 @@
     "notReviewed": "لم تُراجَع بعد",
     "yes": "نعم",
     "no": "لا"
+  },
+  "home": {
+    "verseTitle": "آية نعمة",
+    "another": "آية أخرى",
+    "openCard": "بطاقة {name}",
+    "loading": "…",
+    "journey": "الرحلة {n} من {total}",
+    "journeyNext": "التالية: {name}",
+    "journeyDone": "اكتملت الرحلة",
+    "yourDay": "يومك",
+    "hijri": "التاريخ الهجري"
   }
 }

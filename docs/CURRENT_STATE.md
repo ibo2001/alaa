@@ -8,8 +8,8 @@ A running snapshot of where the project is. Updated at each milestone. For "buil
 | Check | Status |
 |---|---|
 | Lint, typecheck | Clean |
-| Unit tests (Vitest) | 56 passing |
-| E2E (Playwright, stub provider) | 9 passing (builds into `.next-e2e`, so it can run beside `next dev`) |
+| Unit tests (Vitest) | 64 passing |
+| E2E (Playwright, stub provider) | 10 passing (builds into `.next-e2e`, so it can run beside `next dev`) |
 | Vercel deploy | Green, auto-deploys from `main`. Today's commits (review, UI) are local and not pushed yet, so the live site still shows the Day 1 UI |
 | Real-model eval (`claude-haiku-4-5`) | 21/21 correct, 7/7 consistent over 3 runs (7 sample photos) |
 
@@ -52,7 +52,7 @@ The PWA now looks and behaves like a native app instead of a website. Checked at
 | Compact translucent top bar: back on pushed pages (in-app history, parent page for shared links), app name, language chip | Done |
 | Page transitions: slide in when going deeper, slide back on return, crossfade between tabs; opacity only with reduced motion, solid bars with reduced transparency | Done |
 | Native touches: safe-area insets, press feedback, no tap delay, no page bounce | Done |
-| Home: hero with the refrain and the main action, segmented learning-stage control, grouped shortcuts | Done |
+| Home: date (Gregorian and Hijri), "A blessing verse" chosen on the device by time of day from Guard-verified references already in `blessings.json` (see `DECISIONS.md`), the refrain, "another verse", day and journey status tiles; intro and learning stage only until answered (stage also in About). No repeated shortcuts | Done |
 | Lens: viewfinder panel with shutter and gallery buttons, scan line while analysing; confirm, abstention and error as bottom sheets on `<dialog>` | Done |
 | Card: icon action row (Add to My Day, Share, Source, quran.com); verses from different surahs shown as separate passages | Done |
 | My Day: empty state, round remove buttons, share-card tools in a card | Done |
