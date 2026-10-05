@@ -1,0 +1,24 @@
+docs/user-testing/FORM.md
+  s_9a8b9d0f22ef1e::t_84d98346355716 44,49
+docs/user-testing/PROTOCOL.md
+  s_9a8b9d0f22ef1e::t_84d98346355716 28
+  s_9a8b9d0f22ef1e::t_007abded7468f5 21,35
+scripts/study-form.ts
+  s_9a8b9d0f22ef1e::t_84d98346355716 36,77
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "dd19329da2c5f2b474164c060dddfaf6579ab399",
+  "prompts": {},
+  "sessions": {
+    "s_9a8b9d0f22ef1e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b8b37140-fbdc-4e61-a833-176ff24e8c3a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
