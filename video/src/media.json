@@ -1,11 +1,11 @@
 {
-  "clips/s2_home.mp4": 187,
-  "clips/s3_lens_water.mp4": 358,
-  "clips/s4_myday.mp4": 508,
-  "clips/s5_keyboard.mp4": 307,
-  "clips/s6_source.mp4": 283,
-  "clips/s7_journey.mp4": 425,
-  "clips/s8_english.mp4": 240,
+  "clips/s2_home.mp4": 138,
+  "clips/s3_lens_water.mp4": 332,
+  "clips/s4_myday.mp4": 461,
+  "clips/s5_keyboard.mp4": 266,
+  "clips/s6_source.mp4": 235,
+  "clips/s7_journey.mp4": 383,
+  "clips/s8_english.mp4": 196,
   "voice/s1.mp3": 149,
   "voice/s10.mp3": 224,
   "voice/s2.mp3": 277,
@@ -15,5 +15,6 @@
   "voice/s6.mp3": 627,
   "voice/s7.mp3": 231,
   "voice/s8.mp3": 203,
-  "voice/s9.mp3": 485
+  "voice/s9.mp3": 485,
+  "footage/glass.mp4": 240
 }

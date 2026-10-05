@@ -138,7 +138,15 @@ async function main() {
       writeFileSync(file, Buffer.from(f.data, "base64"));
       await cdp.send("Page.screencastFrameAck", { sessionId: f.sessionId }).catch(() => {});
     });
-    await cdp.send("Page.startScreencast", { format: "jpeg", quality: 92, maxWidth: 1170, maxHeight: 2532, everyNthFrame: 1 });
+    // Start capturing only once the first page has loaded, so clips never open on a blank white screen.
+    let started = false;
+    const start = async () => {
+      if (started) return;
+      started = true;
+      await page.waitForTimeout(250);
+      await cdp.send("Page.startScreencast", { format: "jpeg", quality: 92, maxWidth: 1170, maxHeight: 2532, everyNthFrame: 1 });
+    };
+    page.once("load", () => void start());
     try {
       await run(page);
       console.log(`✓ ${name} (${frames.length} frames)`);

@@ -186,7 +186,7 @@ const Footage: React.FC<{ clip: string; length: number }> = ({ clip, length }) =
   const zoom = interpolate(frame, [0, length], [1.04, 1.12]);
   return (
     <AbsoluteFill style={{ overflow: "hidden" }}>
-      <OffthreadVideo src={staticFile(clip)} muted style={{ width: "100%", height: "100%", objectFit: "cover", transform: `scale(${zoom})` }} />
+      <OffthreadVideo src={staticFile(clip)} muted style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "40% 50%", transform: `scale(${zoom})`, transformOrigin: "40% 60%" }} />
       <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(18,24,58,0.2), rgba(18,24,58,0.65))" }} />
     </AbsoluteFill>
   );
@@ -221,7 +221,7 @@ const SceneView: React.FC<{ s: Scene; landscape: boolean }> = ({ s, landscape })
         </AbsoluteFill>
       )}
       {s.kind === "numbers" && (
-        <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", gap: 70, flexDirection: "column" }}>
+        <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", gap: landscape ? 36 : 70, flexDirection: "column", paddingBottom: landscape ? 150 : 0 }}>
           {s.title && <Title t={s.title} length={length} landscape={landscape} />}
           <Numbers length={length} />
         </AbsoluteFill>
