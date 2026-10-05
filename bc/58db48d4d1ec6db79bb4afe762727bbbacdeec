@@ -1,0 +1,19 @@
+docs/CURRENT_STATE.md
+  s_9a8b9d0f22ef1e::t_7ffacd4b25f3f8 5,13-14,83,88,91,94-95
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "bc58db48d4d1ec6db79bb4afe762727bbbacdeec",
+  "prompts": {},
+  "sessions": {
+    "s_9a8b9d0f22ef1e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b8b37140-fbdc-4e61-a833-176ff24e8c3a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
