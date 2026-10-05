@@ -15,7 +15,7 @@ const passages = [
 async function index(withEmbeddings: boolean): Promise<RagIndex> {
   const embeddings = withEmbeddings ? await new StubEmbedder().embed(passages.map(passageText), "document") : null;
   return {
-    manifest: { builtAt: "", sources: { quran: "", translation: "", tafsir: "" }, embedding: null, passages: passages.length },
+    manifest: { builtAt: "", sources: { quran: "", translation: "", tafsir: "" }, embedding: null, passages: passages.length, files: {} },
     manifestSha256: "x",
     passages,
     lexicon: { ماء: ["موه"], يد: ["يدي"], ايدي: ["يدي"] },

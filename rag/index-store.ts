@@ -1,4 +1,5 @@
 // rag/index/: passages.jsonl, lexicon.json, embeddings.f32 (git-ignored) and manifest.json (committed).
+import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { sha256 } from "@/lib/quran/tanzil";
@@ -13,6 +14,8 @@ export type IndexManifest = {
   sources: SourceHashes;
   embedding: { model: string; dimensions: number } | null;
   passages: number;
+  /** SHA-256 of each git-ignored data file, so a committed manifest never vouches for other data. */
+  files: Record<string, string>;
 };
 export type RagIndex = {
   manifest: IndexManifest;
@@ -28,6 +31,8 @@ export class IndexError extends Error {
     this.name = "IndexError";
   }
 }
+
+const fileHash = (path: string) => createHash("sha256").update(readFileSync(path)).digest("hex");
 
 export function currentSourceHashes(bundle: SourceBundle, tafsir: TafsirManifest): SourceHashes {
   const tr = bundle.translations[TRANSLATION_ID]?.manifest;
@@ -57,11 +62,13 @@ export function writeIndex(
     writeFileSync(join(dir, "embeddings.f32"), Buffer.from(all.buffer));
     embedding = { model: data.embeddingModel, dimensions: dims };
   }
+  const names = ["passages.jsonl", "lexicon.json", ...(embedding ? ["embeddings.f32"] : [])];
   const manifest: IndexManifest = {
     builtAt: (data.now ?? new Date()).toISOString(),
     sources: data.sources,
     embedding,
     passages: data.passages.length,
+    files: Object.fromEntries(names.map((n) => [n, fileHash(join(dir, n))])),
   };
   writeFileSync(join(dir, "manifest.json"), JSON.stringify(manifest, null, 2) + "\n");
   return manifest;
@@ -74,6 +81,12 @@ export function readIndex(dir: string, expected: SourceHashes): RagIndex {
   const manifest = JSON.parse(raw) as IndexManifest;
   for (const k of ["quran", "translation", "tafsir"] as const) {
     if (manifest.sources[k] !== expected[k]) throw new IndexError(`The index was built from a different ${k} file`);
+  }
+  if (!manifest.files) throw new IndexError("The index manifest has no data-file hashes");
+  for (const [name, hash] of Object.entries(manifest.files)) {
+    const path = join(dir, name);
+    if (!existsSync(path)) throw new IndexError(`${name} is missing`);
+    if (fileHash(path) !== hash) throw new IndexError(`${name} does not belong to this index manifest`);
   }
   const passages = readFileSync(join(dir, "passages.jsonl"), "utf8").trim().split("\n").map((l) => JSON.parse(l) as Passage);
   if (passages.length !== manifest.passages) throw new IndexError("passages.jsonl does not match the manifest");

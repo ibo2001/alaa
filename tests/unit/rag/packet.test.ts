@@ -13,7 +13,7 @@ import type { TafsirTexts } from "@/rag/tafsir";
 const real = loadSources();
 const keys = ["16:53", "21:30", "55:13"];
 const index: RagIndex = {
-  manifest: { builtAt: "", sources: { quran: "", translation: "", tafsir: "" }, embedding: null, passages: 3 },
+  manifest: { builtAt: "", sources: { quran: "", translation: "", tafsir: "" }, embedding: null, passages: 3, files: {} },
   manifestSha256: "m".repeat(64),
   passages: keys.map((key, i) => ({ key, ar: "", en: ["blessing favour", "water life", "favours deny"][i]!, enMukhtasar: "", arMuyassar: "", roots: [] })),
   lexicon: {},

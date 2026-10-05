@@ -1,4 +1,4 @@
-import { mkdtempSync, rmSync } from "node:fs";
+import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
@@ -42,6 +42,25 @@ describe("index store", () => {
     expect(() => readIndex(dir, sources)).toThrow(/npx tsx rag\/build-index\.ts/);
     writeIndex(dir, { sources, passages, lexicon: {}, embeddings: [Float32Array.from([1]), Float32Array.from([1])], embeddingModel: "stub" });
     rmSync(join(dir, "embeddings.f32"));
+    expect(() => readIndex(dir, sources)).toThrow(IndexError);
+  });
+
+  it("stops when a data file no longer belongs to the manifest (review finding 2)", () => {
+    // e.g. a pulled manifest.json next to old, git-ignored data files with the same counts
+    const dir = mkdtempSync(join(tmpdir(), "alaa-idx-"));
+    writeIndex(dir, { sources, passages, lexicon: { حمد: ["حمد"] }, embeddings: [Float32Array.from([1, 0]), Float32Array.from([0, 1])], embeddingModel: "stub" });
+    writeFileSync(join(dir, "passages.jsonl"), passages.map((p) => JSON.stringify({ ...p, en: "older" })).join("\n") + "\n");
+    expect(() => readIndex(dir, sources)).toThrow(/passages\.jsonl/);
+
+    writeIndex(dir, { sources, passages, lexicon: { حمد: ["حمد"] }, embeddings: [Float32Array.from([1, 0]), Float32Array.from([0, 1])], embeddingModel: "stub" });
+    writeFileSync(join(dir, "lexicon.json"), JSON.stringify({}));
+    expect(() => readIndex(dir, sources)).toThrow(/lexicon\.json/);
+
+    writeIndex(dir, { sources, passages, lexicon: {}, embeddings: [Float32Array.from([1, 0]), Float32Array.from([0, 1])], embeddingModel: "stub" });
+    writeFileSync(join(dir, "embeddings.f32"), Buffer.from(Float32Array.from([0, 1, 1, 0]).buffer));
+    expect(() => readIndex(dir, sources)).toThrow(/embeddings\.f32/);
+
+    rmSync(join(dir, "lexicon.json"));
     expect(() => readIndex(dir, sources)).toThrow(IndexError);
   });
 });
