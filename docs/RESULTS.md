@@ -15,7 +15,7 @@ On this set the alternative was more accurate and cheaper; Alaa's target (≥ 85
 **By group (photos correct in all three runs):**
 | Group | Alaa | Alternative |
 |---|---|---|
-| Blessings on the list (12 new + 6 earlier) | 17/18 | 17/18 |
+| Blessings on the list (12 new + 5 earlier) | 16/17 | 16/17 |
 | Off the list / known with no verse (8 + keyboard) | 6/9 | 8/9 |
 | Ambiguous (3) | 2/3 | 3/3 |
 | Two objects (2) | 1/2 | 1/2 |
@@ -37,7 +37,7 @@ On this set the alternative was more accurate and cheaper; Alaa's target (≥ 85
 - **Oct 5 (Day 2) harness check:** the same 7 photos × 1 run, both approaches, to test the script (not a result). Label fix found: `my_hand.png` was labelled "abstain" from before the hand card existed; it now expects `hand`.
 
 ## Religious text
-0 unverified religious text: the Source Guard tests pass on every commit (70 unit tests on Oct 5).
+0 unverified religious text: the Source Guard tests pass on every commit (72 unit tests on Oct 5).
 
 ## User testing
 See `docs/user-testing/RESULTS.md` (sessions pending).
