@@ -1,0 +1,21 @@
+docs/ROADMAP.md
+  s_9a8b9d0f22ef1e::t_717190ba303129 22,24
+docs/DECISIONS.md
+  s_9a8b9d0f22ef1e::t_717190ba303129 16
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d1809175558d80c11d6d7ff0c60447779f0ae08a",
+  "prompts": {},
+  "sessions": {
+    "s_9a8b9d0f22ef1e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b8b37140-fbdc-4e61-a833-176ff24e8c3a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
