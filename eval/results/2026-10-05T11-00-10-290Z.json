@@ -1,0 +1,901 @@
+{
+  "stamp": "2026-10-05T11:00:10.290Z",
+  "model": "claude-haiku-4-5-20251001",
+  "folder": "eval/images",
+  "runs": 3,
+  "metrics": {
+    "constrained": {
+      "calls": 102,
+      "correct": 90,
+      "consistentImages": 33,
+      "images": 34,
+      "medianMs": 1657,
+      "p95Ms": 2080,
+      "avgCostUsd": 0.0041193137254901995
+    }
+  },
+  "results": {
+    "constrained": [
+      {
+        "file": "Acer_SF114-32_keyboard_closeup.jpg",
+        "expected": "abstain",
+        "calls": [
+          {
+            "decision": "abstain",
+            "ok": true,
+            "ms": 2980,
+            "cost": 0.0040479999999999995
+          },
+          {
+            "decision": "abstain",
+            "ok": true,
+            "ms": 1714,
+            "cost": 0.0040479999999999995
+          },
+          {
+            "decision": "abstain",
+            "ok": true,
+            "ms": 1462,
+            "cost": 0.0040479999999999995
+          }
+        ]
+      },
+      {
+        "file": "Blue_sky_white_clouds_looking_up_at_trees.jpg",
+        "expected": [
+          "sky",
+          "tree"
+        ],
+        "calls": [
+          {
+            "decision": "card sky",
+            "ok": true,
+            "ms": 1462,
+            "cost": 0.004216
+          },
+          {
+            "decision": "card sky",
+            "ok": true,
+            "ms": 1440,
+            "cost": 0.004216
+          },
+          {
+            "decision": "card sky",
+            "ok": true,
+            "ms": 1436,
+            "cost": 0.004216
+          }
+        ]
+      },
+      {
+        "file": "Bubbles_in_glass_of_water.jpg",
+        "expected": [
+          "drinking_water",
+          "water"
+        ],
+        "calls": [
+          {
+            "decision": "card drinking_water",
+            "ok": true,
+            "ms": 1648,
+            "cost": 0.0041979999999999995
+          },
+          {
+            "decision": "card drinking_water",
+            "ok": true,
+            "ms": 1679,
+            "cost": 0.0041979999999999995
+          },
+          {
+            "decision": "card drinking_water",
+            "ok": true,
+            "ms": 1798,
+            "cost": 0.0041979999999999995
+          }
+        ]
+      },
+      {
+        "file": "Dates_on_date_palm.jpg",
+        "expected": [
+          "date_fruit",
+          "palm_tree"
+        ],
+        "calls": [
+          {
+            "decision": "card date_fruit",
+            "ok": true,
+            "ms": 1937,
+            "cost": 0.004156999999999999
+          },
+          {
+            "decision": "card date_fruit",
+            "ok": true,
+            "ms": 1720,
+            "cost": 0.004156999999999999
+          },
+          {
+            "decision": "card date_fruit",
+            "ok": true,
+            "ms": 1754,
+            "cost": 0.004156999999999999
+          }
+        ]
+      },
+      {
+        "file": "Glass_of_Water.jpeg",
+        "expected": [
+          "drinking_water",
+          "water"
+        ],
+        "calls": [
+          {
+            "decision": "card drinking_water",
+            "ok": true,
+            "ms": 1727,
+            "cost": 0.004226
+          },
+          {
+            "decision": "card drinking_water",
+            "ok": true,
+            "ms": 1879,
+            "cost": 0.004226
+          },
+          {
+            "decision": "card drinking_water",
+            "ok": true,
+            "ms": 1746,
+            "cost": 0.004226
+          }
+        ]
+      },
+      {
+        "file": "Sky_clouds.jpeg",
+        "expected": [
+          "sky"
+        ],
+        "calls": [
+          {
+            "decision": "card sky",
+            "ok": true,
+            "ms": 1571,
+            "cost": 0.004118
+          },
+          {
+            "decision": "card sky",
+            "ok": true,
+            "ms": 1563,
+            "cost": 0.004118
+          },
+          {
+            "decision": "card sky",
+            "ok": true,
+            "ms": 1620,
+            "cost": 0.004118
+          }
+        ]
+      },
+      {
+        "file": "ambiguous__bokeh_lights__px6296462.jpg",
+        "expected": "abstain",
+        "calls": [
+          {
+            "decision": "card night",
+            "ok": false,
+            "ms": 2140,
+            "cost": 0.004131999999999999
+          },
+          {
+            "decision": "card night",
+            "ok": false,
+            "ms": 2057,
+            "cost": 0.004131999999999999
+          },
+          {
+            "decision": "card night",
+            "ok": false,
+            "ms": 2206,
+            "cost": 0.004131999999999999
+          }
+        ]
+      },
+      {
+        "file": "ambiguous__bottle_on_beach__px7981599.jpg",
+        "expected": [
+          "abstain",
+          "sea",
+          "water"
+        ],
+        "calls": [
+          {
+            "decision": "confirm bottle/sea/daytime",
+            "ok": true,
+            "ms": 1642,
+            "cost": 0.004137
+          },
+          {
+            "decision": "confirm bottle/sea/daytime",
+            "ok": true,
+            "ms": 1687,
+            "cost": 0.004137
+          },
+          {
+            "decision": "confirm bottle/sea/daytime",
+            "ok": true,
+            "ms": 1660,
+            "cost": 0.004137
+          }
+        ]
+      },
+      {
+        "file": "ambiguous__tree_bark__px37024589.jpg",
+        "expected": [
+          "abstain",
+          "tree"
+        ],
+        "calls": [
+          {
+            "decision": "card tree",
+            "ok": true,
+            "ms": 1458,
+            "cost": 0.003992
+          },
+          {
+            "decision": "card tree",
+            "ok": true,
+            "ms": 1417,
+            "cost": 0.003992
+          },
+          {
+            "decision": "card tree",
+            "ok": true,
+            "ms": 1469,
+            "cost": 0.003992
+          }
+        ]
+      },
+      {
+        "file": "blessing__crops_grain__px16222126.jpg",
+        "expected": [
+          "wheat",
+          "grain"
+        ],
+        "calls": [
+          {
+            "decision": "confirm wheat/tree/daytime",
+            "ok": true,
+            "ms": 1803,
+            "cost": 0.004137
+          },
+          {
+            "decision": "confirm wheat/tree/daytime",
+            "ok": true,
+            "ms": 1619,
+            "cost": 0.004137
+          },
+          {
+            "decision": "confirm wheat/tree/daytime",
+            "ok": true,
+            "ms": 1540,
+            "cost": 0.004137
+          }
+        ]
+      },
+      {
+        "file": "blessing__date_fruit__px17877978.jpg",
+        "expected": [
+          "date_fruit"
+        ],
+        "calls": [
+          {
+            "decision": "card grain",
+            "ok": false,
+            "ms": 1574,
+            "cost": 0.004062
+          },
+          {
+            "decision": "card grain",
+            "ok": false,
+            "ms": 1662,
+            "cost": 0.004062
+          },
+          {
+            "decision": "card grain",
+            "ok": false,
+            "ms": 1565,
+            "cost": 0.004062
+          }
+        ]
+      },
+      {
+        "file": "blessing__date_palm__px18331921.jpg",
+        "expected": [
+          "palm_tree",
+          "date_fruit"
+        ],
+        "calls": [
+          {
+            "decision": "card palm_tree",
+            "ok": true,
+            "ms": 1703,
+            "cost": 0.0041519999999999994
+          },
+          {
+            "decision": "card palm_tree",
+            "ok": true,
+            "ms": 1938,
+            "cost": 0.0041519999999999994
+          },
+          {
+            "decision": "card palm_tree",
+            "ok": true,
+            "ms": 1846,
+            "cost": 0.0041519999999999994
+          }
+        ]
+      },
+      {
+        "file": "blessing__drinking_water__px13464445.jpg",
+        "expected": [
+          "drinking_water",
+          "water"
+        ],
+        "calls": [
+          {
+            "decision": "card drinking_water",
+            "ok": true,
+            "ms": 1809,
+            "cost": 0.004142
+          },
+          {
+            "decision": "card drinking_water",
+            "ok": true,
+            "ms": 1691,
+            "cost": 0.004142
+          },
+          {
+            "decision": "card drinking_water",
+            "ok": true,
+            "ms": 1721,
+            "cost": 0.004142
+          }
+        ]
+      },
+      {
+        "file": "blessing__moon__px10531646.jpg",
+        "expected": [
+          "moon"
+        ],
+        "calls": [
+          {
+            "decision": "card moon",
+            "ok": true,
+            "ms": 1954,
+            "cost": 0.004062
+          },
+          {
+            "decision": "card moon",
+            "ok": true,
+            "ms": 1946,
+            "cost": 0.004062
+          },
+          {
+            "decision": "card moon",
+            "ok": true,
+            "ms": 1993,
+            "cost": 0.004062
+          }
+        ]
+      },
+      {
+        "file": "blessing__pearls__px5357486.jpg",
+        "expected": [
+          "pearl"
+        ],
+        "calls": [
+          {
+            "decision": "card pearl",
+            "ok": true,
+            "ms": 1434,
+            "cost": 0.00402
+          },
+          {
+            "decision": "card pearl",
+            "ok": true,
+            "ms": 1438,
+            "cost": 0.00402
+          },
+          {
+            "decision": "card pearl",
+            "ok": true,
+            "ms": 1449,
+            "cost": 0.00402
+          }
+        ]
+      },
+      {
+        "file": "blessing__pen_writing__px35522712.jpg",
+        "expected": [
+          "pen",
+          "handwriting"
+        ],
+        "calls": [
+          {
+            "decision": "card handwriting",
+            "ok": true,
+            "ms": 1682,
+            "cost": 0.004137
+          },
+          {
+            "decision": "card handwriting",
+            "ok": true,
+            "ms": 1648,
+            "cost": 0.004137
+          },
+          {
+            "decision": "card handwriting",
+            "ok": true,
+            "ms": 1618,
+            "cost": 0.004137
+          }
+        ]
+      },
+      {
+        "file": "blessing__pomegranate__px12148143.jpg",
+        "expected": [
+          "pomegranate"
+        ],
+        "calls": [
+          {
+            "decision": "card pomegranate",
+            "ok": true,
+            "ms": 1535,
+            "cost": 0.004161
+          },
+          {
+            "decision": "card pomegranate",
+            "ok": true,
+            "ms": 1585,
+            "cost": 0.004161
+          },
+          {
+            "decision": "card pomegranate",
+            "ok": true,
+            "ms": 1545,
+            "cost": 0.004161
+          }
+        ]
+      },
+      {
+        "file": "blessing__sea__px9314030.jpg",
+        "expected": [
+          "sea"
+        ],
+        "calls": [
+          {
+            "decision": "card sea",
+            "ok": true,
+            "ms": 1677,
+            "cost": 0.004137
+          },
+          {
+            "decision": "card sea",
+            "ok": true,
+            "ms": 1700,
+            "cost": 0.004137
+          },
+          {
+            "decision": "card sea",
+            "ok": true,
+            "ms": 1626,
+            "cost": 0.004137
+          }
+        ]
+      },
+      {
+        "file": "blessing__ship__px15944128.jpg",
+        "expected": [
+          "ship",
+          "sea"
+        ],
+        "calls": [
+          {
+            "decision": "confirm ship/sea/mountain",
+            "ok": true,
+            "ms": 1657,
+            "cost": 0.004131999999999999
+          },
+          {
+            "decision": "confirm ship/sea/mountain",
+            "ok": true,
+            "ms": 1663,
+            "cost": 0.004131999999999999
+          },
+          {
+            "decision": "confirm ship/sea/mountain",
+            "ok": true,
+            "ms": 1666,
+            "cost": 0.004131999999999999
+          }
+        ]
+      },
+      {
+        "file": "blessing__sunlight__px28486391.jpg",
+        "expected": [
+          "sun",
+          "tree"
+        ],
+        "calls": [
+          {
+            "decision": "confirm tree/sun/daytime",
+            "ok": true,
+            "ms": 1605,
+            "cost": 0.004137
+          },
+          {
+            "decision": "confirm tree/sun/daytime",
+            "ok": true,
+            "ms": 1618,
+            "cost": 0.004137
+          },
+          {
+            "decision": "confirm tree/sun/grass",
+            "ok": true,
+            "ms": 1657,
+            "cost": 0.004131999999999999
+          }
+        ]
+      },
+      {
+        "file": "blessing__tree__px33526769.jpg",
+        "expected": [
+          "tree"
+        ],
+        "calls": [
+          {
+            "decision": "card tree",
+            "ok": true,
+            "ms": 1816,
+            "cost": 0.004131999999999999
+          },
+          {
+            "decision": "card tree",
+            "ok": true,
+            "ms": 1795,
+            "cost": 0.004131999999999999
+          },
+          {
+            "decision": "card tree",
+            "ok": true,
+            "ms": 1626,
+            "cost": 0.004131999999999999
+          }
+        ]
+      },
+      {
+        "file": "my_hand.png",
+        "expected": [
+          "hand"
+        ],
+        "calls": [
+          {
+            "decision": "card hand",
+            "ok": true,
+            "ms": 1431,
+            "cost": 0.0040479999999999995
+          },
+          {
+            "decision": "card hand",
+            "ok": true,
+            "ms": 1408,
+            "cost": 0.0040479999999999995
+          },
+          {
+            "decision": "card hand",
+            "ok": true,
+            "ms": 1413,
+            "cost": 0.0040479999999999995
+          }
+        ]
+      },
+      {
+        "file": "noverse__keyboard__px18641167.jpg",
+        "expected": "abstain",
+        "calls": [
+          {
+            "decision": "abstain",
+            "ok": true,
+            "ms": 1447,
+            "cost": 0.003992
+          },
+          {
+            "decision": "abstain",
+            "ok": true,
+            "ms": 1437,
+            "cost": 0.003992
+          },
+          {
+            "decision": "abstain",
+            "ok": true,
+            "ms": 1599,
+            "cost": 0.003992
+          }
+        ]
+      },
+      {
+        "file": "noverse__laptop__px8534240.jpg",
+        "expected": "abstain",
+        "calls": [
+          {
+            "decision": "abstain",
+            "ok": true,
+            "ms": 1611,
+            "cost": 0.004137
+          },
+          {
+            "decision": "abstain",
+            "ok": true,
+            "ms": 1670,
+            "cost": 0.004137
+          },
+          {
+            "decision": "abstain",
+            "ok": true,
+            "ms": 1613,
+            "cost": 0.004137
+          }
+        ]
+      },
+      {
+        "file": "noverse__sofa__px6758245.jpg",
+        "expected": "abstain",
+        "calls": [
+          {
+            "decision": "abstain",
+            "ok": true,
+            "ms": 1708,
+            "cost": 0.004137
+          },
+          {
+            "decision": "abstain",
+            "ok": true,
+            "ms": 1705,
+            "cost": 0.004137
+          },
+          {
+            "decision": "abstain",
+            "ok": true,
+            "ms": 2154,
+            "cost": 0.004137
+          }
+        ]
+      },
+      {
+        "file": "offlist__bicycle__px12470022.jpg",
+        "expected": "abstain",
+        "calls": [
+          {
+            "decision": "abstain",
+            "ok": true,
+            "ms": 1578,
+            "cost": 0.004131999999999999
+          },
+          {
+            "decision": "abstain",
+            "ok": true,
+            "ms": 1590,
+            "cost": 0.004131999999999999
+          },
+          {
+            "decision": "abstain",
+            "ok": true,
+            "ms": 1595,
+            "cost": 0.004131999999999999
+          }
+        ]
+      },
+      {
+        "file": "offlist__headphones__px210927.jpg",
+        "expected": "abstain",
+        "calls": [
+          {
+            "decision": "abstain",
+            "ok": true,
+            "ms": 1437,
+            "cost": 0.003992
+          },
+          {
+            "decision": "abstain",
+            "ok": true,
+            "ms": 1414,
+            "cost": 0.003992
+          },
+          {
+            "decision": "abstain",
+            "ok": true,
+            "ms": 1418,
+            "cost": 0.003992
+          }
+        ]
+      },
+      {
+        "file": "offlist__scissors__px20785313.jpg",
+        "expected": "abstain",
+        "calls": [
+          {
+            "decision": "abstain",
+            "ok": true,
+            "ms": 2245,
+            "cost": 0.004131999999999999
+          },
+          {
+            "decision": "abstain",
+            "ok": true,
+            "ms": 2080,
+            "cost": 0.004131999999999999
+          },
+          {
+            "decision": "abstain",
+            "ok": true,
+            "ms": 2056,
+            "cost": 0.004131999999999999
+          }
+        ]
+      },
+      {
+        "file": "offlist__sneakers__px1027130.jpg",
+        "expected": "abstain",
+        "calls": [
+          {
+            "decision": "abstain",
+            "ok": true,
+            "ms": 1542,
+            "cost": 0.004062
+          },
+          {
+            "decision": "abstain",
+            "ok": true,
+            "ms": 1507,
+            "cost": 0.004062
+          },
+          {
+            "decision": "abstain",
+            "ok": true,
+            "ms": 1570,
+            "cost": 0.004062
+          }
+        ]
+      },
+      {
+        "file": "offlist__umbrella__px39993697.jpg",
+        "expected": "abstain",
+        "calls": [
+          {
+            "decision": "abstain",
+            "ok": true,
+            "ms": 1689,
+            "cost": 0.004193
+          },
+          {
+            "decision": "abstain",
+            "ok": true,
+            "ms": 1620,
+            "cost": 0.004193
+          },
+          {
+            "decision": "abstain",
+            "ok": true,
+            "ms": 1657,
+            "cost": 0.004193
+          }
+        ]
+      },
+      {
+        "file": "person__face__px39087408.jpg",
+        "expected": "abstain",
+        "calls": [
+          {
+            "decision": "confirm eye",
+            "ok": false,
+            "ms": 1860,
+            "cost": 0.004062
+          },
+          {
+            "decision": "confirm eye",
+            "ok": false,
+            "ms": 1506,
+            "cost": 0.004062
+          },
+          {
+            "decision": "confirm eye",
+            "ok": false,
+            "ms": 1626,
+            "cost": 0.004062
+          }
+        ]
+      },
+      {
+        "file": "person__hand_dates__px37514842.jpg",
+        "expected": [
+          "hand",
+          "date_fruit",
+          "palm_tree"
+        ],
+        "calls": [
+          {
+            "decision": "card hand",
+            "ok": true,
+            "ms": 1645,
+            "cost": 0.004203
+          },
+          {
+            "decision": "card hand",
+            "ok": true,
+            "ms": 1681,
+            "cost": 0.004203
+          },
+          {
+            "decision": "card hand",
+            "ok": true,
+            "ms": 1626,
+            "cost": 0.004203
+          }
+        ]
+      },
+      {
+        "file": "two__laptop-and-pen__px9263102.jpg",
+        "expected": [
+          "pen",
+          "handwriting"
+        ],
+        "calls": [
+          {
+            "decision": "confirm laptop/pen/paper",
+            "ok": true,
+            "ms": 1645,
+            "cost": 0.004188
+          },
+          {
+            "decision": "confirm laptop/pen/paper",
+            "ok": true,
+            "ms": 1682,
+            "cost": 0.004188
+          },
+          {
+            "decision": "confirm laptop/pen/paper",
+            "ok": true,
+            "ms": 1920,
+            "cost": 0.004188
+          }
+        ]
+      },
+      {
+        "file": "two__water-and-dates__px8164799.jpg",
+        "expected": [
+          "drinking_water",
+          "water",
+          "date_fruit"
+        ],
+        "calls": [
+          {
+            "decision": "confirm hand",
+            "ok": false,
+            "ms": 1872,
+            "cost": 0.004142
+          },
+          {
+            "decision": "confirm hand",
+            "ok": false,
+            "ms": 1883,
+            "cost": 0.0041519999999999994
+          },
+          {
+            "decision": "confirm hand",
+            "ok": false,
+            "ms": 1885,
+            "cost": 0.004142
+          }
+        ]
+      }
+    ]
+  }
+}

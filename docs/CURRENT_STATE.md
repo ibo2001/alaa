@@ -8,10 +8,10 @@ A running snapshot of where the project is. Updated at each milestone. For "buil
 | Check | Status |
 |---|---|
 | Lint, typecheck | Clean |
-| Unit tests (Vitest) | 72 passing |
+| Unit tests (Vitest) | 74 passing |
 | E2E (Playwright, stub provider) | 10 passing (builds into `.next-e2e`, so it can run beside `next dev`) |
 | Vercel deploy | Green, auto-deploys from `main`. Day 2 work (review, app-style UI, new Home) pushed and live at 10:44 Riyadh; key pages 200, cached sample through `/api/see` gives the card |
-| Real-model eval (`claude-haiku-4-5`) | 21/21 correct, 7/7 consistent over 3 runs (7 sample photos) |
+| Real-model eval (`claude-haiku-4-5`) | 34 photos × 3 runs: 88% correct or correctly abstained after the no-verse rule fix (79% before), 97% consistent, 1.7 s median, $0.0041 per photo; alternative approach 88%, $0.0020 (`docs/RESULTS.md`) |
 
 ## Day 1 (Oct 4): The Lens
 | Item | Status |

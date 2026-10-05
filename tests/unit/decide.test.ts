@@ -80,3 +80,16 @@ describe("vision output validation", () => {
     expect(() => parseVisionResult({ candidates: "water" })).toThrow();
   });
 });
+
+describe("decide: a confident subject with no verse", () => {
+  const r = (cands: [string, number][]) => ({ candidates: cands.map(([concept, confidence]) => ({ concept, confidence })), is_person: false, unsafe: false });
+
+  it("background concepts below 0.75 do not turn it into 'Is this…?' (bicycle on grass under the sky)", () => {
+    expect(decide(r([["bicycle", 0.95], ["grass", 0.85], ["sky", 0.7]]))).toEqual({ kind: "abstain", reason: "no-blessing", concept: "bicycle" });
+    expect(decide(r([["laptop", 0.95], ["plant", 0.7], ["daytime", 0.6]]))).toEqual({ kind: "abstain", reason: "no-blessing", concept: "laptop" });
+  });
+
+  it("a second confident concept with a card is still offered (a pen next to a laptop)", () => {
+    expect(decide(r([["laptop", 0.95], ["pen", 0.8]])).kind).toBe("confirm");
+  });
+});

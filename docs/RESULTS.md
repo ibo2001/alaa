@@ -28,6 +28,17 @@ On this set the alternative was more accurate and cheaper; Alaa's target (≥ 85
 - **Bokeh lights (1 photo):** read as "night" (0.85), giving the night-and-day card; the label expected an abstention.
 - **Dates in a crate (1 photo):** read as "grain" (0.95) by Alaa and as "cacao" by the alternative; both wrong.
 
+**Change made because of run 1 (`lib/vision/decide.ts`):** when the main subject is confidently recognised but has no verse, another concept is offered only if it is itself confident (≥ 0.75). Weaker background concepts no longer turn "no verse for this" into "Is this…?". Unit tests added; the privacy rule, labels and photos were left unchanged.
+
+**Run 2 · 2026-10-05 14:00 Riyadh** · same photos, labels and model, Alaa only · raw data: `eval/results/2026-10-05T11-00-10-290Z.json`
+
+| Approach | Accuracy | Consistency | Median latency | p95 latency | Cost per image |
+|---|---|---|---|---|---|
+| Alaa after the change | **90/102 (88%)** | 33/34 (97%) | 1.7 s | 2.1 s | $0.0041 |
+| Alternative (run 1) | 90/102 (88%) | 34/34 (100%) | 1.5 s | 2.0 s | $0.0020 |
+
+The laptop, bicycle and umbrella now get the no-verse answer; "laptop and pen" still offers the pen; nothing that was correct in run 1 became wrong. Remaining misses: water and dates (privacy rule), face ("eye" offered), bokeh lights ("night"), loose dates ("grain"). The one inconsistent photo (sunlight) was correct in all three runs; only the background option in its "Is this…?" changed. Alaa now meets the accuracy target and matches the alternative, while only ever naming concepts from the reviewed list; the alternative stays cheaper.
+
 **Why the alternative missed:** it names objects loosely, so the mapping misses or generalises: "hand holding olives" (dates) and "pastries" (dates) → abstain; "glass of carbonated water" → "water" rather than "drinking water" (still accepted); "orange sticky note" → orange fruit.
 
 **Cost:** Alaa's call carries the full list of 122 concepts in the prompt and tool schema on every photo; the alternative's prompt is short. Prompt caching of that fixed part is a possible saving, not yet measured.

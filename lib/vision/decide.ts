@@ -65,8 +65,10 @@ export function decide(result: VisionResult): Decision {
       return { kind: "confirm", candidates: withBlessing.filter((c) => c.confidence >= CONFIRM_THRESHOLD) };
     }
     if (top.blessingId) return { kind: "card", concept: top.concept, blessingId: top.blessingId };
-    // Confidently recognized, but nothing in the database mentions it.
-    const alt = withBlessing.find((c) => c.blessingId && c.confidence >= CONFIRM_THRESHOLD);
+    // Confidently recognized, but nothing in the database mentions it. Offer another concept only if it is
+    // itself confident (e.g. a pen next to a laptop); weaker background concepts (grass behind a bicycle,
+    // daytime around a laptop) must not turn a clear "no verse for this" into "Is this…?" (eval run 1, Oct 5).
+    const alt = withBlessing.find((c) => c.blessingId && c.confidence >= CARD_THRESHOLD);
     if (alt) return { kind: "confirm", candidates: withBlessing.filter((c) => c.confidence >= CONFIRM_THRESHOLD) };
     return { kind: "abstain", reason: "no-blessing", concept: top.concept };
   }
