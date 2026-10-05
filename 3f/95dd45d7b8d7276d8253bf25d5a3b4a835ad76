@@ -1,0 +1,23 @@
+lib/guard/index.ts
+  s_9a8b9d0f22ef1e::t_2575d1ccaa56f1 137-144
+lib/quran/surahs.ts
+  s_9a8b9d0f22ef1e::t_64098b8032cf47 6-7,12
+app/[locale]/blessing/[id]/page.tsx
+  s_9a8b9d0f22ef1e::t_161ecd78406c76 9,66-71
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3f95dd45d7b8d7276d8253bf25d5a3b4a835ad76",
+  "prompts": {},
+  "sessions": {
+    "s_9a8b9d0f22ef1e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b8b37140-fbdc-4e61-a833-176ff24e8c3a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
