@@ -1,0 +1,48 @@
+tests/unit/home.test.ts
+  s_9a8b9d0f22ef1e::t_bcdafe766779d5 1-59
+messages/en.json
+  s_9a8b9d0f22ef1e::t_7ca4a8354bb2de 284-294
+components/HomeClient.tsx
+  s_9a8b9d0f22ef1e::t_3acb4efd7b6d3b 18,101
+  s_9a8b9d0f22ef1e::t_83886ee25b88e7 1-17,19-88,90-100,102-161
+  s_9a8b9d0f22ef1e::t_554e3a89ae6cd7 89
+app/[locale]/page.tsx
+  s_9a8b9d0f22ef1e::t_3acb4efd7b6d3b 22
+  s_9a8b9d0f22ef1e::t_3508dc1754e8cf 2-5,7,9,15,17-21,23
+tests/e2e/day2.spec.ts
+  s_9a8b9d0f22ef1e::t_6d29113c9fac8b 1-14,25,141
+  s_9a8b9d0f22ef1e::t_6db5e2aee0868e 127-140,142-147
+lib/sources/home.ts
+  s_9a8b9d0f22ef1e::t_7ca4a8354bb2de 1-40
+sources/home.json
+  s_9a8b9d0f22ef1e::t_bcdafe766779d5 1-5
+messages/ar.json
+  s_9a8b9d0f22ef1e::t_7ca4a8354bb2de 284-294
+components/icons.tsx
+  s_9a8b9d0f22ef1e::t_4833e48e9d9e48 126-133
+docs/DECISIONS.md
+  s_9a8b9d0f22ef1e::t_6db5e2aee0868e 13-14
+lib/home.ts
+  s_9a8b9d0f22ef1e::t_c2e67536cd4ca2 1-47
+app/[locale]/about/page.tsx
+  s_9a8b9d0f22ef1e::t_3acb4efd7b6d3b 4,75-78
+  s_9a8b9d0f22ef1e::t_a6b53e55428026 79
+docs/CURRENT_STATE.md
+  s_9a8b9d0f22ef1e::t_34c912bd6e5705 11-12,55
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ee67a57929b0a6f1b9d0062682ec7209207e7fdc",
+  "prompts": {},
+  "sessions": {
+    "s_9a8b9d0f22ef1e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b8b37140-fbdc-4e61-a833-176ff24e8c3a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
