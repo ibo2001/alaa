@@ -1,0 +1,21 @@
+tests/unit/rag/packet.test.ts
+  s_9a8b9d0f22ef1e::t_4a0498b09da0c3 1-120
+rag/packet.ts
+  s_9a8b9d0f22ef1e::t_4a0498b09da0c3 1-133
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9d3f0dfad4d6874ccf5333b7609d022c5f27aa74",
+  "prompts": {},
+  "sessions": {
+    "s_9a8b9d0f22ef1e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b8b37140-fbdc-4e61-a833-176ff24e8c3a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
