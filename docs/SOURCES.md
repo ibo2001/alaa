@@ -89,4 +89,4 @@ All resized to 768px (longest edge) and re-encoded as JPEG, which also strips me
 | LibreOffice + Poppler (Homebrew) | Renders the challenge PPTX decks to images for visual checks | MPL-2.0 / GPL (tools only) |
 | Evaluation photos (`eval/images/`, local only) | 27 Pexels photos + 7 earlier photos; list in `eval/images/SOURCES.md` | Pexels License; earlier ones as listed |
 | ElevenLabs (`eleven_multilingual_v2`, voice "Rawi – Calm & Clear Fusha Narrator", library voice) | Arabic voice-over of the demo video, 10 lines from `docs/video/SCRIPT.ar.md`, generated on 2026-10-05 (≈1,000 credits); disclosed on the video's end card; checked back with local whisper.cpp | ElevenLabs terms (Ibrahim's account); voice files stay out of git |
-| Glass-of-water footage (Pexels, to be added by Ibrahim) | Opening shot of the demo video | Pexels License |
+| "Water falling into a drinking glass" (Pexels video 10557768): https://www.pexels.com/video/water-falling-into-a-drinking-glass-10557768/ | Opening shot of the demo video (file in `video/public/footage/`, git-ignored) | Pexels License |
