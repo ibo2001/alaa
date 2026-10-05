@@ -21,7 +21,7 @@ Any format the phone produces works (`.jpg`, `.jpeg`, `.png`, `.webp`, `.heic`).
 { "glass.jpg": "drinking_water", "two-things.jpg": ["date_fruit", "drinking_water"], "violin.jpg": "abstain" }
 ```
 
-A card or an "Is this…?" that includes an accepted id counts as correct; for `"abstain"` only an abstention counts. Concept ids are in `sources/concepts.json`. Unlabelled images are skipped (and listed), so you can drop photos in and I'll write the labels.
+A card or an "Is this…?" that includes an accepted id counts as correct; for `"abstain"` only an abstention counts. For an ambiguous photo, `"abstain"` can be one of the accepted answers, e.g. `["abstain", "tree"]`. Concept ids are in `sources/concepts.json`. Unlabelled images are skipped (and listed), so you can drop photos in and I'll write the labels.
 
 ## Run
 ```

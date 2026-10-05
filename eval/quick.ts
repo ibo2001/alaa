@@ -84,7 +84,7 @@ async function quick() {
       // A label is "abstain" or one/several acceptable concept ids.
       const accepted = new Set(Array.isArray(expected) ? expected : [expected]);
       const ok =
-        expected === "abstain"
+        expected === "abstain" || (d.kind === "abstain" && accepted.has("abstain"))
           ? d.kind === "abstain"
           : d.kind === "card"
             ? accepted.has(d.concept ?? "")

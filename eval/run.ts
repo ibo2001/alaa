@@ -45,6 +45,7 @@ const summary = (d: Decision) =>
 function correct(expected: Label, d: Decision): boolean {
   if (expected === "abstain") return d.kind === "abstain";
   const accepted = new Set([expected].flat());
+  if (d.kind === "abstain") return accepted.has("abstain"); // e.g. ["abstain", "tree"] for an ambiguous photo
   if (d.kind === "card") return accepted.has(d.concept);
   if (d.kind === "confirm") return d.candidates.some((c) => accepted.has(c.concept));
   return false;

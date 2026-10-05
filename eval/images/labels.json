@@ -21,5 +21,80 @@
   ],
   "my_hand.png": [
     "hand"
-  ]
+  ],
+  "blessing__drinking_water__px13464445.jpg": [
+    "drinking_water",
+    "water"
+  ],
+  "blessing__date_fruit__px17877978.jpg": [
+    "date_fruit"
+  ],
+  "blessing__date_palm__px18331921.jpg": [
+    "palm_tree",
+    "date_fruit"
+  ],
+  "blessing__crops_grain__px16222126.jpg": [
+    "wheat",
+    "grain"
+  ],
+  "blessing__sea__px9314030.jpg": [
+    "sea"
+  ],
+  "blessing__tree__px33526769.jpg": [
+    "tree"
+  ],
+  "blessing__moon__px10531646.jpg": [
+    "moon"
+  ],
+  "blessing__sunlight__px28486391.jpg": [
+    "sun",
+    "tree"
+  ],
+  "blessing__pearls__px5357486.jpg": [
+    "pearl"
+  ],
+  "blessing__pen_writing__px35522712.jpg": [
+    "pen",
+    "handwriting"
+  ],
+  "blessing__pomegranate__px12148143.jpg": [
+    "pomegranate"
+  ],
+  "blessing__ship__px15944128.jpg": [
+    "ship",
+    "sea"
+  ],
+  "offlist__bicycle__px12470022.jpg": "abstain",
+  "offlist__umbrella__px39993697.jpg": "abstain",
+  "offlist__scissors__px20785313.jpg": "abstain",
+  "offlist__headphones__px210927.jpg": "abstain",
+  "offlist__sneakers__px1027130.jpg": "abstain",
+  "noverse__keyboard__px18641167.jpg": "abstain",
+  "noverse__laptop__px8534240.jpg": "abstain",
+  "noverse__sofa__px6758245.jpg": "abstain",
+  "ambiguous__bokeh_lights__px6296462.jpg": "abstain",
+  "ambiguous__tree_bark__px37024589.jpg": [
+    "abstain",
+    "tree"
+  ],
+  "ambiguous__bottle_on_beach__px7981599.jpg": [
+    "abstain",
+    "sea",
+    "water"
+  ],
+  "two__water-and-dates__px8164799.jpg": [
+    "drinking_water",
+    "water",
+    "date_fruit"
+  ],
+  "two__laptop-and-pen__px9263102.jpg": [
+    "pen",
+    "handwriting"
+  ],
+  "person__hand_dates__px37514842.jpg": [
+    "hand",
+    "date_fruit",
+    "palm_tree"
+  ],
+  "person__face__px39087408.jpg": "abstain"
 }
