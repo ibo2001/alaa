@@ -1,0 +1,14 @@
+{
+  "builtAt": "2026-10-05T13:37:46.806Z",
+  "sources": {
+    "quran": "6933e133dd56db778c801bf738848454e43648105a151e8d84d86a7cae39ec5f",
+    "translation": "213e1aeb515c5bac6ca446955527b8f3c0f9c21e9d1bad9c6857e9e5b282e9b6",
+    "tafsir": "10e61f615ab5e6a3440e8ecc8ba1dc2273d12cd9048752760fe53a44d191cc27"
+  },
+  "embedding": null,
+  "passages": 6236,
+  "files": {
+    "passages.jsonl": "08eb422a030f319c200929deb0ef4630702ebe20b726b53bb89a58c24e5b325b",
+    "lexicon.json": "e48f4c42e5a433dcf93b91df658ee78b89c331f900ce3c8a28e45682e3068342"
+  }
+}

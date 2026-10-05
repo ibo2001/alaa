@@ -90,3 +90,9 @@ All resized to 768px (longest edge) and re-encoded as JPEG, which also strips me
 | Evaluation photos (`eval/images/`, local only) | 27 Pexels photos + 7 earlier photos; list in `eval/images/SOURCES.md` | Pexels License; earlier ones as listed |
 | ElevenLabs (`eleven_multilingual_v2`, voice "Rawi – Calm & Clear Fusha Narrator", library voice) | Arabic voice-over of the demo video, 10 lines from `docs/video/SCRIPT.ar.md`, generated on 2026-10-05 (≈1,000 credits); disclosed on the video's end card; checked back with local whisper.cpp | ElevenLabs terms (Ibrahim's account); voice files stay out of git |
 | "Water falling into a drinking glass" (Pexels video 10557768): https://www.pexels.com/video/water-falling-into-a-drinking-glass-10557768/ | Opening shot of the demo video (file in `video/public/footage/`, git-ignored) | Pexels License |
+
+## RAG reviewer's assistant (offline tooling in `rag/`, not part of the app)
+| Item | Use | License / terms |
+|---|---|---|
+| Tafsir Center for Quranic Studies database (`sources/tafsir/quran.db`, release v1.0, commit dbbfa77, SHA-256 pinned in `sources/tafsir/manifest.json`; local only, git-ignored) from the Hugging Face dataset `tafsircenter/tafsir-mcp-data` (https://huggingface.co/datasets/tafsircenter/tafsir-mcp-data), added by Ibrahim on 2026-10-05 | Arabic roots for retrieval and tafsir evidence (al-Muyassar, al-Mukhtasar) for the religious reviewer only; its own Quran text is never read or shown | Data CC BY 4.0, attribution "Tafsir Center for Quranic Studies (https://tafsir.net)" (`sources/tafsir/LICENSE`); code MIT (https://github.com/tafsircenter/tafsir-mcp) |
+| `node:sqlite` (built into Node.js 22.5+) | Reads the Tafsir database read-only | Node.js license (MIT) |

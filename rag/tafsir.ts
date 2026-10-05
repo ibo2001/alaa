@@ -15,7 +15,7 @@ export type TafsirTexts = Map<string, Partial<Record<TafsirSourceId, string>>>;
 export type TafsirData = { rootsByAyah: Map<string, Set<string>>; forms: { form: string; root: string }[]; texts: TafsirTexts };
 export type TafsirManifest = { file: string; sha256: string; source: string; version: string; obtained: string; license: string };
 
-export const TAFSIR_ATTRIBUTION = "Tafsir Center for Quranic Studies · CC BY 4.0";
+export const TAFSIR_ATTRIBUTION = "Tafsir Center for Quranic Studies (https://tafsir.net) · CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)";
 
 export class TafsirError extends Error {
   constructor(message: string) {

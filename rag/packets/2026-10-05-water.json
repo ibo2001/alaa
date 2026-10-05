@@ -1,0 +1,209 @@
+{
+  "query": "Water; running water; tap water; stream; water in a container; الماء",
+  "concept": "water",
+  "candidates": [
+    {
+      "key": "56:68",
+      "score": 1,
+      "found_by": {
+        "root": 51,
+        "keywords": 1
+      },
+      "evidence": {
+        "tafsir": [
+          {
+            "source": "al-Muyassar",
+            "ref": "56:68"
+          },
+          {
+            "source": "al-Mukhtasar (Arabic)",
+            "ref": "56:68"
+          },
+          {
+            "source": "al-Mukhtasar (English)",
+            "ref": "56:68"
+          }
+        ]
+      }
+    },
+    {
+      "key": "21:30",
+      "score": 1,
+      "found_by": {
+        "root": 26,
+        "keywords": 14
+      },
+      "evidence": {
+        "tafsir": [
+          {
+            "source": "al-Muyassar",
+            "ref": "21:30"
+          },
+          {
+            "source": "al-Mukhtasar (Arabic)",
+            "ref": "21:30"
+          },
+          {
+            "source": "al-Mukhtasar (English)",
+            "ref": "21:30"
+          }
+        ]
+      }
+    },
+    {
+      "key": "16:10",
+      "score": 0.95,
+      "found_by": {
+        "root": 20,
+        "keywords": 37
+      },
+      "evidence": {
+        "tafsir": [
+          {
+            "source": "al-Muyassar",
+            "ref": "16:10"
+          },
+          {
+            "source": "al-Mukhtasar (Arabic)",
+            "ref": "16:10"
+          },
+          {
+            "source": "al-Mukhtasar (English)",
+            "ref": "16:10"
+          }
+        ]
+      }
+    },
+    {
+      "key": "25:48",
+      "score": 0.95,
+      "found_by": {
+        "root": 32,
+        "keywords": 11
+      },
+      "evidence": {
+        "tafsir": [
+          {
+            "source": "al-Muyassar",
+            "ref": "25:48"
+          },
+          {
+            "source": "al-Mukhtasar (Arabic)",
+            "ref": "25:48"
+          },
+          {
+            "source": "al-Mukhtasar (English)",
+            "ref": "25:48"
+          }
+        ]
+      }
+    },
+    {
+      "key": "43:11",
+      "score": 0.95,
+      "found_by": {
+        "root": 44,
+        "keywords": 25
+      },
+      "evidence": {
+        "tafsir": [
+          {
+            "source": "al-Muyassar",
+            "ref": "43:11"
+          },
+          {
+            "source": "al-Mukhtasar (Arabic)",
+            "ref": "43:11"
+          },
+          {
+            "source": "al-Mukhtasar (English)",
+            "ref": "43:11"
+          }
+        ]
+      }
+    },
+    {
+      "key": "14:32",
+      "score": 0.95,
+      "found_by": {
+        "root": 18,
+        "keywords": 72
+      },
+      "evidence": {
+        "tafsir": [
+          {
+            "source": "al-Muyassar",
+            "ref": "14:32"
+          },
+          {
+            "source": "al-Mukhtasar (Arabic)",
+            "ref": "14:32"
+          },
+          {
+            "source": "al-Mukhtasar (English)",
+            "ref": "14:32"
+          }
+        ]
+      }
+    },
+    {
+      "key": "28:23",
+      "score": 0.9,
+      "found_by": {
+        "root": 35,
+        "keywords": 23
+      },
+      "evidence": {
+        "tafsir": [
+          {
+            "source": "al-Muyassar",
+            "ref": "28:23"
+          },
+          {
+            "source": "al-Mukhtasar (Arabic)",
+            "ref": "28:23"
+          },
+          {
+            "source": "al-Mukhtasar (English)",
+            "ref": "28:23"
+          }
+        ]
+      }
+    },
+    {
+      "key": "11:7",
+      "score": 0.85,
+      "found_by": {
+        "root": 11,
+        "keywords": 28
+      },
+      "evidence": {
+        "tafsir": [
+          {
+            "source": "al-Muyassar",
+            "ref": "11:7"
+          },
+          {
+            "source": "al-Mukhtasar (Arabic)",
+            "ref": "11:7"
+          },
+          {
+            "source": "al-Mukhtasar (English)",
+            "ref": "11:7"
+          }
+        ]
+      }
+    }
+  ],
+  "status": "ok",
+  "built": {
+    "indexManifest": "2a3088ae61b85114c2a278a7617111d7e8a1ec0d3d9827c55ec85944ab161071",
+    "reranker": "claude-haiku-4-5-20251001",
+    "reranked": true,
+    "channelsMissing": [
+      "meaning"
+    ],
+    "dropped": [],
+    "at": "2026-10-05T13:38:14.082Z"
+  }
+}

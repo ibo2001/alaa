@@ -44,7 +44,7 @@ describe("checkCandidate and renderEvidence (fail closed)", () => {
     expect(ev.arabic).toBe(real.quran.get("21:30"));
     expect(ev.translation).toBe(real.translations["en.rwwad"]!.texts!.get("21:30"));
     expect(ev.tafsir.map((t) => t.source)).toEqual(["al-Muyassar", "al-Mukhtasar (English)"]);
-    expect(ev.tafsir[0]!.attribution).toMatch(/Tafsir Center/);
+    expect(ev.tafsir[0]!.attribution).toMatch(/Tafsir Center for Quranic Studies \(https:\/\/tafsir\.net\)/); // wording required by its LICENSE
   });
   it("blocks an altered Tanzil ayah", () => {
     expect(checkCandidate("21:30", withQuran("21:30"))).toBe("verse-text-mismatch");

@@ -1,0 +1,209 @@
+{
+  "query": "Hand; palm of the hand; fingers; اليد",
+  "concept": "hand",
+  "candidates": [
+    {
+      "key": "27:12",
+      "score": 1,
+      "found_by": {
+        "root": 65,
+        "keywords": 6
+      },
+      "evidence": {
+        "tafsir": [
+          {
+            "source": "al-Muyassar",
+            "ref": "27:12"
+          },
+          {
+            "source": "al-Mukhtasar (Arabic)",
+            "ref": "27:12"
+          },
+          {
+            "source": "al-Mukhtasar (English)",
+            "ref": "27:12"
+          }
+        ]
+      }
+    },
+    {
+      "key": "28:32",
+      "score": 1,
+      "found_by": {
+        "root": 67,
+        "keywords": 47
+      },
+      "evidence": {
+        "tafsir": [
+          {
+            "source": "al-Muyassar",
+            "ref": "28:32"
+          },
+          {
+            "source": "al-Mukhtasar (Arabic)",
+            "ref": "28:32"
+          },
+          {
+            "source": "al-Mukhtasar (English)",
+            "ref": "28:32"
+          }
+        ]
+      }
+    },
+    {
+      "key": "7:108",
+      "score": 1,
+      "found_by": {
+        "root": 32,
+        "keywords": 30
+      },
+      "evidence": {
+        "tafsir": [
+          {
+            "source": "al-Muyassar",
+            "ref": "7:108"
+          },
+          {
+            "source": "al-Mukhtasar (Arabic)",
+            "ref": "7:108"
+          },
+          {
+            "source": "al-Mukhtasar (English)",
+            "ref": "7:108"
+          }
+        ]
+      }
+    },
+    {
+      "key": "20:22",
+      "score": 1,
+      "found_by": {
+        "root": 52,
+        "keywords": 35
+      },
+      "evidence": {
+        "tafsir": [
+          {
+            "source": "al-Muyassar",
+            "ref": "20:22"
+          },
+          {
+            "source": "al-Mukhtasar (Arabic)",
+            "ref": "20:22"
+          },
+          {
+            "source": "al-Mukhtasar (English)",
+            "ref": "20:22"
+          }
+        ]
+      }
+    },
+    {
+      "key": "26:33",
+      "score": 1,
+      "found_by": {
+        "root": 63,
+        "keywords": 32
+      },
+      "evidence": {
+        "tafsir": [
+          {
+            "source": "al-Muyassar",
+            "ref": "26:33"
+          },
+          {
+            "source": "al-Mukhtasar (Arabic)",
+            "ref": "26:33"
+          },
+          {
+            "source": "al-Mukhtasar (English)",
+            "ref": "26:33"
+          }
+        ]
+      }
+    },
+    {
+      "key": "48:10",
+      "score": 0.95,
+      "found_by": {
+        "root": 92,
+        "keywords": 4
+      },
+      "evidence": {
+        "tafsir": [
+          {
+            "source": "al-Muyassar",
+            "ref": "48:10"
+          },
+          {
+            "source": "al-Mukhtasar (Arabic)",
+            "ref": "48:10"
+          },
+          {
+            "source": "al-Mukhtasar (English)",
+            "ref": "48:10"
+          }
+        ]
+      }
+    },
+    {
+      "key": "5:28",
+      "score": 0.9,
+      "found_by": {
+        "root": 20,
+        "keywords": 22
+      },
+      "evidence": {
+        "tafsir": [
+          {
+            "source": "al-Muyassar",
+            "ref": "5:28"
+          },
+          {
+            "source": "al-Mukhtasar (Arabic)",
+            "ref": "5:28"
+          },
+          {
+            "source": "al-Mukhtasar (English)",
+            "ref": "5:28"
+          }
+        ]
+      }
+    },
+    {
+      "key": "7:124",
+      "score": 0.85,
+      "found_by": {
+        "root": 33,
+        "keywords": 1
+      },
+      "evidence": {
+        "tafsir": [
+          {
+            "source": "al-Muyassar",
+            "ref": "7:124"
+          },
+          {
+            "source": "al-Mukhtasar (Arabic)",
+            "ref": "7:124"
+          },
+          {
+            "source": "al-Mukhtasar (English)",
+            "ref": "7:124"
+          }
+        ]
+      }
+    }
+  ],
+  "status": "ok",
+  "built": {
+    "indexManifest": "2a3088ae61b85114c2a278a7617111d7e8a1ec0d3d9827c55ec85944ab161071",
+    "reranker": "claude-haiku-4-5-20251001",
+    "reranked": true,
+    "channelsMissing": [
+      "meaning"
+    ],
+    "dropped": [],
+    "at": "2026-10-05T13:38:17.678Z"
+  }
+}

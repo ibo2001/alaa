@@ -1,0 +1,63 @@
+{
+  "query": "warm shower",
+  "concept": null,
+  "candidates": [
+    {
+      "key": "27:7",
+      "score": 0.85,
+      "found_by": {
+        "keywords": 1
+      },
+      "evidence": {
+        "tafsir": [
+          {
+            "source": "al-Muyassar",
+            "ref": "27:7"
+          },
+          {
+            "source": "al-Mukhtasar (Arabic)",
+            "ref": "27:7"
+          },
+          {
+            "source": "al-Mukhtasar (English)",
+            "ref": "27:7"
+          }
+        ]
+      }
+    },
+    {
+      "key": "28:29",
+      "score": 0.85,
+      "found_by": {
+        "keywords": 6
+      },
+      "evidence": {
+        "tafsir": [
+          {
+            "source": "al-Muyassar",
+            "ref": "28:29"
+          },
+          {
+            "source": "al-Mukhtasar (Arabic)",
+            "ref": "28:29"
+          },
+          {
+            "source": "al-Mukhtasar (English)",
+            "ref": "28:29"
+          }
+        ]
+      }
+    }
+  ],
+  "status": "ok",
+  "built": {
+    "indexManifest": "2a3088ae61b85114c2a278a7617111d7e8a1ec0d3d9827c55ec85944ab161071",
+    "reranker": "claude-haiku-4-5-20251001",
+    "reranked": true,
+    "channelsMissing": [
+      "meaning"
+    ],
+    "dropped": [],
+    "at": "2026-10-05T13:38:05.427Z"
+  }
+}
