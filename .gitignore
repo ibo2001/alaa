@@ -69,5 +69,6 @@ public/swe-worker*.js.map
 # demo video build outputs (recordings, voice, renders)
 /video/public/clips/
 /video/public/voice/
+/video/public/footage/
 /video/out/
 /video/node_modules/
