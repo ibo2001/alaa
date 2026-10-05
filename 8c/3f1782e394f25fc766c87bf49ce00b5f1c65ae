@@ -1,0 +1,27 @@
+tests/e2e/day2.spec.ts
+  s_9a8b9d0f22ef1e::t_867d822f7c063a 32-35,42
+messages/en.json
+  s_9a8b9d0f22ef1e::t_661186ed25d7b4 125-126
+.gitignore
+  s_9a8b9d0f22ef1e::t_661186ed25d7b4 64-66
+docs/DECISIONS.md
+  s_9a8b9d0f22ef1e::t_661186ed25d7b4 17
+messages/ar.json
+  s_9a8b9d0f22ef1e::t_661186ed25d7b4 125-126
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "8c3f1782e394f25fc766c87bf49ce00b5f1c65ae",
+  "prompts": {},
+  "sessions": {
+    "s_9a8b9d0f22ef1e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b8b37140-fbdc-4e61-a833-176ff24e8c3a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
