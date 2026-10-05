@@ -8,7 +8,7 @@ A running snapshot of where the project is. Updated at each milestone. For "buil
 | Check | Status |
 |---|---|
 | Lint, typecheck | Clean |
-| Unit tests (Vitest) | 64 passing |
+| Unit tests (Vitest) | 70 passing |
 | E2E (Playwright, stub provider) | 10 passing (builds into `.next-e2e`, so it can run beside `next dev`) |
 | Vercel deploy | Green, auto-deploys from `main`. Day 2 work (review, app-style UI, new Home) pushed and live at 10:44 Riyadh; key pages 200, cached sample through `/api/see` gives the card |
 | Real-model eval (`claude-haiku-4-5`) | 21/21 correct, 7/7 consistent over 3 runs (7 sample photos) |
@@ -72,7 +72,7 @@ The PWA now looks and behaves like a native app instead of a website. Checked at
 - Challenge presentation: rebuilt in the official challenge template (PPTX, 16 slides, their identity and layouts; adds a team slide, a "meets the reference framework" slide and a built/planned timeline; real screenshots of the live app). Arabic approved by Ibrahim (reviewed in Google Slides: https://docs.google.com/presentation/d/1YdfoLD8rtyEsIb6IhYH-XcIB4_ob-PNg-f9iHPTDT6g/edit); English built the same way, waiting for his review. Files in `docs/presentation/` (git-ignored: partner logos, 10 MB each). Day 3: update the measurements slide with the final evaluation and user-test numbers, and re-take screenshots after the translation switch. Earlier Slides-artifact drafts are superseded
 - `DAILY_LIMIT` is not set on Vercel (defaults to 50 per device per instance); Ibrahim raises it at delivery, not before
 - Push to `main` (deploys to Vercel) only when Ibrahim says so
-- English translation switch: waiting for Ibrahim to add an approved quranenc.com translation file and its LICENSE in `sources/translations/en.rwwad/` (or `en.saheeh/`)
+- English translation switched to Rowwad Translation Center (QuranEnc.com v1.0.19-xml.1), file unchanged, footnotes shown, all 25 cards; Itani stays registered but unused
 - Daily limit is in memory per server instance (best effort); durable store is planned
 - Only one real vision provider; the second is `stub`
 - 13 of 25 mappings are `draft` (12 reviewed); no reflections are shown until reviewed

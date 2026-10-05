@@ -92,7 +92,7 @@ export default async function SourcePage({ params }: Props) {
             t("translationNone")
           ) : (
             <>
-              <p>{tc("translationBy", { translator: card.translation.meta.translator })}</p>
+              <p>{tc("translationBy", { translator: card.translation.meta.translator, publisher: card.translation.meta.publisher })}</p>
               <p className="text-sm">
                 {t("license")}:{" "}
                 <a href={card.translation.meta.licenseUrl} target="_blank" rel="noopener noreferrer" className="text-nakhl underline">

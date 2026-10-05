@@ -8,12 +8,15 @@
  *  Level 4: review.reflection !== "reviewed" → reflection is not rendered at all.
  */
 import { expandRef, sha256, type TextManifest } from "@/lib/quran/tanzil";
+import { hashedTranslation } from "@/lib/quran/quranenc";
 import type { TranslationMeta } from "@/lib/sources/translations";
 import type { Blessing, Lang, Stage, VerseRef } from "@/lib/types";
 
 export type TranslationSource = {
   meta: TranslationMeta;
   texts: Map<string, string> | null;
+  /** Footnotes by ayah key (QuranEnc translations); shown with the translation and covered by its hash. */
+  notes: Map<string, string>;
   manifest: TextManifest | null;
   licensePresent: boolean;
 };
@@ -24,7 +27,7 @@ export type SourceBundle = {
   translations: Record<string, TranslationSource>;
 };
 
-export type GuardedAyah = { key: string; surah: number; ayah: number; text: string; translation?: string };
+export type GuardedAyah = { key: string; surah: number; ayah: number; text: string; translation?: string; translationNotes?: string };
 
 export type TranslationStatus =
   | { status: "not-needed" }
@@ -71,18 +74,21 @@ export function verifyTranslation(
   choices: TranslationChoice[],
   lang: Lang,
   bundle: SourceBundle,
-): { meta: TranslationMeta; texts: Map<string, string> } | null {
+): { meta: TranslationMeta; texts: Map<string, string>; notes: Map<string, string> } | null {
   const choice = choices.find((c) => c.lang === lang);
   const source = choice ? bundle.translations[choice.source] : undefined;
   if (!source || !source.licensePresent || !source.texts || !source.manifest) return null;
   const texts = new Map<string, string>();
+  const notes = new Map<string, string>();
   for (const key of keys) {
     const text = source.texts.get(key);
+    const note = source.notes.get(key);
     const expected = source.manifest.ayat[key];
-    if (!text || expected === undefined || sha256(text) !== expected) return null;
+    if (!text || expected === undefined || sha256(hashedTranslation(text, note)) !== expected) return null;
     texts.set(key, text);
+    if (note) notes.set(key, note);
   }
-  return { meta: source.meta, texts };
+  return { meta: source.meta, texts, notes };
 }
 
 export function guardPassage(
@@ -106,7 +112,7 @@ export function guardPassage(
   return {
     ok: true,
     refs,
-    ayat: ayat.map((a) => ({ ...a, translation: tr.texts.get(a.key) })),
+    ayat: ayat.map((a) => ({ ...a, translation: tr.texts.get(a.key), translationNotes: tr.notes.get(a.key) })),
     translation: { status: "shown", meta: tr.meta },
   };
 }

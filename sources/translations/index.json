@@ -4,10 +4,25 @@
     "dir": "sources/translations/en",
     "file": "en.itani.txt",
     "translator": "Talal Itani",
+    "publisher": "ClearQuran.com",
     "attribution": "Translation by Talal Itani, ClearQuran.com",
     "url": "https://www.clearquran.com",
     "license": "CC BY-ND 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-nd/4.0/",
-    "obtainedFrom": "https://tanzil.net/trans/"
+    "obtainedFrom": "https://tanzil.net/trans/",
+    "format": "tanzil"
+  },
+  "en.rwwad": {
+    "lang": "en",
+    "dir": "sources/translations/en.rwwad",
+    "file": "english_rwwad_v1.0.19-xml.1.xml",
+    "format": "quranenc-xml",
+    "translator": "Rowwad Translation Center",
+    "publisher": "QuranEnc.com",
+    "attribution": "Translation by Rowwad Translation Center, QuranEnc.com (v1.0.19-xml.1)",
+    "url": "https://quranenc.com/en/browse/english_rwwad",
+    "license": "QuranEnc.com terms · v1.0.19-xml.1",
+    "licenseUrl": "https://quranenc.com/en/home",
+    "obtainedFrom": "https://quranenc.com/en/browse/english_rwwad"
   }
 }

@@ -2,6 +2,7 @@
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { parseTanzil, type TextManifest } from "@/lib/quran/tanzil";
+import { parseTranslationFile } from "@/lib/quran/quranenc";
 import type { SourceBundle, TranslationSource } from "@/lib/guard";
 import { translationRegistry } from "./translations";
 
@@ -24,9 +25,11 @@ export function loadSources(root: string = process.cwd()): SourceBundle {
   for (const meta of Object.values(translationRegistry)) {
     const dir = join(root, meta.dir);
     const file = join(dir, meta.file);
+    const parsed = existsSync(file) ? parseTranslationFile(meta.format, readFileSync(file, "utf8")) : null;
     translations[meta.id] = {
       meta,
-      texts: existsSync(file) ? parseTanzil(readFileSync(file, "utf8")) : null,
+      texts: parsed?.texts ?? null,
+      notes: parsed?.notes ?? new Map(),
       manifest: readJson<TextManifest>(join(dir, "manifest.json")),
       licensePresent: existsSync(join(dir, "LICENSE")),
     };

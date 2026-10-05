@@ -6,7 +6,8 @@ Every dependency, font, image, dataset and translation used by Alaa is listed he
 | Item | Source | License / terms | Location |
 |---|---|---|---|
 | Quran text (Uthmani), `quran-uthmani.txt` | Tanzil Project, https://tanzil.net | Creative Commons Attribution 3.0; verbatim only, changing it is not allowed (`sources/quran/LICENSE`) | `sources/quran/` |
-| English translation, `en.itani.txt` | Talal Itani, ClearQuran.com, obtained from https://tanzil.net/trans/ | CC BY-ND 4.0 (`sources/translations/en/LICENSE`). Attribution shown in the app: "Translation by Talal Itani, ClearQuran.com" | `sources/translations/en/` |
+| English translation, `english_rwwad_v1.0.19-xml.1.xml` (shown in the app) | Rowwad Translation Center, from QuranEnc.com (https://quranenc.com/en/browse/english_rwwad), version v1.0.19-xml.1, file kept unchanged | QuranEnc.com terms (`sources/translations/en.rwwad/LICENSE`): re-publish without changes, name the publisher and QuranEnc.com, mention the version, keep the version info in the file. Shown with the translator's footnotes. Attribution in the app: "Translation by Rowwad Translation Center" · "QuranEnc.com terms · v1.0.19-xml.1" | `sources/translations/en.rwwad/` |
+| Previous English translation, `en.itani.txt` (registered, no longer used by any card) | Talal Itani, ClearQuran.com, obtained from https://tanzil.net/trans/ | CC BY-ND 4.0 (`sources/translations/en/LICENSE`). Attribution shown in the app: "Translation by Talal Itani, ClearQuran.com" | `sources/translations/en/` |
 | Concept list, blessing references | Written for this project during the challenge; references from `docs/SPEC.md` §9 | Project's own; mappings pending religious review | `sources/concepts.json`, `sources/blessings.json` |
 
 ## Fonts (via `next/font/google`, self-hosted at build time)

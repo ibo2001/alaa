@@ -5,7 +5,7 @@ import type { Lang, Stage, VerseRef } from "@/lib/types";
 import { data, getBlessing } from "./data";
 import { loadSources } from "./load";
 
-const DEFAULT_TRANSLATIONS = [{ lang: "en" as const, source: "en.itani" }];
+const DEFAULT_TRANSLATIONS = [{ lang: "en" as const, source: "en.rwwad" }];
 
 export function refrainPassage(lang: Lang): GuardedPassage {
   return guardPassage(data.refrain.verses, DEFAULT_TRANSLATIONS, lang, loadSources());

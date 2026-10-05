@@ -46,9 +46,21 @@ export function VersePassage({
               </span>
             ))}
           </p>
+          {/* The translator's footnotes, verbatim: the licence allows no omissions. */}
+          {ayat.some((a) => a.translationNotes) && (
+            <div className="mt-3 space-y-1 border-s border-current/20 ps-3 text-xs leading-relaxed opacity-90">
+              {ayat
+                .filter((a) => a.translationNotes)
+                .map((a) => (
+                  <p key={a.key} className="whitespace-pre-line">
+                    {a.translationNotes}
+                  </p>
+                ))}
+            </div>
+          )}
           <p className="mt-2 text-xs">
             <a href={translation.meta.url} target="_blank" rel="noopener noreferrer" className="underline">
-              {t("translationBy", { translator: translation.meta.translator })}
+              {t("translationBy", { translator: translation.meta.translator, publisher: translation.meta.publisher })}
             </a>{" "}
             ·{" "}
             <a href={translation.meta.licenseUrl} target="_blank" rel="noopener noreferrer" className="underline">

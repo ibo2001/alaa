@@ -80,12 +80,12 @@ describe("Level 2: translation needs text and a LICENSE", () => {
     const result = guardBlessing(water, { lang: "en", stage: "new" }, real);
     if (!result.ok) throw new Error("expected ok");
     expect(result.translation.status).toBe("shown");
-    if (result.translation.status === "shown") expect(result.translation.meta.translator).toBe("Talal Itani");
-    expect(result.ayat[0]!.translation).toBe(real.translations["en.itani"]!.texts!.get("21:30"));
+    if (result.translation.status === "shown") expect(result.translation.meta.translator).toBe("Rowwad Translation Center");
+    expect(result.ayat[0]!.translation).toBe(real.translations["en.rwwad"]!.texts!.get("21:30"));
   });
 
   it("missing LICENSE → Arabic only, translation pending", () => {
-    const bundle = withTranslation("en.itani", { licensePresent: false });
+    const bundle = withTranslation("en.rwwad", { licensePresent: false });
     const result = guardBlessing(water, { lang: "en", stage: "new" }, bundle);
     if (!result.ok) throw new Error("Arabic must still render");
     expect(result.translation.status).toBe("pending");
@@ -94,16 +94,30 @@ describe("Level 2: translation needs text and a LICENSE", () => {
   });
 
   it("missing translation text → pending", () => {
-    const bundle = withTranslation("en.itani", { texts: null });
+    const bundle = withTranslation("en.rwwad", { texts: null });
     const result = guardBlessing(water, { lang: "en", stage: "new" }, bundle);
     expect(result.ok && result.translation.status).toBe("pending");
   });
 
   it("altered translation text → pending", () => {
-    const texts = new Map(real.translations["en.itani"]!.texts!);
+    const texts = new Map(real.translations["en.rwwad"]!.texts!);
     texts.set("21:30", texts.get("21:30")!.replace(/e/, "a"));
-    const result = guardBlessing(water, { lang: "en", stage: "new" }, withTranslation("en.itani", { texts }));
+    const result = guardBlessing(water, { lang: "en", stage: "new" }, withTranslation("en.rwwad", { texts }));
     expect(result.ok && result.translation.status).toBe("pending");
+  });
+
+  it("translator's footnotes come with the translation (1:2 has three)", () => {
+    const p = guardPassage([{ surah: 1, ayah: 2 }], [{ lang: "en", source: "en.rwwad" }], "en", real);
+    if (!p.ok) throw new Error("expected ok");
+    expect(p.ayat[0]!.translationNotes).toBe(real.translations["en.rwwad"]!.notes.get("1:2"));
+    expect(p.ayat[0]!.translationNotes).toContain("[3]");
+  });
+
+  it("altered footnote → pending (the hash covers the notes)", () => {
+    const notes = new Map(real.translations["en.rwwad"]!.notes);
+    notes.set("1:2", notes.get("1:2")!.replace("God", "god"));
+    const p = guardPassage([{ surah: 1, ayah: 2 }], [{ lang: "en", source: "en.rwwad" }], "en", withTranslation("en.rwwad", { notes }));
+    expect(p.ok && p.translation.status).toBe("pending");
   });
 
   it("Arabic UI needs no translation", () => {

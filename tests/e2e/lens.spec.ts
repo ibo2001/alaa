@@ -12,7 +12,7 @@ test("lens → sample photo → verified blessing card", async ({ page }) => {
   await expect(page.getByRole("heading", { level: 1, name: "Drinking water" })).toBeVisible();
   // Verse text from Tanzil, the licensed translation, the review badge and the quran.com link.
   await expect(page.locator("p.verse").first()).toBeVisible();
-  await expect(page.getByRole("link", { name: /Translation by Talal Itani/ }).first()).toBeVisible();
+  await expect(page.getByRole("link", { name: /Translation by Rowwad Translation Center/ }).first()).toBeVisible();
   await expect(page.getByText("Mapping under review")).toHaveCount(0); // drinking-water mapping is reviewed (REVIEW_LOG.md)
   await expect(page.getByRole("link", { name: /in context on quran\.com/ })).toHaveAttribute("href", "https://quran.com/56/68-70");
 });
