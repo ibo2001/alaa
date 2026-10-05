@@ -1,0 +1,52 @@
+components/PageTransition.tsx
+  s_9a8b9d0f22ef1e::t_de411a6e09e19e 1-21
+components/TabBar.tsx
+  s_9a8b9d0f22ef1e::t_6c88974146d916 1-31,33,35-60
+  s_9a8b9d0f22ef1e::t_17d83f5b68d48b 34
+  s_9a8b9d0f22ef1e::t_45c838b8b7376f 32
+components/StagePicker.tsx
+  s_9a8b9d0f22ef1e::t_9514e7076da9d5 29-35,42-43,50
+app/[locale]/template.tsx
+  s_9a8b9d0f22ef1e::t_c5be203c68ace5 1-6
+app/[locale]/layout.tsx
+  s_9a8b9d0f22ef1e::t_c60d2266ace66e 7-8,35,53-55
+components/icons.tsx
+  s_9a8b9d0f22ef1e::t_17d83f5b68d48b 23,26-28
+  s_9a8b9d0f22ef1e::t_b6d958f40d645e 1-22,24-25,29-60
+  s_9a8b9d0f22ef1e::t_957e049f154551 61-67
+app/[locale]/page.tsx
+  s_9a8b9d0f22ef1e::t_de00ed4bd67dd8 52,66
+  s_9a8b9d0f22ef1e::t_e44388506f0935 2,15,18-23,25-49,51,53-65,67
+lib/nav.ts
+  s_9a8b9d0f22ef1e::t_ad608257b25b3c 1-38,43,47
+  s_9a8b9d0f22ef1e::t_e79cb95f456576 39-42,44-46,48-49
+components/LanguageSwitch.tsx
+  s_9a8b9d0f22ef1e::t_45c838b8b7376f 17
+messages/ar.json
+  s_9a8b9d0f22ef1e::t_c60d2266ace66e 15-16
+app/globals.css
+  s_9a8b9d0f22ef1e::t_d20c173f3cc7a5 54-160
+  s_9a8b9d0f22ef1e::t_957e049f154551 13,25,161-168
+messages/en.json
+  s_9a8b9d0f22ef1e::t_c60d2266ace66e 15-16
+components/TopBar.tsx
+  s_9a8b9d0f22ef1e::t_c60d2266ace66e 5,19
+  s_9a8b9d0f22ef1e::t_8fa40cbfc10117 1-4,6-18,20-37,46-52
+  s_9a8b9d0f22ef1e::t_957e049f154551 38-45
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "530a476ed2280af77e64f18813256324038ab07a",
+  "prompts": {},
+  "sessions": {
+    "s_9a8b9d0f22ef1e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b8b37140-fbdc-4e61-a833-176ff24e8c3a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
