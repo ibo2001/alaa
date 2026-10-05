@@ -2,7 +2,7 @@
 
 A running snapshot of where the project is. Updated at each milestone. For "built vs planned" see `ROADMAP.md`; for content decisions see `DECISIONS.md`.
 
-**Last updated:** 2026-10-05 15:23 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
+**Last updated:** 2026-10-05 15:50 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
 
 ## Health
 | Check | Status |
@@ -87,6 +87,7 @@ The PWA now looks and behaves like a native app instead of a website. Checked at
 5. RAG design: spec written and committed (`docs/superpowers/specs/2026-10-05-rag-reviewer-assistant-design.md`), approved section by section, awaiting Ibrahim's review of the document. Phase 0 needs from him: the Tafsir Center database + LICENSE in `sources/tafsir/`, a Voyage API key. Built only if Day 3 leaves time; otherwise it is the deck's "planned" item
 6. Demo video: done. Final cuts rendered (1:57; vertical 1080×1920 and landscape 1920×1080) in `video/out/` (git-ignored): scripted 3× screen recordings of the live app (`video/record.ts`), Remotion composition in the app's look (`video/src/`), Arabic voice-over by ElevenLabs (voice "Rawi", disclosed on the end card), English captions, Pexels glass clip as the opening. Next: Ibrahim adds the clip's Pexels link for `SOURCES.md`, uploads the landscape cut unlisted and tests the link
 7. Next while waiting: Ibrahim checks the live site on a phone; user-test responses and Ziyad's remaining answers
+8. Afternoon (15:30–): prompt caching measured: not in effect (prefix ≈3k tokens, below Haiku 4.5's 4,096 minimum; padding would cost more at demo traffic), written up in `docs/RESULTS.md`, no code change. README, roadmap and `.env.example` brought in line with what is built. Cold run of the live site (laptop and phone size, ar and en, 14 pages, all 7 sample photos): no errors, no broken requests, no horizontal scroll, results under 2 s. Both decks exported to PDF next to the PPTX files (git-ignored, 16 pages, fonts embedded). User-test responses: 0 at 15:40
 
 ## Tafsir MCP (Tafsir Center for Quranic Studies, tafsir.net): now part of the RAG design
 Its SQLite database (data CC BY 4.0, attribution "Tafsir Center for Quranic Studies"; code MIT; ≈214 MB, git-ignored and hash-pinned) is the tafsir and Arabic-roots source of the RAG reviewer's assistant (see the spec). Tafsir is shown only to the reviewer, never in the app; Tanzil stays the only verse text users see. The hosted MCP (`https://mcp.tafsir.net/mcp`) can serve as a manual research aid. Showing a tafsir line to users remains a separate decision (roadmap).
