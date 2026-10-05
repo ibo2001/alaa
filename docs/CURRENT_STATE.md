@@ -2,7 +2,7 @@
 
 A running snapshot of where the project is. Updated at each milestone. For "built vs planned" see `ROADMAP.md`; for content decisions see `DECISIONS.md`.
 
-**Last updated:** 2026-10-05 16:50 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
+**Last updated:** 2026-10-05 16:46 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
 
 ## Health
 | Check | Status |
@@ -10,7 +10,8 @@ A running snapshot of where the project is. Updated at each milestone. For "buil
 | Lint, typecheck | Clean |
 | Unit tests (Vitest) | 134 passing (60 of them for `rag/`) |
 | E2E (Playwright, stub provider) | 10 passing (builds into `.next-e2e`, so it can run beside `next dev`) |
-| Vercel deploy | Green, auto-deploys from `main`. Everything up to 14:16 Riyadh is live (app-style UI, new Home, Rowwad translation, reviewed hand and eyes-tongue cards, no-verse rule fix) |
+| Vercel deploy | Green, auto-deploys from `main`. Everything up to 16:43 Riyadh is pushed and live (app-style UI, new Home, Rowwad translation, reviewed hand and eyes-tongue cards, no-verse rule fix; later pushes are docs and offline `rag/` tooling only, the app is unchanged) |
+| RAG retrieval eval (offline tooling) | 22 known pairs: reviewer's verse among 8 candidates for 16 (73%), MRR 0.49, $0.0055 per question; roots + keywords only (no Voyage key yet) |
 | Real-model eval (`claude-haiku-4-5`) | 34 photos × 3 runs: 88% correct or correctly abstained after the no-verse rule fix (79% before), 97% consistent, 1.7 s median, $0.0041 per photo; alternative approach 88%, $0.0020 (`docs/RESULTS.md`) |
 
 ## Day 1 (Oct 4): The Lens
@@ -79,16 +80,16 @@ The PWA now looks and behaves like a native app instead of a website. Checked at
 - Religious review: waiting for Ziyad's answers to the open questions listed at the end of `sources/REVIEW_LOG.md` (figs-olives, Journey cards, 4 unreviewed cards, pomegranate/night-day/mountains; hand and eyes-tongue answered by voice note on Oct 5, transcribed locally with whisper-cpp). Apply only Ibrahim's decisions
 - End-of-Day-1 progress reply to the committee: drafted in Ibrahim's Gmail (Arabic)
 
-## Day 2 plan (Oct 5): status at 14:20
+## Day 2 plan (Oct 5): status at 16:46
 1. Religious review: first round recorded; voice-note answers applied (hand, eyes-tongue); waiting for the rest of Ziyad's answers
 2. User testing: links sent; when responses arrive, `npx tsx scripts/study-results.ts fetch`, blind scoring, `summarize`, `docs/user-testing/RESULTS.md`, `docs/CHANGES_FROM_TESTING.md`
 3. Evaluation: done (34 photos × 3 runs, two runs reported in `docs/RESULTS.md`; rule fix from run 1)
 4. App-style UI, new Home, roadmap, approved translation, decks in the official template (Arabic and English approved): done
-5. RAG design: spec written and committed (`docs/superpowers/specs/2026-10-05-rag-reviewer-assistant-design.md`), approved section by section, awaiting Ibrahim's review of the document. Phase 0 needs from him: the Tafsir Center database + LICENSE in `sources/tafsir/`, a Voyage API key. Built only if Day 3 leaves time; otherwise it is the deck's "planned" item
+5. RAG reviewer's assistant: spec (`docs/superpowers/specs/2026-10-05-rag-reviewer-assistant-design.md`) approved by Ibrahim; Phase 0 (Tafsir database + LICENSE) and Phase 1 done on Oct 5. Still open: Voyage key (meaning channel, optional; read its data-use terms first) and Phase 2 (reviewer candidates page, form sending, `answers.ts`)
    - Phase 1 plan: `docs/superpowers/plans/2026-10-05-rag-phase-1.md`. Tasks 1–7 built and merged (Oct 5, 16:30): `rag/` tooling (Arabic normalisation, Tafsir database access with hash pinning, passage table, index with source and data-file hashes, roots + BM25 + Voyage channels with reciprocal-rank fusion, Claude re-ranker limited to an enum of candidate keys, references-only packets checked by the Source Guard, `propose` CLI); 56 offline tests; final review by a fresh reviewer, its two important findings fixed. Tasks 8–9 done 16:45: Ibrahim added the Tafsir Center database v1.0 (hash matches the upstream pin) and its LICENSE; index built (roots + keywords); first packets in `rag/packets/` (water, hand, warm shower); evaluation 16/22 (73%) recall@8, MRR 0.49, $0.0055 per question (`docs/RESULTS.md`); threshold kept at 0.5 (`docs/DECISIONS.md`). Next: a Voyage key for the meaning channel, then Phase 2 (reviewer page)
 6. Demo video: done. Final cuts rendered (1:57; vertical 1080×1920 and landscape 1920×1080) in `video/out/` (git-ignored): scripted 3× screen recordings of the live app (`video/record.ts`), Remotion composition in the app's look (`video/src/`), Arabic voice-over by ElevenLabs (voice "Rawi", disclosed on the end card), English captions, Pexels glass clip as the opening. Pexels link recorded in `SOURCES.md`. Landscape cut on YouTube (unlisted): https://youtu.be/preYsrkPt60
-7. Next while waiting: Ibrahim checks the live site on a phone; user-test responses and Ziyad's remaining answers
+7. Next while waiting: Ibrahim checks the live site on a phone; user-test responses (background check every 15 min until 21:45, 0 so far) and Ziyad's remaining answers
 8. Afternoon (15:30–): prompt caching measured: not in effect (prefix ≈3k tokens, below Haiku 4.5's 4,096 minimum; padding would cost more at demo traffic), written up in `docs/RESULTS.md`, no code change. README, roadmap and `.env.example` brought in line with what is built. Cold run of the live site (laptop and phone size, ar and en, 14 pages, all 7 sample photos): no errors, no broken requests, no horizontal scroll, results under 2 s. Both decks exported to PDF next to the PPTX files (git-ignored, 16 pages, fonts embedded). User-test responses: 0 at 15:40
 
-## Tafsir MCP (Tafsir Center for Quranic Studies, tafsir.net): now part of the RAG design
-Its SQLite database (data CC BY 4.0, attribution "Tafsir Center for Quranic Studies"; code MIT; ≈214 MB, git-ignored and hash-pinned) is the tafsir and Arabic-roots source of the RAG reviewer's assistant (see the spec). Tafsir is shown only to the reviewer, never in the app; Tanzil stays the only verse text users see. The hosted MCP (`https://mcp.tafsir.net/mcp`) can serve as a manual research aid. Showing a tafsir line to users remains a separate decision (roadmap).
+## Tafsir MCP (Tafsir Center for Quranic Studies, tafsir.net): source of the RAG tooling
+Its SQLite database `sources/tafsir/quran.db` (v1.0, commit dbbfa77, 234 MB, git-ignored; SHA-256 pinned in `sources/tafsir/manifest.json` and equal to the upstream pin; data CC BY 4.0, attribution "Tafsir Center for Quranic Studies (https://tafsir.net)"; code MIT) is the tafsir and Arabic-roots source of the RAG reviewer's assistant (see the spec). Tafsir is shown only to the reviewer, never in the app; Tanzil stays the only verse text users see. The hosted MCP (`https://mcp.tafsir.net/mcp`) can serve as a manual research aid. Showing a tafsir line to users remains a separate decision (roadmap).
