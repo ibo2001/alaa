@@ -1,0 +1,25 @@
+rag/text.ts
+  s_9a8b9d0f22ef1e::t_8c7c2bb12ad68b 38,41-44,46-53
+  s_9a8b9d0f22ef1e::t_2a99ba3230758a 29-37,39-40,45
+tests/unit/rag/retrieve.test.ts
+  s_9a8b9d0f22ef1e::t_e7315bded414ee 4,95-113
+  s_9a8b9d0f22ef1e::t_bfa33dcdb1684c 114
+rag/passages.ts
+  s_9a8b9d0f22ef1e::t_8c7c2bb12ad68b 6,31
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "cb8fe1a14e2c747f4c32a1aa7e64bc64015f89bd",
+  "prompts": {},
+  "sessions": {
+    "s_9a8b9d0f22ef1e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b8b37140-fbdc-4e61-a833-176ff24e8c3a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
