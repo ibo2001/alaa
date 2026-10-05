@@ -1,0 +1,43 @@
+.gitignore
+  s_9a8b9d0f22ef1e::t_23e7167d8e8be2 78-79
+rag/packets/2026-10-05-hand.json
+  s_9a8b9d0f22ef1e::t_677e7a70e90a9a 1-209
+rag/packets/2026-10-05-hand.md
+  s_9a8b9d0f22ef1e::t_677e7a70e90a9a 1-17
+rag/packets/2026-10-05-warm-shower.json
+  s_9a8b9d0f22ef1e::t_ca3973b7e50846 1-63
+rag/tafsir.ts
+  s_9a8b9d0f22ef1e::t_fb482df5276da2 18
+sources/tafsir/manifest.json
+  s_9a8b9d0f22ef1e::t_968af998805edd 1-8
+rag/index/manifest.json
+  s_9a8b9d0f22ef1e::t_537083b4b50eed 1-14
+tests/unit/rag/packet.test.ts
+  s_9a8b9d0f22ef1e::t_fb482df5276da2 47
+rag/packets/2026-10-05-warm-shower.md
+  s_9a8b9d0f22ef1e::t_ca3973b7e50846 1-11
+rag/packets/2026-10-05-water.json
+  s_9a8b9d0f22ef1e::t_677e7a70e90a9a 1-209
+rag/packets/2026-10-05-water.md
+  s_9a8b9d0f22ef1e::t_677e7a70e90a9a 1-17
+docs/SOURCES.md
+  s_9a8b9d0f22ef1e::t_71576ea2627000 93-98
+sources/tafsir/LICENSE
+  s_9a8b9d0f22ef1e::t_f3e012ede324f5 1-19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5f9e1d145c81b22e3aab4f89cd731d6d74e5e69d",
+  "prompts": {},
+  "sessions": {
+    "s_9a8b9d0f22ef1e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b8b37140-fbdc-4e61-a833-176ff24e8c3a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
