@@ -2,13 +2,13 @@
 
 A running snapshot of where the project is. Updated at each milestone. For "built vs planned" see `ROADMAP.md`; for content decisions see `DECISIONS.md`.
 
-**Last updated:** 2026-10-04 12:45 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
+**Last updated:** 2026-10-05 09:20 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
 
 ## Health
 | Check | Status |
 |---|---|
 | Lint, typecheck | Clean |
-| Unit tests (Vitest) | 55 passing |
+| Unit tests (Vitest) | 56 passing |
 | E2E (Playwright, stub provider) | 9 passing |
 | Vercel deploy | Green, auto-deploys from `main` |
 | Real-model eval (`claude-haiku-4-5`) | 21/21 correct, 7/7 consistent over 3 runs (7 sample photos) |
@@ -38,7 +38,7 @@ A running snapshot of where the project is. Updated at each milestone. For "buil
 | After-journey referral to human support | Done: IslamQA (Ibrahim's choice) |
 | About page (what Alaa is and is not, AI use, sources, review, privacy, referral, report) | Done |
 | Review sheet for the reviewer: `/ar/review`, every card through the Guard; per card "fits" / "needs replacing" + suggested verse + notes, saved on the reviewer's device, sent to a private Google Form (`npx tsx scripts/review-form.ts fetch`); printable | Done |
-| Religious review of the 25 cards, recorded in `sources/REVIEW_LOG.md` by Ibrahim | Ready to start: send the reviewer https://alaa-alpha.vercel.app/ar/review |
+| Religious review of the 25 cards, recorded in `sources/REVIEW_LOG.md` by Ibrahim | First round in (Ziyad, داعية): 12 cards + abstention `reviewed`; 4 Journey cards keep the Ar-Rahman verse and add his verse (draft); open questions sent to him on WhatsApp |
 | User testing kit: protocol, printed sheets (Arabic and English PDF), results template, changes log | Done |
 | Online forms (Google Forms, Arabic and English) with A/B links, blind-scoring script | Done: links in `docs/user-testing/forms.json` |
 | User testing sessions | Not started (Ibrahim) |
@@ -54,12 +54,12 @@ A running snapshot of where the project is. Updated at each milestone. For "buil
 - `DAILY_LIMIT` is not set on Vercel (defaults to 50 per device per instance); raise it for the judging period
 - Daily limit is in memory per server instance (best effort); durable store is planned
 - Only one real vision provider; the second is `stub`
-- All 25 mappings are `draft`; no reflections are shown until reviewed
-- Religious review: link sent to the reviewer; when he submits, run `npx tsx scripts/review-form.ts fetch` (ignore the "TEST (Claude)" response), list "needs replacing" cards for Ibrahim to decide, then update `sources/blessings.json` and `sources/REVIEW_LOG.md` per his decisions only
+- 13 of 25 mappings are `draft` (12 reviewed); no reflections are shown until reviewed
+- Religious review: waiting for Ziyad's answers to the open questions listed at the end of `sources/REVIEW_LOG.md` (figs-olives, hand, eyes-tongue, Journey cards, 4 unreviewed cards, pomegranate/night-day/mountains). Apply only Ibrahim's decisions
 - End-of-Day-1 progress reply to the committee: drafted in Ibrahim's Gmail (Arabic)
 
 ## Day 2 plan (Oct 5)
-1. Religious review results → Ibrahim's decisions → `REVIEW_LOG.md`
+1. Religious review results → Ibrahim's decisions → `REVIEW_LOG.md` (first round done; second round waits for the reviewer)
 2. User testing (A/B forms in `docs/user-testing/forms.json`; Ibrahim to check the prefilled links first), then `study-results.ts fetch`, blind scoring, `summarize`, `RESULTS.md`, `CHANGES_FROM_TESTING.md`
 3. Fixes from review and testing; extend the eval set (needs labelled photos in `eval/images/`)
 

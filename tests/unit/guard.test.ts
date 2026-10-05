@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { guardBlessing, guardPassage, type SourceBundle } from "@/lib/guard";
+import { ayatByRef, guardBlessing, guardPassage, type SourceBundle } from "@/lib/guard";
 import { loadSources } from "@/lib/sources/load";
 import { blessings, data, getBlessing } from "@/lib/sources/data";
 import type { Blessing } from "@/lib/types";
@@ -114,7 +114,7 @@ describe("Level 2: translation needs text and a LICENSE", () => {
 
 describe("Level 3: mapping review badge", () => {
   it("draft mapping → under-review badge", () => {
-    const result = guardBlessing(water, { lang: "ar", stage: "new" }, real);
+    const result = guardBlessing(reviewed(water, { mapping: "draft" }), { lang: "ar", stage: "new" }, real);
     expect(result.ok && result.mappingUnderReview).toBe(true);
   });
 
@@ -138,5 +138,16 @@ describe("Level 4: reflection only when reviewed", () => {
     expect(shown.ok && shown.reflection).toBe("test reflection");
     const otherStage = guardBlessing(b, { lang: "en", stage: "familiar" }, real);
     expect(otherStage.ok && otherStage.reflection).toBeNull();
+  });
+});
+
+describe("ayatByRef", () => {
+  it("splits a card quoting several surahs into one group per reference, in order", () => {
+    const refs = [{ surah: 55, ayah: 5 }, { surah: 14, ayah: 33 }, { surah: 56, ayah: 68, ayahEnd: 70 }];
+    const p = guardPassage(refs, [], "ar", real);
+    expect(p.ok).toBe(true);
+    if (!p.ok) return;
+    const groups = ayatByRef(p.refs, p.ayat);
+    expect(groups.map((g) => g.ayat.map((a) => a.key))).toEqual([["55:5"], ["14:33"], ["56:68", "56:69", "56:70"]]);
   });
 });

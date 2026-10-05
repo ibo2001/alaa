@@ -76,7 +76,7 @@ test("About: what Alaa is and is not, referral and report links", async ({ page 
 test("Review sheet: every card through the Guard, with status and checklist", async ({ page }) => {
   await page.goto("/ar/review");
   await expect(page.getByRole("heading", { level: 1, name: "ورقة المراجعة" })).toBeVisible();
-  await expect(page.getByText("الروابط المراجَعة: ٠ من ٢٥")).toBeVisible();
+  await expect(page.getByText("الروابط المراجَعة: ١٢ من ٢٥")).toBeVisible();
   await expect(page.locator("article > ol > li")).toHaveCount(27); // 25 cards + abstention + refrain
   await expect(page.locator("#water p.verse")).toBeVisible();
   await expect(page.locator("#abstention p.verse")).toHaveCount(2);

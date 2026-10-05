@@ -10,10 +10,11 @@ describe("Ar-Rahman Journey", () => {
     for (const s of stations) expect(s.blessingIds.length).toBeGreaterThan(0);
   });
 
-  it("every station blessing has a verse in Surah Ar-Rahman", () => {
+  // Other verses may follow (e.g. a reviewer's suggestion), but the station opens with Ar-Rahman.
+  it("every station blessing opens with a verse from Surah Ar-Rahman", () => {
     for (const id of Object.keys(stationByBlessing(blessings))) {
       const b = blessings.find((x) => x.id === id)!;
-      expect(b.verses.every((v) => v.surah === 55)).toBe(true);
+      expect(b.verses[0]!.surah).toBe(55);
     }
   });
 

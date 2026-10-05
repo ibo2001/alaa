@@ -12,8 +12,10 @@
       }
     ],
     "review": {
-      "mapping": "draft",
-      "reflection": "draft"
+      "mapping": "reviewed",
+      "reflection": "draft",
+      "reviewer": "زياد (داعية)",
+      "reviewedAt": "2026-10-04"
     }
   },
   "refrain": {
@@ -45,8 +47,10 @@
         }
       ],
       "review": {
-        "mapping": "draft",
-        "reflection": "draft"
+        "mapping": "reviewed",
+        "reflection": "draft",
+        "reviewer": "زياد (داعية)",
+        "reviewedAt": "2026-10-04"
       }
     },
     {
@@ -70,8 +74,10 @@
         }
       ],
       "review": {
-        "mapping": "draft",
-        "reflection": "draft"
+        "mapping": "reviewed",
+        "reflection": "draft",
+        "reviewer": "زياد (داعية)",
+        "reviewedAt": "2026-10-04"
       }
     },
     {
@@ -94,8 +100,10 @@
         }
       ],
       "review": {
-        "mapping": "draft",
-        "reflection": "draft"
+        "mapping": "reviewed",
+        "reflection": "draft",
+        "reviewer": "زياد (داعية)",
+        "reviewedAt": "2026-10-04"
       }
     },
     {
@@ -197,8 +205,10 @@
         }
       ],
       "review": {
-        "mapping": "draft",
-        "reflection": "draft"
+        "mapping": "reviewed",
+        "reflection": "draft",
+        "reviewer": "زياد (داعية)",
+        "reviewedAt": "2026-10-04"
       }
     },
     {
@@ -221,8 +231,10 @@
         }
       ],
       "review": {
-        "mapping": "draft",
-        "reflection": "draft"
+        "mapping": "reviewed",
+        "reflection": "draft",
+        "reviewer": "زياد (داعية)",
+        "reviewedAt": "2026-10-04"
       }
     },
     {
@@ -239,6 +251,10 @@
         {
           "surah": 55,
           "ayah": 5
+        },
+        {
+          "surah": 14,
+          "ayah": 33
         }
       ],
       "translations": [
@@ -251,7 +267,8 @@
       "review": {
         "mapping": "draft",
         "reflection": "draft"
-      }
+      },
+      "note": "Reviewer (2026-10-04) asked to replace the Ar-Rahman verse. Ibrahim decided on 2026-10-05 to keep it, because the Journey follows the surah's order, and to add the reviewer's suggested verse(s) after it. Mapping stays draft until the reviewer confirms."
     },
     {
       "id": "sky",
@@ -264,6 +281,10 @@
         {
           "surah": 55,
           "ayah": 7
+        },
+        {
+          "surah": 2,
+          "ayah": 22
         }
       ],
       "translations": [
@@ -276,7 +297,8 @@
       "review": {
         "mapping": "draft",
         "reflection": "draft"
-      }
+      },
+      "note": "Reviewer (2026-10-04) asked to replace the Ar-Rahman verse. Ibrahim decided on 2026-10-05 to keep it, because the Journey follows the surah's order, and to add the reviewer's suggested verse(s) after it. Mapping stays draft until the reviewer confirms."
     },
     {
       "id": "stars-trees",
@@ -292,6 +314,14 @@
         {
           "surah": 55,
           "ayah": 6
+        },
+        {
+          "surah": 6,
+          "ayah": 97
+        },
+        {
+          "surah": 36,
+          "ayah": 80
         }
       ],
       "translations": [
@@ -304,7 +334,8 @@
       "review": {
         "mapping": "draft",
         "reflection": "draft"
-      }
+      },
+      "note": "Reviewer (2026-10-04) asked to replace the Ar-Rahman verse. Ibrahim decided on 2026-10-05 to keep it, because the Journey follows the surah's order, and to add the reviewer's suggested verse(s) after it. Mapping stays draft until the reviewer confirms."
     },
     {
       "id": "sea",
@@ -317,6 +348,10 @@
         {
           "surah": 55,
           "ayah": 19
+        },
+        {
+          "surah": 16,
+          "ayah": 14
         }
       ],
       "translations": [
@@ -329,7 +364,8 @@
       "review": {
         "mapping": "draft",
         "reflection": "draft"
-      }
+      },
+      "note": "Reviewer (2026-10-04) asked to replace the Ar-Rahman verse. Ibrahim decided on 2026-10-05 to keep it, because the Journey follows the surah's order, and to add the reviewer's suggested verse(s) after it. Mapping stays draft until the reviewer confirms."
     },
     {
       "id": "pearls",
@@ -355,8 +391,10 @@
       ],
       "journeyStation": 7,
       "review": {
-        "mapping": "draft",
-        "reflection": "draft"
+        "mapping": "reviewed",
+        "reflection": "draft",
+        "reviewer": "زياد (داعية)",
+        "reviewedAt": "2026-10-04"
       }
     },
     {
@@ -379,8 +417,10 @@
         }
       ],
       "review": {
-        "mapping": "draft",
-        "reflection": "draft"
+        "mapping": "reviewed",
+        "reflection": "draft",
+        "reviewer": "زياد (داعية)",
+        "reviewedAt": "2026-10-04"
       }
     },
     {
@@ -536,8 +576,10 @@
         }
       ],
       "review": {
-        "mapping": "draft",
-        "reflection": "draft"
+        "mapping": "reviewed",
+        "reflection": "draft",
+        "reviewer": "زياد (داعية)",
+        "reviewedAt": "2026-10-04"
       }
     },
     {
@@ -565,8 +607,10 @@
         }
       ],
       "review": {
-        "mapping": "draft",
-        "reflection": "draft"
+        "mapping": "reviewed",
+        "reflection": "draft",
+        "reviewer": "زياد (داعية)",
+        "reviewedAt": "2026-10-04"
       }
     },
     {
@@ -589,8 +633,10 @@
         }
       ],
       "review": {
-        "mapping": "draft",
-        "reflection": "draft"
+        "mapping": "reviewed",
+        "reflection": "draft",
+        "reviewer": "زياد (داعية)",
+        "reviewedAt": "2026-10-04"
       }
     },
     {
@@ -617,8 +663,10 @@
       ],
       "journeyStation": 5,
       "review": {
-        "mapping": "draft",
-        "reflection": "draft"
+        "mapping": "reviewed",
+        "reflection": "draft",
+        "reviewer": "زياد (داعية)",
+        "reviewedAt": "2026-10-04"
       }
     },
     {
@@ -641,8 +689,10 @@
         }
       ],
       "review": {
-        "mapping": "draft",
-        "reflection": "draft"
+        "mapping": "reviewed",
+        "reflection": "draft",
+        "reviewer": "زياد (داعية)",
+        "reviewedAt": "2026-10-04"
       }
     },
     {
