@@ -2,7 +2,7 @@
 
 A running snapshot of where the project is. Updated at each milestone. For "built vs planned" see `ROADMAP.md`; for content decisions see `DECISIONS.md`.
 
-**Last updated:** 2026-10-05 10:30 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
+**Last updated:** 2026-10-05 10:40 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
 
 ## Health
 | Check | Status |
@@ -69,7 +69,7 @@ The PWA now looks and behaves like a native app instead of a website. Checked at
 
 ## Open items
 - `docs/alaa-pitch.pdf` (registration pitch, pre-challenge) is listed in `BASELINE.md` as "to be added"; Ibrahim adds the original file
-- Challenge presentation: English draft approved and Arabic draft made (13 slides each, challenge work, separate from the registration pitch); files `docs/alaa-presentation.en.pdf` and `docs/alaa-presentation.ar.pdf`. Drafts: English https://claude.ai/artifact/CkdmBC1NQnwbfUtx3oxLpg, Arabic https://claude.ai/artifact/LR8yqaRmAPMncDxTTtobbx. Placeholders for screenshots, Day 2–3 features and Day 3 results; exported to PDF on Day 3
+- Challenge presentation: English draft approved and Arabic draft made (13 slides each, challenge work, separate from the registration pitch); files `docs/alaa-presentation.en.pdf` and `docs/alaa-presentation.ar.pdf`. Drafts: English https://claude.ai/artifact/CkdmBC1NQnwbfUtx3oxLpg, Arabic https://claude.ai/artifact/LR8yqaRmAPMncDxTTtobbx. Updated with Day 2 work on Oct 5 (both approved: idea line with the new Home, first review count on the Source Guard slide, new screen placeholders, built vs planned incl. voice input and Quran-first/hadith-fallback). Still placeholders: screenshots (after push, on a phone) and Day 3 results; exported to PDF on Day 3
 - `DAILY_LIMIT` is not set on Vercel (defaults to 50 per device per instance); Ibrahim raises it at delivery, not before
 - Push to `main` (deploys to Vercel) only when Ibrahim says so
 - Daily limit is in memory per server instance (best effort); durable store is planned
@@ -82,7 +82,7 @@ The PWA now looks and behaves like a native app instead of a website. Checked at
 1. Religious review results → Ibrahim's decisions → `REVIEW_LOG.md` (first round done; second round waits for the reviewer)
 2. User testing (A/B forms in `docs/user-testing/forms.json`; Ibrahim to check the prefilled links first), then `study-results.ts fetch`, blind scoring, `summarize`, `RESULTS.md`, `CHANGES_FROM_TESTING.md`
 3. Fixes from review and testing; extend the eval set (needs labelled photos in `eval/images/`)
-4. App-style UI and new Home (done, see above); next: Ibrahim tries it on a phone, then fixes from that. The user-testing kit names no specific buttons or screens, so it still fits the new UI
+4. App-style UI, new Home, roadmap (voice input, Quran-first with hadith fallback) and presentation update (done); next: Ibrahim tries it on a phone, then fixes from that. The user-testing kit names no specific buttons or screens, so it still fits the new UI
 5. Push to `main` when Ibrahim approves, then check the live site on a phone
 
 ## Under consideration: Tafsir MCP (Tafsir Center for Quranic Studies, tafsir.net)
