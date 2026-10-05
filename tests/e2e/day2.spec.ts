@@ -29,13 +29,17 @@ test("learning stage: new readers see the refrain note", async ({ page }) => {
 });
 
 test("My Day's Surah: add a card, see it with the refrain, draw the share card", async ({ page }) => {
+  // An empty day still reminds of blessings; it never says there are none.
+  await page.goto("/en/today");
+  await expect(page.getByText("Blessings beyond counting around you. Start with one")).toBeVisible();
+
   await page.goto("/en/blessing/water");
   await page.getByRole("button", { name: "Add to My Day" }).click();
   await expect(page.getByRole("button", { name: /Added to My Day/ })).toBeVisible();
 
   await page.goto("/en/today");
   await expect(page.locator("[data-ready]")).toBeVisible();
-  await expect(page.getByText("1 blessing today")).toBeVisible();
+  await expect(page.getByText("1 blessing noted today")).toBeVisible();
   await expect(page.getByRole("link", { name: "Water" })).toBeVisible();
 
   await page.getByRole("button", { name: "Make my day's card" }).click();

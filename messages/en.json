@@ -122,8 +122,8 @@
   "today": {
     "title": "My Day's Surah",
     "loading": "Loading your day…",
-    "count": "{count, plural, =0 {No blessings yet today} one {{shown} blessing today} other {{shown} blessings today}}",
-    "empty": "Nothing here yet. When a blessing card opens, tap “Add to My Day” and it will appear here, followed by the refrain.",
+    "count": "{count, plural, =0 {Blessings beyond counting around you. Start with one} one {{shown} blessing noted today} other {{shown} blessings noted today}}",
+    "empty": "Your day's surah is waiting for its first blessing. When a blessing card opens, tap “Add to My Day” and it will appear here, followed by the refrain.",
     "emptyCta": "Start looking",
     "remove": "Remove {name} from today",
     "removeShort": "Remove",

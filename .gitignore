@@ -61,3 +61,6 @@ public/swe-worker*.js.map
 
 # User-testing responses (fetched by scripts/study-results.ts); never committed
 /user-testing-private/
+
+# Challenge deck (official template with partner logos): delivered, not committed
+/docs/presentation/
