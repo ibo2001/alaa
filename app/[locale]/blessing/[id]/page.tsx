@@ -6,6 +6,7 @@ import { CardActions } from "@/components/CardActions";
 import { JourneyMark } from "@/components/JourneyMark";
 import { StageNote } from "@/components/StageNote";
 import { VersePassage } from "@/components/VersePassage";
+import { ayatByRef } from "@/lib/guard";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { formatNumber, formatRef, quranComUrl } from "@/lib/quran/surahs";
@@ -62,10 +63,12 @@ export default async function BlessingPage({ params }: Props) {
       </header>
 
       <section className="px-6 py-6">
-        <VersePassage ayat={card.ayat} translation={card.translation} lang={locale} tone={refrainOnly ? "gold" : "dark"} size={refrainOnly ? "xl" : "lg"} />
-        <p className="mt-4 text-center text-sm text-sama/70">
-          {card.refs.map((r) => formatRef(r, locale)).join(" · ")}
-        </p>
+        {ayatByRef(card.refs, card.ayat).map(({ ref, ayat }, i) => (
+          <div key={formatRef(ref, locale)} className={i > 0 ? "mt-6 border-t border-sama/10 pt-6" : undefined}>
+            <VersePassage ayat={ayat} translation={card.translation} lang={locale} tone={refrainOnly ? "gold" : "dark"} size={refrainOnly ? "xl" : "lg"} />
+            <p className="mt-4 text-center text-sm text-sama/70">{formatRef(ref, locale)}</p>
+          </div>
+        ))}
         {refrainOnly && <StageNote text={refrainIntro} />}
         {card.reflection && <p className="mt-6 border-s-4 border-lazima ps-4">{card.reflection}</p>}
       </section>

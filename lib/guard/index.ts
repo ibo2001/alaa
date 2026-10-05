@@ -134,3 +134,11 @@ export function guardBlessing(
     reflection,
   };
 }
+
+/** One group of verified ayat per reference, in order, so a card quoting several places shows each on its own. */
+export function ayatByRef(refs: VerseRef[], ayat: GuardedAyah[]): { ref: VerseRef; ayat: GuardedAyah[] }[] {
+  return refs.map((ref) => ({
+    ref,
+    ayat: ayat.filter((a) => a.surah === ref.surah && a.ayah >= ref.ayah && a.ayah <= (ref.ayahEnd ?? ref.ayah)),
+  }));
+}

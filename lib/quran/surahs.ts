@@ -3,10 +3,13 @@ import type { Lang } from "@/lib/types";
 // Names of the surahs referenced in sources/blessings.json (metadata, not Quran text).
 // A unit test fails if a referenced surah is missing here.
 const NAMES: Record<number, Record<Lang, string>> = {
+  2: { ar: "البقرة", en: "Al-Baqarah" },
+  6: { ar: "الأنعام", en: "Al-An'am" },
   7: { ar: "الأعراف", en: "Al-A'raf" },
   14: { ar: "إبراهيم", en: "Ibrahim" },
   16: { ar: "النحل", en: "An-Nahl" },
   21: { ar: "الأنبياء", en: "Al-Anbiya" },
+  36: { ar: "يس", en: "Ya-Sin" },
   50: { ar: "ق", en: "Qaf" },
   55: { ar: "الرحمن", en: "Ar-Rahman" },
   56: { ar: "الواقعة", en: "Al-Waqi'ah" },
