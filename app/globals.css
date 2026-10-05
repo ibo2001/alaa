@@ -10,6 +10,7 @@
   --sama: #e4ecf3; /* sky: light background */
   --nakhl: #2f6b4f; /* palm: success, journey progress */
   --tamr: #7a3b1d; /* date: accents, warm details */
+  --surface: #ffffff; /* cards and grouped lists on the sky background */
 
   --background: var(--sama);
   --foreground: var(--layl);
@@ -21,6 +22,7 @@
   --color-sama: var(--sama);
   --color-nakhl: var(--nakhl);
   --color-tamr: var(--tamr);
+  --color-surface: var(--surface);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
@@ -48,4 +50,119 @@ body {
 .verse {
   font-family: var(--font-quran);
   line-height: 2.2;
+}
+
+/* ── App shell: feel like an installed app, not a web page ─────────────── */
+
+html {
+  --ease-ios: cubic-bezier(0.32, 0.72, 0, 1); /* fast start, long gentle settle */
+  --dir: 1; /* inline direction sign for slides */
+}
+html[dir="rtl"] {
+  --dir: -1;
+}
+
+body {
+  overscroll-behavior-y: none; /* no page bounce exposing the browser behind the app */
+}
+
+a,
+button,
+summary,
+label {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation; /* no double-tap-zoom delay on taps */
+}
+
+/* Translucent chrome: content scrolls underneath, blurred. */
+.topbar,
+.tabbar {
+  background: color-mix(in srgb, var(--layl) 88%, transparent);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-user-select: none;
+  user-select: none;
+}
+.topbar {
+  padding-top: env(safe-area-inset-top);
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--sama) 8%, transparent);
+}
+.tabbar {
+  padding-top: 0.25rem;
+  padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+  box-shadow: 0 -1px 0 color-mix(in srgb, var(--sama) 10%, transparent);
+}
+.app-main {
+  /* room for the tab bar (raised lens button included) */
+  padding-bottom: calc(6.5rem + env(safe-area-inset-bottom));
+}
+
+/* Press feedback on touch-down, instant. */
+.press {
+  transition: transform 120ms ease-out, opacity 120ms ease-out;
+}
+.press:active {
+  transform: scale(0.94);
+  opacity: 0.85;
+}
+
+/* Page entrances (see components/PageTransition.tsx). `backwards` fill drops the transform afterwards. */
+.page-push {
+  animation: page-in-from-end 420ms var(--ease-ios) backwards;
+}
+.page-pop {
+  animation: page-in-from-start 420ms var(--ease-ios) backwards;
+}
+.page-fade {
+  animation: page-fade-in 260ms ease-out backwards;
+}
+@keyframes page-in-from-end {
+  from {
+    opacity: 0;
+    transform: translateX(calc(var(--dir) * 48px));
+  }
+}
+@keyframes page-in-from-start {
+  from {
+    opacity: 0;
+    transform: translateX(calc(var(--dir) * -32px));
+  }
+}
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-push,
+  .page-pop,
+  .page-fade {
+    animation: page-opacity-in 150ms ease-out backwards;
+  }
+  .press:active {
+    transform: none;
+  }
+}
+@keyframes page-opacity-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .topbar,
+  .tabbar {
+    background: var(--layl);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
+/* Home hero: a soft gold glow behind the refrain. */
+.hero-glow {
+  background:
+    radial-gradient(120% 70% at 50% 0%, color-mix(in srgb, var(--lazima) 22%, transparent), transparent 60%),
+    var(--layl);
 }

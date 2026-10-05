@@ -14,7 +14,7 @@ export function LanguageSwitch({ label, ariaLabel }: { label: string; ariaLabel:
       locale={other}
       lang={other}
       aria-label={ariaLabel}
-      className="rounded border border-sama/40 px-2 py-0.5 hover:border-lazima hover:text-lazima"
+      className="press inline-flex min-h-9 items-center rounded-full bg-sama/10 px-3 text-sm hover:bg-sama/20"
     >
       {label}
     </Link>

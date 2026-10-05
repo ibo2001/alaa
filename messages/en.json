@@ -12,7 +12,8 @@
     "journey": "Journey",
     "about": "About",
     "switchLanguage": "العربية",
-    "switchLanguageLabel": "Switch to Arabic"
+    "switchLanguageLabel": "Switch to Arabic",
+    "back": "Back"
   },
   "welcome": {
     "start": "Start looking",

@@ -4,7 +4,8 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { dirFor, routing } from "@/i18n/routing";
 import { fontVariables } from "@/lib/fonts";
-import { SiteHeader } from "@/components/SiteHeader";
+import { TabBar } from "@/components/TabBar";
+import { TopBar } from "@/components/TopBar";
 import "../globals.css";
 
 export function generateStaticParams() {
@@ -31,6 +32,7 @@ export const viewport: Viewport = {
   themeColor: "#1B2340",
   width: "device-width",
   initialScale: 1,
+  viewportFit: "cover", // content may go under the notch/home bar; the bars pad with safe-area insets
 };
 
 export default async function LocaleLayout({
@@ -48,8 +50,9 @@ export default async function LocaleLayout({
     <html lang={locale} dir={dirFor(locale)} className={fontVariables}>
       <body className="min-h-dvh antialiased">
         <NextIntlClientProvider>
-          <SiteHeader />
-          <main className="mx-auto w-full max-w-xl px-4 pb-16">{children}</main>
+          <TopBar />
+          <main className="app-main mx-auto w-full max-w-xl px-4">{children}</main>
+          <TabBar />
         </NextIntlClientProvider>
       </body>
     </html>
