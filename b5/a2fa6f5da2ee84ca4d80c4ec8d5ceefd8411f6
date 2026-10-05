@@ -1,0 +1,26 @@
+rag/eval-truth.json
+  s_9a8b9d0f22ef1e::t_82343dc487c191 1-13
+rag/eval.ts
+  s_9a8b9d0f22ef1e::t_cf929f3b992b89 1-99
+  s_9a8b9d0f22ef1e::t_13a4fcbcfac372 100-108
+rag/eval-metrics.ts
+  s_9a8b9d0f22ef1e::t_82343dc487c191 1-30
+tests/unit/rag/eval-metrics.test.ts
+  s_9a8b9d0f22ef1e::t_82343dc487c191 1-24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b5a2fa6f5da2ee84ca4d80c4ec8d5ceefd8411f6",
+  "prompts": {},
+  "sessions": {
+    "s_9a8b9d0f22ef1e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b8b37140-fbdc-4e61-a833-176ff24e8c3a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
