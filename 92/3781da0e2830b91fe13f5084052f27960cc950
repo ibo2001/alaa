@@ -1,0 +1,21 @@
+video/src/media.json
+  s_9a8b9d0f22ef1e::t_6e41e55d52ebd2 8-18
+docs/SOURCES.md
+  s_9a8b9d0f22ef1e::t_c0b4139329cf19 91
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "923781da0e2830b91fe13f5084052f27960cc950",
+  "prompts": {},
+  "sessions": {
+    "s_9a8b9d0f22ef1e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b8b37140-fbdc-4e61-a833-176ff24e8c3a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
