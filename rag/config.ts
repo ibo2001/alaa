@@ -15,8 +15,10 @@ export const TOP_FINAL = 8;
 /** Reciprocal-rank fusion constant (the usual 60). */
 export const RRF_K = 60;
 /**
- * Re-ranker score below which a candidate is not shown. PROVISIONAL until the Phase 1 evaluation
- * (`npx tsx rag/eval.ts` prints the score distribution); then fixed here with a DECISIONS.md line.
+ * Re-ranker score below which a candidate is not shown. Fixed after the first evaluation
+ * (rag/results/2026-10-05T13-40-18-714Z.json): hits scored 0.85–1.00 but so did most other candidates
+ * (median 0.90), so the score cannot separate them; 0.5 only drops clearly unrelated candidates
+ * (docs/DECISIONS.md, 2026-10-05).
  */
 export const SCORE_THRESHOLD = 0.5;
 

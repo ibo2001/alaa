@@ -1,0 +1,1403 @@
+{
+  "stamp": "2026-10-05T13-40-18-714Z",
+  "indexManifest": {
+    "builtAt": "2026-10-05T13:37:46.806Z",
+    "sources": {
+      "quran": "6933e133dd56db778c801bf738848454e43648105a151e8d84d86a7cae39ec5f",
+      "translation": "213e1aeb515c5bac6ca446955527b8f3c0f9c21e9d1bad9c6857e9e5b282e9b6",
+      "tafsir": "10e61f615ab5e6a3440e8ecc8ba1dc2273d12cd9048752760fe53a44d191cc27"
+    },
+    "embedding": null,
+    "passages": 6236,
+    "files": {
+      "passages.jsonl": "08eb422a030f319c200929deb0ef4630702ebe20b726b53bb89a58c24e5b325b",
+      "lexicon.json": "e48f4c42e5a433dcf93b91df658ee78b89c331f900ce3c8a28e45682e3068342"
+    }
+  },
+  "reranker": "claude-haiku-4-5-20251001",
+  "metrics": {
+    "final": {
+      "recall": 0.7272727272727273,
+      "mrr": 0.4867965367965368,
+      "n": 22
+    },
+    "fused": {
+      "recall": 0.7727272727272727,
+      "mrr": 0.32466317105354536,
+      "n": 22
+    },
+    "root": {
+      "recall": 0.5454545454545454,
+      "mrr": 0.1931311954039227,
+      "n": 22
+    },
+    "keywords": {
+      "recall": 0.6818181818181818,
+      "mrr": 0.3806878306878307,
+      "n": 22
+    },
+    "meaning": {
+      "recall": 0,
+      "mrr": 0,
+      "n": 22
+    },
+    "costPerQuestion": 0.005470727272727272
+  },
+  "hitScores": [
+    0.95,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0.95,
+    1,
+    0.85,
+    0.85,
+    1,
+    0.95,
+    0.9,
+    1
+  ],
+  "otherScores": [
+    1,
+    0.95,
+    0.9,
+    0.9,
+    0.9,
+    0.85,
+    0.85,
+    0.95,
+    0.9,
+    0.9,
+    0.85,
+    0.8,
+    0.75,
+    0.7,
+    1,
+    1,
+    0.95,
+    0.95,
+    0.9,
+    0.9,
+    0.85,
+    0.8,
+    0.95,
+    0.4,
+    0.4,
+    0.35,
+    1,
+    0.95,
+    0.9,
+    0.85,
+    0.8,
+    0.75,
+    1,
+    1,
+    0.95,
+    0.95,
+    0.85,
+    0.8,
+    0.75,
+    1,
+    1,
+    0.95,
+    0.95,
+    0.9,
+    0.9,
+    0.85,
+    1,
+    1,
+    0.95,
+    0.9,
+    0.85,
+    0.8,
+    0.75,
+    0.95,
+    0.9,
+    0.9,
+    0.85,
+    0.7,
+    0.7,
+    1,
+    1,
+    1,
+    0.95,
+    0.9,
+    0.85,
+    0.8,
+    0.95,
+    0.9,
+    0.85,
+    0.85,
+    0.8,
+    0.75,
+    0.65,
+    1,
+    1,
+    1,
+    0.95,
+    0.9,
+    0.9,
+    0.9,
+    0.85,
+    0.95,
+    0.9,
+    0.85,
+    0.8,
+    0.8,
+    0.75,
+    0.7,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0.95,
+    0.9,
+    0.85,
+    1,
+    1,
+    1,
+    0.95,
+    0.95,
+    0.9,
+    0.9,
+    0.95,
+    0.9,
+    0.85,
+    0.8,
+    0.75,
+    0.7,
+    1,
+    0.95,
+    0.95,
+    0.9,
+    0.85,
+    0.8,
+    0.8,
+    1,
+    1,
+    0.95,
+    0.95,
+    0.9,
+    0.9,
+    0.8,
+    1,
+    0.95,
+    0.9,
+    0.9,
+    0.9,
+    0.9,
+    0.85,
+    0.95,
+    0.9,
+    0.9,
+    0.85,
+    0.8,
+    0.8,
+    0.75,
+    1,
+    1,
+    0.9,
+    0.9,
+    0.85,
+    0.85,
+    0.8,
+    1,
+    0.95,
+    0.9,
+    0.85,
+    0.8,
+    0.75
+  ],
+  "rows": [
+    {
+      "id": "water",
+      "origin": "reviewed-mapping",
+      "expect": [
+        "21:30"
+      ],
+      "channels": {
+        "root": 26,
+        "keywords": 14,
+        "meaning": null
+      },
+      "fusedRank": 8,
+      "finalRank": 2,
+      "scores": [
+        {
+          "key": "56:68",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "21:30",
+          "score": 0.95,
+          "hit": true
+        },
+        {
+          "key": "16:10",
+          "score": 0.95,
+          "hit": false
+        },
+        {
+          "key": "25:48",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "43:11",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "14:32",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "28:23",
+          "score": 0.85,
+          "hit": false
+        },
+        {
+          "key": "54:28",
+          "score": 0.85,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "id": "drinking-water",
+      "origin": "reviewed-mapping",
+      "expect": [
+        "56:68",
+        "56:69",
+        "56:70"
+      ],
+      "channels": {
+        "root": 5,
+        "keywords": 1,
+        "meaning": null
+      },
+      "fusedRank": 4,
+      "finalRank": 1,
+      "scores": [
+        {
+          "key": "56:68",
+          "score": 1,
+          "hit": true
+        },
+        {
+          "key": "16:10",
+          "score": 0.95,
+          "hit": false
+        },
+        {
+          "key": "2:60",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "7:160",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "38:42",
+          "score": 0.85,
+          "hit": false
+        },
+        {
+          "key": "15:22",
+          "score": 0.8,
+          "hit": false
+        },
+        {
+          "key": "25:48",
+          "score": 0.75,
+          "hit": false
+        },
+        {
+          "key": "14:32",
+          "score": 0.7,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "id": "rain",
+      "origin": "reviewed-mapping",
+      "expect": [
+        "50:9"
+      ],
+      "channels": {
+        "root": null,
+        "keywords": 62,
+        "meaning": null
+      },
+      "fusedRank": null,
+      "finalRank": null,
+      "scores": [
+        {
+          "key": "24:43",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "30:48",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "16:65",
+          "score": 0.95,
+          "hit": false
+        },
+        {
+          "key": "7:57",
+          "score": 0.95,
+          "hit": false
+        },
+        {
+          "key": "30:46",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "2:22",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "42:28",
+          "score": 0.85,
+          "hit": false
+        },
+        {
+          "key": "13:12",
+          "score": 0.8,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "id": "honey",
+      "origin": "reviewed-mapping",
+      "expect": [
+        "16:69"
+      ],
+      "channels": {
+        "root": null,
+        "keywords": 2,
+        "meaning": null
+      },
+      "fusedRank": 2,
+      "finalRank": 1,
+      "scores": [
+        {
+          "key": "16:69",
+          "score": 1,
+          "hit": true
+        },
+        {
+          "key": "47:15",
+          "score": 0.95,
+          "hit": false
+        },
+        {
+          "key": "2:57",
+          "score": 0.4,
+          "hit": false
+        },
+        {
+          "key": "7:160",
+          "score": 0.4,
+          "hit": false
+        },
+        {
+          "key": "20:80",
+          "score": 0.35,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "id": "milk",
+      "origin": "reviewed-mapping",
+      "expect": [
+        "16:66"
+      ],
+      "channels": {
+        "root": null,
+        "keywords": 2,
+        "meaning": null
+      },
+      "fusedRank": 2,
+      "finalRank": 1,
+      "scores": [
+        {
+          "key": "16:66",
+          "score": 1,
+          "hit": true
+        },
+        {
+          "key": "23:21",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "47:15",
+          "score": 0.95,
+          "hit": false
+        },
+        {
+          "key": "36:73",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "22:33",
+          "score": 0.85,
+          "hit": false
+        },
+        {
+          "key": "42:11",
+          "score": 0.8,
+          "hit": false
+        },
+        {
+          "key": "16:5",
+          "score": 0.75,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "id": "pearls",
+      "origin": "reviewed-mapping",
+      "expect": [
+        "55:22"
+      ],
+      "channels": {
+        "root": 1,
+        "keywords": 1,
+        "meaning": null
+      },
+      "fusedRank": 1,
+      "finalRank": 1,
+      "scores": [
+        {
+          "key": "55:22",
+          "score": 1,
+          "hit": true
+        },
+        {
+          "key": "16:14",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "35:12",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "38:37",
+          "score": 0.95,
+          "hit": false
+        },
+        {
+          "key": "21:82",
+          "score": 0.95,
+          "hit": false
+        },
+        {
+          "key": "55:58",
+          "score": 0.85,
+          "hit": false
+        },
+        {
+          "key": "76:19",
+          "score": 0.8,
+          "hit": false
+        },
+        {
+          "key": "22:23",
+          "score": 0.75,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "id": "ships",
+      "origin": "reviewed-mapping",
+      "expect": [
+        "55:24"
+      ],
+      "channels": {
+        "root": null,
+        "keywords": 2,
+        "meaning": null
+      },
+      "fusedRank": 5,
+      "finalRank": 2,
+      "scores": [
+        {
+          "key": "42:32",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "55:24",
+          "score": 1,
+          "hit": true
+        },
+        {
+          "key": "31:31",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "17:66",
+          "score": 0.95,
+          "hit": false
+        },
+        {
+          "key": "45:12",
+          "score": 0.95,
+          "hit": false
+        },
+        {
+          "key": "14:32",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "2:164",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "16:14",
+          "score": 0.85,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "id": "eyes-tongue",
+      "origin": "reviewed-mapping",
+      "expect": [
+        "67:23",
+        "30:22"
+      ],
+      "channels": {
+        "root": 48,
+        "keywords": null,
+        "meaning": null
+      },
+      "fusedRank": null,
+      "finalRank": null,
+      "scores": [
+        {
+          "key": "90:9",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "90:8",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "33:19",
+          "score": 0.95,
+          "hit": false
+        },
+        {
+          "key": "5:45",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "40:19",
+          "score": 0.85,
+          "hit": false
+        },
+        {
+          "key": "26:13",
+          "score": 0.8,
+          "hit": false
+        },
+        {
+          "key": "20:27",
+          "score": 0.75,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "id": "clothing",
+      "origin": "reviewed-mapping",
+      "expect": [
+        "7:26"
+      ],
+      "channels": {
+        "root": 8,
+        "keywords": 2,
+        "meaning": null
+      },
+      "fusedRank": 1,
+      "finalRank": 1,
+      "scores": [
+        {
+          "key": "7:26",
+          "score": 1,
+          "hit": true
+        },
+        {
+          "key": "7:31",
+          "score": 0.95,
+          "hit": false
+        },
+        {
+          "key": "22:23",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "18:31",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "7:32",
+          "score": 0.85,
+          "hit": false
+        },
+        {
+          "key": "16:14",
+          "score": 0.7,
+          "hit": false
+        },
+        {
+          "key": "35:12",
+          "score": 0.7,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "id": "livestock",
+      "origin": "reviewed-mapping",
+      "expect": [
+        "16:5"
+      ],
+      "channels": {
+        "root": 55,
+        "keywords": 2,
+        "meaning": null
+      },
+      "fusedRank": 11,
+      "finalRank": 2,
+      "scores": [
+        {
+          "key": "39:6",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "16:5",
+          "score": 1,
+          "hit": true
+        },
+        {
+          "key": "16:66",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "23:21",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "5:1",
+          "score": 0.95,
+          "hit": false
+        },
+        {
+          "key": "6:142",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "16:80",
+          "score": 0.85,
+          "hit": false
+        },
+        {
+          "key": "22:34",
+          "score": 0.8,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "origin": "reviewed-mapping",
+      "expect": [
+        "16:80"
+      ],
+      "channels": {
+        "root": 27,
+        "keywords": null,
+        "meaning": null
+      },
+      "fusedRank": null,
+      "finalRank": null,
+      "scores": [
+        {
+          "key": "3:96",
+          "score": 0.95,
+          "hit": false
+        },
+        {
+          "key": "2:125",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "3:97",
+          "score": 0.85,
+          "hit": false
+        },
+        {
+          "key": "2:127",
+          "score": 0.85,
+          "hit": false
+        },
+        {
+          "key": "5:97",
+          "score": 0.8,
+          "hit": false
+        },
+        {
+          "key": "22:26",
+          "score": 0.75,
+          "hit": false
+        },
+        {
+          "key": "33:33",
+          "score": 0.65,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "id": "crops-grain",
+      "origin": "reviewed-mapping",
+      "expect": [
+        "55:12"
+      ],
+      "channels": {
+        "root": 83,
+        "keywords": 1,
+        "meaning": null
+      },
+      "fusedRank": 7,
+      "finalRank": null,
+      "scores": [
+        {
+          "key": "6:99",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "2:261",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "6:141",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "6:95",
+          "score": 0.95,
+          "hit": false
+        },
+        {
+          "key": "50:9",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "13:4",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "36:33",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "16:11",
+          "score": 0.85,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "id": "family",
+      "origin": "reviewed-mapping",
+      "expect": [
+        "16:72"
+      ],
+      "channels": {
+        "root": null,
+        "keywords": null,
+        "meaning": null
+      },
+      "fusedRank": null,
+      "finalRank": null,
+      "scores": [
+        {
+          "key": "3:33",
+          "score": 0.95,
+          "hit": false
+        },
+        {
+          "key": "38:43",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "26:170",
+          "score": 0.85,
+          "hit": false
+        },
+        {
+          "key": "54:34",
+          "score": 0.8,
+          "hit": false
+        },
+        {
+          "key": "27:57",
+          "score": 0.8,
+          "hit": false
+        },
+        {
+          "key": "28:29",
+          "score": 0.75,
+          "hit": false
+        },
+        {
+          "key": "20:29",
+          "score": 0.7,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "id": "hand",
+      "origin": "reviewed-mapping",
+      "expect": [
+        "16:53"
+      ],
+      "channels": {
+        "root": null,
+        "keywords": null,
+        "meaning": null
+      },
+      "fusedRank": null,
+      "finalRank": null,
+      "scores": [
+        {
+          "key": "27:12",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "28:32",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "7:108",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "20:22",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "26:33",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "48:10",
+          "score": 0.95,
+          "hit": false
+        },
+        {
+          "key": "5:28",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "7:124",
+          "score": 0.85,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "id": "suggestion:sun",
+      "origin": "reviewer-suggestion",
+      "expect": [
+        "14:33"
+      ],
+      "channels": {
+        "root": 8,
+        "keywords": 15,
+        "meaning": null
+      },
+      "fusedRank": 5,
+      "finalRank": 5,
+      "scores": [
+        {
+          "key": "10:5",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "21:33",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "36:40",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "6:96",
+          "score": 0.95,
+          "hit": false
+        },
+        {
+          "key": "14:33",
+          "score": 0.95,
+          "hit": true
+        },
+        {
+          "key": "16:12",
+          "score": 0.95,
+          "hit": false
+        },
+        {
+          "key": "18:90",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "18:86",
+          "score": 0.9,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "id": "suggestion:sky",
+      "origin": "reviewer-suggestion",
+      "expect": [
+        "2:22"
+      ],
+      "channels": {
+        "root": 2,
+        "keywords": 51,
+        "meaning": null
+      },
+      "fusedRank": 3,
+      "finalRank": 1,
+      "scores": [
+        {
+          "key": "2:22",
+          "score": 1,
+          "hit": true
+        },
+        {
+          "key": "16:79",
+          "score": 0.95,
+          "hit": false
+        },
+        {
+          "key": "30:48",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "2:164",
+          "score": 0.85,
+          "hit": false
+        },
+        {
+          "key": "16:65",
+          "score": 0.8,
+          "hit": false
+        },
+        {
+          "key": "15:22",
+          "score": 0.75,
+          "hit": false
+        },
+        {
+          "key": "2:19",
+          "score": 0.7,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "id": "suggestion:star",
+      "origin": "reviewer-suggestion",
+      "expect": [
+        "6:97"
+      ],
+      "channels": {
+        "root": 1,
+        "keywords": 5,
+        "meaning": null
+      },
+      "fusedRank": 2,
+      "finalRank": 6,
+      "scores": [
+        {
+          "key": "37:6",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "15:16",
+          "score": 0.95,
+          "hit": false
+        },
+        {
+          "key": "50:6",
+          "score": 0.95,
+          "hit": false
+        },
+        {
+          "key": "25:61",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "16:12",
+          "score": 0.85,
+          "hit": false
+        },
+        {
+          "key": "6:97",
+          "score": 0.85,
+          "hit": true
+        },
+        {
+          "key": "16:16",
+          "score": 0.8,
+          "hit": false
+        },
+        {
+          "key": "7:54",
+          "score": 0.8,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "id": "suggestion:tree",
+      "origin": "reviewer-suggestion",
+      "expect": [
+        "36:80"
+      ],
+      "channels": {
+        "root": 18,
+        "keywords": 27,
+        "meaning": null
+      },
+      "fusedRank": 17,
+      "finalRank": 7,
+      "scores": [
+        {
+          "key": "14:24",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "24:35",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "22:18",
+          "score": 0.95,
+          "hit": false
+        },
+        {
+          "key": "27:60",
+          "score": 0.95,
+          "hit": false
+        },
+        {
+          "key": "19:25",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "23:20",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "36:80",
+          "score": 0.85,
+          "hit": true
+        },
+        {
+          "key": "16:68",
+          "score": 0.8,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "id": "suggestion:sea",
+      "origin": "reviewer-suggestion",
+      "expect": [
+        "16:14"
+      ],
+      "channels": {
+        "root": 13,
+        "keywords": 1,
+        "meaning": null
+      },
+      "fusedRank": 1,
+      "finalRank": 1,
+      "scores": [
+        {
+          "key": "16:14",
+          "score": 1,
+          "hit": true
+        },
+        {
+          "key": "42:32",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "2:164",
+          "score": 0.95,
+          "hit": false
+        },
+        {
+          "key": "14:32",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "10:22",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "17:66",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "45:12",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "31:31",
+          "score": 0.85,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "id": "suggestion:night",
+      "origin": "reviewer-suggestion",
+      "expect": [
+        "28:73"
+      ],
+      "channels": {
+        "root": 42,
+        "keywords": 1,
+        "meaning": null
+      },
+      "fusedRank": 5,
+      "finalRank": 2,
+      "scores": [
+        {
+          "key": "17:12",
+          "score": 0.95,
+          "hit": false
+        },
+        {
+          "key": "28:73",
+          "score": 0.95,
+          "hit": true
+        },
+        {
+          "key": "10:67",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "6:96",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "3:190",
+          "score": 0.85,
+          "hit": false
+        },
+        {
+          "key": "78:10",
+          "score": 0.8,
+          "hit": false
+        },
+        {
+          "key": "21:33",
+          "score": 0.8,
+          "hit": false
+        },
+        {
+          "key": "7:54",
+          "score": 0.75,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "id": "suggestion:mountain",
+      "origin": "reviewer-suggestion",
+      "expect": [
+        "16:81"
+      ],
+      "channels": {
+        "root": 11,
+        "keywords": 68,
+        "meaning": null
+      },
+      "fusedRank": 24,
+      "finalRank": 5,
+      "scores": [
+        {
+          "key": "7:171",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "7:143",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "2:260",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "15:82",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "16:81",
+          "score": 0.9,
+          "hit": true
+        },
+        {
+          "key": "7:74",
+          "score": 0.85,
+          "hit": false
+        },
+        {
+          "key": "78:7",
+          "score": 0.85,
+          "hit": false
+        },
+        {
+          "key": "27:88",
+          "score": 0.8,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "id": "suggestion:pomegranate",
+      "origin": "reviewer-suggestion",
+      "expect": [
+        "6:99"
+      ],
+      "channels": {
+        "root": 1,
+        "keywords": 2,
+        "meaning": null
+      },
+      "fusedRank": 1,
+      "finalRank": 1,
+      "scores": [
+        {
+          "key": "6:99",
+          "score": 1,
+          "hit": true
+        },
+        {
+          "key": "6:141",
+          "score": 1,
+          "hit": false
+        },
+        {
+          "key": "55:68",
+          "score": 0.95,
+          "hit": false
+        },
+        {
+          "key": "55:11",
+          "score": 0.9,
+          "hit": false
+        },
+        {
+          "key": "50:10",
+          "score": 0.85,
+          "hit": false
+        },
+        {
+          "key": "26:148",
+          "score": 0.8,
+          "hit": false
+        },
+        {
+          "key": "69:23",
+          "score": 0.75,
+          "hit": false
+        }
+      ]
+    }
+  ]
+}

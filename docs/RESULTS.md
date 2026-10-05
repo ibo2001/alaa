@@ -47,6 +47,27 @@ The laptop, bicycle and umbrella now get the no-verse answer; "laptop and pen" s
 - **Oct 4 (Day 1):** 7 sample photos × 3 runs with `claude-haiku-4-5`: 21/21 correct concept, 7/7 consistent, live round trip 2.1–2.9 s.
 - **Oct 5 (Day 2) harness check:** the same 7 photos × 1 run, both approaches, to test the script (not a result). Label fix found: `my_hand.png` was labelled "abstain" from before the hand card existed; it now expects `hand`.
 
+## RAG reviewer's assistant: retrieval (Phase 1)
+**Run 1 · 2026-10-05 16:40 Riyadh** · 22 pairs: the 14 reviewed mappings in `sources/blessings.json` and 8 verses the reviewer suggested (`sources/REVIEW_LOG.md`) · roots + keywords, no embeddings yet · re-ranker `claude-haiku-4-5` · raw data: `rag/results/2026-10-05T13-40-18-714Z.json`
+
+| Stage | Recall (reviewer's verse found) | MRR |
+|---|---|---|
+| Final candidates (top 8, re-ranked) | 16/22 (73%) | 0.49 |
+| Fused retrieval (top 30) | 17/22 (77%) | 0.32 |
+| Arabic roots only (top 30) | 55% | 0.19 |
+| Keywords only (top 30) | 68% | 0.38 |
+| Meaning (embeddings) | not built yet (no Voyage key) | — |
+
+Cost: $0.0055 per question (re-ranker only; retrieval runs locally).
+
+**Where it works:** pearls, clothing, sea, pomegranate, honey, milk, drinking water and the sky suggestion come first; water, ships, livestock and the night suggestion second. Re-ranking lifts the reviewer's verse higher than fused retrieval alone (MRR 0.32 → 0.49).
+
+**Where it misses (6):** rain (50:9), home (16:80), family (16:72), eyes and tongue (67:23, 30:22) and hand (16:53) are not among the 30 retrieved candidates, and for crops and grain the re-ranker left out the verse that retrieval found (rank 7). Hand is expected: the reviewer chose a verse about every blessing because no verse presents the hand itself as one. The others are verses whose wording differs from the concept's name, which is what the missing meaning channel is for.
+
+**Scores:** the reviewer's verse scored 0.85–1.00 when found, but most other candidates scored as high (median 0.90), so scores do not separate good from weak candidates; the cutoff stays 0.5 (`docs/DECISIONS.md`). The reviewer should read the candidates in order.
+
+**Caveats:** a small set; 14 of the pairs are the cards' current verses, chosen with this data in view. These are proposals for a qualified reviewer, never answers shown to users.
+
 ## Religious text
 0 unverified religious text: the Source Guard tests pass on every commit (72 unit tests on Oct 5).
 
