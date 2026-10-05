@@ -8,6 +8,21 @@ test("learning stage: new readers see the refrain note", async ({ page }) => {
   const option = page.getByRole("button", { name: "I'm new to the Quran" });
   await option.click();
   await expect(option).toHaveAttribute("aria-pressed", "true");
+  // The button updates before the IndexedDB write commits; wait for the stored value before leaving the page.
+  await expect
+    .poll(() =>
+      page.evaluate(
+        () =>
+          new Promise((resolve) => {
+            const open = indexedDB.open("keyval-store");
+            open.onsuccess = () => {
+              const req = open.result.transaction("keyval").objectStore("keyval").get("stage");
+              req.onsuccess = () => resolve(req.result);
+            };
+          }),
+      ),
+    )
+    .toBe("new");
 
   await page.goto("/en/blessing/water");
   await expect(page.getByText("This ayah is from Surah Ar-Rahman, where it is repeated 31 times.")).toBeVisible();
