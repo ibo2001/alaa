@@ -2,7 +2,7 @@
 
 A running snapshot of where the project is. Updated at each milestone. For "built vs planned" see `ROADMAP.md`; for content decisions see `DECISIONS.md`.
 
-**Last updated:** 2026-10-05 10:40 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
+**Last updated:** 2026-10-05 10:46 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
 
 ## Health
 | Check | Status |
@@ -10,7 +10,7 @@ A running snapshot of where the project is. Updated at each milestone. For "buil
 | Lint, typecheck | Clean |
 | Unit tests (Vitest) | 64 passing |
 | E2E (Playwright, stub provider) | 10 passing (builds into `.next-e2e`, so it can run beside `next dev`) |
-| Vercel deploy | Green, auto-deploys from `main`. Today's 11 commits (review, app-style UI, new Home) are local and not pushed (Ibrahim decides when), so the live site still shows the Day 1 UI |
+| Vercel deploy | Green, auto-deploys from `main`. Day 2 work (review, app-style UI, new Home) pushed and live at 10:44 Riyadh; key pages 200, cached sample through `/api/see` gives the card |
 | Real-model eval (`claude-haiku-4-5`) | 21/21 correct, 7/7 consistent over 3 runs (7 sample photos) |
 
 ## Day 1 (Oct 4): The Lens
@@ -83,7 +83,7 @@ The PWA now looks and behaves like a native app instead of a website. Checked at
 2. User testing (A/B forms in `docs/user-testing/forms.json`; Ibrahim to check the prefilled links first), then `study-results.ts fetch`, blind scoring, `summarize`, `RESULTS.md`, `CHANGES_FROM_TESTING.md`
 3. Fixes from review and testing; extend the eval set (needs labelled photos in `eval/images/`)
 4. App-style UI, new Home, roadmap (voice input, Quran-first with hadith fallback) and presentation update (done); next: Ibrahim tries it on a phone, then fixes from that. The user-testing kit names no specific buttons or screens, so it still fits the new UI
-5. Push to `main` when Ibrahim approves, then check the live site on a phone
+5. Pushed and live (10:44); next: check the live site on a phone, then take the presentation screenshots
 
 ## Under consideration: Tafsir MCP (Tafsir Center for Quranic Studies, tafsir.net)
 Open-source MCP server (code MIT, data CC BY 4.0 with attribution "Tafsir Center for Quranic Studies"): Uthmani text, word-level i'rab and roots, asbab al-nuzul, qira'at, 28 tafsir sources (incl. al-Muyassar, al-Sa'di, Ibn Kathir; English al-Mukhtasar). `claude mcp add tafsir --scope user -- uvx tafsir-mcp` (≈214 MB DB) or `https://mcp.tafsir.net/mcp`. Repo: https://github.com/tafsircenter/tafsir-mcp
