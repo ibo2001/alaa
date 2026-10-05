@@ -2,15 +2,15 @@
 
 A running snapshot of where the project is. Updated at each milestone. For "built vs planned" see `ROADMAP.md`; for content decisions see `DECISIONS.md`.
 
-**Last updated:** 2026-10-05 09:20 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
+**Last updated:** 2026-10-05 09:55 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
 
 ## Health
 | Check | Status |
 |---|---|
 | Lint, typecheck | Clean |
 | Unit tests (Vitest) | 56 passing |
-| E2E (Playwright, stub provider) | 9 passing |
-| Vercel deploy | Green, auto-deploys from `main` |
+| E2E (Playwright, stub provider) | 9 passing (builds into `.next-e2e`, so it can run beside `next dev`) |
+| Vercel deploy | Green, auto-deploys from `main`. Today's commits (review, UI) are local and not pushed yet, so the live site still shows the Day 1 UI |
 | Real-model eval (`claude-haiku-4-5`) | 21/21 correct, 7/7 consistent over 3 runs (7 sample photos) |
 
 ## Day 1 (Oct 4): The Lens
@@ -43,6 +43,25 @@ A running snapshot of where the project is. Updated at each milestone. For "buil
 | Online forms (Google Forms, Arabic and English) with A/B links, blind-scoring script | Done: links in `docs/user-testing/forms.json` |
 | User testing sessions | Not started (Ibrahim) |
 
+## Day 2 (Oct 5): App-style UI
+The PWA now looks and behaves like a native app instead of a website. Checked at phone width in Arabic and English.
+
+| Item | Status |
+|---|---|
+| App shell: bottom tab bar (Home, Journey, Look raised in the middle, My Day, About) replaces the website header | Done |
+| Compact translucent top bar: back on pushed pages (in-app history, parent page for shared links), app name, language chip | Done |
+| Page transitions: slide in when going deeper, slide back on return, crossfade between tabs; opacity only with reduced motion, solid bars with reduced transparency | Done |
+| Native touches: safe-area insets, press feedback, no tap delay, no page bounce | Done |
+| Home: hero with the refrain and the main action, segmented learning-stage control, grouped shortcuts | Done |
+| Lens: viewfinder panel with shutter and gallery buttons, scan line while analysing; confirm, abstention and error as bottom sheets on `<dialog>` | Done |
+| Card: icon action row (Add to My Day, Share, Source, quran.com); verses from different surahs shown as separate passages | Done |
+| My Day: empty state, round remove buttons, share-card tools in a card | Done |
+| Journey: progress card and a timeline joining the 7 stations | Done |
+| About and Source: grouped inset cards and rows | Done |
+| Abstention counter in Arabic digits | Done |
+| Review sheet (`/review`) | Unchanged on purpose (printable reviewer tool) |
+| Try on a real phone (touch feel of the shutter, sheets, transitions) | Ibrahim |
+
 ## Day 3 (Oct 6): Measurement and submission (not started)
 - Fixes from user testing; evaluation ×3, alternative-approach run, cost measurement
 - `docs/METHODOLOGY.md`, `docs/RESULTS.md`
@@ -51,7 +70,8 @@ A running snapshot of where the project is. Updated at each milestone. For "buil
 ## Open items
 - `docs/alaa-pitch.pdf` (registration pitch, pre-challenge) is listed in `BASELINE.md` as "to be added"; Ibrahim adds the original file
 - Challenge presentation: English draft approved and Arabic draft made (13 slides each, challenge work, separate from the registration pitch); files `docs/alaa-presentation.en.pdf` and `docs/alaa-presentation.ar.pdf`. Drafts: English https://claude.ai/artifact/CkdmBC1NQnwbfUtx3oxLpg, Arabic https://claude.ai/artifact/LR8yqaRmAPMncDxTTtobbx. Placeholders for screenshots, Day 2–3 features and Day 3 results; exported to PDF on Day 3
-- `DAILY_LIMIT` is not set on Vercel (defaults to 50 per device per instance); raise it for the judging period
+- `DAILY_LIMIT` is not set on Vercel (defaults to 50 per device per instance); Ibrahim raises it at delivery, not before
+- Push to `main` (deploys to Vercel) only when Ibrahim says so
 - Daily limit is in memory per server instance (best effort); durable store is planned
 - Only one real vision provider; the second is `stub`
 - 13 of 25 mappings are `draft` (12 reviewed); no reflections are shown until reviewed
@@ -62,6 +82,7 @@ A running snapshot of where the project is. Updated at each milestone. For "buil
 1. Religious review results → Ibrahim's decisions → `REVIEW_LOG.md` (first round done; second round waits for the reviewer)
 2. User testing (A/B forms in `docs/user-testing/forms.json`; Ibrahim to check the prefilled links first), then `study-results.ts fetch`, blind scoring, `summarize`, `RESULTS.md`, `CHANGES_FROM_TESTING.md`
 3. Fixes from review and testing; extend the eval set (needs labelled photos in `eval/images/`)
+4. App-style UI (done, see above); next: Ibrahim tries it on a phone, then fixes from that
 
 ## Under consideration: Tafsir MCP (Tafsir Center for Quranic Studies, tafsir.net)
 Open-source MCP server (code MIT, data CC BY 4.0 with attribution "Tafsir Center for Quranic Studies"): Uthmani text, word-level i'rab and roots, asbab al-nuzul, qira'at, 28 tafsir sources (incl. al-Muyassar, al-Sa'di, Ibn Kathir; English al-Mukhtasar). `claude mcp add tafsir --scope user -- uvx tafsir-mcp` (≈214 MB DB) or `https://mcp.tafsir.net/mcp`. Repo: https://github.com/tafsircenter/tafsir-mcp
