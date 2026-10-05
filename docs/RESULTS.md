@@ -3,12 +3,34 @@
 Measured as described in `METHODOLOGY.md`. Numbers are filled from `eval/results/` and the user-testing results; nothing here is estimated.
 
 ## Recognition (full evaluation)
-_To be filled on Day 3 (Oct 6) from `npx tsx eval/run.ts` on the full image set (≈30 photos × 3 runs)._
+**Run 1 · 2026-10-05 13:50 Riyadh** · `claude-haiku-4-5` · 34 labelled photos × 3 runs per approach · raw data: `eval/results/2026-10-05T10-50-51-707Z.json`
 
 | Approach | Accuracy | Consistency | Median latency | p95 latency | Cost per image |
 |---|---|---|---|---|---|
-| Alaa: closed list, forced tool call | [__] | [__] | [__] | [__] | [__] |
-| Alternative: free labels + manual mapping | [__] | [__] | [__] | [__] | [__] |
+| Alaa: closed list, forced tool call | 81/102 (79%) | 33/34 (97%) | 1.7 s | 2.2 s | $0.0041 |
+| Alternative: free labels + manual mapping | 90/102 (88%) | 34/34 (100%) | 1.5 s | 2.0 s | $0.0020 |
+
+On this set the alternative was more accurate and cheaper; Alaa's target (≥ 85%) was **not** met. Both met the consistency target (≥ 90%) and the latency target (< 4 s).
+
+**By group (photos correct in all three runs):**
+| Group | Alaa | Alternative |
+|---|---|---|
+| Blessings on the list (12 new + 6 earlier) | 17/18 | 17/18 |
+| Off the list / known with no verse (8 + keyboard) | 6/9 | 8/9 |
+| Ambiguous (3) | 2/3 | 3/3 |
+| Two objects (2) | 1/2 | 1/2 |
+| Person (2 + hand photo) | 2/3 | 2/3 |
+
+**Why Alaa missed (raw candidates checked after the run):**
+- **Background concepts on off-list photos (3 photos):** the subject is recognised with high confidence but has no verse (laptop 0.95, bicycle 0.95, umbrella 0.95), and weaker background concepts from the list (plant, grass, window, daytime) turn the answer into "Is this…?" instead of the polite no-verse abstention. The alternative names only the main objects, so it abstains.
+- **Privacy rule on a held object (1 photo):** in "water and dates" the model flags a person (hands holding a tray); by design only "eye" or "hand" may then be offered, so the glass of water (0.85) is dropped. This is the CLAUDE.md privacy rule working as intended, at a cost to accuracy.
+- **Face (1 photo):** with a face, the model offers "eye" (0.70) as an "Is this…?". The label expected an abstention, but offering "eye" when clearly visible is allowed by the app's rule; label and policy disagree here.
+- **Bokeh lights (1 photo):** read as "night" (0.85), giving the night-and-day card; the label expected an abstention.
+- **Dates in a crate (1 photo):** read as "grain" (0.95) by Alaa and as "cacao" by the alternative; both wrong.
+
+**Why the alternative missed:** it names objects loosely, so the mapping misses or generalises: "hand holding olives" (dates) and "pastries" (dates) → abstain; "glass of carbonated water" → "water" rather than "drinking water" (still accepted); "orange sticky note" → orange fruit.
+
+**Cost:** Alaa's call carries the full list of 122 concepts in the prompt and tool schema on every photo; the alternative's prompt is short. Prompt caching of that fixed part is a possible saving, not yet measured.
 
 ### Earlier checks
 - **Oct 4 (Day 1):** 7 sample photos × 3 runs with `claude-haiku-4-5`: 21/21 correct concept, 7/7 consistent, live round trip 2.1–2.9 s.
