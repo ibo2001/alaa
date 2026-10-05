@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { StubEmbedder, passageText } from "@/rag/embed";
 import type { RagIndex } from "@/rag/index-store";
-import type { Passage } from "@/rag/passages";
+import { buildLexicon, type Passage } from "@/rag/passages";
 import { Bm25, buildBm25, fuse, keywordChannel, queryForConcept, queryForText, queryRoots, retrieve, rootChannel } from "@/rag/retrieve";
 
 const P = (key: string, en: string, roots: string[] = [], ar = ""): Passage => ({ key, ar, en, enMukhtasar: "", arMuyassar: "", roots });
@@ -90,5 +90,25 @@ describe("retrieve", () => {
     const failing = { model: "x", embed: async () => { throw new Error("Voyage 503"); } };
     const r = await retrieve(queryForText("water"), idx, { bm25: buildBm25(idx), embedder: failing });
     expect(r.channelsMissing).toEqual(["meaning"]);
+  });
+});
+
+describe("root lexicon built from Uthmani database forms (review finding 1)", () => {
+  // Word forms as the database may store them: Uthmani marks, dagger alef, a bare proclitic. Single words only.
+  const lexicon = buildLexicon([
+    { form: "بِأَيْدِى", root: "يدي" },
+    { form: "يَدُ", root: "يدي" },
+    { form: "ٱلسَّمَٰوَٰتِ", root: "سمو" },
+  ]);
+  const roots = (term: string) => queryRoots({ text: "", arTerms: [term], concept: null }, lexicon);
+
+  it("finds the root of a form that only occurs with و/ف/ب/ل in front", () => {
+    expect(roots("أيدي")).toEqual(["يدي"]);
+    expect(roots("اليد")).toEqual(["يدي"]);
+    expect(roots("يَد")).toEqual(["يدي"]);
+  });
+  it("matches modern spelling against a dagger alef, and the spelling without it", () => {
+    expect(roots("السماوات")).toEqual(["سمو"]);
+    expect(roots("السموات")).toEqual(["سمو"]);
   });
 });

@@ -3,7 +3,7 @@
 import type { SourceBundle } from "@/lib/guard";
 import { TRANSLATION_ID } from "./config";
 import type { TafsirData } from "./tafsir";
-import { arabicVariants, normalizeArabic, stripHtml, stripMarkers } from "./text";
+import { indexSpellings, normalizeArabic, stripHtml, stripMarkers } from "./text";
 
 export type Passage = { key: string; ar: string; en: string; enMukhtasar: string; arMuyassar: string; roots: string[] };
 
@@ -28,7 +28,7 @@ export function buildPassages(bundle: SourceBundle, tafsir: TafsirData): Passage
 export function buildLexicon(forms: { form: string; root: string }[]): Record<string, string[]> {
   const lex = new Map<string, Set<string>>();
   for (const { form, root } of forms) {
-    for (const v of arabicVariants(normalizeArabic(form))) {
+    for (const v of indexSpellings(form)) {
       if (!lex.has(v)) lex.set(v, new Set());
       lex.get(v)!.add(root);
     }
