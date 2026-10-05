@@ -1,0 +1,34 @@
+tests/unit/guard.test.ts
+  s_9a8b9d0f22ef1e::t_161ecd78406c76 2,143-151
+  s_9a8b9d0f22ef1e::t_64098b8032cf47 117
+  s_9a8b9d0f22ef1e::t_af784b6f6f9f33 152-153
+tests/e2e/day2.spec.ts
+  s_9a8b9d0f22ef1e::t_26ee621aafb383 79
+tests/unit/journey.test.ts
+  s_9a8b9d0f22ef1e::t_64098b8032cf47 13-14,17
+tests/e2e/lens.spec.ts
+  s_9a8b9d0f22ef1e::t_26ee621aafb383 16
+sources/REVIEW_LOG.md
+  s_9a8b9d0f22ef1e::t_9cd500b7cdfe05 5-7,28-35
+  s_9a8b9d0f22ef1e::t_64098b8032cf47 11-27
+sources/blessings.json
+  s_9a8b9d0f22ef1e::t_5093a795d340af 15-18,50-53,77-80,103-106,208-211,234-237,254-257,270-271,284-287,300-301,317-324,337-338,351-354,367-368,394-397,420-423,579-582,610-613,636-639,666-669,692-695
+docs/CURRENT_STATE.md
+  s_9a8b9d0f22ef1e::t_b94c84bd92dff4 5,11,41,57-58,62
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0d760a01b7193b967ea76fd9869812143cf23770",
+  "prompts": {},
+  "sessions": {
+    "s_9a8b9d0f22ef1e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b8b37140-fbdc-4e61-a833-176ff24e8c3a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
