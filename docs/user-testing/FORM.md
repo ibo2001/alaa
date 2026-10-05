@@ -41,11 +41,12 @@ Spend about 5 minutes. Before you close the app, open the Journey screen once mo
 Now close the app, and please don't open it again while you answer. → Section 4
 
 ## Section 3B · Your 5 minutes (reading)
-Please read these four verses on quran.com, at your own pace, for about 5 minutes:
+Please read these verses on quran.com, at your own pace, for about 5 minutes:
 
 - https://quran.com/56/68-70
 - https://quran.com/55/11
 - https://quran.com/55/7
+- https://quran.com/2/22
 - https://quran.com/55/13
 
 Then close the page, and please don't open it again while you answer. → Section 4

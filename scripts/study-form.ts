@@ -33,7 +33,7 @@ const T = {
     ready: "I've closed it and I'm ready for the questions",
     bTitle: "Your 5 minutes (reading)",
     bBody:
-      "Please read these four verses on quran.com, at your own pace, for about 5 minutes:\n\nhttps://quran.com/56/68-70\nhttps://quran.com/55/11\nhttps://quran.com/55/7\nhttps://quran.com/55/13",
+      "Please read these verses on quran.com, at your own pace, for about 5 minutes:\n\nhttps://quran.com/56/68-70\nhttps://quran.com/55/11\nhttps://quran.com/55/7\nhttps://quran.com/2/22\nhttps://quran.com/55/13",
     bReady: "Then close the page, and please don't open it again while you answer.",
     qTitle: "Questions",
     qHelp: "Answer in your own words. “I don't know” is a fine answer.",
@@ -74,7 +74,7 @@ const T = {
     ready: "أغلقته وأنا مستعد للأسئلة",
     bTitle: "دقائقك الخمس (القراءة)",
     bBody:
-      "نرجو أن تقرأ هذه الآيات الأربع على موقع quran.com، على مهلك، لنحو خمس دقائق:\n\nhttps://quran.com/56/68-70\nhttps://quran.com/55/11\nhttps://quran.com/55/7\nhttps://quran.com/55/13",
+      "نرجو أن تقرأ هذه الآيات على موقع quran.com، على مهلك، لنحو خمس دقائق:\n\nhttps://quran.com/56/68-70\nhttps://quran.com/55/11\nhttps://quran.com/55/7\nhttps://quran.com/2/22\nhttps://quran.com/55/13",
     bReady: "ثم أغلق الصفحة، ونرجو ألا تفتحها مرة أخرى أثناء الإجابة.",
     qTitle: "الأسئلة",
     qHelp: "أجب بكلماتك. «لا أعرف» إجابة مقبولة.",

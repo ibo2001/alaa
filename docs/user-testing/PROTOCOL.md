@@ -18,21 +18,21 @@ Print `participant-sheet.ar.pdf` or `participant-sheet.en.pdf` (A4, two pages; r
 
 ## Setup
 - One phone with the live app open: https://alaa-alpha.vercel.app (Arabic or English, the participant's choice). Clear site data before each Alaa session so My Day and the journey start empty.
-- Comparison phone or laptop with quran.com open, and the four links below ready.
+- Comparison phone or laptop with quran.com open, and the five links below ready.
 - The same three blessings for both groups, matching the app's sample photos:
 
 | Blessing | Group A sees (sample or a real object) | Group B reads on quran.com |
 |---|---|---|
 | Water to drink | Card "Drinking water" | https://quran.com/56/68-70 |
 | Dates and palms | Card "Dates and palms" | https://quran.com/55/11 |
-| The sky | Card "Sky" | https://quran.com/55/7 |
+| The sky | Card "Sky" (55:7, then 2:22) | https://quran.com/55/7 and https://quran.com/2/22 |
 | The refrain | On every card | https://quran.com/55/13 |
 
 ## Session (about 12 minutes per person)
 1. Consent and the optional familiarity question (1 min).
 2. **5 minutes** with the group's tool:
    - **A:** "This app recognizes everyday things. Try it on a glass of water, dates and the sky, with real objects or the sample photos. Add what you like to My Day. Then open the Journey and go as far as you like." Do not explain the refrain or the verses.
-   - **B:** "Please read these four verses in this app, at your own pace." Same 5 minutes, no explanation.
+   - **B:** "Please read these verses in this app, at your own pace." Same 5 minutes, no explanation.
 3. Questions on the participant sheet, answered in writing or out loud (5 min). The sheet has no group label.
 4. Observation notes (group A only, by Ibrahim): stations completed in the journey (count from the Journey screen), anything that confused them, errors.
 
