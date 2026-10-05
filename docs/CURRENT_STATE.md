@@ -2,7 +2,7 @@
 
 A running snapshot of where the project is. Updated at each milestone. For "built vs planned" see `ROADMAP.md`; for content decisions see `DECISIONS.md`.
 
-**Last updated:** 2026-10-05 10:46 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
+**Last updated:** 2026-10-05 11:25 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
 
 ## Health
 | Check | Status |
@@ -69,9 +69,10 @@ The PWA now looks and behaves like a native app instead of a website. Checked at
 
 ## Open items
 - `docs/alaa-pitch.pdf` (registration pitch, pre-challenge) is listed in `BASELINE.md` as "to be added"; Ibrahim adds the original file
-- Challenge presentation: English draft approved and Arabic draft made (13 slides each, challenge work, separate from the registration pitch); files `docs/alaa-presentation.en.pdf` and `docs/alaa-presentation.ar.pdf`. Drafts: English https://claude.ai/artifact/CkdmBC1NQnwbfUtx3oxLpg, Arabic https://claude.ai/artifact/LR8yqaRmAPMncDxTTtobbx. Updated with Day 2 work on Oct 5 (both approved: idea line with the new Home, first review count on the Source Guard slide, new screen placeholders, built vs planned incl. voice input and Quran-first/hadith-fallback). Still placeholders: screenshots (after push, on a phone) and Day 3 results; exported to PDF on Day 3
+- Challenge presentation: rebuilt in the official challenge template (PPTX, 16 slides, their identity and layouts; adds a team slide, a "meets the reference framework" slide and a built/planned timeline; real screenshots of the live app). Arabic approved by Ibrahim (reviewed in Google Slides: https://docs.google.com/presentation/d/1YdfoLD8rtyEsIb6IhYH-XcIB4_ob-PNg-f9iHPTDT6g/edit); English built the same way, waiting for his review. Files in `docs/presentation/` (git-ignored: partner logos, 10 MB each). Day 3: update the measurements slide with the final evaluation and user-test numbers, and re-take screenshots after the translation switch. Earlier Slides-artifact drafts are superseded
 - `DAILY_LIMIT` is not set on Vercel (defaults to 50 per device per instance); Ibrahim raises it at delivery, not before
 - Push to `main` (deploys to Vercel) only when Ibrahim says so
+- English translation switch: waiting for Ibrahim to add an approved quranenc.com translation file and its LICENSE in `sources/translations/en.rwwad/` (or `en.saheeh/`)
 - Daily limit is in memory per server instance (best effort); durable store is planned
 - Only one real vision provider; the second is `stub`
 - 13 of 25 mappings are `draft` (12 reviewed); no reflections are shown until reviewed
