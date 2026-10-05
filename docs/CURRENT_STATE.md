@@ -2,7 +2,7 @@
 
 A running snapshot of where the project is. Updated at each milestone. For "built vs planned" see `ROADMAP.md`; for content decisions see `DECISIONS.md`.
 
-**Last updated:** 2026-10-05 14:20 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
+**Last updated:** 2026-10-05 14:30 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
 
 ## Health
 | Check | Status |
@@ -84,10 +84,8 @@ The PWA now looks and behaves like a native app instead of a website. Checked at
 2. User testing: links sent; when responses arrive, `npx tsx scripts/study-results.ts fetch`, blind scoring, `summarize`, `docs/user-testing/RESULTS.md`, `docs/CHANGES_FROM_TESTING.md`
 3. Evaluation: done (34 photos × 3 runs, two runs reported in `docs/RESULTS.md`; rule fix from run 1)
 4. App-style UI, new Home, roadmap, approved translation, decks in the official template (Arabic approved, English ready for review): done
-5. Next while waiting: RAG design (reviewer's assistant over the framework's approved sources), demo video script; Ibrahim checks the live site on a phone
+5. RAG design: spec written and committed (`docs/superpowers/specs/2026-10-05-rag-reviewer-assistant-design.md`), approved section by section, awaiting Ibrahim's review of the document. Phase 0 needs from him: the Tafsir Center database + LICENSE in `sources/tafsir/`, a Voyage API key. Built only if Day 3 leaves time; otherwise it is the deck's "planned" item
+6. Next while waiting: demo video script; Ibrahim checks the live site on a phone
 
-## Under consideration: Tafsir MCP (Tafsir Center for Quranic Studies, tafsir.net)
-Open-source MCP server (code MIT, data CC BY 4.0 with attribution "Tafsir Center for Quranic Studies"): Uthmani text, word-level i'rab and roots, asbab al-nuzul, qira'at, 28 tafsir sources (incl. al-Muyassar, al-Sa'di, Ibn Kathir; English al-Mukhtasar). `claude mcp add tafsir --scope user -- uvx tafsir-mcp` (≈214 MB DB) or `https://mcp.tafsir.net/mcp`. Repo: https://github.com/tafsircenter/tafsir-mcp
-- Proposed: development-time aid only (candidate verses by root for replacements; classical tafsir excerpts beside each mapping for the reviewer). Not a source of verse text (Tanzil stays the single Guard source)
-- Possible feature (needs Ibrahim's decision on religious content and licence): one attributed al-Mukhtasar line per card as a build-time snapshot with LICENSE, gated by the Guard; otherwise `ROADMAP.md`
-- Pending Ibrahim: (1) OK to install the MCP in Claude Code? (2) build the tafsir line now or roadmap it?
+## Tafsir MCP (Tafsir Center for Quranic Studies, tafsir.net): now part of the RAG design
+Its SQLite database (data CC BY 4.0, attribution "Tafsir Center for Quranic Studies"; code MIT; ≈214 MB, git-ignored and hash-pinned) is the tafsir and Arabic-roots source of the RAG reviewer's assistant (see the spec). Tafsir is shown only to the reviewer, never in the app; Tanzil stays the only verse text users see. The hosted MCP (`https://mcp.tafsir.net/mcp`) can serve as a manual research aid. Showing a tafsir line to users remains a separate decision (roadmap).
