@@ -704,8 +704,8 @@
       },
       "verses": [
         {
-          "surah": 55,
-          "ayah": 13
+          "surah": 16,
+          "ayah": 53
         }
       ],
       "translations": [
@@ -714,10 +714,12 @@
           "source": "en.rwwad"
         }
       ],
-      "note": "Interim mapping decided by Ibrahim on 2026-10-04: the refrain only, until a hand reference is chosen through the planned source-bound (RAG) review process.",
+      "note": "Reviewer (2026-10-05, voice note): no verse presents the hand itself as a blessing (verses mentioning hands concern accountability), so An-Nahl 16:53, a verse covering every blessing, is used. Applied and marked reviewed by Ibrahim on 2026-10-05. Replaces the interim refrain-only card.",
       "review": {
-        "mapping": "draft",
-        "reflection": "draft"
+        "mapping": "reviewed",
+        "reflection": "draft",
+        "reviewer": "زياد (داعية)",
+        "reviewedAt": "2026-10-05"
       }
     }
   ]

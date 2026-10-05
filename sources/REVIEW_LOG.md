@@ -25,10 +25,11 @@ First review: Ziyad (داعية), submitted through the review sheet on 2026-10-
 | sky | زياد (Ziyad) | داعية | 2026-10-04 | Asked to replace the Ar-Rahman verse with 2:22. Ibrahim kept the Ar-Rahman verse (Journey follows the surah's order) and added 2:22 after it. Stays `draft`; asked the reviewer to confirm |
 | stars-trees | زياد (Ziyad) | داعية | 2026-10-04 | Asked to replace the Ar-Rahman verse with 6:97 and 36:80. Ibrahim kept the Ar-Rahman verse (Journey follows the surah's order) and added 6:97 and 36:80 after it. Stays `draft`; asked the reviewer to confirm |
 | sea | زياد (Ziyad) | داعية | 2026-10-04 | Asked to replace the Ar-Rahman verse with 16:14. Ibrahim kept the Ar-Rahman verse (Journey follows the surah's order) and added 16:14 after it. Stays `draft`; asked the reviewer to confirm |
+| hand | زياد (Ziyad) | داعية | 2026-10-05 | Answer by voice note: no verse presents the hand itself as a blessing (where hands are mentioned, the context is accountability), so he recommends An-Nahl 16:53, which covers every blessing. Mapping changed from the interim refrain (55:13) to 16:53 and set to `reviewed` by Ibrahim on 2026-10-05 |
 
 ### Open questions sent to the reviewer (2026-10-05, WhatsApp)
 - `figs-olives`: suggested 6:140; 6:140 is not about olives. Did he mean 6:141?
-- `hand`: suggested "النخل 53"; probably 16:53, a general verse that does not mention the hand. Is it suitable?
+- ~~`hand`~~: answered 2026-10-05 (voice note): An-Nahl 16:53, see the row above
 - `eyes-tongue`: suggested 67:23 and 30:22 (30:22 is about languages). Is it suitable? Rename the card if 67:23 is used?
 - Journey cards above: is keeping the Ar-Rahman verse plus his verse acceptable?
 - Not reviewed: `dates-palms` (55:11), `speech-writing` (55:3–4, note: start from 55:1), `sleep` (78:9), refrain (55:13)

@@ -30,11 +30,12 @@ test("lens → sample with no verse → polite abstention", async ({ page }) => 
   await expect(page.getByText("إبراهيم ١٤:٣٤")).toBeHidden();
 });
 
-test("hand sample → interim refrain card", async ({ page }) => {
+test("hand sample → reviewed card An-Nahl 16:53, then the refrain", async ({ page }) => {
   await page.goto("/en/lens");
   await expect(page.locator("[data-ready]")).toBeVisible();
   await page.locator('[data-sample="hand"]').click();
   await expect(page).toHaveURL(/\/en\/blessing\/hand$/);
-  await expect(page.getByText("Mapping under review")).toBeVisible();
-  await expect(page.getByText("Ar-Rahman 55:13")).toHaveCount(1);
+  await expect(page.getByText("An-Nahl 16:53")).toBeVisible();
+  await expect(page.getByText("Mapping under review")).toHaveCount(0); // reviewed 2026-10-05 (REVIEW_LOG.md)
+  await expect(page.getByText("Ar-Rahman 55:13")).toHaveCount(1); // the refrain, once
 });
