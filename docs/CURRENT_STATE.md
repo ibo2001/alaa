@@ -2,7 +2,7 @@
 
 A running snapshot of where the project is. Updated at each milestone. For "built vs planned" see `ROADMAP.md`; for content decisions see `DECISIONS.md`.
 
-**Last updated:** 2026-10-05 14:33 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
+**Last updated:** 2026-10-05 15:23 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
 
 ## Health
 | Check | Status |
@@ -65,7 +65,7 @@ The PWA now looks and behaves like a native app instead of a website. Checked at
 ## Day 3 (Oct 6): Measurement and submission (not started)
 - Fixes from user testing; evaluation ×3, alternative-approach run, cost measurement
 - `docs/METHODOLOGY.md`, `docs/RESULTS.md`
-- Video (≤ 2 min): script ready (Arabic narration, English captions); record, caption, upload unlisted. Presentation: decks ready in the official template (export PDF). Final checks from another device and network
+- Video (≤ 2 min): final cuts ready (1:57); upload unlisted and put the link in the submission; re-render with `cd video && npm run render:landscape` if screens or numbers change. Presentation: decks ready in the official template (export PDF). Final checks from another device and network
 
 ## Open items
 - `docs/alaa-pitch.pdf` (registration pitch, pre-challenge) is listed in `BASELINE.md` as "to be added"; Ibrahim adds the original file
@@ -85,7 +85,7 @@ The PWA now looks and behaves like a native app instead of a website. Checked at
 3. Evaluation: done (34 photos × 3 runs, two runs reported in `docs/RESULTS.md`; rule fix from run 1)
 4. App-style UI, new Home, roadmap, approved translation, decks in the official template (Arabic approved, English ready for review): done
 5. RAG design: spec written and committed (`docs/superpowers/specs/2026-10-05-rag-reviewer-assistant-design.md`), approved section by section, awaiting Ibrahim's review of the document. Phase 0 needs from him: the Tafsir Center database + LICENSE in `sources/tafsir/`, a Voyage API key. Built only if Day 3 leaves time; otherwise it is the deck's "planned" item
-6. Demo video script: done, 1:55, Arabic narration with English captions (`docs/video/SCRIPT.ar.md`; English master and shot list in `docs/video/SCRIPT.en.md`). Ibrahim records on Day 3 from the live app
+6. Demo video: done. Final cuts rendered (1:57; vertical 1080×1920 and landscape 1920×1080) in `video/out/` (git-ignored): scripted 3× screen recordings of the live app (`video/record.ts`), Remotion composition in the app's look (`video/src/`), Arabic voice-over by ElevenLabs (voice "Rawi", disclosed on the end card), English captions, Pexels glass clip as the opening. Next: Ibrahim adds the clip's Pexels link for `SOURCES.md`, uploads the landscape cut unlisted and tests the link
 7. Next while waiting: Ibrahim checks the live site on a phone; user-test responses and Ziyad's remaining answers
 
 ## Tafsir MCP (Tafsir Center for Quranic Studies, tafsir.net): now part of the RAG design
