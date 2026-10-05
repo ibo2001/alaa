@@ -435,9 +435,12 @@
       },
       "verses": [
         {
-          "surah": 90,
-          "ayah": 8,
-          "ayahEnd": 9
+          "surah": 67,
+          "ayah": 23
+        },
+        {
+          "surah": 30,
+          "ayah": 22
         }
       ],
       "translations": [
@@ -447,9 +450,12 @@
         }
       ],
       "review": {
-        "mapping": "draft",
-        "reflection": "draft"
-      }
+        "mapping": "reviewed",
+        "reflection": "draft",
+        "reviewer": "زياد (داعية)",
+        "reviewedAt": "2026-10-05"
+      },
+      "note": "Reviewer (2026-10-04 sheet + 2026-10-05 voice note): Al-Mulk 67:23 for sight (with hearing and hearts), Ar-Rum 30:22 for the tongue (the difference of tongues = how people speak). Replaces 90:8-9. Applied and marked reviewed by Ibrahim on 2026-10-05."
     },
     {
       "id": "speech-writing",
