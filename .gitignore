@@ -65,3 +65,9 @@ public/swe-worker*.js.map
 
 # Challenge deck (official template with partner logos): delivered, not committed
 /docs/presentation/
+
+# demo video build outputs (recordings, voice, renders)
+/video/public/clips/
+/video/public/voice/
+/video/out/
+/video/node_modules/

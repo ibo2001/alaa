@@ -1,0 +1,22 @@
+{
+  "name": "alaa-video",
+  "private": true,
+  "description": "Demo video for Alaa, composed with Remotion. Separate from the app; nothing here ships to users.",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts AlaaDemo out/alaa-demo-vertical.mp4",
+    "render:landscape": "remotion render src/index.ts AlaaDemoLandscape out/alaa-demo-landscape.mp4",
+    "probe": "node scripts/probe.mjs"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.533",
+    "@remotion/google-fonts": "4.0.533",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.533"
+  },
+  "devDependencies": {
+    "@types/react": "^19",
+    "typescript": "^5"
+  }
+}
