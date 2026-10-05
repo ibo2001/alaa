@@ -70,12 +70,19 @@ export class AnthropicVisionProvider implements VisionProvider {
     }
 
     // A safety refusal means we must not show anything for this image.
-    if (response.stop_reason === "refusal") return { candidates: [], is_person: false, unsafe: true };
+    const u = response.usage;
+    const usage = {
+      input: u.input_tokens,
+      output: u.output_tokens,
+      cacheWrite: u.cache_creation_input_tokens ?? 0,
+      cacheRead: u.cache_read_input_tokens ?? 0,
+    };
+    if (response.stop_reason === "refusal") return { candidates: [], is_person: false, unsafe: true, usage };
 
     const call = response.content.find(
       (b): b is Anthropic.ToolUseBlock => b.type === "tool_use" && b.name === TOOL_NAME,
     );
     if (!call) return null;
-    return parseVisionResult(call.input);
+    return { ...parseVisionResult(call.input), usage };
   }
 }

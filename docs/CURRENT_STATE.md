@@ -8,7 +8,7 @@ A running snapshot of where the project is. Updated at each milestone. For "buil
 | Check | Status |
 |---|---|
 | Lint, typecheck | Clean |
-| Unit tests (Vitest) | 70 passing |
+| Unit tests (Vitest) | 72 passing |
 | E2E (Playwright, stub provider) | 10 passing (builds into `.next-e2e`, so it can run beside `next dev`) |
 | Vercel deploy | Green, auto-deploys from `main`. Day 2 work (review, app-style UI, new Home) pushed and live at 10:44 Riyadh; key pages 200, cached sample through `/api/see` gives the card |
 | Real-model eval (`claude-haiku-4-5`) | 21/21 correct, 7/7 consistent over 3 runs (7 sample photos) |
@@ -82,7 +82,7 @@ The PWA now looks and behaves like a native app instead of a website. Checked at
 ## Day 2 plan (Oct 5)
 1. Religious review results → Ibrahim's decisions → `REVIEW_LOG.md` (first round done; second round waits for the reviewer)
 2. User testing (A/B forms in `docs/user-testing/forms.json`; Ibrahim to check the prefilled links first), then `study-results.ts fetch`, blind scoring, `summarize`, `RESULTS.md`, `CHANGES_FROM_TESTING.md`
-3. Fixes from review and testing; extend the eval set (needs labelled photos in `eval/images/`)
+3. Fixes from review and testing; evaluation harness ready (`eval/run.ts`: 3 runs, Alaa vs free labels + manual mapping, accuracy, consistency, latency, cost per image; `docs/METHODOLOGY.md`, `docs/RESULTS.md` skeleton). Waiting for Ibrahim's ~23 extra photos in `eval/images/` (kinds listed in its README)
 4. App-style UI, new Home, roadmap (voice input, Quran-first with hadith fallback) and presentation update (done); next: Ibrahim tries it on a phone, then fixes from that. The user-testing kit names no specific buttons or screens, so it still fits the new UI
 5. Pushed and live (10:44); next: check the live site on a phone, then take the presentation screenshots
 

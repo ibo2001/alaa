@@ -5,7 +5,11 @@ export type VisionResult = {
   candidates: Candidate[];
   is_person: boolean;
   unsafe: boolean;
+  /** Token usage of the model call(s), for cost measurement in the evaluation. Never sent to clients. */
+  usage?: Usage;
 };
+
+export type Usage = { input: number; output: number; cacheWrite: number; cacheRead: number };
 
 export type VisionImage = { data: Buffer; mediaType: "image/jpeg" | "image/png" | "image/webp" };
 

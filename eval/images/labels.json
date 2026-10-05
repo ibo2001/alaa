@@ -19,5 +19,7 @@
   "Sky_clouds.jpeg": [
     "sky"
   ],
-  "my_hand.png": "abstain"
+  "my_hand.png": [
+    "hand"
+  ]
 }
