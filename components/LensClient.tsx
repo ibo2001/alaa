@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/navigation";
 import { markStation } from "@/lib/device";
 import { downscaleImage } from "@/lib/image/downscale";
+import { formatNumber } from "@/lib/quran/surahs";
 import type { StationNumber } from "@/lib/journey";
 import type { GuardedAyah, TranslationStatus } from "@/lib/guard";
 import type { Decision, DecisionCandidate } from "@/lib/vision/decide";
@@ -40,10 +41,11 @@ function AbstentionCards({
   const t = useTranslations("abstain");
   const [i, setI] = useState(0);
   const card = cards[i]!;
+  const counter = t("cardOf", { n: formatNumber(i + 1, lang), total: formatNumber(cards.length, lang) });
   const nav = "press grid size-11 place-items-center rounded-full bg-sama/10 text-sama disabled:opacity-30";
   return (
     <div role="group" aria-roledescription="carousel" aria-label={t("cardsLabel")}>
-      <div aria-live="polite" aria-label={t("cardOf", { n: i + 1, total: cards.length })}>
+      <div aria-live="polite" aria-label={counter}>
         <VersePassage ayat={card.ayat} translation={card.translation} lang={lang} tone="gold" />
         <p className="mt-2 text-center text-sm text-sama/80">{card.ref}</p>
       </div>
@@ -52,7 +54,7 @@ function AbstentionCards({
           <button type="button" className={nav} disabled={i === 0} onClick={() => setI(i - 1)} aria-label={t("previous")}>
             <BackIcon className="size-5 rtl:-scale-x-100" />
           </button>
-          <span className="text-sm text-sama/70">{t("cardOf", { n: i + 1, total: cards.length })}</span>
+          <span className="text-sm text-sama/70">{counter}</span>
           <button
             type="button"
             className={nav}
