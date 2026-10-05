@@ -6,6 +6,8 @@ Built for the AI Challenge for Islamic Content (islamicaich.org), Track 3: Inter
 
 **Live demo:** https://alaa-alpha.vercel.app (Arabic: `/ar`, English: `/en`). No camera? Use the sample photos in the lens.
 
+**Demo video (1:57, Arabic voice-over, English captions):** https://youtu.be/preYsrkPt60
+
 > Alaa is not a mushaf app, a tafsir, a fatwa service or a religious Q&A. The AI only **sees**; it never writes religious text.
 
 ## How it works

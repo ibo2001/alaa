@@ -2,6 +2,7 @@
 
 - الهوية البصرية (عربي): https://claude.ai/artifact/3rD3j6CdA1LM2Q4yXdngpo
 - الهوية البصرية (English): https://claude.ai/artifact/A5dowvCH1ektYhoViuvWea
+- فيديو العرض (يوتيوب، غير مُدرَج): https://youtu.be/preYsrkPt60
 - موقع التحدي: https://islamicaich.org
 - دليل التحدي (PDF): https://islamicaich.org/files/Hackathon/i2xgA3mxVhrbRe0ReLlA86kTDbFZ9QQ9eb856dq8.pdf
 - دليل المشارك (PDF، المرجع بعد القبول): https://islamicaich.org/files/HackathonFile/da2OrbRMEsNrIQaoq8z6jEv26opKXdQmq1i0XfXo.pdf
