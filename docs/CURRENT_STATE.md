@@ -2,13 +2,13 @@
 
 A running snapshot of where the project is. Updated at each milestone. For "built vs planned" see `ROADMAP.md`; for content decisions see `DECISIONS.md`.
 
-**Last updated:** 2026-10-05 15:50 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
+**Last updated:** 2026-10-05 16:35 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
 
 ## Health
 | Check | Status |
 |---|---|
 | Lint, typecheck | Clean |
-| Unit tests (Vitest) | 74 passing |
+| Unit tests (Vitest) | 130 passing (56 of them for `rag/`) |
 | E2E (Playwright, stub provider) | 10 passing (builds into `.next-e2e`, so it can run beside `next dev`) |
 | Vercel deploy | Green, auto-deploys from `main`. Everything up to 14:16 Riyadh is live (app-style UI, new Home, Rowwad translation, reviewed hand and eyes-tongue cards, no-verse rule fix) |
 | Real-model eval (`claude-haiku-4-5`) | 34 photos × 3 runs: 88% correct or correctly abstained after the no-verse rule fix (79% before), 97% consistent, 1.7 s median, $0.0041 per photo; alternative approach 88%, $0.0020 (`docs/RESULTS.md`) |
@@ -85,6 +85,7 @@ The PWA now looks and behaves like a native app instead of a website. Checked at
 3. Evaluation: done (34 photos × 3 runs, two runs reported in `docs/RESULTS.md`; rule fix from run 1)
 4. App-style UI, new Home, roadmap, approved translation, decks in the official template (Arabic and English approved): done
 5. RAG design: spec written and committed (`docs/superpowers/specs/2026-10-05-rag-reviewer-assistant-design.md`), approved section by section, awaiting Ibrahim's review of the document. Phase 0 needs from him: the Tafsir Center database + LICENSE in `sources/tafsir/`, a Voyage API key. Built only if Day 3 leaves time; otherwise it is the deck's "planned" item
+   - Phase 1 plan: `docs/superpowers/plans/2026-10-05-rag-phase-1.md`. Tasks 1–7 built and merged (Oct 5, 16:30): `rag/` tooling (Arabic normalisation, Tafsir database access with hash pinning, passage table, index with source and data-file hashes, roots + BM25 + Voyage channels with reciprocal-rank fusion, Claude re-ranker limited to an enum of candidate keys, references-only packets checked by the Source Guard, `propose` CLI); 56 offline tests; final review by a fresh reviewer, its two important findings fixed. Tasks 8–9 (first real build, retrieval evaluation, score threshold) wait for Phase 0: `sources/tafsir/quran.db` + LICENSE from Ibrahim; Voyage key optional
 6. Demo video: done. Final cuts rendered (1:57; vertical 1080×1920 and landscape 1920×1080) in `video/out/` (git-ignored): scripted 3× screen recordings of the live app (`video/record.ts`), Remotion composition in the app's look (`video/src/`), Arabic voice-over by ElevenLabs (voice "Rawi", disclosed on the end card), English captions, Pexels glass clip as the opening. Pexels link recorded in `SOURCES.md`. Landscape cut on YouTube (unlisted): https://youtu.be/preYsrkPt60
 7. Next while waiting: Ibrahim checks the live site on a phone; user-test responses and Ziyad's remaining answers
 8. Afternoon (15:30–): prompt caching measured: not in effect (prefix ≈3k tokens, below Haiku 4.5's 4,096 minimum; padding would cost more at demo traffic), written up in `docs/RESULTS.md`, no code change. README, roadmap and `.env.example` brought in line with what is built. Cold run of the live site (laptop and phone size, ar and en, 14 pages, all 7 sample photos): no errors, no broken requests, no horizontal scroll, results under 2 s. Both decks exported to PDF next to the PPTX files (git-ignored, 16 pages, fonts embedded). User-test responses: 0 at 15:40
