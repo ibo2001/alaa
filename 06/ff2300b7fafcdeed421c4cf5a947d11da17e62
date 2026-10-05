@@ -1,0 +1,29 @@
+sources/REVIEW_LOG.md
+  s_9a8b9d0f22ef1e::t_e073dd2b0e79eb 29,34
+docs/CURRENT_STATE.md
+  s_9a8b9d0f22ef1e::t_e073dd2b0e79eb 41,78
+tests/e2e/day2.spec.ts
+  s_9a8b9d0f22ef1e::t_e073dd2b0e79eb 98
+lib/quran/surahs.ts
+  s_9a8b9d0f22ef1e::t_73fbcbf9860774 12,17
+sources/blessings.json
+  s_9a8b9d0f22ef1e::t_e073dd2b0e79eb 438-443,453-458
+docs/DECISIONS.md
+  s_9a8b9d0f22ef1e::t_e073dd2b0e79eb 20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "06ff2300b7fafcdeed421c4cf5a947d11da17e62",
+  "prompts": {},
+  "sessions": {
+    "s_9a8b9d0f22ef1e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b8b37140-fbdc-4e61-a833-176ff24e8c3a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
