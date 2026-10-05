@@ -1,0 +1,27 @@
+tsconfig.json
+  s_9a8b9d0f22ef1e::t_368eae661d834d 40-42
+playwright.config.ts
+  s_9a8b9d0f22ef1e::t_e21abb5249cf67 16
+eslint.config.mjs
+  s_9a8b9d0f22ef1e::t_605fd4fe1b08b6 18
+next.config.ts
+  s_9a8b9d0f22ef1e::t_e21abb5249cf67 23-24
+.gitignore
+  s_9a8b9d0f22ef1e::t_e21abb5249cf67 19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "39c4822cb9156fa1b57c870f1a733e801c5c8f70",
+  "prompts": {},
+  "sessions": {
+    "s_9a8b9d0f22ef1e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b8b37140-fbdc-4e61-a833-176ff24e8c3a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
