@@ -2,7 +2,7 @@
 
 A running snapshot of where the project is. Updated at each milestone. For "built vs planned" see `ROADMAP.md`; for content decisions see `DECISIONS.md`.
 
-**Last updated:** 2026-10-05 14:30 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
+**Last updated:** 2026-10-05 14:33 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
 
 ## Health
 | Check | Status |
@@ -65,7 +65,7 @@ The PWA now looks and behaves like a native app instead of a website. Checked at
 ## Day 3 (Oct 6): Measurement and submission (not started)
 - Fixes from user testing; evaluation ×3, alternative-approach run, cost measurement
 - `docs/METHODOLOGY.md`, `docs/RESULTS.md`
-- Video (≤ 2 min), presentation PDF, final checks from another device and network
+- Video (≤ 2 min): script ready (Arabic narration, English captions); record, caption, upload unlisted. Presentation: decks ready in the official template (export PDF). Final checks from another device and network
 
 ## Open items
 - `docs/alaa-pitch.pdf` (registration pitch, pre-challenge) is listed in `BASELINE.md` as "to be added"; Ibrahim adds the original file
@@ -85,7 +85,8 @@ The PWA now looks and behaves like a native app instead of a website. Checked at
 3. Evaluation: done (34 photos × 3 runs, two runs reported in `docs/RESULTS.md`; rule fix from run 1)
 4. App-style UI, new Home, roadmap, approved translation, decks in the official template (Arabic approved, English ready for review): done
 5. RAG design: spec written and committed (`docs/superpowers/specs/2026-10-05-rag-reviewer-assistant-design.md`), approved section by section, awaiting Ibrahim's review of the document. Phase 0 needs from him: the Tafsir Center database + LICENSE in `sources/tafsir/`, a Voyage API key. Built only if Day 3 leaves time; otherwise it is the deck's "planned" item
-6. Next while waiting: demo video script; Ibrahim checks the live site on a phone
+6. Demo video script: done, 1:55, Arabic narration with English captions (`docs/video/SCRIPT.ar.md`; English master and shot list in `docs/video/SCRIPT.en.md`). Ibrahim records on Day 3 from the live app
+7. Next while waiting: Ibrahim checks the live site on a phone; user-test responses and Ziyad's remaining answers
 
 ## Tafsir MCP (Tafsir Center for Quranic Studies, tafsir.net): now part of the RAG design
 Its SQLite database (data CC BY 4.0, attribution "Tafsir Center for Quranic Studies"; code MIT; ≈214 MB, git-ignored and hash-pinned) is the tafsir and Arabic-roots source of the RAG reviewer's assistant (see the spec). Tafsir is shown only to the reviewer, never in the app; Tanzil stays the only verse text users see. The hosted MCP (`https://mcp.tafsir.net/mcp`) can serve as a manual research aid. Showing a tafsir line to users remains a separate decision (roadmap).
