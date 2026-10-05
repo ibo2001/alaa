@@ -1,0 +1,28 @@
+eval/results/latest.md
+  s_9a8b9d0f22ef1e::t_db42000fea794d 1-2,4-6,9-15,50-54,89
+  s_9a8b9d0f22ef1e::t_522f399a724878 3
+  s_9a8b9d0f22ef1e::t_ec56f95a3e76d1 7-8
+  s_9a8b9d0f22ef1e::t_5dfc6e15e72afe 16-18,47-49
+  s_9a8b9d0f22ef1e::t_b416617152dbf9 55-57,86-88
+  s_9a8b9d0f22ef1e::t_0fca8bb0e337ca 19-46,58-85
+docs/RESULTS.md
+  s_9a8b9d0f22ef1e::t_9c8a28b4e0b62e 6,10-33
+eval/results/2026-10-05T10-50-51-707Z.json
+  s_9a8b9d0f22ef1e::t_45970029391dbd 1-1894
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "98965e02b518b95eb9fd1d40ab84ab53bef2e42c",
+  "prompts": {},
+  "sessions": {
+    "s_9a8b9d0f22ef1e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b8b37140-fbdc-4e61-a833-176ff24e8c3a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
