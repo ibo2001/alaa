@@ -1,0 +1,65 @@
+sources/translations/en.rwwad/manifest.json
+  s_9a8b9d0f22ef1e::t_2b07da90eac483 1
+components/VersePassage.tsx
+  s_9a8b9d0f22ef1e::t_5bee31bceae396 49-60
+  s_9a8b9d0f22ef1e::t_b6e51d05dbf2db 63
+lib/sources/translations.ts
+  s_9a8b9d0f22ef1e::t_b6e51d05dbf2db 12
+  s_9a8b9d0f22ef1e::t_29fd7644e8168e 9-10,21
+app/[locale]/source/[id]/page.tsx
+  s_9a8b9d0f22ef1e::t_b6e51d05dbf2db 95
+lib/guard/index.ts
+  s_9a8b9d0f22ef1e::t_2b07da90eac483 11,18-19,30,77,82,85,87,89,91,115
+sources/blessings.json
+  s_9a8b9d0f22ef1e::t_29fd7644e8168e 46,73,99,128,153,180,204,230,263,293,330,360,389,416,446,474,499,527,551,575,606,632,661,688,714
+lib/quran/quranenc.ts
+  s_9a8b9d0f22ef1e::t_97eef90d5e22a6 1-3,5-37
+  s_9a8b9d0f22ef1e::t_2b07da90eac483 4,38-51
+lib/sources/load.ts
+  s_9a8b9d0f22ef1e::t_2b07da90eac483 5,28,31-32
+tests/e2e/lens.spec.ts
+  s_9a8b9d0f22ef1e::t_e772d3ef31f233 15
+tests/unit/guard.test.ts
+  s_9a8b9d0f22ef1e::t_e772d3ef31f233 83-84,88,97,103,105,107-120
+sources/translations/index.json
+  s_9a8b9d0f22ef1e::t_29fd7644e8168e 12-20,22-26
+  s_9a8b9d0f22ef1e::t_b6e51d05dbf2db 7,21
+tests/unit/quranenc.test.ts
+  s_9a8b9d0f22ef1e::t_9a0fd3a3befc5e 1-36
+lib/sources/passages.ts
+  s_9a8b9d0f22ef1e::t_29fd7644e8168e 8
+messages/ar.json
+  s_9a8b9d0f22ef1e::t_b6e51d05dbf2db 80
+  s_9a8b9d0f22ef1e::t_b6be647fda59d5 216
+messages/en.json
+  s_9a8b9d0f22ef1e::t_5bee31bceae396 216
+  s_9a8b9d0f22ef1e::t_b6e51d05dbf2db 80
+scripts/build-manifest.ts
+  s_9a8b9d0f22ef1e::t_2b07da90eac483 10,15,17,24
+docs/SOURCES.md
+  s_9a8b9d0f22ef1e::t_b6be647fda59d5 9-10
+docs/CURRENT_STATE.md
+  s_9a8b9d0f22ef1e::t_1e2c7d180b51de 11,75
+docs/DECISIONS.md
+  s_9a8b9d0f22ef1e::t_571bccadcd0c57 18
+sources/translations/en.rwwad/LICENSE
+  s_9a8b9d0f22ef1e::t_8b80b1ad5cc8ff 1-22
+sources/translations/en.rwwad/english_rwwad_v1.0.19-xml.1.xml
+  s_9a8b9d0f22ef1e::t_80203bd473bf14 1-25537
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "43a624ffa3393292f0c8285e2be81a360c1e70d3",
+  "prompts": {},
+  "sessions": {
+    "s_9a8b9d0f22ef1e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b8b37140-fbdc-4e61-a833-176ff24e8c3a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
