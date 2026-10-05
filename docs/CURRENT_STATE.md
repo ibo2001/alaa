@@ -50,8 +50,21 @@ A running snapshot of where the project is. Updated at each milestone. For "buil
 
 ## Open items
 - `docs/alaa-pitch.pdf` (registration pitch, pre-challenge) is listed in `BASELINE.md` as "to be added"; Ibrahim adds the original file
-- Challenge presentation: English draft approved and Arabic draft made (13 slides each, challenge work, separate from the registration pitch); files `docs/alaa-presentation.en.pdf` and `docs/alaa-presentation.ar.pdf`. Placeholders for screenshots, Day 2–3 features and Day 3 results; exported to PDF on Day 3
+- Challenge presentation: English draft approved and Arabic draft made (13 slides each, challenge work, separate from the registration pitch); files `docs/alaa-presentation.en.pdf` and `docs/alaa-presentation.ar.pdf`. Drafts: English https://claude.ai/artifact/CkdmBC1NQnwbfUtx3oxLpg, Arabic https://claude.ai/artifact/LR8yqaRmAPMncDxTTtobbx. Placeholders for screenshots, Day 2–3 features and Day 3 results; exported to PDF on Day 3
 - `DAILY_LIMIT` is not set on Vercel (defaults to 50 per device per instance); raise it for the judging period
 - Daily limit is in memory per server instance (best effort); durable store is planned
 - Only one real vision provider; the second is `stub`
 - All 25 mappings are `draft`; no reflections are shown until reviewed
+- Religious review: link sent to the reviewer; when he submits, run `npx tsx scripts/review-form.ts fetch` (ignore the "TEST (Claude)" response), list "needs replacing" cards for Ibrahim to decide, then update `sources/blessings.json` and `sources/REVIEW_LOG.md` per his decisions only
+- End-of-Day-1 progress reply to the committee: drafted in Ibrahim's Gmail (Arabic)
+
+## Day 2 plan (Oct 5)
+1. Religious review results → Ibrahim's decisions → `REVIEW_LOG.md`
+2. User testing (A/B forms in `docs/user-testing/forms.json`; Ibrahim to check the prefilled links first), then `study-results.ts fetch`, blind scoring, `summarize`, `RESULTS.md`, `CHANGES_FROM_TESTING.md`
+3. Fixes from review and testing; extend the eval set (needs labelled photos in `eval/images/`)
+
+## Under consideration: Tafsir MCP (Tafsir Center for Quranic Studies, tafsir.net)
+Open-source MCP server (code MIT, data CC BY 4.0 with attribution "Tafsir Center for Quranic Studies"): Uthmani text, word-level i'rab and roots, asbab al-nuzul, qira'at, 28 tafsir sources (incl. al-Muyassar, al-Sa'di, Ibn Kathir; English al-Mukhtasar). `claude mcp add tafsir --scope user -- uvx tafsir-mcp` (≈214 MB DB) or `https://mcp.tafsir.net/mcp`. Repo: https://github.com/tafsircenter/tafsir-mcp
+- Proposed: development-time aid only (candidate verses by root for replacements; classical tafsir excerpts beside each mapping for the reviewer). Not a source of verse text (Tanzil stays the single Guard source)
+- Possible feature (needs Ibrahim's decision on religious content and licence): one attributed al-Mukhtasar line per card as a build-time snapshot with LICENSE, gated by the Guard; otherwise `ROADMAP.md`
+- Pending Ibrahim: (1) OK to install the MCP in Claude Code? (2) build the tafsir line now or roadmap it?
