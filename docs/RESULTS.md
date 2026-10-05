@@ -41,7 +41,7 @@ The laptop, bicycle and umbrella now get the no-verse answer; "laptop and pen" s
 
 **Why the alternative missed:** it names objects loosely, so the mapping misses or generalises: "hand holding olives" (dates) and "pastries" (dates) → abstain; "glass of carbonated water" → "water" rather than "drinking water" (still accepted); "orange sticky note" → orange fruit.
 
-**Cost:** Alaa's call carries the full list of 122 concepts in the prompt and tool schema on every photo; the alternative's prompt is short. Prompt caching of that fixed part is a possible saving, not yet measured.
+**Cost:** Alaa's call carries the full list of 122 concepts in the prompt and tool schema on every photo; the alternative's prompt is short. Prompt caching of that fixed part was measured on 2026-10-05 and does not apply: the fixed prefix (tools + system prompt) is about 3,000 tokens, below Claude Haiku 4.5's 4,096-token minimum for caching, and the API reports 0 cache reads and 0 cache writes on repeated calls (3,572 input tokens each, including the photo). Padding the prompt past the minimum would cost about $0.0051 for the first call in each 5-minute window and about $0.0004 for later ones, against about $0.0030 uncached, so it only pays off from about 2 photos per 5 minutes; at demo traffic it would likely cost more, and it would change a prompt whose accuracy we measured. We keep the cache marker so caching starts on its own if the concept list grows past the minimum.
 
 ### Earlier checks
 - **Oct 4 (Day 1):** 7 sample photos × 3 runs with `claude-haiku-4-5`: 21/21 correct concept, 7/7 consistent, live round trip 2.1–2.9 s.

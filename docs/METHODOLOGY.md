@@ -36,4 +36,4 @@ Two groups, the same three blessings: group A uses Alaa for 5 minutes, group B r
 - About 30 photos is a small set; it shows the approach works and where it fails, not a population rate.
 - The photos and labels come from the team, so they may favour objects the team expected.
 - Both approaches use the same model; the comparison isolates the closed list and forced tool call, not the model.
-- Cost uses list prices; caching makes later calls cheaper than the first, so the average depends on run order.
+- Cost uses list prices. Prompt caching is not in effect for Claude Haiku 4.5 (the fixed prefix is below its 4,096-token minimum; see `RESULTS.md`), so every call is priced as uncached and the order of runs does not matter.

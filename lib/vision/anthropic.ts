@@ -47,6 +47,8 @@ export class AnthropicVisionProvider implements VisionProvider {
       response = await this.client.messages.create({
         model: this.model,
         max_tokens: 2048,
+        // Cache marker on the fixed prefix (tools + system). With claude-haiku-4-5 the prefix (~3k tokens) is below the
+        // 4,096-token caching minimum, so it is a no-op today (measured; docs/RESULTS.md); it takes effect if the list grows.
         system: [{ type: "text", text: this.system, cache_control: { type: "ephemeral" } }],
         tools: [this.tool],
         tool_choice: forced ? { type: "tool", name: TOOL_NAME } : { type: "auto", disable_parallel_tool_use: true },
