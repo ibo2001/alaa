@@ -1,0 +1,25 @@
+tests/unit/rag/tafsir.test.ts
+  s_9a8b9d0f22ef1e::t_47cec38c902581 1-74
+rag/passages.ts
+  s_9a8b9d0f22ef1e::t_f99b254c27ddcd 1-37
+tests/unit/rag/passages.test.ts
+  s_9a8b9d0f22ef1e::t_f99b254c27ddcd 1-46
+rag/tafsir.ts
+  s_9a8b9d0f22ef1e::t_47cec38c902581 1-113
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f642fc15717b41e88181c4e6561f35dddc4b2440",
+  "prompts": {},
+  "sessions": {
+    "s_9a8b9d0f22ef1e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b8b37140-fbdc-4e61-a833-176ff24e8c3a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
