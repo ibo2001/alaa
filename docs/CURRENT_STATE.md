@@ -2,7 +2,7 @@
 
 A running snapshot of where the project is. Updated at each milestone. For "built vs planned" see `ROADMAP.md`; for content decisions see `DECISIONS.md`.
 
-**Last updated:** 2026-10-05 11:25 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
+**Last updated:** 2026-10-05 14:20 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
 
 ## Health
 | Check | Status |
@@ -10,7 +10,7 @@ A running snapshot of where the project is. Updated at each milestone. For "buil
 | Lint, typecheck | Clean |
 | Unit tests (Vitest) | 74 passing |
 | E2E (Playwright, stub provider) | 10 passing (builds into `.next-e2e`, so it can run beside `next dev`) |
-| Vercel deploy | Green, auto-deploys from `main`. Day 2 work (review, app-style UI, new Home) pushed and live at 10:44 Riyadh; key pages 200, cached sample through `/api/see` gives the card |
+| Vercel deploy | Green, auto-deploys from `main`. Everything up to 14:16 Riyadh is live (app-style UI, new Home, Rowwad translation, reviewed hand and eyes-tongue cards, no-verse rule fix) |
 | Real-model eval (`claude-haiku-4-5`) | 34 photos × 3 runs: 88% correct or correctly abstained after the no-verse rule fix (79% before), 97% consistent, 1.7 s median, $0.0041 per photo; alternative approach 88%, $0.0020 (`docs/RESULTS.md`) |
 
 ## Day 1 (Oct 4): The Lens
@@ -41,7 +41,7 @@ A running snapshot of where the project is. Updated at each milestone. For "buil
 | Religious review of the 25 cards, recorded in `sources/REVIEW_LOG.md` by Ibrahim | First round in (Ziyad, داعية): 12 cards + abstention `reviewed`; Oct 5: hand → An-Nahl 16:53 and eyes-tongue → 67:23 + 30:22, reviewed (14 cards); 4 Journey cards keep the Ar-Rahman verse and add his verse (draft); open questions sent to him on WhatsApp |
 | User testing kit: protocol, printed sheets (Arabic and English PDF), results template, changes log | Done |
 | Online forms (Google Forms, Arabic and English) with A/B links, blind-scoring script | Done: links in `docs/user-testing/forms.json` |
-| User testing sessions | Not started (Ibrahim) |
+| User testing sessions | Started Oct 5 afternoon: Ibrahim sent the A/B group links (a first general link without the group was replaced); no responses yet at 14:20 |
 
 ## Day 2 (Oct 5): App-style UI
 The PWA now looks and behaves like a native app instead of a website. Checked at phone width in Arabic and English.
@@ -76,15 +76,15 @@ The PWA now looks and behaves like a native app instead of a website. Checked at
 - Daily limit is in memory per server instance (best effort); durable store is planned
 - Only one real vision provider; the second is `stub`
 - 11 of 25 mappings are `draft` (14 reviewed, incl. hand → 16:53, eyes-tongue → 67:23 + 30:22); no reflections are shown until reviewed
-- Religious review: waiting for Ziyad's answers to the open questions listed at the end of `sources/REVIEW_LOG.md` (figs-olives, hand, eyes-tongue, Journey cards, 4 unreviewed cards, pomegranate/night-day/mountains). Apply only Ibrahim's decisions
+- Religious review: waiting for Ziyad's answers to the open questions listed at the end of `sources/REVIEW_LOG.md` (figs-olives, Journey cards, 4 unreviewed cards, pomegranate/night-day/mountains; hand and eyes-tongue answered by voice note on Oct 5, transcribed locally with whisper-cpp). Apply only Ibrahim's decisions
 - End-of-Day-1 progress reply to the committee: drafted in Ibrahim's Gmail (Arabic)
 
-## Day 2 plan (Oct 5)
-1. Religious review results → Ibrahim's decisions → `REVIEW_LOG.md` (first round done; second round waits for the reviewer)
-2. User testing (A/B forms in `docs/user-testing/forms.json`; Ibrahim to check the prefilled links first), then `study-results.ts fetch`, blind scoring, `summarize`, `RESULTS.md`, `CHANGES_FROM_TESTING.md`
-3. Fixes from review and testing; evaluation harness ready (`eval/run.ts`: 3 runs, Alaa vs free labels + manual mapping, accuracy, consistency, latency, cost per image; `docs/METHODOLOGY.md`, `docs/RESULTS.md` skeleton). Waiting for Ibrahim's ~23 extra photos in `eval/images/` (kinds listed in its README)
-4. App-style UI, new Home, roadmap (voice input, Quran-first with hadith fallback) and presentation update (done); next: Ibrahim tries it on a phone, then fixes from that. The user-testing kit names no specific buttons or screens, so it still fits the new UI
-5. Pushed and live (10:44); next: check the live site on a phone, then take the presentation screenshots
+## Day 2 plan (Oct 5): status at 14:20
+1. Religious review: first round recorded; voice-note answers applied (hand, eyes-tongue); waiting for the rest of Ziyad's answers
+2. User testing: links sent; when responses arrive, `npx tsx scripts/study-results.ts fetch`, blind scoring, `summarize`, `docs/user-testing/RESULTS.md`, `docs/CHANGES_FROM_TESTING.md`
+3. Evaluation: done (34 photos × 3 runs, two runs reported in `docs/RESULTS.md`; rule fix from run 1)
+4. App-style UI, new Home, roadmap, approved translation, decks in the official template (Arabic approved, English ready for review): done
+5. Next while waiting: RAG design (reviewer's assistant over the framework's approved sources), demo video script; Ibrahim checks the live site on a phone
 
 ## Under consideration: Tafsir MCP (Tafsir Center for Quranic Studies, tafsir.net)
 Open-source MCP server (code MIT, data CC BY 4.0 with attribution "Tafsir Center for Quranic Studies"): Uthmani text, word-level i'rab and roots, asbab al-nuzul, qira'at, 28 tafsir sources (incl. al-Muyassar, al-Sa'di, Ibn Kathir; English al-Mukhtasar). `claude mcp add tafsir --scope user -- uvx tafsir-mcp` (≈214 MB DB) or `https://mcp.tafsir.net/mcp`. Repo: https://github.com/tafsircenter/tafsir-mcp
