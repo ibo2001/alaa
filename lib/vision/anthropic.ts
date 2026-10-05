@@ -7,7 +7,7 @@ export const DEFAULT_VISION_MODEL = "claude-opus-5-5";
 
 // These models reject a forced tool_choice ("any"/"tool") with a 400; for them we use
 // tool_choice "auto" + a strict tool + a prompt instruction, and check that the call was made.
-const NO_FORCED_TOOL = /^claude-(opus-5-5|sonnet-5-5|fable-5-1|mythos-5-1)/;
+export const NO_FORCED_TOOL = /^claude-(opus-5-5|sonnet-5-5|fable-5-1|mythos-5-1)/;
 // These models do not accept output_config.effort.
 const NO_EFFORT = /^claude-(haiku-4-5|sonnet-4-5)/;
 // These models still accept sampling parameters; temperature 0 makes repeated runs more consistent.

@@ -72,3 +72,9 @@ public/swe-worker*.js.map
 /video/public/footage/
 /video/out/
 /video/node_modules/
+
+# RAG tooling: the Tafsir database (≈214 MB, added by Ibrahim) and the built index stay local
+/sources/tafsir/*.db
+/rag/index/*
+!/rag/index/manifest.json
+/.superpowers/
