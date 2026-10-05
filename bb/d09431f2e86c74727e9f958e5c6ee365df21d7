@@ -1,0 +1,31 @@
+rag/config.ts
+  s_9a8b9d0f22ef1e::t_09a404e5c8e93c 18-21
+docs/DECISIONS.md
+  s_9a8b9d0f22ef1e::t_09a404e5c8e93c 21
+rag/results/latest.md
+  s_9a8b9d0f22ef1e::t_fc3665833b1e9c 1-18
+docs/RESULTS.md
+  s_9a8b9d0f22ef1e::t_09a404e5c8e93c 50-70
+rag/results/2026-10-05T13-40-18-714Z.json
+  s_9a8b9d0f22ef1e::t_fc3665833b1e9c 1-1403
+docs/CURRENT_STATE.md
+  s_9a8b9d0f22ef1e::t_a4c6921bf59959 5,11,88
+docs/ROADMAP.md
+  s_9a8b9d0f22ef1e::t_5e086267902d13 12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "bbd09431f2e86c74727e9f958e5c6ee365df21d7",
+  "prompts": {},
+  "sessions": {
+    "s_9a8b9d0f22ef1e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b8b37140-fbdc-4e61-a833-176ff24e8c3a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
