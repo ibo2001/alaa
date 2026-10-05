@@ -1,0 +1,30 @@
+sources/home.json
+  s_9a8b9d0f22ef1e::t_25a11d5898320b 2
+docs/DECISIONS.md
+  s_9a8b9d0f22ef1e::t_25a11d5898320b 14
+  s_9a8b9d0f22ef1e::t_e4002a418aedc5 15
+messages/ar.json
+  s_9a8b9d0f22ef1e::t_e4002a418aedc5 286
+messages/en.json
+  s_9a8b9d0f22ef1e::t_e4002a418aedc5 286
+docs/CURRENT_STATE.md
+  s_9a8b9d0f22ef1e::t_e4002a418aedc5 55
+lib/home.ts
+  s_9a8b9d0f22ef1e::t_25a11d5898320b 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3ad5061731964502c1c81732fe155eaba641b7e0",
+  "prompts": {},
+  "sessions": {
+    "s_9a8b9d0f22ef1e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b8b37140-fbdc-4e61-a833-176ff24e8c3a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
