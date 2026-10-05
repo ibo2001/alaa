@@ -88,5 +88,5 @@ All resized to 768px (longest edge) and re-encoded as JPEG, which also strips me
 | whisper.cpp + `ggml-large-v3-turbo` model (Homebrew, local) | Transcribes the reviewer's voice notes on the developer's Mac; audio never leaves the machine | MIT (code), MIT (model) |
 | LibreOffice + Poppler (Homebrew) | Renders the challenge PPTX decks to images for visual checks | MPL-2.0 / GPL (tools only) |
 | Evaluation photos (`eval/images/`, local only) | 27 Pexels photos + 7 earlier photos; list in `eval/images/SOURCES.md` | Pexels License; earlier ones as listed |
-| ElevenLabs (planned for the demo video's Arabic voice-over) | AI voice-over; disclosed on the video's end card | ElevenLabs terms (Ibrahim's account) |
+| ElevenLabs (`eleven_multilingual_v2`, voice "Rawi – Calm & Clear Fusha Narrator", library voice) | Arabic voice-over of the demo video, 10 lines from `docs/video/SCRIPT.ar.md`, generated on 2026-10-05 (≈1,000 credits); disclosed on the video's end card; checked back with local whisper.cpp | ElevenLabs terms (Ibrahim's account); voice files stay out of git |
 | Glass-of-water footage (Pexels, to be added by Ibrahim) | Opening shot of the demo video | Pexels License |
