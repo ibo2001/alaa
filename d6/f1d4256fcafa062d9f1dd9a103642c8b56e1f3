@@ -1,0 +1,25 @@
+video/src/media.json
+  s_9a8b9d0f22ef1e::t_d59437dd0d2462 2-8
+  s_9a8b9d0f22ef1e::t_2fafbaaa343fab 18-19
+video/record.ts
+  s_9a8b9d0f22ef1e::t_d59437dd0d2462 141-149
+video/src/Demo.tsx
+  s_9a8b9d0f22ef1e::t_2fafbaaa343fab 189
+  s_9a8b9d0f22ef1e::t_d59437dd0d2462 224
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d6f1d4256fcafa062d9f1dd9a103642c8b56e1f3",
+  "prompts": {},
+  "sessions": {
+    "s_9a8b9d0f22ef1e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b8b37140-fbdc-4e61-a833-176ff24e8c3a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
