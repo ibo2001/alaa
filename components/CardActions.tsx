@@ -4,9 +4,11 @@ import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { addToDay, getDay } from "@/lib/myday";
+import { BookIcon, CheckIcon, PlusIcon, ShareIcon, SourceIcon } from "./icons";
 
-const btn =
-  "inline-flex min-h-11 items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors";
+// Icon-over-label actions, like the action row under a native share sheet.
+const action = "press flex min-h-11 flex-col items-center gap-1.5 text-xs text-sama/85 disabled:cursor-default";
+const disc = "grid size-12 place-items-center rounded-full";
 
 export function CardActions({
   blessingId,
@@ -54,30 +56,30 @@ export function CardActions({
   }
 
   return (
-    <div className="flex flex-wrap justify-center gap-2">
-      <button
-        type="button"
-        onClick={onAdd}
-        disabled={added}
-        aria-pressed={added}
-        className={`${btn} ${added ? "bg-nakhl text-sama" : "bg-lazima text-layl hover:bg-lazima/90"}`}
-      >
-        {added ? `✓ ${t("added")}` : t("addToDay")}
+    <div className="grid grid-cols-4 gap-2">
+      <button type="button" onClick={onAdd} disabled={added} aria-pressed={added} className={action}>
+        <span className={`${disc} transition-colors ${added ? "bg-nakhl text-sama" : "bg-lazima text-layl"}`}>
+          {added ? <CheckIcon className="size-6" /> : <PlusIcon className="size-6" />}
+        </span>
+        <span className={added ? "text-sama" : "font-medium text-lazima"}>{added ? t("added") : t("addToDay")}</span>
       </button>
-      <button type="button" onClick={onShare} className={`${btn} border border-sama/40 text-sama hover:border-lazima`}>
-        {copied ? t("copied") : t("share")}
+      <button type="button" onClick={onShare} className={action}>
+        <span className={`${disc} bg-sama/10`}>
+          <ShareIcon className="size-6" />
+        </span>
+        <span aria-live="polite">{copied ? t("copied") : t("share")}</span>
       </button>
-      <Link href={`/source/${blessingId}`} className={`${btn} border border-sama/40 text-sama hover:border-lazima`}>
+      <Link href={`/source/${blessingId}`} className={action}>
+        <span className={`${disc} bg-sama/10`}>
+          <SourceIcon className="size-6" />
+        </span>
         {t("source")}
       </Link>
-      <a
-        href={quranUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={readLabel}
-        className={`${btn} border border-sama/40 text-sama hover:border-lazima`}
-      >
-        {t("readInContext")} ↗
+      <a href={quranUrl} target="_blank" rel="noopener noreferrer" aria-label={readLabel} className={action}>
+        <span className={`${disc} bg-sama/10`}>
+          <BookIcon className="size-6" />
+        </span>
+        {t("readInContext")}
       </a>
     </div>
   );

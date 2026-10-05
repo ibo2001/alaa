@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { LensIcon } from "@/components/icons";
+import { button, PageHeader } from "@/components/ui";
 import { Link } from "@/i18n/navigation";
 import { issueUrl, REPO_URL, REVIEW_LOG_URL } from "@/lib/links";
 import { formatNumber } from "@/lib/quran/surahs";
@@ -19,9 +21,9 @@ const ext = { target: "_blank", rel: "noopener noreferrer", className: "text-nak
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <section className="mt-8">
+    <section className="mt-4 rounded-2xl bg-surface p-5 shadow-sm">
       <h2 className="font-heading text-2xl text-tamr">{title}</h2>
-      <div className="mt-2 space-y-2 leading-relaxed">{children}</div>
+      <div className="mt-2 space-y-2 leading-relaxed text-layl/85">{children}</div>
     </section>
   );
 }
@@ -33,9 +35,8 @@ export default async function AboutPage({ params }: Props) {
   const r = referral[locale] as { name: string | null; url: string | null };
 
   return (
-    <article className="py-8">
-      <h1 className="font-heading text-4xl">{t("title")}</h1>
-      <p className="mt-3 text-lg">{t("lead")}</p>
+    <article className="pb-4">
+      <PageHeader title={t("title")} subtitle={t("lead")} />
 
       <Section title={t("isTitle")}>
         <p>{t("is")}</p>
@@ -103,11 +104,10 @@ export default async function AboutPage({ params }: Props) {
         </p>
       </Section>
 
-      <p className="mt-10">
-        <Link href="/lens" className="inline-flex min-h-12 items-center rounded-full bg-layl px-6 py-3 text-lazima hover:bg-layl/90">
-          {t("cta")}
-        </Link>
-      </p>
+      <Link href="/lens" className={`${button.primary} mt-6 w-full`}>
+        <LensIcon className="size-5" />
+        {t("cta")}
+      </Link>
     </article>
   );
 }

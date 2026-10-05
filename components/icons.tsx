@@ -65,3 +65,61 @@ export const ChevronIcon = ({ className }: Props) => (
     <path d="M9 6l6 6-6 6" />
   </svg>
 );
+
+export const PlusIcon = ({ className }: Props) => (
+  <svg {...base} className={className} strokeWidth={2}>
+    <path d="M12 5v14M5 12h14" />
+  </svg>
+);
+
+export const CheckIcon = ({ className }: Props) => (
+  <svg {...base} className={className} strokeWidth={2.2}>
+    <path d="M5 12.5l4.5 4.5L19 7.5" />
+  </svg>
+);
+
+export const ShareIcon = ({ className }: Props) => (
+  <svg {...base} className={className}>
+    <path d="M12 3v12M7.5 7.5 12 3l4.5 4.5M5 12v6.5A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5V12" />
+  </svg>
+);
+
+/** A shield with a check: the verified source. */
+export const SourceIcon = ({ className }: Props) => (
+  <svg {...base} className={className}>
+    <path d="M12 3l7 3v5.5c0 4.2-3 7.7-7 9.5-4-1.8-7-5.3-7-9.5V6z" />
+    <path d="M9 12l2 2 4-4" />
+  </svg>
+);
+
+export const BookIcon = ({ className }: Props) => (
+  <svg {...base} className={className}>
+    <path d="M12 6.5C10 5 7.5 4.5 4 4.5v13c3.5 0 6 .5 8 2 2-1.5 4.5-2 8-2v-13c-3.5 0-6 .5-8 2zM12 6.5v13" />
+  </svg>
+);
+
+export const PhotoIcon = ({ className }: Props) => (
+  <svg {...base} className={className}>
+    <rect x="3.5" y="5" width="17" height="14" rx="2.5" />
+    <circle cx="9" cy="10" r="1.6" />
+    <path d="M20.5 15.5l-4.5-4.5-8 8" />
+  </svg>
+);
+
+export const CloseIcon = ({ className }: Props) => (
+  <svg {...base} className={className} strokeWidth={2}>
+    <path d="M6 6l12 12M18 6L6 18" />
+  </svg>
+);
+
+export const DownloadIcon = ({ className }: Props) => (
+  <svg {...base} className={className}>
+    <path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19.5h14" />
+  </svg>
+);
+
+export const ExternalIcon = ({ className }: Props) => (
+  <svg {...base} className={className}>
+    <path d="M14 4h6v6M20 4l-8.5 8.5M18 14v4.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10" />
+  </svg>
+);

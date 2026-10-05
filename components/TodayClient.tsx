@@ -8,6 +8,8 @@ import { getDay, removeFromDay, type DayEntry } from "@/lib/myday";
 import { formatNumber } from "@/lib/quran/surahs";
 import { drawShareCard } from "@/lib/sharecard";
 import type { Lang } from "@/lib/types";
+import { CloseIcon, DayIcon, DownloadIcon, LensIcon, ShareIcon } from "./icons";
+import { button, Card, PageHeader } from "./ui";
 import { VersePassage } from "./VersePassage";
 
 export type DayBlessing = { id: string; label: string; ref: string; ayat: GuardedAyah[]; translation: TranslationStatus };
@@ -15,10 +17,6 @@ type Refrain = { ayat: GuardedAyah[]; translation: TranslationStatus; ref: strin
 type CardState = { kind: "idle" } | { kind: "drawing" } | { kind: "ready"; url: string; file: File } | { kind: "error" };
 
 const ARABIC_ONLY: TranslationStatus = { status: "not-needed" };
-const primary =
-  "inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-layl px-6 py-3 text-lazima hover:bg-layl/90 disabled:opacity-50";
-const secondary =
-  "inline-flex min-h-12 items-center justify-center gap-2 rounded-full border-2 border-layl px-6 py-3 text-layl hover:bg-layl/5";
 
 export function TodayClient({ lang, cards, refrain }: { lang: Lang; cards: DayBlessing[]; refrain: Refrain | null }) {
   const t = useTranslations("today");
@@ -88,27 +86,35 @@ export function TodayClient({ lang, cards, refrain }: { lang: Lang; cards: DayBl
   }
 
   return (
-    <section className="py-8" data-ready>
-      <h1 className="text-center font-heading text-4xl text-tamr">{t("title")}</h1>
-      <p className="mt-1 text-center text-sm text-layl/70">{date}</p>
-      <p className="mt-4 text-center text-lg font-medium" aria-live="polite">
-        {t("count", { count: today.length, shown: formatNumber(today.length, lang) })}
-      </p>
+    <section className="pb-4" data-ready>
+      <PageHeader title={t("title")} subtitle={date}>
+        <p
+          className="mt-3 inline-flex min-h-8 items-center gap-1.5 rounded-full bg-tamr/10 px-3 text-sm font-medium text-tamr"
+          aria-live="polite"
+        >
+          <DayIcon className="size-4" />
+          {t("count", { count: today.length, shown: formatNumber(today.length, lang) })}
+        </p>
+      </PageHeader>
 
       {today.length === 0 ? (
-        <div className="mt-8 rounded-3xl bg-layl/5 p-6 text-center">
-          <p>{t("empty")}</p>
-          <Link href="/lens" className={`${primary} mt-6`}>
+        <Card className="mt-4 flex flex-col items-center px-6 py-10 text-center">
+          <span aria-hidden className="grid size-16 place-items-center rounded-full bg-lazima/25 text-tamr">
+            <DayIcon className="size-8" />
+          </span>
+          <p className="mt-5 max-w-xs leading-relaxed text-layl/80">{t("empty")}</p>
+          <Link href="/lens" className={`${button.primary} mt-6`}>
+            <LensIcon className="size-5" />
             {t("emptyCta")}
           </Link>
-        </div>
+        </Card>
       ) : (
         <>
-          <ol className="mt-6 space-y-4">
+          <ol className="mt-4 space-y-4">
             {today.map((c) => (
-              <li key={c.id} className="rounded-3xl bg-layl px-5 py-5 text-sama">
+              <li key={c.id} className="overflow-hidden rounded-[1.75rem] bg-layl px-5 pb-5 pt-4 text-sama shadow-lg shadow-layl/15">
                 <div className="flex items-center justify-between gap-3">
-                  <h2 className="font-heading text-2xl text-lazima">
+                  <h2 className="font-heading text-3xl text-lazima">
                     <Link href={`/blessing/${c.id}`} className="hover:underline">
                       {c.label}
                     </Link>
@@ -116,10 +122,10 @@ export function TodayClient({ lang, cards, refrain }: { lang: Lang; cards: DayBl
                   <button
                     type="button"
                     onClick={() => void onRemove(c.id)}
-                    className="min-h-11 rounded-full px-3 text-xs text-sama/70 underline hover:text-lazima"
+                    className="press grid size-11 place-items-center rounded-full bg-sama/10 text-sama/80"
                     aria-label={t("remove", { name: c.label })}
                   >
-                    {t("removeShort")}
+                    <CloseIcon className="size-5" />
                   </button>
                 </div>
                 <div className="mt-3">
@@ -136,15 +142,15 @@ export function TodayClient({ lang, cards, refrain }: { lang: Lang; cards: DayBl
           </ol>
 
           {refrain && lang !== "ar" && (
-            <figure className="mt-6 rounded-3xl bg-layl px-5 py-5">
+            <figure className="mt-4 rounded-[1.75rem] bg-layl px-5 py-5">
               <VersePassage ayat={refrain.ayat} translation={refrain.translation} lang={lang} tone="gold" />
               <figcaption className="mt-2 text-center text-xs text-sama/60">{refrain.ref}</figcaption>
             </figure>
           )}
 
-          <div className="mt-8 flex flex-col items-center gap-4">
+          <Card className="mt-6 flex flex-col items-center gap-4">
             {card.kind !== "ready" && (
-              <button type="button" className={primary} onClick={() => void onMakeCard()} disabled={card.kind === "drawing" || !refrain}>
+              <button type="button" className={`${button.gold} w-full`} onClick={() => void onMakeCard()} disabled={card.kind === "drawing" || !refrain}>
                 {card.kind === "drawing" ? t("drawing") : t("makeCard")}
               </button>
             )}
@@ -152,24 +158,26 @@ export function TodayClient({ lang, cards, refrain }: { lang: Lang; cards: DayBl
             {card.kind === "ready" && (
               <>
                 {/* eslint-disable-next-line @next/next/no-img-element -- a local object URL, not an optimizable asset */}
-                <img src={card.url} alt={t("previewAlt", { date })} width={270} height={480} className="rounded-2xl shadow-lg" />
-                <div className="flex flex-wrap justify-center gap-3">
+                <img src={card.url} alt={t("previewAlt", { date })} width={270} height={480} className="rounded-2xl shadow-xl" />
+                <div className="grid w-full grid-cols-1 gap-2 sm:grid-cols-2">
                   {typeof navigator !== "undefined" && navigator.canShare?.({ files: [card.file] }) && (
-                    <button type="button" className={primary} onClick={() => void onShareCard(card.file)}>
+                    <button type="button" className={button.primary} onClick={() => void onShareCard(card.file)}>
+                      <ShareIcon className="size-5" />
                       {t("shareCard")}
                     </button>
                   )}
-                  <a href={card.url} download="alaa-my-day.png" className={secondary}>
+                  <a href={card.url} download="alaa-my-day.png" className={button.secondary}>
+                    <DownloadIcon className="size-5" />
                     {t("download")}
                   </a>
                 </div>
               </>
             )}
-          </div>
+          </Card>
         </>
       )}
 
-      <p className="mt-10 text-center text-xs text-layl/60">{t("privacy")}</p>
+      <p className="mt-8 px-2 text-center text-xs text-layl/60">{t("privacy")}</p>
     </section>
   );
 }

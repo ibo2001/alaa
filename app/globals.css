@@ -166,3 +166,82 @@ label {
     radial-gradient(120% 70% at 50% 0%, color-mix(in srgb, var(--lazima) 22%, transparent), transparent 60%),
     var(--layl);
 }
+
+/* Bottom sheet (components/Sheet.tsx). */
+.sheet {
+  margin: auto auto 0;
+  width: 100%;
+  max-width: 36rem;
+  max-height: 88dvh;
+  border: 0;
+  padding: 0;
+  border-radius: 2rem 2rem 0 0;
+  box-shadow: 0 -10px 40px rgb(0 0 0 / 0.25);
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+.sheet-body {
+  padding: 0.75rem 1.5rem calc(1.5rem + env(safe-area-inset-bottom));
+}
+.sheet[open] {
+  animation: sheet-up 460ms var(--ease-ios);
+}
+.sheet::backdrop {
+  background: color-mix(in srgb, var(--layl) 45%, transparent);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  animation: backdrop-in 300ms ease-out;
+}
+@keyframes sheet-up {
+  from {
+    transform: translateY(100%);
+  }
+}
+@keyframes backdrop-in {
+  from {
+    opacity: 0;
+  }
+}
+
+/* Lens viewfinder: corner brackets and a scanning line while the photo is analysed. */
+.viewfinder {
+  background:
+    radial-gradient(90% 60% at 50% 30%, color-mix(in srgb, var(--lazima) 12%, transparent), transparent 70%),
+    var(--layl);
+}
+.viewfinder-corners {
+  --c: color-mix(in srgb, var(--lazima) 70%, transparent);
+  --l: 26px;
+  background:
+    linear-gradient(var(--c), var(--c)) top left / var(--l) 2px,
+    linear-gradient(var(--c), var(--c)) top left / 2px var(--l),
+    linear-gradient(var(--c), var(--c)) top right / var(--l) 2px,
+    linear-gradient(var(--c), var(--c)) top right / 2px var(--l),
+    linear-gradient(var(--c), var(--c)) bottom left / var(--l) 2px,
+    linear-gradient(var(--c), var(--c)) bottom left / 2px var(--l),
+    linear-gradient(var(--c), var(--c)) bottom right / var(--l) 2px,
+    linear-gradient(var(--c), var(--c)) bottom right / 2px var(--l);
+  background-repeat: no-repeat;
+}
+.scan-line {
+  background: linear-gradient(to bottom, transparent, color-mix(in srgb, var(--lazima) 55%, transparent), transparent);
+  animation: scan 1.6s ease-in-out infinite alternate;
+}
+@keyframes scan {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sheet[open] {
+    animation: page-opacity-in 150ms ease-out;
+  }
+  .scan-line {
+    animation: none;
+    opacity: 0.4;
+  }
+}

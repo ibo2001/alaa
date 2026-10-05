@@ -30,8 +30,8 @@ export default async function LensPage({ params }: Props) {
 
   return (
     <>
-      <h1 className="sr-only">{t("lens")}</h1>
       <LensClient
+        title={t("lens")}
         lang={locale}
         samples={samples.map((s) => ({
           id: s.id,

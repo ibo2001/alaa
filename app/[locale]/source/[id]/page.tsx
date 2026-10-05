@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { ExternalIcon } from "@/components/icons";
+import { button, PageHeader } from "@/components/ui";
 import { VersePassage } from "@/components/VersePassage";
-import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { formatRef, quranComUrl } from "@/lib/quran/surahs";
 import { blessings, getBlessing } from "@/lib/sources/data";
@@ -27,9 +28,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 function Row({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <div className="border-t border-layl/10 py-3 sm:grid sm:grid-cols-3 sm:gap-4">
-      <dt className="font-medium text-layl/70">{label}</dt>
-      <dd className="mt-1 sm:col-span-2 sm:mt-0">{children}</dd>
+    <div className="px-4 py-3.5">
+      <dt className="text-xs font-semibold text-layl/55">{label}</dt>
+      <dd className="mt-1 leading-relaxed">{children}</dd>
     </div>
   );
 }
@@ -51,16 +52,16 @@ export default async function SourcePage({ params }: Props) {
   );
 
   return (
-    <article className="py-6">
-      <h1 className="font-heading text-3xl">{t("title", { name: blessing.labels[locale] })}</h1>
+    <article className="pb-4">
+      <PageHeader title={t("title", { name: blessing.labels[locale] })} />
 
       {card.ok && (
-        <div className="mt-6 rounded-2xl bg-white p-5 shadow-sm">
+        <div className="mt-3 rounded-2xl bg-surface p-5 shadow-sm">
           <VersePassage ayat={card.ayat} translation={card.translation} lang={locale} />
         </div>
       )}
 
-      <dl className="mt-6">
+      <dl className="mt-4 divide-y divide-layl/10 overflow-hidden rounded-2xl bg-surface shadow-sm">
         <Row label={t("verses")}>
           {refs}
           <ul className="mt-1">
@@ -122,14 +123,10 @@ export default async function SourcePage({ params }: Props) {
         </Row>
       </dl>
 
-      <div className="mt-8 flex flex-wrap gap-4">
-        <Link href={`/blessing/${blessing.id}`} className="rounded-full bg-layl px-5 py-2 text-lazima">
-          ← {blessing.labels[locale]}
-        </Link>
-        <a href={reportUrl} target="_blank" rel="noopener noreferrer" className="rounded-full border-2 border-tamr px-5 py-2 text-tamr">
-          {t("reportError")} ↗
-        </a>
-      </div>
+      <a href={reportUrl} target="_blank" rel="noopener noreferrer" className={`${button.secondary} mt-6 w-full text-tamr`}>
+        {t("reportError")}
+        <ExternalIcon className="size-4" />
+      </a>
     </article>
   );
 }

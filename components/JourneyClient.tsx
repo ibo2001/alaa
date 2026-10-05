@@ -7,13 +7,13 @@ import { getJourney, resetJourney } from "@/lib/device";
 import { formatNumber } from "@/lib/quran/surahs";
 import type { Lang } from "@/lib/types";
 import { completedCount, nextStation, STATION_NUMBERS, type JourneyProgress, type StationNumber } from "@/lib/journey";
+import { BookIcon, CheckIcon, ChevronIcon, DayIcon, ExternalIcon, LensIcon } from "./icons";
+import { button, Card, PageHeader } from "./ui";
 
 export type StationView = { n: StationNumber; blessings: { id: string; label: string; ref: string }[] };
 
-const primary =
-  "inline-flex min-h-11 items-center justify-center rounded-full bg-layl px-5 py-2 text-sm text-lazima hover:bg-layl/90";
-const secondary =
-  "inline-flex min-h-11 items-center justify-center rounded-full border-2 border-layl px-5 py-2 text-sm text-layl hover:bg-layl/5";
+// A row in the after-journey list: icon, label, trailing chevron or external mark.
+const afterRow = "press flex min-h-14 items-center gap-3 px-4 text-sama";
 
 export function JourneyClient({ stations, referral }: { stations: StationView[]; referral: { name: string; url: string } | null }) {
   const t = useTranslations("journey");
@@ -41,68 +41,72 @@ export function JourneyClient({ stations, referral }: { stations: StationView[];
     }
   }
 
-  return (
-    <section className="py-8" data-ready>
-      <h1 className="text-center font-heading text-4xl text-tamr">{t("title")}</h1>
-      <p className="mt-3 text-center text-layl/80">{t("intro")}</p>
+  const pct = (done / STATION_NUMBERS.length) * 100;
 
-      <div className="mt-6">
-        <p className="text-center text-sm font-medium" id="journey-progress">
+  return (
+    <section className="pb-4" data-ready>
+      <PageHeader title={t("title")} subtitle={t("intro")} />
+
+      <Card className="mt-3">
+        <p className="text-sm font-medium" id="journey-progress">
           {t("progress", { n: formatNumber(done, lang), total: formatNumber(STATION_NUMBERS.length, lang) })}
         </p>
         <div
-          className="mt-2 h-2 overflow-hidden rounded-full bg-layl/10"
+          className="mt-3 h-2.5 overflow-hidden rounded-full bg-layl/10"
           role="progressbar"
           aria-labelledby="journey-progress"
           aria-valuemin={0}
           aria-valuemax={STATION_NUMBERS.length}
           aria-valuenow={done}
         >
-          <div className="h-full bg-nakhl transition-all" style={{ width: `${(done / STATION_NUMBERS.length) * 100}%` }} />
+          <div className="h-full rounded-full bg-nakhl transition-[width] duration-700 ease-out" style={{ width: `${pct}%` }} />
         </div>
-      </div>
+      </Card>
 
-      <ol className="mt-8 space-y-4">
-        {stations.map((s) => {
+      {/* Timeline: a line joins the station markers, filled up to the stations already reached. */}
+      <ol className="mt-6">
+        {stations.map((s, i) => {
           const p = progress[s.n];
           const isNext = s.n === next;
+          const last = i === stations.length - 1;
           return (
-            <li
-              key={s.n}
-              data-station={s.n}
-              data-done={p ? "true" : "false"}
-              className={`rounded-3xl border-2 p-5 ${p ? "border-nakhl/40 bg-nakhl/5" : isNext ? "border-layl bg-white/60" : "border-layl/15"}`}
-            >
-              <div className="flex items-start gap-4">
-                <span
-                  aria-hidden
-                  className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full font-heading text-xl ${
-                    p ? "bg-nakhl text-sama" : isNext ? "bg-layl text-lazima" : "bg-layl/10 text-layl"
-                  }`}
-                >
-                  {p ? "✓" : t(`stations.s${s.n}.number`)}
-                </span>
-                <div className="min-w-0 flex-1">
-                  <h2 className="font-heading text-2xl">
-                    <span className="sr-only">{t("stationLabel", { n: formatNumber(s.n, lang) })}: </span>
-                    {t(`stations.s${s.n}.title`)}
-                  </h2>
-                  <p className="mt-1 text-sm text-layl/70">
-                    {p ? t(p.via === "photo" ? "foundByPhoto" : "cardRead") : isNext ? t("next") : t("upcoming")}
-                  </p>
-                  <p className="mt-3">{t(`stations.s${s.n}.mission`)}</p>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {!p && (
-                      <Link href="/lens" className={primary}>
-                        {t("takePhoto")}
-                      </Link>
-                    )}
-                    {s.blessings.map((b) => (
-                      <Link key={b.id} href={`/blessing/${b.id}`} className={secondary} aria-label={t("readCardLabel", { name: b.label, ref: b.ref })}>
-                        {t("readCard", { name: b.label })}
-                      </Link>
-                    ))}
-                  </div>
+            <li key={s.n} data-station={s.n} data-done={p ? "true" : "false"} className="relative flex gap-4 pb-4">
+              {!last && (
+                <span aria-hidden className={`absolute start-[1.3rem] top-12 -bottom-0 w-0.5 ${p ? "bg-nakhl/50" : "bg-layl/12"}`} />
+              )}
+              <span
+                aria-hidden
+                className={`relative z-10 mt-1 grid size-11 shrink-0 place-items-center rounded-full font-heading text-xl shadow-sm ${
+                  p ? "bg-nakhl text-sama" : isNext ? "bg-layl text-lazima ring-4 ring-lazima/40" : "bg-surface text-layl/60 ring-1 ring-layl/10"
+                }`}
+              >
+                {p ? <CheckIcon className="size-5" /> : t(`stations.s${s.n}.number`)}
+              </span>
+              <div
+                className={`min-w-0 flex-1 rounded-2xl p-4 ${
+                  isNext ? "bg-surface shadow-md ring-2 ring-layl/80" : p ? "bg-surface/70" : "bg-surface/50"
+                }`}
+              >
+                <p className={`text-xs font-medium ${p ? "text-nakhl" : isNext ? "text-tamr" : "text-layl/55"}`}>
+                  {p ? t(p.via === "photo" ? "foundByPhoto" : "cardRead") : isNext ? t("next") : t("upcoming")}
+                </p>
+                <h2 className="mt-0.5 font-heading text-2xl">
+                  <span className="sr-only">{t("stationLabel", { n: formatNumber(s.n, lang) })}: </span>
+                  {t(`stations.s${s.n}.title`)}
+                </h2>
+                <p className="mt-2 text-sm leading-relaxed text-layl/80">{t(`stations.s${s.n}.mission`)}</p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {!p && (
+                    <Link href="/lens" className={isNext ? button.chipDark : button.chip}>
+                      <LensIcon className="size-4" />
+                      {t("takePhoto")}
+                    </Link>
+                  )}
+                  {s.blessings.map((b) => (
+                    <Link key={b.id} href={`/blessing/${b.id}`} className={button.chip} aria-label={t("readCardLabel", { name: b.label, ref: b.ref })}>
+                      {t("readCard", { name: b.label })}
+                    </Link>
+                  ))}
                 </div>
               </div>
             </li>
@@ -111,46 +115,54 @@ export function JourneyClient({ stations, referral }: { stations: StationView[];
       </ol>
 
       {next === null ? (
-        <section aria-labelledby="after-journey" className="mt-10 rounded-3xl bg-layl p-6 text-sama">
-          <h2 id="after-journey" className="font-heading text-3xl text-lazima">
-            {t("after.title")}
-          </h2>
-          <p className="mt-2 text-sama/80">{t("after.intro")}</p>
-          <ol className="mt-6 space-y-5">
+        <section aria-labelledby="after-journey" className="hero-glow mt-6 overflow-hidden rounded-[2rem] text-sama shadow-xl shadow-layl/20">
+          <div className="px-6 pb-4 pt-7">
+            <h2 id="after-journey" className="font-heading text-3xl text-lazima">
+              {t("after.title")}
+            </h2>
+            <p className="mt-2 text-sama/80">{t("after.intro")}</p>
+          </div>
+          <ol className="divide-y divide-sama/10 border-t border-sama/10">
             <li>
-              <h3 className="font-medium">{t("after.readTitle")}</h3>
-              <a href="https://quran.com/55" target="_blank" rel="noopener noreferrer" className="mt-1 inline-block text-lazima underline">
-                {t("after.readLink")}
+              <h3 className="px-4 pt-3 text-xs text-sama/60">{t("after.readTitle")}</h3>
+              <a href="https://quran.com/55" target="_blank" rel="noopener noreferrer" className={afterRow}>
+                <BookIcon className="size-5 text-lazima" />
+                <span className="flex-1">{t("after.readLink")}</span>
+                <ExternalIcon className="size-4 text-sama/50" />
               </a>
             </li>
             <li>
-              <h3 className="font-medium">{t("after.habitTitle")}</h3>
-              <Link href="/today" className="mt-1 inline-block text-lazima underline">
-                {t("after.habitLink")}
+              <h3 className="px-4 pt-3 text-xs text-sama/60">{t("after.habitTitle")}</h3>
+              <Link href="/today" className={afterRow}>
+                <DayIcon className="size-5 text-lazima" />
+                <span className="flex-1">{t("after.habitLink")}</span>
+                <ChevronIcon className="size-4 text-sama/50 rtl:-scale-x-100" />
               </Link>
             </li>
             {referral && (
               <li>
-                <h3 className="font-medium">{t("after.askTitle")}</h3>
-                <a href={referral.url} target="_blank" rel="noopener noreferrer" className="mt-1 inline-block text-lazima underline">
-                  {t("after.askLink", { name: referral.name })}
+                <h3 className="px-4 pt-3 text-xs text-sama/60">{t("after.askTitle")}</h3>
+                <a href={referral.url} target="_blank" rel="noopener noreferrer" className={afterRow}>
+                  <span aria-hidden className="grid size-5 place-items-center text-lazima">?</span>
+                  <span className="flex-1">{t("after.askLink", { name: referral.name })}</span>
+                  <ExternalIcon className="size-4 text-sama/50" />
                 </a>
               </li>
             )}
           </ol>
         </section>
       ) : (
-        <p className="mt-10 text-center text-sm text-layl/70">{t("afterLocked")}</p>
+        <p className="mt-4 px-2 text-center text-sm text-layl/70">{t("afterLocked")}</p>
       )}
 
       {done > 0 && (
-        <p className="mt-8 text-center">
-          <button type="button" onClick={() => void onReset()} className="min-h-11 text-sm text-layl/70 underline hover:text-layl">
+        <p className="mt-6 text-center">
+          <button type="button" onClick={() => void onReset()} className={`${button.plain} text-tamr`}>
             {t("reset")}
           </button>
         </p>
       )}
-      <p className="mt-6 text-center text-xs text-layl/60">{t("privacy")}</p>
+      <p className="mt-4 px-2 text-center text-xs text-layl/60">{t("privacy")}</p>
     </section>
   );
 }

@@ -10,6 +10,9 @@ import type { StationNumber } from "@/lib/journey";
 import type { GuardedAyah, TranslationStatus } from "@/lib/guard";
 import type { Decision, DecisionCandidate } from "@/lib/vision/decide";
 import type { Lang } from "@/lib/types";
+import { BackIcon, LensIcon, PhotoIcon } from "./icons";
+import { Sheet } from "./Sheet";
+import { button } from "./ui";
 import { VersePassage } from "./VersePassage";
 
 type SampleView = { id: string; file: string; alt: string; placeholder: boolean; credit: string; license: string; sourceUrl: string };
@@ -25,10 +28,6 @@ type State =
 
 const KNOWN_ERRORS = new Set<ErrorKind>(["daily-limit", "model-unavailable", "invalid-image", "too-large", "invalid-request"]);
 
-const primary =
-  "inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-layl px-6 py-3 text-lazima hover:bg-layl/90 disabled:opacity-50";
-const secondary =
-  "inline-flex min-h-12 items-center justify-center gap-2 rounded-full border-2 border-layl px-6 py-3 text-layl hover:bg-layl/5 disabled:opacity-50";
 
 /** The general-gratitude ayat, each whole and on its own card, with previous/next. */
 function AbstentionCards({
@@ -41,7 +40,7 @@ function AbstentionCards({
   const t = useTranslations("abstain");
   const [i, setI] = useState(0);
   const card = cards[i]!;
-  const nav = "min-h-11 min-w-11 rounded-full border border-sama/40 px-3 text-sama hover:border-lazima disabled:opacity-30";
+  const nav = "press grid size-11 place-items-center rounded-full bg-sama/10 text-sama disabled:opacity-30";
   return (
     <div role="group" aria-roledescription="carousel" aria-label={t("cardsLabel")}>
       <div aria-live="polite" aria-label={t("cardOf", { n: i + 1, total: cards.length })}>
@@ -51,7 +50,7 @@ function AbstentionCards({
       {cards.length > 1 && (
         <div className="mt-4 flex items-center justify-center gap-4">
           <button type="button" className={nav} disabled={i === 0} onClick={() => setI(i - 1)} aria-label={t("previous")}>
-            <span aria-hidden className="rtl:rotate-180 inline-block">←</span>
+            <BackIcon className="size-5 rtl:-scale-x-100" />
           </button>
           <span className="text-sm text-sama/70">{t("cardOf", { n: i + 1, total: cards.length })}</span>
           <button
@@ -61,7 +60,7 @@ function AbstentionCards({
             onClick={() => setI(i + 1)}
             aria-label={t("next")}
           >
-            <span aria-hidden className="rtl:rotate-180 inline-block">→</span>
+            <BackIcon className="size-5 -scale-x-100 rtl:scale-x-100" />
           </button>
         </div>
       )}
@@ -75,7 +74,9 @@ export function LensClient({
   conceptLabels,
   abstention,
   stationOf,
+  title,
 }: {
+  title: string;
   lang: Lang;
   samples: SampleView[];
   conceptLabels: Record<string, string>;
@@ -150,56 +151,89 @@ export function LensClient({
 
   const label = (concept?: string) => (concept ? (conceptLabels[concept] ?? concept) : "");
 
-  return (
-    <div className="py-6" data-ready={ready || undefined}>
-      <p className="text-center text-layl/80">{t("intro")}</p>
+  const dismiss = () => setState({ kind: "idle" });
 
-      <div className="mt-6 flex flex-col items-stretch gap-3 sm:flex-row sm:justify-center">
-        <button type="button" className={primary} disabled={busy || !ready} onClick={() => cameraInput.current?.click()}>
-          <span aria-hidden>◉</span> {t("takePhoto")}
-        </button>
-        <button type="button" className={secondary} disabled={busy || !ready} onClick={() => galleryInput.current?.click()}>
-          {t("upload")}
-        </button>
+  return (
+    <div className="pb-4 pt-5" data-ready={ready || undefined}>
+      <h1 className="font-heading text-4xl leading-tight">{title}</h1>
+
+      {/* Viewfinder: the main action, styled like a camera. */}
+      <section className="viewfinder relative mt-4 overflow-hidden rounded-[2rem] px-6 pb-6 pt-8 text-sama shadow-xl shadow-layl/20">
+        <div aria-hidden className="viewfinder-corners pointer-events-none absolute inset-4" />
+        {busy && <div aria-hidden className="scan-line pointer-events-none absolute inset-x-0 top-0 h-full" />}
+
+        <div aria-live="polite" className="relative flex min-h-24 items-center justify-center px-4 text-center">
+          {busy ? (
+            <p role="status" className="text-lg text-lazima">
+              <span className="inline-block animate-pulse">{t("working")}</span>
+            </p>
+          ) : (
+            <p className="text-sama/85">{t("intro")}</p>
+          )}
+        </div>
+
+        <div className="relative mt-6 grid grid-cols-3 items-end">
+          <div className="flex justify-center">
+            <button
+              type="button"
+              className="press flex flex-col items-center gap-1.5 text-xs text-sama/80 disabled:opacity-40"
+              disabled={busy || !ready}
+              onClick={() => galleryInput.current?.click()}
+            >
+              <span className="grid size-12 place-items-center rounded-2xl bg-sama/12 ring-1 ring-sama/20">
+                <PhotoIcon className="size-6" />
+              </span>
+              {t("upload")}
+            </button>
+          </div>
+          <div className="flex justify-center">
+            <button
+              type="button"
+              className="press flex flex-col items-center gap-1.5 text-xs font-medium text-lazima disabled:opacity-40"
+              disabled={busy || !ready}
+              onClick={() => cameraInput.current?.click()}
+            >
+              <span className="grid size-[4.5rem] place-items-center rounded-full ring-4 ring-lazima/40">
+                <span className="grid size-16 place-items-center rounded-full bg-lazima text-layl">
+                  <LensIcon className="size-7" />
+                </span>
+              </span>
+              {t("takePhoto")}
+            </button>
+          </div>
+          <div />
+        </div>
         <input ref={cameraInput} type="file" accept="image/*" capture="environment" hidden onChange={onFile} tabIndex={-1} />
         <input ref={galleryInput} type="file" accept="image/*" hidden onChange={onFile} tabIndex={-1} />
-      </div>
-      <p className="mt-3 text-center text-xs text-layl/60">{t("privacy")}</p>
+      </section>
+      <p className="mt-3 px-2 text-center text-xs text-layl/60">{t("privacy")}</p>
 
-      <div aria-live="polite" className="mt-6">
-        {state.kind === "working" && (
-          <p className="text-center text-lg" role="status">
-            <span className="inline-block animate-pulse">{t("working")}</span>
-          </p>
-        )}
-
+      <Sheet open={state.kind === "confirm"} onDismiss={dismiss} labelledBy="confirm-title">
         {state.kind === "confirm" && (
-          <section className="rounded-2xl bg-white p-5 shadow" aria-labelledby="confirm-title">
-            <h2 id="confirm-title" className="font-heading text-2xl">{tc("title")}</h2>
+          <>
+            <h2 id="confirm-title" className="font-heading text-3xl">{tc("title")}</h2>
             <p className="mt-1 text-sm text-layl/70">{tc("hint")}</p>
-            <ul className="mt-4 flex flex-col gap-2">
+            <ul className="mt-5 flex flex-col gap-2">
               {state.candidates.map((c) => (
                 <li key={c.concept}>
-                  <button type="button" className={`${secondary} w-full`} onClick={() => pick(c)}>
+                  <button type="button" className={`${button.secondary} w-full`} onClick={() => pick(c)}>
                     {label(c.concept)}
                   </button>
                 </li>
               ))}
               <li>
-                <button
-                  type="button"
-                  className="min-h-11 w-full rounded-full px-4 py-2 text-sm underline"
-                  onClick={() => setState({ kind: "abstain", reason: "low-confidence" })}
-                >
+                <button type="button" className={`${button.plain} w-full`} onClick={() => setState({ kind: "abstain", reason: "low-confidence" })}>
                   {tc("noneOfThese")}
                 </button>
               </li>
             </ul>
-          </section>
+          </>
         )}
+      </Sheet>
 
+      <Sheet open={state.kind === "abstain"} onDismiss={dismiss} labelledBy="abstain-title" tone="dark">
         {state.kind === "abstain" && (
-          <section className="rounded-2xl bg-layl p-6 text-sama shadow" aria-labelledby="abstain-title">
+          <>
             <h2 id="abstain-title" className="text-center text-lg">
               {ta(state.reason, { concept: label(state.concept) })}
             </h2>
@@ -209,34 +243,26 @@ export function LensClient({
                 <AbstentionCards cards={abstention} lang={lang} />
               </div>
             )}
-            <p className="mt-6 text-center">
-              <button
-                type="button"
-                className="min-h-11 rounded-full bg-lazima px-6 py-2 text-layl"
-                onClick={() => setState({ kind: "idle" })}
-              >
-                {t("tryAgain")}
-              </button>
-            </p>
-          </section>
+            <button type="button" className={`${button.gold} mt-6 w-full`} onClick={dismiss}>
+              {t("tryAgain")}
+            </button>
+          </>
         )}
+      </Sheet>
 
+      <Sheet open={state.kind === "error"} onDismiss={dismiss} labelledBy="error-title" role="alertdialog">
         {state.kind === "error" && (
-          <section role="alert" className="rounded-2xl border-2 border-tamr bg-white p-5">
-            <h2 className="font-bold text-tamr">{te("title")}</h2>
+          <>
+            <h2 id="error-title" className="text-lg font-bold text-tamr">{te("title")}</h2>
             <p className="mt-2">{te(state.error)}</p>
-            <button
-              type="button"
-              className="mt-4 min-h-11 rounded-full bg-layl px-5 py-2 text-lazima"
-              onClick={() => setState({ kind: "idle" })}
-            >
+            <button type="button" className={`${button.primary} mt-6 w-full`} onClick={dismiss}>
               {te("dismiss")}
             </button>
-          </section>
+          </>
         )}
-      </div>
+      </Sheet>
 
-      <section className="mt-10" aria-labelledby="samples-title">
+      <section className="mt-8" aria-labelledby="samples-title">
         <h2 id="samples-title" className="font-heading text-2xl">{t("samplesTitle")}</h2>
         <p className="text-sm text-layl/70">{t("samplesHint")}</p>
         <ul className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
@@ -248,10 +274,10 @@ export function LensClient({
                 onClick={() => trySample(s.id)}
                 aria-label={t("sampleLabel", { name: s.alt })}
                 data-sample={s.id}
-                className="group relative block w-full overflow-hidden rounded-xl bg-layl/10 disabled:opacity-50"
+                className="press group relative block w-full overflow-hidden rounded-2xl bg-layl/10 shadow-sm disabled:opacity-50"
               >
-                <Image src={s.file} alt={s.alt} width={384} height={384} className="aspect-square w-full object-cover transition-transform group-hover:scale-105" />
-                <span className="absolute inset-x-0 bottom-0 bg-layl/80 px-2 py-1 text-sm text-sama">
+                <Image src={s.file} alt={s.alt} width={384} height={384} className="aspect-square w-full object-cover" />
+                <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-layl/90 to-transparent px-3 pb-2 pt-6 text-start text-sm font-medium text-sama">
                   {s.alt}
                   {s.placeholder && <span className="ms-1 text-xs text-sama/60">({t("placeholderNote")})</span>}
                 </span>
@@ -259,7 +285,7 @@ export function LensClient({
             </li>
           ))}
         </ul>
-        <details className="mt-3 text-xs text-layl/70">
+        <details className="mt-3 px-1 text-xs text-layl/70">
           <summary className="cursor-pointer">{t("credits")}</summary>
           <ul className="mt-2 space-y-1">
             {samples.map((s) => (

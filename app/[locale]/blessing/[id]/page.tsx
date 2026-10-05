@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { BlockedCard } from "@/components/BlockedCard";
 import { CardActions } from "@/components/CardActions";
 import { JourneyMark } from "@/components/JourneyMark";
+import { LensIcon } from "@/components/icons";
 import { StageNote } from "@/components/StageNote";
 import { VersePassage } from "@/components/VersePassage";
 import { ayatByRef } from "@/lib/guard";
@@ -48,13 +49,13 @@ export default async function BlessingPage({ params }: Props) {
   const first = card.refs[0]!;
 
   return (
-    <article className="mt-6 overflow-hidden rounded-3xl bg-layl text-sama shadow-lg">
+    <article className="mt-4 overflow-hidden rounded-[2rem] bg-layl text-sama shadow-xl shadow-layl/20">
       {blessing.journeyStation && <JourneyMark station={blessing.journeyStation} />}
-      <header className="px-6 pt-6 text-center">
-        <h1 className="font-heading text-4xl text-lazima">{blessing.labels[locale]}</h1>
+      <header className="hero-glow px-6 pb-2 pt-8 text-center">
+        <h1 className="font-heading text-5xl leading-tight text-lazima">{blessing.labels[locale]}</h1>
         {card.mappingUnderReview && (
           <details className="mt-3 inline-block text-sm">
-            <summary className="cursor-pointer list-none rounded-full border border-lazima/60 px-3 py-1 text-lazima">
+            <summary className="press inline-flex min-h-9 cursor-pointer list-none items-center rounded-full bg-lazima/15 px-3 text-lazima">
               ⓘ {t("underReview")}
             </summary>
             <p className="mt-2 max-w-sm text-sama/80">{t("underReviewHint")}</p>
@@ -88,11 +89,10 @@ export default async function BlessingPage({ params }: Props) {
           quranUrl={quranComUrl(first)}
           readLabel={t("readInContextLabel", { ref: formatRef(first, locale) })}
         />
-        <p className="mt-6 text-center">
-          <Link href="/lens" className="text-sm text-sama/80 underline hover:text-lazima">
-            {t("lookAgain")}
-          </Link>
-        </p>
+        <Link href="/lens" className="press mt-6 flex min-h-12 items-center justify-center gap-2 rounded-2xl bg-sama/10 text-sm font-medium text-sama">
+          <LensIcon className="size-5" />
+          {t("lookAgain")}
+        </Link>
       </footer>
     </article>
   );
