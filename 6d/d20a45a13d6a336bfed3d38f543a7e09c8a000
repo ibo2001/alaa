@@ -1,0 +1,19 @@
+docs/RESULTS.md
+  s_9a8b9d0f22ef1e::t_cb3eb585978194 18,40
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6dd20a45a13d6a336bfed3d38f543a7e09c8a000",
+  "prompts": {},
+  "sessions": {
+    "s_9a8b9d0f22ef1e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b8b37140-fbdc-4e61-a833-176ff24e8c3a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
