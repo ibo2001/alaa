@@ -1,0 +1,13 @@
+{
+  "note": "Reviewer-suggested verses (sources/REVIEW_LOG.md, 2026-10-04/05). Reviewed mappings come from sources/blessings.json at run time.",
+  "suggestions": [
+    { "concept": "sun", "expect": ["14:33"] },
+    { "concept": "sky", "expect": ["2:22"] },
+    { "concept": "star", "expect": ["6:97"] },
+    { "concept": "tree", "expect": ["36:80"] },
+    { "concept": "sea", "expect": ["16:14"] },
+    { "concept": "night", "expect": ["28:73"] },
+    { "concept": "mountain", "expect": ["16:81"] },
+    { "concept": "pomegranate", "expect": ["6:99"] }
+  ]
+}
