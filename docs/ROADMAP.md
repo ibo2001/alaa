@@ -8,8 +8,19 @@ This file separates what was **built during the challenge** (Oct 4–6, 2026) fr
 - Day 1: `/api/see` vision endpoint: closed concept enum, thresholds, person/unsafe handling, per-device daily limit, swappable provider (`anthropic`, `stub`)
 - Day 1: Lens (camera, gallery upload, sample photos), blessing card, "Is this…?" picker, abstention screen, source page, error states with next steps; Playwright tests
 - Day 2 (started Oct 4): learning stage on the welcome screen (on device, optional); My Day's Surah with the refrain after each blessing and a 1080×1920 share card drawn on the device; Ar-Rahman Journey with 7 stations (found by photo or card read), progress on the device and the after-journey screen with a referral to IslamQA for religious questions; About page; printable review sheet for the religious reviewer; user testing protocol
+- Day 2 (Oct 5): first religious review recorded (12 cards and the abstention reviewed; Journey cards keep their Ar-Rahman verse and add the reviewer's suggestion); app-style UI (tab bar, compact top bar, page transitions, lens viewfinder with bottom sheets, card action row, journey timeline); new Home with "نِعَمٌ لا تُحصى / Blessings beyond counting" (a Guard-verified verse by time of day, Hijri date, day and journey status)
 
 ## Planned (not built yet)
+- **Voice input: "tell Alaa what you noticed".** Besides the camera and the photo album, the user says what they are grateful for, e.g. "Today I slept eight hours for the first time", "A good evening with my family after a long while", "A shower with warm water", "I feel ill but could still go to work". Alaa then shows the related reference, Quran first.
+  - Speech to text on the device where the browser supports it (Web Speech API), otherwise a server speech model; a typed box as the accessible alternative.
+  - The text goes through the same rule as photos: the model returns only concept IDs from the closed list plus confidence (forced tool call). It never selects or writes religious text; concept → reference stays reviewed data, and every card passes the Source Guard.
+  - New non-visual concepts for this (e.g. rest and sleep, time with family, warm water, health despite illness, free time), each with a reviewed mapping.
+  - "Did you mean…?" confirmation before the card, as with photos.
+  - Privacy: these sentences can carry health or family details. Audio and text are processed and discarded, never stored or logged, and no attribute is inferred or kept.
+- **Better detection when no listed object fits.** Today a photo of something outside the closed list (e.g. a sofa) gets the general abstention (Ibrahim 14:34, An-Nahl 16:18). Planned: a scene layer that maps such photos to broader blessings (rest, free time, home, health).
+  - Order of sources: a reviewed **Quran** reference first; a **sahih hadith only as a fallback** when no reviewed Quran mapping fits. Example: the hadith on health and free time, Bukhari 6412 (listed in `docs/SPEC.md` §9), for a sofa or a quiet moment.
+  - Hadith go in only with: text copied from a licensed collection file in `sources/hadith/` with its LICENSE, collection and number, grade and grader, a hash check before rendering (like Guard level 1), the same review status and badge as Quran mappings, and a link to the source (e.g. sunnah.com). No hadith text is typed by hand.
+  - Built on the source-bound RAG below, which proposes candidates for the reviewer; nothing reaches users without review.
 - Deeper content for the "I know the Quran" stage (reflections with tafsir references), once reflections are reviewed
 - Source-bound RAG: retrieval over approved, licensed sources to help choose references and refine mappings for the religious reviewer (see `docs/SPEC.en.md` §16). Replaces interim choices such as the hand card
 - "Report an error" filed through `/api/report` (today: link to a prefilled GitHub issue)
