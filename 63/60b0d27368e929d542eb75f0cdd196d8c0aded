@@ -1,0 +1,21 @@
+docs/CURRENT_STATE.md
+  s_9a8b9d0f22ef1e::t_30ad84b1620f5b 5,11,88
+docs/ROADMAP.md
+  s_9a8b9d0f22ef1e::t_fa8eae5cfbb8ea 12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6360b0d27368e929d542eb75f0cdd196d8c0aded",
+  "prompts": {},
+  "sessions": {
+    "s_9a8b9d0f22ef1e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b8b37140-fbdc-4e61-a833-176ff24e8c3a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
