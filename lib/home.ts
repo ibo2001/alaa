@@ -1,4 +1,4 @@
-// Home "A blessing verse": a general reminder, not an answer about an object.
+// Home "Blessings beyond counting" card: a verse as a general reminder, not an answer about an object.
 // Every verse comes from a reference already in blessings.json (or the abstention); text is loaded and
 // guarded elsewhere. Pure functions, so the choice can be tested with a fixed hour and fixed randomness.
 import type { BlessingsFile, VerseRef } from "@/lib/types";

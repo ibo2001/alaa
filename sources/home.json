@@ -1,5 +1,5 @@
 {
-  "$comment": "Home 'A blessing verse': which cards' verses are preferred at each time of day (blessing ids only; verses come from blessings.json, text from Tanzil). Decided by Ibrahim on 2026-10-05, see docs/DECISIONS.md.",
+  "$comment": "Home verse card: which cards' verses are preferred at each time of day (blessing ids only; verses come from blessings.json, text from Tanzil). Decided by Ibrahim on 2026-10-05, see docs/DECISIONS.md.",
   "night": ["night-day", "sleep", "stars-trees"],
   "day": ["sun-moon", "sky", "rain"]
 }

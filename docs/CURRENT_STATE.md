@@ -52,7 +52,7 @@ The PWA now looks and behaves like a native app instead of a website. Checked at
 | Compact translucent top bar: back on pushed pages (in-app history, parent page for shared links), app name, language chip | Done |
 | Page transitions: slide in when going deeper, slide back on return, crossfade between tabs; opacity only with reduced motion, solid bars with reduced transparency | Done |
 | Native touches: safe-area insets, press feedback, no tap delay, no page bounce | Done |
-| Home: date (Gregorian and Hijri), "A blessing verse" chosen on the device by time of day from Guard-verified references already in `blessings.json` (see `DECISIONS.md`), the refrain, "another verse", day and journey status tiles; intro and learning stage only until answered (stage also in About). No repeated shortcuts | Done |
+| Home: date (Gregorian and Hijri), "Blessings beyond counting" (نِعَمٌ لا تُحصى): a verse chosen on the device by time of day from Guard-verified references already in `blessings.json` (see `DECISIONS.md`), the refrain, "another verse", day and journey status tiles; intro and learning stage only until answered (stage also in About). No repeated shortcuts | Done |
 | Lens: viewfinder panel with shutter and gallery buttons, scan line while analysing; confirm, abstention and error as bottom sheets on `<dialog>` | Done |
 | Card: icon action row (Add to My Day, Share, Source, quran.com); verses from different surahs shown as separate passages | Done |
 | My Day: empty state, round remove buttons, share-card tools in a card | Done |
