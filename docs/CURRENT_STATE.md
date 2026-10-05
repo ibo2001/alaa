@@ -2,7 +2,7 @@
 
 A running snapshot of where the project is. Updated at each milestone. For "built vs planned" see `ROADMAP.md`; for content decisions see `DECISIONS.md`.
 
-**Last updated:** 2026-10-05 16:46 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
+**Last updated:** 2026-10-05 18:07 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
 
 ## Health
 | Check | Status |
@@ -84,11 +84,12 @@ The PWA now looks and behaves like a native app instead of a website. Checked at
 1. Religious review: first round recorded; voice-note answers applied (hand, eyes-tongue); waiting for the rest of Ziyad's answers
 2. User testing: links sent; when responses arrive, `npx tsx scripts/study-results.ts fetch`, blind scoring, `summarize`, `docs/user-testing/RESULTS.md`, `docs/CHANGES_FROM_TESTING.md`
 3. Evaluation: done (34 photos × 3 runs, two runs reported in `docs/RESULTS.md`; rule fix from run 1)
-4. App-style UI, new Home, roadmap, approved translation, decks in the official template (Arabic and English approved): done
+4. App-style UI, new Home, roadmap, approved translation, decks in the official template (Arabic and English approved): done. Team name corrected in both decks at 17:50 (cover, Team slide, thank-you slide): the team is «عباد الرحمن» / "Ibad Ar-Rahman" (team 181); «آلاء» / Alaa is the app. PDFs re-exported; the Google Slides copy of the Arabic deck still has the old name until Ibrahim re-uploads it
 5. RAG reviewer's assistant: spec (`docs/superpowers/specs/2026-10-05-rag-reviewer-assistant-design.md`) approved by Ibrahim; Phase 0 (Tafsir database + LICENSE) and Phase 1 done on Oct 5. Still open: Voyage key (meaning channel, optional; read its data-use terms first) and Phase 2 (reviewer candidates page, form sending, `answers.ts`)
    - Phase 1 plan: `docs/superpowers/plans/2026-10-05-rag-phase-1.md`. Tasks 1–7 built and merged (Oct 5, 16:30): `rag/` tooling (Arabic normalisation, Tafsir database access with hash pinning, passage table, index with source and data-file hashes, roots + BM25 + Voyage channels with reciprocal-rank fusion, Claude re-ranker limited to an enum of candidate keys, references-only packets checked by the Source Guard, `propose` CLI); 56 offline tests; final review by a fresh reviewer, its two important findings fixed. Tasks 8–9 done 16:45: Ibrahim added the Tafsir Center database v1.0 (hash matches the upstream pin) and its LICENSE; index built (roots + keywords); first packets in `rag/packets/` (water, hand, warm shower); evaluation 16/22 (73%) recall@8, MRR 0.49, $0.0055 per question (`docs/RESULTS.md`); threshold kept at 0.5 (`docs/DECISIONS.md`). Next: a Voyage key for the meaning channel, then Phase 2 (reviewer page)
 6. Demo video: done. Final cuts rendered (1:57; vertical 1080×1920 and landscape 1920×1080) in `video/out/` (git-ignored): scripted 3× screen recordings of the live app (`video/record.ts`), Remotion composition in the app's look (`video/src/`), Arabic voice-over by ElevenLabs (voice "Rawi", disclosed on the end card), English captions, Pexels glass clip as the opening. Pexels link recorded in `SOURCES.md`. Landscape cut on YouTube (unlisted): https://youtu.be/preYsrkPt60
-7. Next while waiting: Ibrahim checks the live site on a phone; user-test responses (background check every 15 min until 21:45, 0 so far) and Ziyad's remaining answers
+7. Next while waiting: Ibrahim checks the live site on a phone; user-test responses (background check every 15 min until 21:45; 0 at 16:48 in both forms, both forms published and accepting) and Ziyad's remaining answers
+9. Mentors' channel on Discord (`#عباد-الرحمن-181`): Nasser Almani (mentor) reminded at 14:16 that the final submission is due Oct 6 at 23:59 and asked for status; Ibrahim posted the study links at 17:36 asking mentors to try and share them; a Day 2 progress reply to Nasser is drafted (Arabic). The Day 2 check-out (✅ or one line) is expected around 22:00, as on Day 1
 8. Afternoon (15:30–): prompt caching measured: not in effect (prefix ≈3k tokens, below Haiku 4.5's 4,096 minimum; padding would cost more at demo traffic), written up in `docs/RESULTS.md`, no code change. README, roadmap and `.env.example` brought in line with what is built. Cold run of the live site (laptop and phone size, ar and en, 14 pages, all 7 sample photos): no errors, no broken requests, no horizontal scroll, results under 2 s. Both decks exported to PDF next to the PPTX files (git-ignored, 16 pages, fonts embedded). User-test responses: 0 at 15:40
 
 ## Tafsir MCP (Tafsir Center for Quranic Studies, tafsir.net): source of the RAG tooling
