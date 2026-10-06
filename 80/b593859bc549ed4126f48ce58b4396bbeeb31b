@@ -1,0 +1,24 @@
+LICENSE
+  s_a390bda20b7d98::t_9be8b30e81ede1 1-21
+README.md
+  s_a390bda20b7d98::t_9be8b30e81ede1 78-79
+  s_a390bda20b7d98::t_d128baf8e6f3c2 80
+package.json
+  s_a390bda20b7d98::t_9be8b30e81ede1 43-44
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "80b593859bc549ed4126f48ce58b4396bbeeb31b",
+  "prompts": {},
+  "sessions": {
+    "s_a390bda20b7d98": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2ef5e39d-84a5-4770-8613-826a772262ec",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
