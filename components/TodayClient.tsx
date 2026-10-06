@@ -12,7 +12,15 @@ import { CloseIcon, DayIcon, DownloadIcon, LensIcon, ShareIcon } from "./icons";
 import { button, Card, PageHeader } from "./ui";
 import { VersePassage } from "./VersePassage";
 
-export type DayBlessing = { id: string; label: string; ref: string; ayat: GuardedAyah[]; translation: TranslationStatus };
+export type DayBlessing = {
+  id: string;
+  label: string;
+  ref: string;
+  ayat: GuardedAyah[];
+  translation: TranslationStatus;
+  /** Guard-verified ayat per reference for the share card; null while the mapping is under review. */
+  groups: GuardedAyah[][] | null;
+};
 type Refrain = { ayat: GuardedAyah[]; translation: TranslationStatus; ref: string };
 type CardState = { kind: "idle" } | { kind: "drawing" } | { kind: "ready"; url: string; file: File } | { kind: "error" };
 
@@ -54,15 +62,25 @@ export function TodayClient({ lang, cards, refrain }: { lang: Lang; cards: DayBl
     if (!refrain) return;
     setCard({ kind: "drawing" });
     try {
+      const now = new Date();
+      const hijri = new Intl.DateTimeFormat(lang === "ar" ? "ar-SA-u-ca-islamic-umalqura" : "en-u-ca-islamic-umalqura", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+      }).format(now);
+      // Each ayah whole, followed by its number as in the app; the no-break space keeps the number with its ayah.
+      const passage = (ayat: GuardedAyah[]) => ayat.map((a) => `${a.text}\u00A0(${formatNumber(a.ayah, "ar")})`).join(" ");
       const blob = await drawShareCard({
         lang,
         appName: app("name"),
         title: t("title"),
-        date,
-        items: today.map((c) => ({ label: c.label, ref: c.ref })),
+        dates: { greg: date, hijri },
+        count: t("count", { count: today.length, shown: formatNumber(today.length, lang) }),
+        items: today.map((c) => ({ id: c.id, label: c.label, ref: c.ref, passages: c.groups ? c.groups.map(passage) : null })),
+        alsoToday: t("alsoToday"),
         more: (n) => t("more", { shown: formatNumber(n, lang) }),
         refrain: { text: refrain.ayat.map((a) => a.text).join(" "), ref: refrain.ref },
-        footer: t("cardFooter"),
+        invite: { title: t("inviteTitle"), body: t("inviteBody"), url: t("cardFooter"), qrUrl: `${window.location.origin}/${lang}` },
       });
       const file = new File([blob], "alaa-my-day.png", { type: "image/png" });
       setCard({ kind: "ready", url: URL.createObjectURL(blob), file });

@@ -136,7 +136,10 @@
     "more": "+ {shown} more",
     "cardFooter": "alaa-alpha.vercel.app",
     "cardError": "This device couldn't draw the card. Try another browser.",
-    "privacy": "Your day is saved on this device only. Nothing is sent to a server."
+    "privacy": "Your day is saved on this device only. Nothing is sent to a server.",
+    "inviteTitle": "What did you notice today?",
+    "inviteBody": "Scan to try Alaa",
+    "alsoToday": "Also today:"
   },
   "journey": {
     "title": "Ar-Rahman Journey",

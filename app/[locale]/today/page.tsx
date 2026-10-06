@@ -30,6 +30,10 @@ export default async function TodayPage({ params }: Props) {
       ref: card.refs.map((r) => formatRef(r, locale)).join(" · "),
       ayat: card.ayat,
       translation: card.translation,
+      // Share card: the verse is drawn only for reviewed mappings, one group per reference (never cut).
+      groups: card.mappingUnderReview
+        ? null
+        : card.refs.map((r) => card.ayat.filter((a) => a.surah === r.surah && a.ayah >= r.ayah && a.ayah <= (r.ayahEnd ?? r.ayah))),
     });
   }
 

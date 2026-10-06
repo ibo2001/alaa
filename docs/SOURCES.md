@@ -51,6 +51,8 @@ All resized to 768px (longest edge) and re-encoded as JPEG, which also strips me
 | `idb-keyval` | 6.3.0 | Apache-2.0 |
 | `@anthropic-ai/sdk` | 0.131.0 | MIT |
 | `zod` | 4.6.5 | MIT |
+| `qrcode` | 1.5.4 | MIT (QR code on the My Day share card, drawn on the device) |
+| `lucide` | 1.52.0 | ISC (line icons on the My Day share card; icon data only) |
 
 ### Development only
 | Package | Version | License |
@@ -62,7 +64,7 @@ All resized to 768px (longest edge) and re-encoded as JPEG, which also strips me
 | `@playwright/test` | 1.63.0 | Apache-2.0 |
 | `tsx` | 4.23.15 | MIT |
 | `sharp` | 0.34.5 | Apache-2.0 |
-| `@types/node`, `@types/react`, `@types/react-dom` | 24 / 19 / 19 | MIT |
+| `@types/node`, `@types/react`, `@types/react-dom`, `@types/qrcode` | 24 / 19 / 19 / 1.5 | MIT |
 
 ## External services
 | Service | Use |
