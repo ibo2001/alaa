@@ -2,13 +2,13 @@
 
 A running snapshot of where the project is. Updated at each milestone. For "built vs planned" see `ROADMAP.md`; for content decisions see `DECISIONS.md`.
 
-**Last updated:** 2026-10-06 09:02 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
+**Last updated:** 2026-10-06 11:30 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
 
 ## Health
 | Check | Status |
 |---|---|
 | Lint, typecheck | Clean |
-| Unit tests (Vitest) | 134 passing (60 of them for `rag/`) |
+| Unit tests (Vitest) | 141 passing (60 of them for `rag/`) |
 | E2E (Playwright, stub provider) | 10 passing (builds into `.next-e2e`, so it can run beside `next dev`) |
 | Vercel deploy | Green, auto-deploys from `main`. Everything up to 16:43 Riyadh is pushed and live (app-style UI, new Home, Rowwad translation, reviewed hand and eyes-tongue cards, no-verse rule fix; later pushes are docs and offline `rag/` tooling only, the app is unchanged) |
 | RAG retrieval eval (offline tooling) | 22 known pairs: reviewer's verse among 8 candidates for 16 (73%), MRR 0.49, $0.0055 per question; roots + keywords only (no Voyage key yet) |
@@ -63,10 +63,16 @@ The PWA now looks and behaves like a native app instead of a website. Checked at
 | Review sheet (`/review`) | Unchanged on purpose (printable reviewer tool) |
 | Try on a real phone (touch feel of the shutter, sheets, transitions) | Ibrahim |
 
-## Day 3 (Oct 6): Measurement and submission (not started)
-- Fixes from user testing; evaluation ×3, alternative-approach run, cost measurement
-- `docs/METHODOLOGY.md`, `docs/RESULTS.md`
-- Video (≤ 2 min): final cuts ready (1:57); upload unlisted and put the link in the submission; re-render with `cd video && npm run render:landscape` if screens or numbers change. Presentation: decks ready in the official template (export PDF). Final checks from another device and network
+## Day 3 (Oct 6): Measurement and submission (in progress)
+| Item | Status |
+|---|---|
+| User-test responses | 0 in both forms (checked every 30 min since 09:16). Ibrahim runs in-person sessions until 15:00; then blind scoring and `docs/user-testing/RESULTS.md`, or an honest "0 responses" |
+| Reviewer's voice notes (3, transcribed locally) | Applied by Ibrahim's decision: 4 Journey cards + dates-palms, speech-writing, sleep reviewed (21 of 25); refrain approved (log only); hadith suggestion → roadmap. figs-olives, pomegranate, night-day, mountains stay draft |
+| MIT license for the code; pitch PDF marked present in `BASELINE.md` | Done |
+| Accessibility and usability audit (axe 112 states, Lighthouse, keyboard, 200% text) and fixes | Done, live: two-tone focus ring, scroll padding for the bars, sheet focus, contrast, 200% text, favicon, judge hints. axe 0 violations after. Recorded as an audit (not user testing) in `CHANGES_FROM_TESTING.md` and `RESULTS.md` |
+| My Day share card redesign | Done, live: whole Guard-verified verses (reviewed mappings only, never cut, tested layout), line icons (Lucide), Hijri date, QR invite (`qrcode`). Video left unchanged by Ibrahim's choice |
+| Decks | Both: "How Alaa meets the judging criteria" slide (official criterion names, Arabic and English), 21 of 25 on the Source Guard slide, share card on the phones slide. Still to do: user-test results, PDF export, Ibrahim's review of the English deck |
+| Submission on the platform | Ibrahim, target 19:30–21:00 |
 
 ## Open items
 - `docs/alaa-pitch.pdf` (registration pitch, pre-challenge) is listed in `BASELINE.md` as "to be added"; Ibrahim adds the original file
@@ -76,7 +82,7 @@ The PWA now looks and behaves like a native app instead of a website. Checked at
 - English translation switched to Rowwad Translation Center (QuranEnc.com v1.0.19-xml.1), file unchanged, footnotes shown, all 25 cards; Itani stays registered but unused
 - Daily limit is in memory per server instance (best effort); durable store is planned
 - Only one real vision provider; the second is `stub`
-- 11 of 25 mappings are `draft` (14 reviewed, incl. hand → 16:53, eyes-tongue → 67:23 + 30:22); no reflections are shown until reviewed
+- 4 of 25 mappings are `draft` (21 reviewed); no reflections are shown until reviewed
 - Religious review: waiting for Ziyad's answers to the open questions listed at the end of `sources/REVIEW_LOG.md` (figs-olives, Journey cards, 4 unreviewed cards, pomegranate/night-day/mountains; hand and eyes-tongue answered by voice note on Oct 5, transcribed locally with whisper-cpp). Apply only Ibrahim's decisions
 - End-of-Day-1 progress reply to the committee: drafted in Ibrahim's Gmail (Arabic)
 
