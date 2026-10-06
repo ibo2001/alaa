@@ -23,7 +23,7 @@ To verify: `git show baseline` shows exactly what was committed before the chall
 | Item | Description | Location |
 |---|---|---|
 | `SPEC.md` / `SPEC.en.md` | Product and technical specification (Arabic / English) | `docs/` |
-| Registration pitch | 10-slide pitch submitted with the registration form | `docs/alaa-pitch.pdf` (to be added) |
+| Registration pitch | 10-slide pitch submitted with the registration form | `docs/alaa-pitch.pdf` |
 | Visual identity | Colors, typography and logo direction, shared with the sister project Mizan | Linked in `docs/SOURCES.md` |
 | Seed blessing list | 25 concept → verse references (references only, unreviewed) | Inside `SPEC.md` §9 |
 | `CLAUDE.md`, `LINKS.md` | Standing instructions for Claude Code; project links | repo root, `docs/` |
