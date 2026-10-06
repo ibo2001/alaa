@@ -1,0 +1,25 @@
+docs/ROADMAP.md
+  s_a390bda20b7d98::t_77eafe5e16d859 13,27,29
+tests/unit/rag/eval-metrics.test.ts
+  s_a390bda20b7d98::t_f4a2f27d490cf6 6-7
+sources/blessings.json
+  s_a390bda20b7d98::t_653b141a44719e 133-136,270-273,302-305,341-344,373-376,495-498,521-524
+sources/REVIEW_LOG.md
+  s_a390bda20b7d98::t_b0f6e7c793f84d 24-27,30-33,39-40,42-47
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6db55a0234b3ca568d7f3eede2199d633a33fcc2",
+  "prompts": {},
+  "sessions": {
+    "s_a390bda20b7d98": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2ef5e39d-84a5-4770-8613-826a772262ec",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
