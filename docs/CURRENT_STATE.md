@@ -2,7 +2,7 @@
 
 A running snapshot of where the project is. Updated at each milestone. For "built vs planned" see `ROADMAP.md`; for content decisions see `DECISIONS.md`.
 
-**Last updated:** 2026-10-06 11:30 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
+**Last updated:** 2026-10-06 17:05 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
 
 ## Health
 | Check | Status |
@@ -66,12 +66,13 @@ The PWA now looks and behaves like a native app instead of a website. Checked at
 ## Day 3 (Oct 6): Measurement and submission (in progress)
 | Item | Status |
 |---|---|
-| User-test responses | 0 in both forms (checked every 30 min since 09:16). Ibrahim runs in-person sessions until 15:00; then blind scoring and `docs/user-testing/RESULTS.md`, or an honest "0 responses" |
+| User study | Forms open since Oct 5: 1 response (Arabic, group A), no in-person sessions. Not scored (too few); reported as such in `docs/user-testing/RESULTS.md` and `RESULTS.md`. Its observation (left Home within 3 min, didn't see what Alaa is for) led to the first-visit Home card, row 1 of `CHANGES_FROM_TESTING.md` |
 | Reviewer's voice notes (3, transcribed locally) | Applied by Ibrahim's decision: 4 Journey cards + dates-palms, speech-writing, sleep reviewed (21 of 25); refrain approved (log only); hadith suggestion → roadmap. figs-olives, pomegranate, night-day, mountains stay draft |
 | MIT license for the code; pitch PDF marked present in `BASELINE.md` | Done |
 | Accessibility and usability audit (axe 112 states, Lighthouse, keyboard, 200% text) and fixes | Done, live: two-tone focus ring, scroll padding for the bars, sheet focus, contrast, 200% text, favicon, judge hints. axe 0 violations after. Recorded as an audit (not user testing) in `CHANGES_FROM_TESTING.md` and `RESULTS.md` |
 | My Day share card redesign | Done, live: whole Guard-verified verses (reviewed mappings only, never cut, tested layout), line icons (Lucide), Hijri date, QR invite (`qrcode`). Video left unchanged by Ibrahim's choice |
-| Decks | Both: "How Alaa meets the judging criteria" slide (official criterion names, Arabic and English), 21 of 25 on the Source Guard slide, share card on the phones slide. Still to do: user-test results, PDF export, Ibrahim's review of the English deck |
+| Decks | Final, both approved by Ibrahim (English reviewed on Oct 6): judging-criteria slide (official names), 21 of 25, share card on the phones slide, honest user-study line, slide 6 impact line. PDFs exported 17:02 (17 pages, LibreOffice, template font substituted) |
+| First-visit Home card (why, how, Start looking, sample photo) | Done, live (`31fa4b7`) |
 | Submission on the platform | Ibrahim, target 19:30–21:00 |
 
 ## Open items
