@@ -2,7 +2,7 @@
 
 A running snapshot of where the project is. Updated at each milestone. For "built vs planned" see `ROADMAP.md`; for content decisions see `DECISIONS.md`.
 
-**Last updated:** 2026-10-06 17:31 (Riyadh) · **Submitted:** 2026-10-06 ~17:30 (final judging, team 181) · **Live:** https://alaa-alpha.vercel.app
+**Last updated:** 2026-10-06 17:49 (Riyadh) · **Submitted:** 2026-10-06 ~17:30 (final judging, team 181) · **Live:** https://alaa-alpha.vercel.app
 
 ## Health
 | Check | Status |
@@ -73,6 +73,7 @@ The PWA now looks and behaves like a native app instead of a website. Checked at
 | My Day share card redesign | Done, live: whole Guard-verified verses (reviewed mappings only, never cut, tested layout), line icons (Lucide), Hijri date, QR invite (`qrcode`). Video left unchanged by Ibrahim's choice |
 | Decks | Final, both approved by Ibrahim (English reviewed on Oct 6): judging-criteria slide (official names), 21 of 25, share card on the phones slide, honest user-study line, slide 6 impact line. PDFs exported 17:02 (17 pages, LibreOffice, template font substituted) |
 | First-visit Home card (why, how, Start looking, sample photo) | Done, live (`31fa4b7`) |
+| Mentors' channel (Discord `#عباد-الرحمن-181`) | Submission announced by Ibrahim at 17:49 (Arabic): live link, repo, video, and Day 3 highlights (21 of 25 reviewed, accessibility audit and fixes, new share card, first-visit Home card) |
 | `DAILY_LIMIT` on Vercel | Set by Ibrahim (Secret, Production), applied by a production redeploy; live site checked after it (pages, sample recognition) |
 | Submission on the platform | **Done ~17:30**: islamicaich.org final-judging form, «تم الحفظ بنجاح», team 181, by Ibrahim. Arabic: name آلاء; track «التجارب التفاعلية والرحلة المعرفية للتعريف بالإسلام وتعلمه»; Arabic description; `alaa-presentation.ar.pdf` (17 pages); video https://youtu.be/preYsrkPt60; repo https://github.com/ibo2001/alaa; live https://alaa-alpha.vercel.app. The submission can be viewed (https://islamicaich.org/dashboard/submission/1111/show) and edited until the deadline; Ibrahim refined the description after sending. Checked 17:40: name, track, PDF, video and repo saved |
 
