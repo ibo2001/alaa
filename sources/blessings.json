@@ -130,8 +130,10 @@
       ],
       "journeyStation": 5,
       "review": {
-        "mapping": "draft",
-        "reflection": "draft"
+        "mapping": "reviewed",
+        "reflection": "draft",
+        "reviewer": "زياد (داعية)",
+        "reviewedAt": "2026-10-06"
       }
     },
     {
@@ -265,8 +267,10 @@
       ],
       "journeyStation": 2,
       "review": {
-        "mapping": "draft",
-        "reflection": "draft"
+        "mapping": "reviewed",
+        "reflection": "draft",
+        "reviewer": "زياد (داعية)",
+        "reviewedAt": "2026-10-06"
       },
       "note": "Reviewer (2026-10-04) asked to replace the Ar-Rahman verse. Ibrahim decided on 2026-10-05 to keep it, because the Journey follows the surah's order, and to add the reviewer's suggested verse(s) after it. Mapping stays draft until the reviewer confirms."
     },
@@ -295,8 +299,10 @@
       ],
       "journeyStation": 4,
       "review": {
-        "mapping": "draft",
-        "reflection": "draft"
+        "mapping": "reviewed",
+        "reflection": "draft",
+        "reviewer": "زياد (داعية)",
+        "reviewedAt": "2026-10-06"
       },
       "note": "Reviewer (2026-10-04) asked to replace the Ar-Rahman verse. Ibrahim decided on 2026-10-05 to keep it, because the Journey follows the surah's order, and to add the reviewer's suggested verse(s) after it. Mapping stays draft until the reviewer confirms."
     },
@@ -332,8 +338,10 @@
       ],
       "journeyStation": 3,
       "review": {
-        "mapping": "draft",
-        "reflection": "draft"
+        "mapping": "reviewed",
+        "reflection": "draft",
+        "reviewer": "زياد (داعية)",
+        "reviewedAt": "2026-10-06"
       },
       "note": "Reviewer (2026-10-04) asked to replace the Ar-Rahman verse. Ibrahim decided on 2026-10-05 to keep it, because the Journey follows the surah's order, and to add the reviewer's suggested verse(s) after it. Mapping stays draft until the reviewer confirms."
     },
@@ -362,8 +370,10 @@
       ],
       "journeyStation": 6,
       "review": {
-        "mapping": "draft",
-        "reflection": "draft"
+        "mapping": "reviewed",
+        "reflection": "draft",
+        "reviewer": "زياد (داعية)",
+        "reviewedAt": "2026-10-06"
       },
       "note": "Reviewer (2026-10-04) asked to replace the Ar-Rahman verse. Ibrahim decided on 2026-10-05 to keep it, because the Journey follows the surah's order, and to add the reviewer's suggested verse(s) after it. Mapping stays draft until the reviewer confirms."
     },
@@ -482,8 +492,10 @@
       ],
       "journeyStation": 1,
       "review": {
-        "mapping": "draft",
-        "reflection": "draft"
+        "mapping": "reviewed",
+        "reflection": "draft",
+        "reviewer": "زياد (داعية)",
+        "reviewedAt": "2026-10-06"
       }
     },
     {
@@ -506,8 +518,10 @@
         }
       ],
       "review": {
-        "mapping": "draft",
-        "reflection": "draft"
+        "mapping": "reviewed",
+        "reflection": "draft",
+        "reviewer": "زياد (داعية)",
+        "reviewedAt": "2026-10-06"
       }
     },
     {

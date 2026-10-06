@@ -3,8 +3,8 @@ import { firstHitRank, summarize, truthPairs } from "@/rag/eval-metrics";
 
 describe("truth pairs", () => {
   const pairs = truthPairs();
-  it("has the 14 reviewed mappings and the 8 reviewer suggestions", () => {
-    expect(pairs.filter((p) => p.origin === "reviewed-mapping")).toHaveLength(14);
+  it("has the 21 reviewed mappings and the 8 reviewer suggestions", () => {
+    expect(pairs.filter((p) => p.origin === "reviewed-mapping")).toHaveLength(21);
     expect(pairs.filter((p) => p.origin === "reviewer-suggestion")).toHaveLength(8);
   });
   it("expands ranges and multi-reference cards into every ayah key", () => {
