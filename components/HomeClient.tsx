@@ -11,8 +11,9 @@ import { formatNumber } from "@/lib/quran/surahs";
 import type { HomeVerse } from "@/lib/sources/home";
 import type { GuardedAyah, TranslationStatus } from "@/lib/guard";
 import type { Lang } from "@/lib/types";
-import { ChevronIcon, DayIcon, JourneyIcon, RefreshIcon } from "./icons";
+import { ChevronIcon, DayIcon, JourneyIcon, LensIcon, RefreshIcon } from "./icons";
 import { StagePicker } from "./StagePicker";
+import { button } from "./ui";
 import { VersePassage } from "./VersePassage";
 
 type Refrain = { ayat: GuardedAyah[]; translation: TranslationStatus; ref: string };
@@ -80,6 +81,26 @@ export function HomeClient({
           )}
         </p>
       </header>
+
+      {/* First visit: say what Alaa does and lead to the lens before the verse (user test, Oct 6). */}
+      {status && !status.stageSet && (
+        <section aria-labelledby="home-how" className="rounded-[2rem] bg-surface p-5 shadow-sm">
+          <h2 id="home-how" className="font-heading text-2xl text-layl">
+            {tw("howTitle")}
+          </h2>
+          <p className="mt-2 leading-relaxed text-layl/80">{tw("intro")}</p>
+          <p className="mt-2 leading-relaxed text-layl/80">{tw("how")}</p>
+          <div className="mt-4 flex flex-wrap items-center gap-2">
+            <Link href="/lens" className={button.gold}>
+              <LensIcon className="size-5" />
+              {tw("start")}
+            </Link>
+            <Link href="/lens#samples" className={button.plain}>
+              {tw("trySample")}
+            </Link>
+          </div>
+        </section>
+      )}
 
       <section aria-labelledby="home-verse" className="hero-glow overflow-hidden rounded-[2rem] text-sama shadow-xl shadow-layl/20">
         <div className="px-6 pb-5 pt-6">
@@ -149,13 +170,8 @@ export function HomeClient({
         </Link>
       </section>
 
-      {/* First visit: what Alaa is, and the optional learning stage. Later it lives in About. */}
-      {status && !status.stageSet && (
-        <>
-          <p className="px-1 leading-relaxed text-layl/80">{tw("intro")}</p>
-          <StagePicker />
-        </>
-      )}
+      {/* First visit: the optional learning stage. Later it lives in About. */}
+      {status && !status.stageSet && <StagePicker />}
     </div>
   );
 }

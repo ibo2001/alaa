@@ -18,7 +18,10 @@
   "welcome": {
     "start": "Start looking",
     "intro": "Alaa helps you notice everyday blessings you have grown used to: water, light, the food on your table.",
-    "refrainNote": "This verse is repeated {count} times in Surah Ar-Rahman."
+    "refrainNote": "This verse is repeated {count} times in Surah Ar-Rahman.",
+    "howTitle": "Point, and see",
+    "how": "Photograph something around you, like water, dates or the sky, and Alaa shows you where the Quran mentions it.",
+    "trySample": "or try a sample photo"
   },
   "pages": {
     "lens": "Lens",
