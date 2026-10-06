@@ -1,0 +1,19 @@
+BASELINE.md
+  s_a390bda20b7d98::t_4532613b479ecc 26
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "8db5872d65c65bb1ed6616d1c60771064f09bf7f",
+  "prompts": {},
+  "sessions": {
+    "s_a390bda20b7d98": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2ef5e39d-84a5-4770-8613-826a772262ec",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
