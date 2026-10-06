@@ -2,7 +2,7 @@
 
 A running snapshot of where the project is. Updated at each milestone. For "built vs planned" see `ROADMAP.md`; for content decisions see `DECISIONS.md`.
 
-**Last updated:** 2026-10-06 17:05 (Riyadh) · **Live:** https://alaa-alpha.vercel.app
+**Last updated:** 2026-10-06 17:31 (Riyadh) · **Submitted:** 2026-10-06 ~17:30 (final judging, team 181) · **Live:** https://alaa-alpha.vercel.app
 
 ## Health
 | Check | Status |
@@ -10,7 +10,7 @@ A running snapshot of where the project is. Updated at each milestone. For "buil
 | Lint, typecheck | Clean |
 | Unit tests (Vitest) | 141 passing (60 of them for `rag/`) |
 | E2E (Playwright, stub provider) | 10 passing (builds into `.next-e2e`, so it can run beside `next dev`) |
-| Vercel deploy | Green, auto-deploys from `main`. Everything up to 16:43 Riyadh is pushed and live (app-style UI, new Home, Rowwad translation, reviewed hand and eyes-tongue cards, no-verse rule fix; later pushes are docs and offline `rag/` tooling only, the app is unchanged) |
+| Vercel deploy | Green, auto-deploys from `main`. Everything is pushed and live; last production deploy is a redeploy of `0c4a40f` on Oct 6 after Ibrahim set `DAILY_LIMIT` (Secret, Production) |
 | RAG retrieval eval (offline tooling) | 22 known pairs: reviewer's verse among 8 candidates for 16 (73%), MRR 0.49, $0.0055 per question; roots + keywords only (no Voyage key yet) |
 | Real-model eval (`claude-haiku-4-5`) | 34 photos × 3 runs: 88% correct or correctly abstained after the no-verse rule fix (79% before), 97% consistent, 1.7 s median, $0.0041 per photo; alternative approach 88%, $0.0020 (`docs/RESULTS.md`) |
 
@@ -63,7 +63,7 @@ The PWA now looks and behaves like a native app instead of a website. Checked at
 | Review sheet (`/review`) | Unchanged on purpose (printable reviewer tool) |
 | Try on a real phone (touch feel of the shutter, sheets, transitions) | Ibrahim |
 
-## Day 3 (Oct 6): Measurement and submission (in progress)
+## Day 3 (Oct 6): Measurement and submission (submitted)
 | Item | Status |
 |---|---|
 | User study | Forms open since Oct 5: 1 response (Arabic, group A), no in-person sessions. Not scored (too few); reported as such in `docs/user-testing/RESULTS.md` and `RESULTS.md`. Its observation (left Home within 3 min, didn't see what Alaa is for) led to the first-visit Home card, row 1 of `CHANGES_FROM_TESTING.md` |
@@ -73,18 +73,18 @@ The PWA now looks and behaves like a native app instead of a website. Checked at
 | My Day share card redesign | Done, live: whole Guard-verified verses (reviewed mappings only, never cut, tested layout), line icons (Lucide), Hijri date, QR invite (`qrcode`). Video left unchanged by Ibrahim's choice |
 | Decks | Final, both approved by Ibrahim (English reviewed on Oct 6): judging-criteria slide (official names), 21 of 25, share card on the phones slide, honest user-study line, slide 6 impact line. PDFs exported 17:02 (17 pages, LibreOffice, template font substituted) |
 | First-visit Home card (why, how, Start looking, sample photo) | Done, live (`31fa4b7`) |
-| Submission on the platform | Ibrahim, target 19:30–21:00 |
+| `DAILY_LIMIT` on Vercel | Set by Ibrahim (Secret, Production), applied by a production redeploy; live site checked after it (pages, sample recognition) |
+| Submission on the platform | **Done ~17:30**: islamicaich.org final-judging form, «تم الحفظ بنجاح», team 181, by Ibrahim. Arabic: name آلاء; track «التجارب التفاعلية والرحلة المعرفية للتعريف بالإسلام وتعلمه»; Arabic description; `alaa-presentation.ar.pdf` (17 pages); video https://youtu.be/preYsrkPt60; repo https://github.com/ibo2001/alaa; live https://alaa-alpha.vercel.app. The submission can be viewed (https://islamicaich.org/dashboard/submission/1111/show) and edited until the deadline; Ibrahim refined the description after sending. Checked 17:40: name, track, PDF, video and repo saved |
 
 ## Open items
-- `docs/alaa-pitch.pdf` (registration pitch, pre-challenge) is listed in `BASELINE.md` as "to be added"; Ibrahim adds the original file
-- Challenge presentation: rebuilt in the official challenge template (PPTX, 16 slides, their identity and layouts; adds a team slide, a "meets the reference framework" slide and a built/planned timeline; real screenshots of the live app). Arabic approved by Ibrahim (reviewed in Google Slides: https://docs.google.com/presentation/d/1YdfoLD8rtyEsIb6IhYH-XcIB4_ob-PNg-f9iHPTDT6g/edit); English built the same way, waiting for his review. Files in `docs/presentation/` (git-ignored: partner logos, 10 MB each). Oct 5 11:45: both decks updated for the Rowwad translation (English screenshots re-taken from the live site, timeline now lists the approved translation under Day 2). 14:05: both decks updated with the evaluation (88%, 97%, 1.7 s, $0.004 per photo; alternative in a footnote) and the review count (13 of 25 + abstention). Day 3: add user-test results. Earlier Slides-artifact drafts are superseded
-- `DAILY_LIMIT` is not set on Vercel (defaults to 50 per device per instance); Ibrahim raises it at delivery, not before
+- Challenge presentation: rebuilt in the official challenge template (PPTX, 16 slides, their identity and layouts; adds a team slide, a "meets the reference framework" slide and a built/planned timeline; real screenshots of the live app). Arabic approved by Ibrahim (reviewed in Google Slides: https://docs.google.com/presentation/d/1YdfoLD8rtyEsIb6IhYH-XcIB4_ob-PNg-f9iHPTDT6g/edit); English built the same way and approved by Ibrahim on Oct 6. Files in `docs/presentation/` (git-ignored: partner logos, 10 MB each). Oct 5 11:45: both decks updated for the Rowwad translation (English screenshots re-taken from the live site, timeline now lists the approved translation under Day 2). 14:05: both decks updated with the evaluation (88%, 97%, 1.7 s, $0.004 per photo; alternative in a footnote) and the review count (13 of 25 + abstention). Oct 6: final versions (see the Day 3 table). Earlier Slides-artifact drafts are superseded
 - Push to `main` (deploys to Vercel) only when Ibrahim says so
 - English translation switched to Rowwad Translation Center (QuranEnc.com v1.0.19-xml.1), file unchanged, footnotes shown, all 25 cards; Itani stays registered but unused
 - Daily limit is in memory per server instance (best effort); durable store is planned
 - Only one real vision provider; the second is `stub`
 - 4 of 25 mappings are `draft` (21 reviewed); no reflections are shown until reviewed
-- Religious review: waiting for Ziyad's answers to the open questions listed at the end of `sources/REVIEW_LOG.md` (figs-olives, Journey cards, 4 unreviewed cards, pomegranate/night-day/mountains; hand and eyes-tongue answered by voice note on Oct 5, transcribed locally with whisper-cpp). Apply only Ibrahim's decisions
+- Religious review: 4 cards wait for Ziyad's answers (figs-olives, pomegranate, night-day, mountains; see the end of `sources/REVIEW_LOG.md`). Apply only Ibrahim's decisions
+- Until Oct 22 (end of final judging): keep the live demo, video and repo links working. No commits after 23:59 on Oct 6 (challenge rule: only work done Oct 4–6 counts)
 - End-of-Day-1 progress reply to the committee: drafted in Ibrahim's Gmail (Arabic)
 
 ## Day 2 plan (Oct 5): status at 16:46
