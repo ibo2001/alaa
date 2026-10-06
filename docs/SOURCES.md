@@ -84,6 +84,8 @@ All resized to 768px (longest edge) and re-encoded as JPEG, which also strips me
 |---|---|---|
 | Remotion 4.0.533 (`remotion`, `@remotion/cli`, `@remotion/google-fonts`) | Composes the demo video in `video/` (separate `package.json`) | Remotion License: free for individuals and small teams |
 | Playwright (existing dev dependency) + Chrome screencast | Records the app's screens for the video (`video/record.ts`) | Apache-2.0 |
+| axe-core 4.13.0 (`@axe-core/playwright`) and Lighthouse 13.5 (run with `npx`, not installed in the repo) | Accessibility audit of the live site on Oct 6 (`docs/CHANGES_FROM_TESTING.md`) | MPL-2.0 (axe-core), Apache-2.0 (Lighthouse) |
+| Pillow (Python, run with `uv`) | Made `app/favicon.ico` from the app's own 192px icon | MIT-CMU (HPND) |
 | ffmpeg (Homebrew) | Assembles screen frames into clips | LGPL/GPL (tool only, not distributed) |
 | whisper.cpp + `ggml-large-v3-turbo` model (Homebrew, local) | Transcribes the reviewer's voice notes on the developer's Mac; audio never leaves the machine | MIT (code), MIT (model) |
 | LibreOffice + Poppler (Homebrew) | Renders the challenge PPTX decks to images for visual checks | MPL-2.0 / GPL (tools only) |

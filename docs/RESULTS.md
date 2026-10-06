@@ -74,5 +74,8 @@ Cost: $0.0055 per question (re-ranker only; retrieval runs locally).
 ## User testing
 See `docs/user-testing/RESULTS.md` (sessions pending).
 
+## Accessibility audit (Oct 6)
+Before the fixes, on the live site: Lighthouse accessibility 100 (Arabic) and 96 (English, colour contrast), best practices 96 (favicon error); axe-core found colour-contrast issues on small text, and keyboard checks found a focus ring too faint on light pages, focused items hidden behind the tab bar and focus lost after sheets. After the fixes (`66b6587`), the same axe and keyboard scripts on a local production build: no axe violations, no hidden focused items, focus returns after every sheet, no sideways scroll at 200% text. Details in `docs/CHANGES_FROM_TESTING.md`. This is an audit, not user testing.
+
 ## Changes made because of testing and review
 See `docs/CHANGES_FROM_TESTING.md` and `sources/REVIEW_LOG.md`.
