@@ -106,7 +106,7 @@ export function ReviewSubmit({ items, action, entries }: { items: Item[]; action
     }
   }
 
-  const input = "mt-1 w-full rounded-xl border border-layl/30 bg-white px-3 py-2 focus:border-layl focus:outline-none";
+  const input = "mt-1 w-full rounded-xl border border-layl/30 bg-white px-3 py-2 text-layl focus:border-layl";
   return (
     <section aria-labelledby="send-review" className="mt-10 rounded-2xl bg-layl p-5 text-sama print:hidden">
       <h2 id="send-review" className="font-heading text-2xl text-lazima">

@@ -30,7 +30,7 @@
   },
   "offline": {
     "title": "You're offline",
-    "body": "Alaa needs a connection to recognize photos. Check your connection and try again.",
+    "body": "Alaa needs a connection to open this page. Check your connection and try again.",
     "retry": "Try again"
   },
   "lens": {
@@ -44,7 +44,8 @@
     "working": "Looking…",
     "privacy": "Your photo is shrunk on your device, analyzed, then discarded. It is never stored.",
     "tryAgain": "Try something else around you",
-    "credits": "Photo credits (resized to 768px)"
+    "credits": "Photo credits (resized to 768px)",
+    "samplesJump": "No camera? Try a sample photo"
   },
   "confirm": {
     "title": "Is this…?",
@@ -150,7 +151,7 @@
     "takePhoto": "Take the photo",
     "readCard": "Read: {name}",
     "readCardLabel": "Read the card {name} ({ref})",
-    "afterLocked": "After station 7, your next steps open here.",
+    "afterLocked": "A station is complete when you photograph its blessing or read its card. After station 7, your next steps open here.",
     "reset": "Start the journey again",
     "privacy": "Your progress is saved on this device only.",
     "stations": {

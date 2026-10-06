@@ -47,7 +47,7 @@ export function StagePicker() {
           </button>
         ))}
       </div>
-      <p className="mt-2 text-center text-xs text-layl/60">{t("hint")}</p>
+      <p className="mt-2 text-center text-xs text-layl/75">{t("hint")}</p>
     </fieldset>
   );
 }

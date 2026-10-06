@@ -41,9 +41,17 @@ body {
   font-family: var(--font-ui);
 }
 
+/* Two-tone focus ring: navy reads on light surfaces, the gold halo on navy ones (WCAG 2.4.7 / 1.4.11). */
 :focus-visible {
-  outline: 3px solid var(--lazima);
+  outline: 3px solid var(--layl);
   outline-offset: 2px;
+  box-shadow: 0 0 0 5px var(--lazima);
+}
+
+/* Keep the focused element clear of the sticky top bar and the fixed tab bar (WCAG 2.4.11). */
+html {
+  scroll-padding-top: 3.5rem;
+  scroll-padding-bottom: calc(6.5rem + env(safe-area-inset-bottom));
 }
 
 /* Verse text: generous line height for Uthmani diacritics. */

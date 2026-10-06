@@ -104,7 +104,7 @@ export default async function AboutPage({ params }: Props) {
       <Section title={t("builtTitle")}>
         <p>{t("built")}</p>
         <p>
-          <a href={REPO_URL} {...ext} dir="ltr">
+          <a href={REPO_URL} {...ext} className={`${ext.className} break-all`} dir="ltr">
             github.com/ibo2001/alaa
           </a>
         </p>

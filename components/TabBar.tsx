@@ -44,7 +44,7 @@ export function TabBar() {
               <Link
                 href={href}
                 aria-current={current ? "page" : undefined}
-                className={`press flex min-h-14 min-w-14 flex-col items-center justify-center gap-1 text-[0.7rem] font-medium transition-colors ${
+                className={`press flex min-h-14 w-full flex-col items-center justify-center gap-1 px-0.5 text-center text-[0.7rem] font-medium leading-tight [overflow-wrap:anywhere] transition-colors ${
                   current ? "text-lazima" : "text-sama/65 hover:text-sama"
                 }`}
               >

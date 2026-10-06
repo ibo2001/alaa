@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 function Row({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div className="px-4 py-3.5">
-      <dt className="text-xs font-semibold text-layl/55">{label}</dt>
+      <dt className="text-xs font-semibold text-layl/75">{label}</dt>
       <dd className="mt-1 leading-relaxed">{children}</dd>
     </div>
   );

@@ -22,7 +22,7 @@ export function TopBar() {
 
   return (
     <header className="topbar sticky top-0 z-30 text-sama print:hidden">
-      <div className="mx-auto grid h-13 w-full max-w-xl grid-cols-[1fr_auto_1fr] items-center px-2">
+      <div className="mx-auto grid h-13 w-full max-w-xl grid-cols-[1fr_minmax(0,auto)_1fr] items-center px-2">
         <div className="flex justify-start">
           {parent && (
             <button
@@ -39,7 +39,7 @@ export function TopBar() {
         {pathname === "/" ? (
           <span />
         ) : (
-          <Link href="/" className="press font-heading text-2xl leading-none text-lazima">
+          <Link href="/" className="press min-w-0 truncate font-heading text-2xl leading-none text-lazima">
             {app("name")}
           </Link>
         )}

@@ -177,7 +177,7 @@ export function TodayClient({ lang, cards, refrain }: { lang: Lang; cards: DayBl
         </>
       )}
 
-      <p className="mt-8 px-2 text-center text-xs text-layl/60">{t("privacy")}</p>
+      <p className="mt-8 px-2 text-center text-xs text-layl/75">{t("privacy")}</p>
     </section>
   );
 }

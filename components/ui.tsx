@@ -36,7 +36,7 @@ export function Card({ className = "", children, ...rest }: React.HTMLAttributes
 /** Small section heading above a group, like iOS list headers. */
 export function SectionLabel({ id, children }: { id?: string; children: React.ReactNode }) {
   return (
-    <h2 id={id} className="mb-2 mt-8 px-1 text-sm font-semibold text-layl/60">
+    <h2 id={id} className="mb-2 mt-8 px-1 text-sm font-semibold text-layl/75">
       {children}
     </h2>
   );

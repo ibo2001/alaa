@@ -143,7 +143,7 @@ export function HomeClient({
                 : t("loading")}
             </span>
             {status && next !== null && (
-              <span className="block text-layl/60">{t("journeyNext", { name: tj(`stations.s${next}.title`) })}</span>
+              <span className="block text-layl/75">{t("journeyNext", { name: tj(`stations.s${next}.title`) })}</span>
             )}
           </span>
         </Link>

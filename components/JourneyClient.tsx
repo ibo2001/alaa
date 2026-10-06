@@ -59,7 +59,7 @@ export function JourneyClient({ stations, referral }: { stations: StationView[];
           aria-valuemax={STATION_NUMBERS.length}
           aria-valuenow={done}
         >
-          <div className="h-full rounded-full bg-nakhl transition-[width] duration-700 ease-out" style={{ width: `${pct}%` }} />
+          <div className="h-full rounded-full bg-nakhl transition-[width] duration-700 ease-out motion-reduce:transition-none" style={{ width: `${pct}%` }} />
         </div>
       </Card>
 
@@ -77,7 +77,7 @@ export function JourneyClient({ stations, referral }: { stations: StationView[];
               <span
                 aria-hidden
                 className={`relative z-10 mt-1 grid size-11 shrink-0 place-items-center rounded-full font-heading text-xl shadow-sm ${
-                  p ? "bg-nakhl text-sama" : isNext ? "bg-layl text-lazima ring-4 ring-lazima/40" : "bg-surface text-layl/60 ring-1 ring-layl/10"
+                  p ? "bg-nakhl text-sama" : isNext ? "bg-layl text-lazima ring-4 ring-lazima/40" : "bg-surface text-layl/75 ring-1 ring-layl/10"
                 }`}
               >
                 {p ? <CheckIcon className="size-5" /> : t(`stations.s${s.n}.number`)}
@@ -87,7 +87,7 @@ export function JourneyClient({ stations, referral }: { stations: StationView[];
                   isNext ? "bg-surface shadow-md ring-2 ring-layl/80" : p ? "bg-surface/70" : "bg-surface/50"
                 }`}
               >
-                <p className={`text-xs font-medium ${p ? "text-nakhl" : isNext ? "text-tamr" : "text-layl/55"}`}>
+                <p className={`text-xs font-medium ${p ? "text-nakhl" : isNext ? "text-tamr" : "text-layl/75"}`}>
                   {p ? t(p.via === "photo" ? "foundByPhoto" : "cardRead") : isNext ? t("next") : t("upcoming")}
                 </p>
                 <h2 className="mt-0.5 font-heading text-2xl">
@@ -162,7 +162,7 @@ export function JourneyClient({ stations, referral }: { stations: StationView[];
           </button>
         </p>
       )}
-      <p className="mt-4 px-2 text-center text-xs text-layl/60">{t("privacy")}</p>
+      <p className="mt-4 px-2 text-center text-xs text-layl/75">{t("privacy")}</p>
     </section>
   );
 }

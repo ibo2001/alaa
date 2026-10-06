@@ -12,6 +12,7 @@ export function Sheet({
   labelledBy,
   tone = "light",
   role,
+  focusHeading = false,
   children,
 }: {
   open: boolean;
@@ -19,6 +20,8 @@ export function Sheet({
   labelledBy: string;
   tone?: "light" | "dark";
   role?: "alertdialog";
+  /** Start focus on the heading (labelledBy, needs tabIndex={-1}) instead of the first link or button. */
+  focusHeading?: boolean;
   children: React.ReactNode;
 }) {
   const ref = useRef<HTMLDialogElement>(null);
@@ -26,9 +29,12 @@ export function Sheet({
   useEffect(() => {
     const d = ref.current;
     if (!d) return;
-    if (open && !d.open) d.showModal();
+    if (open && !d.open) {
+      d.showModal();
+      if (focusHeading) document.getElementById(labelledBy)?.focus();
+    }
     if (!open && d.open) d.close();
-  }, [open]);
+  }, [open, focusHeading, labelledBy]);
 
   return (
     <dialog

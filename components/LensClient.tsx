@@ -153,7 +153,16 @@ export function LensClient({
 
   const label = (concept?: string) => (concept ? (conceptLabels[concept] ?? concept) : "");
 
-  const dismiss = () => setState({ kind: "idle" });
+  // The control that started this look: focus goes back to it when a sheet closes (it was disabled while busy).
+  const trigger = useRef<HTMLElement | null>(null);
+  const remember = (e: React.MouseEvent<HTMLElement>) => {
+    trigger.current = e.currentTarget;
+  };
+
+  const dismiss = () => {
+    setState({ kind: "idle" });
+    setTimeout(() => trigger.current?.focus(), 0);
+  };
 
   return (
     <div className="pb-4 pt-5" data-ready={ready || undefined}>
@@ -167,7 +176,7 @@ export function LensClient({
         <div aria-live="polite" className="relative flex min-h-24 items-center justify-center px-4 text-center">
           {busy ? (
             <p role="status" className="text-lg text-lazima">
-              <span className="inline-block animate-pulse">{t("working")}</span>
+              <span className="inline-block motion-safe:animate-pulse">{t("working")}</span>
             </p>
           ) : (
             <p className="text-sama/85">{t("intro")}</p>
@@ -180,7 +189,10 @@ export function LensClient({
               type="button"
               className="press flex flex-col items-center gap-1.5 text-xs text-sama/80 disabled:opacity-40"
               disabled={busy || !ready}
-              onClick={() => galleryInput.current?.click()}
+              onClick={(e) => {
+                remember(e);
+                galleryInput.current?.click();
+              }}
             >
               <span className="grid size-12 place-items-center rounded-2xl bg-sama/12 ring-1 ring-sama/20">
                 <PhotoIcon className="size-6" />
@@ -193,7 +205,10 @@ export function LensClient({
               type="button"
               className="press flex flex-col items-center gap-1.5 text-xs font-medium text-lazima disabled:opacity-40"
               disabled={busy || !ready}
-              onClick={() => cameraInput.current?.click()}
+              onClick={(e) => {
+                remember(e);
+                cameraInput.current?.click();
+              }}
             >
               <span className="grid size-[4.5rem] place-items-center rounded-full ring-4 ring-lazima/40">
                 <span className="grid size-16 place-items-center rounded-full bg-lazima text-layl">
@@ -205,10 +220,15 @@ export function LensClient({
           </div>
           <div />
         </div>
+        <p className="relative mt-5 text-center text-sm">
+          <a href="#samples" className="text-lazima underline underline-offset-4">
+            {t("samplesJump")}
+          </a>
+        </p>
         <input ref={cameraInput} type="file" accept="image/*" capture="environment" hidden onChange={onFile} tabIndex={-1} />
         <input ref={galleryInput} type="file" accept="image/*" hidden onChange={onFile} tabIndex={-1} />
       </section>
-      <p className="mt-3 px-2 text-center text-xs text-layl/60">{t("privacy")}</p>
+      <p className="mt-3 px-2 text-center text-xs text-layl/75">{t("privacy")}</p>
 
       <Sheet open={state.kind === "confirm"} onDismiss={dismiss} labelledBy="confirm-title">
         {state.kind === "confirm" && (
@@ -233,10 +253,10 @@ export function LensClient({
         )}
       </Sheet>
 
-      <Sheet open={state.kind === "abstain"} onDismiss={dismiss} labelledBy="abstain-title" tone="dark">
+      <Sheet open={state.kind === "abstain"} onDismiss={dismiss} labelledBy="abstain-title" tone="dark" focusHeading>
         {state.kind === "abstain" && (
           <>
-            <h2 id="abstain-title" className="text-center text-lg">
+            <h2 id="abstain-title" tabIndex={-1} className="text-center text-lg focus:outline-none">
               {ta(state.reason, { concept: label(state.concept) })}
             </h2>
             {abstention.length > 0 && (state.reason === "low-confidence" || state.reason === "no-blessing") && (
@@ -264,7 +284,7 @@ export function LensClient({
         )}
       </Sheet>
 
-      <section className="mt-8" aria-labelledby="samples-title">
+      <section id="samples" className="mt-8" aria-labelledby="samples-title">
         <h2 id="samples-title" className="font-heading text-2xl">{t("samplesTitle")}</h2>
         <p className="text-sm text-layl/70">{t("samplesHint")}</p>
         <ul className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
@@ -273,12 +293,15 @@ export function LensClient({
               <button
                 type="button"
                 disabled={busy || !ready}
-                onClick={() => trySample(s.id)}
+                onClick={(e) => {
+                  remember(e);
+                  trySample(s.id);
+                }}
                 aria-label={t("sampleLabel", { name: s.alt })}
                 data-sample={s.id}
                 className="press group relative block w-full overflow-hidden rounded-2xl bg-layl/10 shadow-sm disabled:opacity-50"
               >
-                <Image src={s.file} alt={s.alt} width={384} height={384} className="aspect-square w-full object-cover" />
+                <Image src={s.file} alt="" width={384} height={384} className="aspect-square w-full object-cover" />
                 <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-layl/90 to-transparent px-3 pb-2 pt-6 text-start text-sm font-medium text-sama">
                   {s.alt}
                   {s.placeholder && <span className="ms-1 text-xs text-sama/60">({t("placeholderNote")})</span>}
