@@ -1,0 +1,54 @@
+tests/unit/sharecard-layout.test.ts
+  s_a390bda20b7d98::t_a74c620b518d6a 2,29,57
+  s_a390bda20b7d98::t_f2614022e945d8 1,3-28,30-50,53-54,56,60-61,70-77
+  s_a390bda20b7d98::t_a98c8cf9586bf7 51-52,55,58-59,62-69
+lib/sharecard-layout.ts
+  s_a390bda20b7d98::t_a7a0d82191d54f 137-144,146-167,170,172-174
+  s_a390bda20b7d98::t_55bf77141a80ec 46-47
+  s_a390bda20b7d98::t_3713f0b40a23f1 1-7,9,11-28,32-45,48-63,74-91,94,97,100-101,103,133-136,168-169,175-181,183-213,215-216,219-227
+  s_a390bda20b7d98::t_a74c620b518d6a 8,10,66-69,92-93,95-96,98-99,102
+  s_a390bda20b7d98::t_499c57363dbc5e 29-31,64-65,70-73,104-132,145,171,182,214,217-218
+package.json
+  s_a390bda20b7d98::t_6b0cce7ccbc725 19,22,33
+lib/sharecard.ts
+  s_a390bda20b7d98::t_61cdbc75ac692a 2-4,7,13-16,23,26-34,41-79,86,89-90,102-104,110-111,114,118-119,122-159,161-162,164-175,177-178,180-200
+  s_a390bda20b7d98::t_61b3e2c9eedae8 5
+  s_a390bda20b7d98::t_0e9bb56a57dbae 17-18,93-95,105-109,112,160,163,176
+app/[locale]/today/page.tsx
+  s_a390bda20b7d98::t_55bf77141a80ec 33-36
+lib/sharecard-icons.ts
+  s_a390bda20b7d98::t_87f4d0a7674bed 1-71
+messages/ar.json
+  s_a390bda20b7d98::t_55bf77141a80ec 139-140
+  s_a390bda20b7d98::t_0e9bb56a57dbae 141-142
+tests/unit/sharecard.test.ts
+  s_a390bda20b7d98::t_907ca6d7c1f47c 19-23
+  s_a390bda20b7d98::t_61b3e2c9eedae8 2
+  s_a390bda20b7d98::t_1bd41963107b03 17
+messages/en.json
+  s_a390bda20b7d98::t_55bf77141a80ec 139-140
+  s_a390bda20b7d98::t_0e9bb56a57dbae 141-142
+docs/SOURCES.md
+  s_a390bda20b7d98::t_8c4e01250425c5 54-55,67
+components/TodayClient.tsx
+  s_a390bda20b7d98::t_55bf77141a80ec 15-23,65-72,77-79,83
+  s_a390bda20b7d98::t_0e9bb56a57dbae 80
+package-lock.json
+  s_a390bda20b7d98::t_1624d3675f4c09 10,15,18,29,2855-2864,3611-3619,4012-4020,4074-4084,4233-4241,4294-4299,5271-5279,5850-5858,6580-6585,7137-7145,7249-7257,7347-7363,7459-7473,7678-7683,7933-7952,8067-8078,9116-9121,9167-9273
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7770f71ead20bdaf15f0508346b25b9facc43e36",
+  "prompts": {},
+  "sessions": {
+    "s_a390bda20b7d98": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2ef5e39d-84a5-4770-8613-826a772262ec",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
