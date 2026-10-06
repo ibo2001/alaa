@@ -1,0 +1,23 @@
+docs/CHANGES_FROM_TESTING.md
+  s_a390bda20b7d98::t_bcab3660c4d9cf 7
+docs/RESULTS.md
+  s_a390bda20b7d98::t_725b4c17f866ad 75
+docs/user-testing/RESULTS.md
+  s_a390bda20b7d98::t_a1a2cbea87fe78 3-5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "31fa4b72289caa4f8ca1cdf5d3beeff97bf5b41e",
+  "prompts": {},
+  "sessions": {
+    "s_a390bda20b7d98": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2ef5e39d-84a5-4770-8613-826a772262ec",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ibrahim Qraiqe <ibo2001@gmail.com>"
+    }
+  }
+}
