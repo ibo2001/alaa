@@ -75,3 +75,6 @@ See `.env.example`.
 - `docs/user-testing/`: user-testing protocol, sheets and forms
 - `docs/video/`: demo video script; the video is composed with Remotion in `video/` (`cd video && npm install && npm run render`; clips from `npx tsx video/record.ts`)
 - `docs/superpowers/specs/2026-10-05-rag-reviewer-assistant-design.md`: design of the planned source-bound RAG reviewer's assistant
+
+## License
+The code is released under the MIT License (`LICENSE`). The Quran text, translations, Tafsir data and other third-party content in `sources/`, plus fonts, photos and media, are not covered by it: each keeps its own license, listed in `docs/SOURCES.md` (every text in `sources/` also has a LICENSE file in its folder).
