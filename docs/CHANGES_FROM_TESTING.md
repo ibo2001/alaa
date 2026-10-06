@@ -4,6 +4,7 @@ Every problem seen in user testing (`docs/user-testing/`) that led to a change. 
 
 | # | Observed | Changed | Commit |
 |---|---|---|---|
+| 1 | The one online participant (Oct 6, group A) left within 3 minutes and wrote that they did not know what the app is for; their answers suggest they stayed on Home, which led with a verse card and explained Alaa only below the fold | First visit: Home starts with a short card saying why and how, with "Start looking" (to the lens) and "or try a sample photo", before the verse | `7bf4ea6` |
 
 ## From the accessibility and usability audit (Oct 6), not user testing
 An automated and scripted audit of the live site (axe-core on 112 page states, Lighthouse, keyboard, 200% text, reduced motion, offline; Arabic and English, phone and laptop widths), run by an AI agent (Claude Code) because the online user-test forms had no responses yet. These are expert-style findings, not observations of real users. Fixed in `66b6587`.
